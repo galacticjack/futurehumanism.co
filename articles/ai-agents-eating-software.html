@@ -314,6 +314,117 @@
             z-index: 1000;
             transition: width 0.1s ease-out;
         }
+    
+    /* Author Bio */
+    .author-bio {
+        display: flex;
+        gap: 20px;
+        padding: 32px;
+        background: var(--bg-secondary);
+        border-radius: 12px;
+        margin: 48px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .author-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent);
+    }
+    .author-info {
+        flex: 1;
+    }
+    .author-info h4 {
+        color: var(--text-primary);
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    .author-info p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    .author-follow {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .author-follow:hover {
+        text-decoration: underline;
+    }
+    /* Related Articles */
+    .related-articles {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 24px;
+    }
+    .related-articles h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 32px;
+        color: var(--text-primary);
+    }
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .related-card {
+        background: var(--bg-secondary);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+    }
+    .related-card img {
+        width: 100%;
+        aspect-ratio: 16/10;
+        object-fit: cover;
+    }
+    .related-content {
+        padding: 16px;
+    }
+    .related-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--accent);
+        margin-bottom: 8px;
+    }
+    .related-content h4 {
+        font-size: 0.95rem;
+        color: var(--text-primary);
+        line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+        .author-bio {
+            flex-direction: column;
+            text-align: center;
+            padding: 24px;
+        }
+        .author-avatar {
+            margin: 0 auto;
+        }
+        .related-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .related-articles {
+            padding: 0 16px;
+        }
+    }
     </style>
 </head>
 <body>

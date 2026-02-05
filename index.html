@@ -1623,7 +1623,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>© 2025 Future Humanism. Made with intention.</p>
+                <p>© 2026 Future Humanism. Made with intention. · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
                 <div class="footer-social">
                     <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
                     <a href="/subscribe.html" target="_blank">Newsletter</a>
@@ -1747,6 +1747,194 @@
             el.style.transform = 'translateY(20px)';
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
+        });
+    </script>
+
+    <!-- Exit Intent Popup -->
+    <div id="exit-popup" class="exit-popup">
+        <div class="exit-popup-content">
+            <button class="exit-popup-close" onclick="closeExitPopup()">×</button>
+            <div class="exit-popup-icon">🚀</div>
+            <h2>Wait! Don't miss out.</h2>
+            <p>Get weekly insights on AI, automation, and building profitable side projects. Join 500+ builders.</p>
+            <form id="exit-popup-form">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe Free →</button>
+            </form>
+            <p class="exit-popup-note">No spam. Unsubscribe anytime.</p>
+        </div>
+    </div>
+
+    <style>
+        .exit-popup {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.8);
+            z-index: 10000;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 0.3s ease;
+        }
+        .exit-popup.show {
+            display: flex;
+        }
+        .exit-popup-content {
+            background: var(--bg-secondary);
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 48px;
+            max-width: 440px;
+            width: 90%;
+            text-align: center;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .exit-popup-close {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: color 0.2s;
+        }
+        .exit-popup-close:hover {
+            color: var(--text-primary);
+        }
+        .exit-popup-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+        .exit-popup-content h2 {
+            font-size: 1.6rem;
+            margin-bottom: 12px;
+        }
+        .exit-popup-content > p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-size: 0.95rem;
+        }
+        .exit-popup-content form {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .exit-popup-content input {
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .exit-popup-content input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .exit-popup-content button {
+            padding: 14px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .exit-popup-content button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .exit-popup-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-top: 12px;
+        }
+        @media (max-width: 768px) {
+            .exit-popup-content {
+                padding: 32px 24px;
+            }
+            .exit-popup-content h2 {
+                font-size: 1.3rem;
+            }
+        }
+    </style>
+
+    <script>
+        // Exit Intent Popup
+        let popupShown = false;
+        
+        function showExitPopup() {
+            if (popupShown || localStorage.getItem('fh_popup_dismissed')) return;
+            document.getElementById('exit-popup').classList.add('show');
+            popupShown = true;
+        }
+        
+        function closeExitPopup() {
+            document.getElementById('exit-popup').classList.remove('show');
+            localStorage.setItem('fh_popup_dismissed', Date.now());
+        }
+        
+        // Trigger on mouse leaving the page (desktop)
+        document.addEventListener('mouseout', function(e) {
+            if (e.clientY < 5 && !popupShown) {
+                showExitPopup();
+            }
+        });
+        
+        // Trigger after 60 seconds on mobile/desktop as fallback
+        setTimeout(() => {
+            if (!popupShown && !localStorage.getItem('fh_popup_dismissed')) {
+                showExitPopup();
+            }
+        }, 60000);
+        
+        // Handle popup form
+        document.getElementById('exit-popup-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = this.email.value;
+            const btn = this.querySelector('button');
+            btn.disabled = true;
+            btn.textContent = 'Subscribing...';
+            
+            // Store locally
+            const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+            subscribers.push({ email, date: new Date().toISOString(), source: 'exit_popup' });
+            localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+            
+            // Try Formspree
+            try {
+                await fetch('https://formspree.io/f/myzevrzl', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, source: 'exit_popup' })
+                });
+            } catch (e) {}
+            
+            this.innerHTML = '<p style="color: #22c55e; font-size: 1.1rem;">🎉 You\'re in! Check your inbox.</p>';
+            localStorage.setItem('fh_popup_dismissed', Date.now());
+            
+            setTimeout(closeExitPopup, 2000);
+        });
+        
+        // Close on backdrop click
+        document.getElementById('exit-popup').addEventListener('click', function(e) {
+            if (e.target === this) closeExitPopup();
+        });
+        
+        // Close on Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeExitPopup();
         });
     </script>
     <script src="js/lazy-loading.js"></script>

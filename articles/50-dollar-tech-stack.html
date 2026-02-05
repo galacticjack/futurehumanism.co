@@ -365,10 +365,121 @@
         left: 0;
         width: 0%;
         height: 3px;
-        background: linear-gradient(90deg, #FF5A5F, #FF7F7F);
+        background: linear-gradient(90deg, var(--accent), #8B5CF6);
         z-index: 1000;
         transition: width 0.1s ease-out;
-    }</style>
+    }
+    /* Author Bio */
+    .author-bio {
+        display: flex;
+        gap: 20px;
+        padding: 32px;
+        background: var(--bg-secondary);
+        border-radius: 12px;
+        margin: 48px 0;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .author-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid var(--accent);
+    }
+    .author-info {
+        flex: 1;
+    }
+    .author-info h4 {
+        color: var(--text-primary);
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    .author-info p {
+        color: var(--text-secondary);
+        font-size: 0.9rem;
+        margin-bottom: 12px;
+        line-height: 1.5;
+    }
+    .author-follow {
+        color: var(--accent);
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 0.9rem;
+    }
+    .author-follow:hover {
+        text-decoration: underline;
+    }
+    /* Related Articles */
+    .related-articles {
+        max-width: 900px;
+        margin: 60px auto;
+        padding: 0 24px;
+    }
+    .related-articles h3 {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 32px;
+        color: var(--text-primary);
+    }
+    .related-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 24px;
+    }
+    .related-card {
+        background: var(--bg-secondary);
+        border-radius: 12px;
+        overflow: hidden;
+        border: 1px solid var(--border);
+        text-decoration: none;
+        transition: transform 0.2s, border-color 0.2s;
+    }
+    .related-card:hover {
+        transform: translateY(-4px);
+        border-color: var(--accent);
+    }
+    .related-card img {
+        width: 100%;
+        aspect-ratio: 16/10;
+        object-fit: cover;
+    }
+    .related-content {
+        padding: 16px;
+    }
+    .related-tag {
+        display: inline-block;
+        font-size: 0.7rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--accent);
+        margin-bottom: 8px;
+    }
+    .related-content h4 {
+        font-size: 0.95rem;
+        color: var(--text-primary);
+        line-height: 1.4;
+    }
+    @media (max-width: 768px) {
+        .author-bio {
+            flex-direction: column;
+            text-align: center;
+            padding: 24px;
+        }
+        .author-avatar {
+            margin: 0 auto;
+        }
+        .related-grid {
+            grid-template-columns: 1fr;
+            gap: 16px;
+        }
+        .related-articles {
+            padding: 0 16px;
+        }
+    }
+    </style>
     <script>
         // Reading Progress Bar
         document.addEventListener('DOMContentLoaded', function() {
@@ -551,6 +662,44 @@
             <button class="share-btn copy-link" onclick="copyLink()" title="Copy link">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
             </button>
+        </div>
+    </div>
+
+    <!-- Author Bio -->
+    <div class="author-bio">
+        <img src="../images/profile.jpg" alt="Author" class="author-avatar">
+        <div class="author-info">
+            <h4>Written by Future Humanism</h4>
+            <p>Exploring where AI meets human potential. Weekly insights on automation, side projects, and building things that matter.</p>
+            <a href="https://twitter.com/FutureHumanism" target="_blank" class="author-follow">Follow on X →</a>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+        <h3>Keep Reading</h3>
+        <div class="related-grid">
+            <a href="why-ai-side-projects-fail.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80" alt="Side Projects">
+                <div class="related-content">
+                    <span class="related-tag">Strategy</span>
+                    <h4>Why Most AI Side Projects Fail</h4>
+                </div>
+            </a>
+            <a href="automate-80-percent-agency-work.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=400&q=80" alt="Automation">
+                <div class="related-content">
+                    <span class="related-tag">Case Study</span>
+                    <h4>How We Automated 80% of Agency Work</h4>
+                </div>
+            </a>
+            <a href="ai-agents-2025-guide.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="AI Agents">
+                <div class="related-content">
+                    <span class="related-tag">Deep Dive</span>
+                    <h4>The Complete Guide to AI Agents in 2025</h4>
+                </div>
+            </a>
         </div>
     </div>
 
