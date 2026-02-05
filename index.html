@@ -178,6 +178,28 @@
             transform: translateY(-1px);
         }
 
+        .nav-search {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+        }
+        .nav-search:hover {
+            border-color: var(--accent);
+            color: var(--accent) !important;
+        }
+        .nav-search svg {
+            color: var(--text-secondary);
+        }
+        .nav-search:hover svg {
+            color: var(--accent);
+        }
+
         /* Mobile Menu */
         .mobile-menu-btn {
             display: none;
@@ -1289,7 +1311,9 @@
                 <a href="/articles/">Stories</a>
                 <a href="/resources.html">AI Tools</a>
                 <a href="/quiz.html">Quiz</a>
-                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                <a href="/search.html" class="nav-search" title="Search (Press /)">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+                </a>
                 <a href="/subscribe.html" class="nav-cta" target="_blank">Subscribe</a>
                 <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </nav>
@@ -1638,6 +1662,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
+        <a href="/search.html" onclick="closeMobileMenu()">🔍 Search</a>
         <a href="/" onclick="closeMobileMenu()">Home</a>
         <a href="/articles/" onclick="closeMobileMenu()">Stories</a>
         <a href="/resources.html" onclick="closeMobileMenu()">AI Tools</a>
@@ -1936,6 +1961,17 @@
         // Close on Escape key
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeExitPopup();
+        });
+    </script>
+
+    <!-- Keyboard Shortcuts -->
+    <script>
+        document.addEventListener('keydown', function(e) {
+            // Press / to go to search (unless typing in input)
+            if (e.key === '/' && !['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) {
+                e.preventDefault();
+                window.location.href = '/search.html';
+            }
         });
     </script>
     <script src="js/lazy-loading.js"></script>

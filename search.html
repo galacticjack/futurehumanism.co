@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search | Future Humanism</title>
+    <meta name="description" content="Search all Future Humanism articles on AI, automation, and building things that matter.">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --accent: #6366F1;
+            --border: #2a2a2a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+        }
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        .search-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        .search-header h1 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        
+        .search-box {
+            position: relative;
+            margin-bottom: 40px;
+        }
+        .search-input {
+            width: 100%;
+            padding: 18px 24px 18px 56px;
+            font-size: 1.1rem;
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .search-input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .search-input::placeholder {
+            color: var(--text-secondary);
+        }
+        .search-icon {
+            position: absolute;
+            left: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--text-secondary);
+        }
+        .keyboard-hint {
+            position: absolute;
+            right: 16px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: var(--border);
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+        }
+        
+        .results-info {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            font-size: 0.9rem;
+        }
+        
+        .search-results {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        
+        .result-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        .result-card:hover {
+            border-color: var(--accent);
+            transform: translateX(4px);
+        }
+        .result-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+        .result-title {
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        .result-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+        .result-excerpt mark {
+            background: rgba(99, 102, 241, 0.3);
+            color: var(--text-primary);
+            padding: 0 2px;
+            border-radius: 2px;
+        }
+        .result-meta {
+            color: var(--text-muted);
+            font-size: 0.8rem;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 60px 24px;
+            color: var(--text-secondary);
+        }
+        .no-results h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .popular-searches {
+            margin-top: 32px;
+            padding-top: 32px;
+            border-top: 1px solid var(--border);
+        }
+        .popular-searches h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        .popular-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+        .popular-tag {
+            padding: 8px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .popular-tag:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); text-decoration: none; }
+        
+        @media (max-width: 768px) {
+            main { padding: 40px 16px; }
+            .search-header h1 { font-size: 1.5rem; }
+            .search-input { padding: 16px 16px 16px 48px; font-size: 1rem; }
+            .keyboard-hint { display: none; }
+            .result-card { padding: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+            <a href="/" class="back-link">← Back</a>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-header">
+            <h1>Search Articles</h1>
+        </div>
+
+        <div class="search-box">
+            <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.35-4.35"></path>
+            </svg>
+            <input type="text" class="search-input" id="search-input" placeholder="Search articles..." autofocus>
+            <span class="keyboard-hint">Press /</span>
+        </div>
+
+        <div id="results-container">
+            <div class="popular-searches">
+                <h4>Popular Topics</h4>
+                <div class="popular-tags">
+                    <span class="popular-tag" onclick="searchFor('AI agents')">AI agents</span>
+                    <span class="popular-tag" onclick="searchFor('automation')">automation</span>
+                    <span class="popular-tag" onclick="searchFor('Claude')">Claude</span>
+                    <span class="popular-tag" onclick="searchFor('GPT')">GPT</span>
+                    <span class="popular-tag" onclick="searchFor('side projects')">side projects</span>
+                    <span class="popular-tag" onclick="searchFor('tech stack')">tech stack</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a></p>
+    </footer>
+
+    <script>
+        // Article database for client-side search
+        const articles = [
+            {
+                title: "AI Agents Getting Memory: Why Persistent Context Changes Everything",
+                url: "/articles/ai-agents-memory.html",
+                tag: "Latest",
+                excerpt: "The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy and business applications.",
+                keywords: "AI agents memory context persistent digital minds autonomy business"
+            },
+            {
+                title: "DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning",
+                url: "/articles/deepseek-r1-vs-openai-o1.html",
+                tag: "Analysis",
+                excerpt: "DeepSeek R1 just shattered the reasoning AI landscape. How this open-source model compares to OpenAI's o1 and why it changes everything.",
+                keywords: "DeepSeek R1 OpenAI o1 reasoning AI open source comparison benchmark"
+            },
+            {
+                title: "The Complete Guide to AI Agents in 2025",
+                url: "/articles/ai-agents-2025-guide.html",
+                tag: "Deep Dive",
+                excerpt: "Everything you need to know about AI agents: what they are, how they work, and why this year is different from all the previous AI hype cycles.",
+                keywords: "AI agents guide 2025 autonomous systems chatbots automation"
+            },
+            {
+                title: "Claude vs GPT-4: The Only Comparison That Actually Matters",
+                url: "/articles/claude-vs-gpt-comparison.html",
+                tag: "Comparison",
+                excerpt: "Forget benchmarks. Here's how Claude and GPT-4 actually perform on real work tasks that matter to builders and operators.",
+                keywords: "Claude GPT-4 comparison Anthropic OpenAI chatbot AI assistant"
+            },
+            {
+                title: "The $50/Month Stack That Runs My Entire Business",
+                url: "/articles/50-dollar-tech-stack.html",
+                tag: "Tutorial",
+                excerpt: "Every tool I use to build, launch, and sell digital products—for less than a gym membership. The complete tech stack breakdown.",
+                keywords: "tech stack tools budget cheap startup side project Vercel Cursor"
+            },
+            {
+                title: "Why Most AI Side Projects Fail (And How to Beat the Odds)",
+                url: "/articles/why-ai-side-projects-fail.html",
+                tag: "Strategy",
+                excerpt: "The uncomfortable truth about AI projects—and the exact playbook to be in the 10% that actually succeed and make money.",
+                keywords: "side projects fail success startup AI business strategy"
+            },
+            {
+                title: "How We Automated 80% of Our Agency Work",
+                url: "/articles/automate-80-percent-agency-work.html",
+                tag: "Case Study",
+                excerpt: "The exact automations, prompts, and workflows we use to run a marketing agency with a fraction of the headcount.",
+                keywords: "automation agency workflow prompts marketing efficiency productivity"
+            },
+            {
+                title: "AI Agents: The Next Big Platform Shift After Mobile",
+                url: "/articles/ai-agents-platform-shift.html",
+                tag: "Analysis",
+                excerpt: "Why AI agents represent the most significant platform shift since mobile. From apps to autonomous workers.",
+                keywords: "AI agents platform shift mobile apps future technology trend"
+            },
+            {
+                title: "AI Agents Are Eating Software",
+                url: "/articles/ai-agents-eating-software.html",
+                tag: "Analysis",
+                excerpt: "Software is being absorbed by agents. The UI layer is disappearing. What this means for builders and businesses.",
+                keywords: "AI agents software SaaS UI interface automation future"
+            },
+            {
+                title: "World Models: The AI Breakthrough That Will Change Everything After LLMs",
+                url: "/articles/ai-world-models-next-breakthrough.html",
+                tag: "Deep Dive",
+                excerpt: "Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works.",
+                keywords: "world models AI LLM 3D physics robotics breakthrough future"
+            },
+            {
+                title: "ChatGPT Pro at $200/Month: What This Signals About Enterprise AI",
+                url: "/articles/chatgpt-pro-200-enterprise-ai-shift.html",
+                tag: "Enterprise",
+                excerpt: "OpenAI's premium pricing strategy reveals how enterprise AI budgets will reshape competitive landscapes.",
+                keywords: "ChatGPT Pro enterprise pricing OpenAI business strategy"
+            },
+            {
+                title: "Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI",
+                url: "/articles/gemini-2-flash-multimodal-ai-dominance.html",
+                tag: "Industry",
+                excerpt: "Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Analysis of what this means for the AI landscape.",
+                keywords: "Gemini Google multimodal AI vision audio code analysis"
+            },
+            {
+                title: "The $200M Deal That Just Changed Enterprise AI Forever",
+                url: "/articles/snowflake-openai-enterprise-ai-tipping-point.html",
+                tag: "Breaking",
+                excerpt: "Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise transformation.",
+                keywords: "Snowflake OpenAI enterprise partnership deal data AI"
+            },
+            {
+                title: "The Agent Economy: How AI Will Create $1 Trillion in New Value by 2027",
+                url: "/articles/ai-agent-economy-2027.html",
+                tag: "Future",
+                excerpt: "The economic revolution happening right now. Where the money is flowing and how to position yourself.",
+                keywords: "agent economy AI trillion value future business opportunity"
+            }
+        ];
+
+        const searchInput = document.getElementById('search-input');
+        const resultsContainer = document.getElementById('results-container');
+
+        function searchFor(query) {
+            searchInput.value = query;
+            performSearch(query);
+            searchInput.focus();
+        }
+
+        function performSearch(query) {
+            if (!query || query.length < 2) {
+                resultsContainer.innerHTML = `
+                    <div class="popular-searches">
+                        <h4>Popular Topics</h4>
+                        <div class="popular-tags">
+                            <span class="popular-tag" onclick="searchFor('AI agents')">AI agents</span>
+                            <span class="popular-tag" onclick="searchFor('automation')">automation</span>
+                            <span class="popular-tag" onclick="searchFor('Claude')">Claude</span>
+                            <span class="popular-tag" onclick="searchFor('GPT')">GPT</span>
+                            <span class="popular-tag" onclick="searchFor('side projects')">side projects</span>
+                            <span class="popular-tag" onclick="searchFor('tech stack')">tech stack</span>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            const queryLower = query.toLowerCase();
+            const queryTerms = queryLower.split(/\s+/);
+
+            // Score and filter articles
+            const results = articles.map(article => {
+                let score = 0;
+                const titleLower = article.title.toLowerCase();
+                const excerptLower = article.excerpt.toLowerCase();
+                const keywordsLower = article.keywords.toLowerCase();
+
+                queryTerms.forEach(term => {
+                    if (titleLower.includes(term)) score += 10;
+                    if (excerptLower.includes(term)) score += 5;
+                    if (keywordsLower.includes(term)) score += 3;
+                });
+
+                return { ...article, score };
+            }).filter(a => a.score > 0).sort((a, b) => b.score - a.score);
+
+            if (results.length === 0) {
+                resultsContainer.innerHTML = `
+                    <div class="no-results">
+                        <h3>No results found</h3>
+                        <p>Try different keywords or browse our articles</p>
+                    </div>
+                    <div class="popular-searches">
+                        <h4>Popular Topics</h4>
+                        <div class="popular-tags">
+                            <span class="popular-tag" onclick="searchFor('AI agents')">AI agents</span>
+                            <span class="popular-tag" onclick="searchFor('automation')">automation</span>
+                            <span class="popular-tag" onclick="searchFor('Claude')">Claude</span>
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Highlight matches in excerpt
+            function highlightMatches(text, terms) {
+                let result = text;
+                terms.forEach(term => {
+                    const regex = new RegExp(`(${term})`, 'gi');
+                    result = result.replace(regex, '<mark>$1</mark>');
+                });
+                return result;
+            }
+
+            const html = `
+                <p class="results-info">${results.length} result${results.length === 1 ? '' : 's'} for "${query}"</p>
+                <div class="search-results">
+                    ${results.map(article => `
+                        <a href="${article.url}" class="result-card">
+                            <span class="result-tag">${article.tag}</span>
+                            <h3 class="result-title">${highlightMatches(article.title, queryTerms)}</h3>
+                            <p class="result-excerpt">${highlightMatches(article.excerpt, queryTerms)}</p>
+                        </a>
+                    `).join('')}
+                </div>
+            `;
+
+            resultsContainer.innerHTML = html;
+        }
+
+        // Debounce search
+        let searchTimeout;
+        searchInput.addEventListener('input', (e) => {
+            clearTimeout(searchTimeout);
+            searchTimeout = setTimeout(() => {
+                performSearch(e.target.value);
+            }, 150);
+        });
+
+        // Keyboard shortcut: / to focus search
+        document.addEventListener('keydown', (e) => {
+            if (e.key === '/' && document.activeElement !== searchInput) {
+                e.preventDefault();
+                searchInput.focus();
+            }
+            if (e.key === 'Escape') {
+                searchInput.blur();
+            }
+        });
+
+        // Check for search query in URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const initialQuery = urlParams.get('q');
+        if (initialQuery) {
+            searchInput.value = initialQuery;
+            performSearch(initialQuery);
+        }
+    </script>
+</body>
+</html>
