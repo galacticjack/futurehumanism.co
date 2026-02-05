@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>404 - Page Not Found | Future Humanism</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 24px;
+        }
+        .error-code {
+            font-size: 8rem;
+            font-weight: 700;
+            color: #FF5A5F;
+            line-height: 1;
+            margin-bottom: 16px;
+        }
+        h1 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        p {
+            color: #b0b0b0;
+            margin-bottom: 32px;
+            max-width: 400px;
+        }
+        .back-btn {
+            display: inline-block;
+            background: #FF5A5F;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .back-btn:hover {
+            background: #ff7a7e;
+            transform: translateY(-2px);
+        }
+        .logo {
+            position: absolute;
+            top: 24px;
+            left: 24px;
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: white;
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+    </style>
+</head>
+<body>
+    <a href="/" class="logo">Future<span>Humanism</span></a>
+    <div class="error-code">404</div>
+    <h1>Page Not Found</h1>
+    <p>The page you're looking for doesn't exist or has been moved. Let's get you back on track.</p>
+    <a href="/" class="back-btn">Back to Home</a>
+</body>
+</html>
