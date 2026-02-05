@@ -64,16 +64,16 @@
         }
 
         .logo-icon {
-            width: 32px;
-            height: 32px;
-            background: var(--accent);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: white;
-            font-weight: 800;
-            font-size: 18px;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
 
         .logo-text {
@@ -667,9 +667,22 @@
 
         /* Stats Section */
         .stats-section {
-            background: var(--bg-dark);
+            background: url('images/cover.jpg') center/cover no-repeat;
             color: white;
-            padding: 60px 24px;
+            padding: 80px 24px;
+            position: relative;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.6);
+        }
+
+        .stats-section .stats-grid {
+            position: relative;
+            z-index: 1;
         }
 
         .stats-grid {
@@ -859,7 +872,7 @@
     <header>
         <div class="header-inner">
             <a href="/" class="logo">
-                <div class="logo-icon">F</div>
+                <div class="logo-icon"><img src="images/profile.jpg" alt="Future Humanism"></div>
                 <div class="logo-text">Future<span>Humanism</span></div>
             </a>
             <nav>
@@ -1127,7 +1140,7 @@
             <div class="footer-top">
                 <div class="footer-brand">
                     <a href="/" class="logo">
-                        <div class="logo-icon">F</div>
+                        <div class="logo-icon"><img src="images/profile.jpg" alt="Future Humanism"></div>
                         <div class="logo-text">Future<span>Humanism</span></div>
                     </a>
                     <p>Where AI meets human potential. Stories, tools, and insights for builders navigating the most interesting time in tech history.</p>
