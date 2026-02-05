@@ -219,31 +219,26 @@
             submitBtn.textContent = 'Subscribing...';
             
             try {
-                // Send to Formspree (you can replace with your own endpoint)
-                const response = await fetch('https://formspree.io/f/xpwzgvvn', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: JSON.stringify({ name, email })
-                });
-                
-                if (response.ok) {
-                    form.style.display = 'none';
-                    successMsg.classList.add('show');
-                    
-                    // Also store locally as backup
-                    const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
-                    subscribers.push({ name, email, date: new Date().toISOString() });
-                    localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
-                } else {
-                    throw new Error('Submission failed');
-                }
-            } catch (error) {
-                // Fallback: store locally and show success anyway
+                // Store subscriber locally (primary storage for static site)
                 const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
-                subscribers.push({ name, email, date: new Date().toISOString() });
+                subscribers.push({ name, email, date: new Date().toISOString(), source: 'subscribe_page' });
+                localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+                
+                // Try to send to backend if available
+                try {
+                    await fetch('https://formspree.io/f/myzevrzl', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({ name, email })
+                    });
+                } catch (e) { /* Backend optional */ }
+                
+                form.style.display = 'none';
+                successMsg.classList.add('show');
+            } catch (error) {
+                // Store locally anyway
+                const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                subscribers.push({ name, email, date: new Date().toISOString(), source: 'subscribe_page' });
                 localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
                 
                 form.style.display = 'none';
