@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How We Automated 80% of Our Agency Work | Future Humanism</title>
+    <meta name="description" content="The exact automations, prompts, and workflows we use to run a digital agency with a fraction of the headcount.">
+    <meta property="og:title" content="How We Automated 80% of Our Agency Work">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --text-primary: #ffffff; --text-secondary: #b0b0b0; --bg-primary: #0a0a0a; --bg-secondary: #141414; --accent: #FF5A5F; --border: #2a2a2a; }
+        body { font-family: 'Inter', sans-serif; background: var(--bg-primary); color: var(--text-primary); line-height: 1.7; }
+        header { padding: 16px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-weight: 700; font-size: 1.2rem; color: var(--text-primary); text-decoration: none; }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        .back-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .hero { background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)), url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=1200') center/cover; padding: 80px 24px; text-align: center; }
+        .hero-tag { display: inline-block; background: var(--accent); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(2rem, 5vw, 3rem); font-weight: 700; margin-bottom: 16px; max-width: 700px; margin-left: auto; margin-right: auto; }
+        .hero-meta { color: var(--text-secondary); font-size: 0.9rem; }
+        article { max-width: 700px; margin: 0 auto; padding: 60px 24px; }
+        article h2 { font-size: 1.6rem; margin: 48px 0 20px; color: var(--text-primary); }
+        article h3 { font-size: 1.25rem; margin: 32px 0 16px; color: var(--text-primary); }
+        article p { margin-bottom: 20px; color: var(--text-secondary); }
+        article ul, article ol { margin: 20px 0; padding-left: 24px; color: var(--text-secondary); }
+        article li { margin-bottom: 12px; }
+        article strong { color: var(--text-primary); }
+        .automation-card { background: var(--bg-secondary); border-radius: 12px; padding: 24px; margin: 24px 0; border: 1px solid var(--border); }
+        .automation-card h4 { color: var(--accent); margin-bottom: 8px; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; }
+        .automation-card h5 { color: var(--text-primary); font-size: 1.1rem; margin-bottom: 12px; }
+        .automation-card p { margin: 0; font-size: 0.95rem; }
+        .time-saved { display: inline-block; background: rgba(102, 187, 106, 0.2); color: #66bb6a; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: 600; margin-top: 12px; }
+        .highlight-box { background: var(--bg-secondary); border-left: 4px solid var(--accent); padding: 24px; margin: 32px 0; border-radius: 0 8px 8px 0; }
+        .highlight-box p { margin: 0; color: var(--text-primary); }
+        .cta-box { background: linear-gradient(135deg, var(--accent), #ff7a7e); padding: 40px; border-radius: 12px; text-align: center; margin: 48px 0; }
+        .cta-box h3 { color: white; margin: 0 0 12px; }
+        .cta-box p { color: rgba(255,255,255,0.9); margin-bottom: 20px; }
+        .cta-box a { display: inline-block; background: white; color: var(--accent); padding: 12px 28px; border-radius: 6px; text-decoration: none; font-weight: 600; }
+        footer { border-top: 1px solid var(--border); padding: 40px 24px; text-align: center; }
+        footer p { color: var(--text-secondary); font-size: 0.9rem; }
+        footer a { color: var(--accent); text-decoration: none; }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+            <a href="/" class="back-link">← Back to Home</a>
+        </div>
+    </header>
+
+    <div class="hero">
+        <span class="hero-tag">Case Study</span>
+        <h1>How We Automated 80% of Our Agency Work</h1>
+        <p class="hero-meta">8 min read · February 2025</p>
+    </div>
+
+    <article>
+        <p>We run a digital marketing agency with 15 clients and a team of 3. Two years ago, that same client load required 8 people.</p>
+
+        <p>We didn't get more efficient. We automated.</p>
+
+        <p>Here's exactly what we automated, the tools we use, and the results.</p>
+
+        <h2>The Automations</h2>
+
+        <div class="automation-card">
+            <h4>Research & Discovery</h4>
+            <h5>Client Brand Research</h5>
+            <p>Before any new client kickoff, we run an automated research pipeline: scrape their website, pull social media profiles, analyze competitor positioning, and summarize their market. Claude processes everything into a structured brief.</p>
+            <p><strong>Before:</strong> 4-6 hours of manual research per client</p>
+            <p><strong>After:</strong> 15 minutes of review + edits</p>
+            <span class="time-saved">~5 hours saved per client</span>
+        </div>
+
+        <div class="automation-card">
+            <h4>Proposals & Pitches</h4>
+            <h5>Proposal Generation</h5>
+            <p>Feed client requirements + our service templates into Claude with a structured prompt. Out comes a 90% complete proposal with pricing, scope, timeline, and case studies automatically pulled from our database.</p>
+            <p><strong>Before:</strong> 3-4 hours per proposal</p>
+            <p><strong>After:</strong> 30 minutes of customization</p>
+            <span class="time-saved">~3 hours saved per proposal</span>
+        </div>
+
+        <div class="automation-card">
+            <h4>Content Production</h4>
+            <h5>Social Media Content Calendar</h5>
+            <p>Monthly content calendars used to take days. Now: input brand voice guide + topics + content pillars → Claude generates 30 days of post concepts with captions. We review, adjust, and schedule.</p>
+            <p><strong>Before:</strong> 8 hours per client per month</p>
+            <p><strong>After:</strong> 2 hours of review + refinement</p>
+            <span class="time-saved">~6 hours saved per client monthly</span>
+        </div>
+
+        <div class="automation-card">
+            <h4>Reporting</h4>
+            <h5>Automated Performance Reports</h5>
+            <p>Pull data from Google Analytics, Meta Ads, Google Ads via APIs. Claude analyzes trends, highlights wins/concerns, and writes the narrative. Export to Google Slides template automatically.</p>
+            <p><strong>Before:</strong> 6 hours per report, dreaded monthly task</p>
+            <p><strong>After:</strong> 45 minutes of review</p>
+            <span class="time-saved">~5 hours saved per report</span>
+        </div>
+
+        <div class="automation-card">
+            <h4>Client Communication</h4>
+            <h5>Email Response Drafting</h5>
+            <p>Every client email gets processed by Claude to draft a response. It pulls context from our CRM, previous conversations, and project status. We review and send. Never starting from blank.</p>
+            <p><strong>Before:</strong> 15-30 minutes per thoughtful email</p>
+            <p><strong>After:</strong> 5 minutes to review and personalize</p>
+            <span class="time-saved">~20 minutes saved per email</span>
+        </div>
+
+        <div class="automation-card">
+            <h4>Ad Creative</h4>
+            <h5>Ad Copy Variations</h5>
+            <p>For every ad campaign, we need 10-20 copy variations. Claude generates them based on winning formulas from our swipe file. We pick the best, test, and iterate.</p>
+            <p><strong>Before:</strong> 2 hours per campaign</p>
+            <p><strong>After:</strong> 20 minutes of selection + tweaking</p>
+            <span class="time-saved">~1.5 hours saved per campaign</span>
+        </div>
+
+        <h2>The Numbers</h2>
+
+        <p>Across 15 clients with monthly retainers:</p>
+
+        <ul>
+            <li><strong>Research:</strong> 75 hours/month → 15 hours/month</li>
+            <li><strong>Content:</strong> 120 hours/month → 30 hours/month</li>
+            <li><strong>Reporting:</strong> 90 hours/month → 15 hours/month</li>
+            <li><strong>Proposals:</strong> 20 hours/month → 5 hours/month</li>
+            <li><strong>Communication:</strong> 50 hours/month → 15 hours/month</li>
+        </ul>
+
+        <p><strong>Total: 355 hours → 80 hours. That's 78% reduction in operational hours.</strong></p>
+
+        <div class="highlight-box">
+            <p>💡 <strong>The insight:</strong> We didn't eliminate human work. We eliminated human busywork. Strategy, relationships, and creative judgment still require humans. Data pulling, first drafts, and formatting don't.</p>
+        </div>
+
+        <h2>What We Don't Automate</h2>
+
+        <ul>
+            <li><strong>Strategy calls:</strong> Humans build trust. Period.</li>
+            <li><strong>Final creative approval:</strong> AI drafts, humans decide.</li>
+            <li><strong>Crisis management:</strong> When things go wrong, humans fix them.</li>
+            <li><strong>Relationship building:</strong> No AI can replace genuine connection.</li>
+            <li><strong>Novel problem-solving:</strong> AI handles patterns; we handle exceptions.</li>
+        </ul>
+
+        <h2>The Tools</h2>
+
+        <ul>
+            <li><strong>Claude Pro + API:</strong> The brain behind 90% of our automations</li>
+            <li><strong>Make (Integromat):</strong> Connects everything, runs on schedule</li>
+            <li><strong>Google Workspace APIs:</strong> Pulls data, generates docs/slides</li>
+            <li><strong>Notion:</strong> Our knowledge base that Claude references</li>
+            <li><strong>Custom scripts:</strong> Python for the stuff no-code can't handle</li>
+        </ul>
+
+        <p>Total automation tooling cost: ~$200/month. Saves us easily $8,000+/month in labor.</p>
+
+        <h2>How to Start</h2>
+
+        <p>Don't try to automate everything at once. Here's the progression that worked for us:</p>
+
+        <ol>
+            <li><strong>Week 1:</strong> Automate one reporting task. Pick your most repetitive report.</li>
+            <li><strong>Week 2:</strong> Add email drafting. Create templates Claude can use.</li>
+            <li><strong>Week 3:</strong> Content calendar generation. Build your brand voice prompts.</li>
+            <li><strong>Month 2:</strong> Connect systems. Make data flow automatically.</li>
+            <li><strong>Month 3:</strong> Tackle proposals and research. These are bigger but highest impact.</li>
+        </ol>
+
+        <p>Each automation builds on the last. You learn what works, refine your prompts, and expand.</p>
+
+        <h2>The Result</h2>
+
+        <p>We went from 8 people struggling to keep up to 3 people running smoothly with better output quality. Not because AI replaced humans, but because AI eliminated the work that was never really "human" work in the first place.</p>
+
+        <p>The 80% we automated was always just information transformation: taking data from one format and putting it in another. That's what computers are for.</p>
+
+        <p>The 20% we kept is what actually matters: strategy, creativity, relationships, and judgment. That's what humans are for.</p>
+
+        <div class="cta-box">
+            <h3>Get the Automation Playbook</h3>
+            <p>Weekly breakdowns of AI workflows that actually save time.</p>
+            <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank">Subscribe Free →</a>
+        </div>
+    </article>
+
+    <footer>
+        <p>© 2025 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="https://galactics-newsletter.beehiiv.com" target="_blank">Newsletter</a></p>
+    </footer>
+</body>
+</html>
