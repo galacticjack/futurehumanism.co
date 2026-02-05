@@ -16,15 +16,15 @@
         }
         
         :root {
-            --text-primary: #1a1a1a;
-            --text-secondary: #555;
-            --text-muted: #888;
-            --bg-primary: #fff;
-            --bg-secondary: #f5f5f5;
-            --bg-dark: #1a1a1a;
-            --border: #e5e5e5;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #707070;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-dark: #000000;
+            --border: #2a2a2a;
             --accent: #FF5A5F;
-            --accent-hover: #e54e53;
+            --accent-hover: #ff7a7e;
         }
         
         body {
@@ -41,7 +41,7 @@
             border-bottom: 1px solid var(--border);
             position: sticky;
             top: 0;
-            background: rgba(255,255,255,0.98);
+            background: rgba(10,10,10,0.95);
             backdrop-filter: blur(10px);
             z-index: 100;
         }
@@ -309,18 +309,19 @@
             width: 36px;
             height: 36px;
             border: 1px solid var(--border);
-            background: white;
+            background: var(--bg-secondary);
             border-radius: 50%;
             cursor: pointer;
             display: flex;
             align-items: center;
             justify-content: center;
             transition: all 0.2s;
+            color: var(--text-secondary);
         }
 
         .carousel-nav button:hover {
-            background: var(--text-primary);
-            border-color: var(--text-primary);
+            background: var(--accent);
+            border-color: var(--accent);
             color: white;
         }
 
@@ -493,6 +494,12 @@
             border-radius: 6px;
             font-size: 0.9rem;
             font-family: inherit;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+        }
+
+        .newsletter-form input::placeholder {
+            color: var(--text-muted);
         }
 
         .newsletter-form input:focus {
@@ -543,8 +550,8 @@
         }
 
         .social-icons a:hover {
-            background: var(--text-primary);
-            border-color: var(--text-primary);
+            background: var(--accent);
+            border-color: var(--accent);
             color: white;
         }
 
@@ -581,7 +588,7 @@
         }
 
         .product-card {
-            background: white;
+            background: var(--bg-secondary);
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border);
@@ -590,7 +597,8 @@
 
         .product-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.1);
+            box-shadow: 0 12px 40px rgba(255,90,95,0.15);
+            border-color: var(--accent);
         }
 
         .product-image {
@@ -649,14 +657,14 @@
             font-weight: 600;
             text-transform: uppercase;
             padding: 5px 10px;
-            background: #e8f5e9;
-            color: #2e7d32;
+            background: rgba(46, 125, 50, 0.2);
+            color: #66bb6a;
             border-radius: 4px;
         }
 
         .product-badge.beta {
-            background: #fff3e0;
-            color: #ef6c00;
+            background: rgba(239, 108, 0, 0.2);
+            color: #ffb74d;
         }
 
         /* Accent Bar */
