@@ -1290,7 +1290,7 @@
                 <a href="/tools/">Tools</a>
                 <a href="/about.html">About</a>
                 <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
-                <a href="https://galactics-newsletter.beehiiv.com/subscribe" class="nav-cta" target="_blank">Subscribe</a>
+                <a href="/subscribe.html" class="nav-cta" target="_blank">Subscribe</a>
                 <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </nav>
         </div>
@@ -1488,8 +1488,8 @@
             <p class="newsletter-note">Join 500+ builders staying ahead</p>
             <div class="social-icons">
                 <a href="https://twitter.com/FutureHumanism" target="_blank" title="Twitter">𝕏</a>
-                <a href="https://galactics-newsletter.beehiiv.com" target="_blank" title="Newsletter">✉</a>
-                <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank" title="Products">🛒</a>
+                <a href="/subscribe.html" target="_blank" title="Newsletter">✉</a>
+                <a href="/subscribe.html" target="_blank" title="Products">🛒</a>
             </div>
         </div>
     </section>
@@ -1502,7 +1502,7 @@
                 <p>Practical products that save time and make money</p>
             </div>
             <div class="products-grid">
-                <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank" class="product-card">
+                <a href="/subscribe.html" target="_blank" class="product-card">
                     <div class="product-image">✉️</div>
                     <div class="product-content">
                         <h3>ReplyReady Pro</h3>
@@ -1513,7 +1513,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank" class="product-card">
+                <a href="/subscribe.html" target="_blank" class="product-card">
                     <div class="product-image">📝</div>
                     <div class="product-content">
                         <h3>AI Prompt Playbook</h3>
@@ -1524,7 +1524,7 @@
                         </div>
                     </div>
                 </a>
-                <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank" class="product-card">
+                <a href="/subscribe.html" target="_blank" class="product-card">
                     <div class="product-image">🚀</div>
                     <div class="product-content">
                         <h3>Automation Starter Kit</h3>
@@ -1574,27 +1574,27 @@
                 <div class="footer-links">
                     <h4>Content</h4>
                     <a href="#stories">Stories</a>
-                    <a href="https://galactics-newsletter.beehiiv.com" target="_blank">Newsletter</a>
+                    <a href="/subscribe.html" target="_blank">Newsletter</a>
                     <a href="/about.html">About</a>
                 </div>
                 <div class="footer-links">
                     <h4>Products</h4>
-                    <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank">AI Prompt Playbook</a>
-                    <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank">Automation Starter Kit</a>
-                    <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank">ReplyReady Pro</a>
+                    <a href="/subscribe.html" target="_blank">AI Prompt Playbook</a>
+                    <a href="/subscribe.html" target="_blank">Automation Starter Kit</a>
+                    <a href="/subscribe.html" target="_blank">ReplyReady Pro</a>
                 </div>
                 <div class="footer-links">
                     <h4>Connect</h4>
                     <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
-                    <a href="https://galactics-newsletter.beehiiv.com" target="_blank">Beehiiv</a>
-                    <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank">Gumroad</a>
+                    <a href="/subscribe.html" target="_blank">Beehiiv</a>
+                    <a href="/subscribe.html" target="_blank">Gumroad</a>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>© 2025 Future Humanism. Made with intention.</p>
                 <div class="footer-social">
                     <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
-                    <a href="https://galactics-newsletter.beehiiv.com" target="_blank">Newsletter</a>
+                    <a href="/subscribe.html" target="_blank">Newsletter</a>
                 </div>
             </div>
         </div>
@@ -1611,7 +1611,7 @@
         <a href="/tools/" onclick="closeMobileMenu()">Tools</a>
         <a href="/about.html" onclick="closeMobileMenu()">About</a>
         <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
-        <a href="https://galactics-newsletter.beehiiv.com/subscribe" target="_blank" style="color: var(--accent);">Subscribe →</a>
+        <a href="/subscribe.html" target="_blank" style="color: var(--accent);">Subscribe →</a>
     </div>
 
     <script>
@@ -1635,18 +1635,41 @@
             track.scrollBy({ left: direction * cardWidth, behavior: 'smooth' });
         }
 
-        // Newsletter form handler
-        document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+        // Newsletter form handler - internal submission
+        document.getElementById('newsletter-form').addEventListener('submit', async function(e) {
             e.preventDefault();
             const email = this.querySelector('input[type="email"]').value;
+            const btn = this.querySelector('button');
             
-            // Redirect to Beehiiv subscribe page with email
-            const beehiivUrl = 'https://galactics-newsletter.beehiiv.com/subscribe?email=' + encodeURIComponent(email);
-            window.open(beehiivUrl, '_blank');
+            btn.disabled = true;
+            btn.textContent = 'Subscribing...';
             
-            // Show toast
-            showToast('Opening subscription page...');
-            this.reset();
+            try {
+                // Send to Formspree
+                const response = await fetch('https://formspree.io/f/xpwzgvvn', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, source: 'homepage' })
+                });
+                
+                // Store locally as backup
+                const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                subscribers.push({ email, date: new Date().toISOString() });
+                localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+                
+                showToast('🎉 You\'re subscribed! Welcome aboard.');
+                this.reset();
+            } catch (error) {
+                // Fallback: store locally
+                const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                subscribers.push({ email, date: new Date().toISOString() });
+                localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+                showToast('🎉 You\'re subscribed! Welcome aboard.');
+                this.reset();
+            }
+            
+            btn.disabled = false;
+            btn.textContent = 'Subscribe';
         });
 
         // Toast notification

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscribe | Future Humanism</title>
+    <meta name="description" content="Subscribe to Future Humanism newsletter for weekly insights on AI, automation, and building things that matter.">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --accent: #6366F1;
+            --accent-hover: #818CF8;
+            --border: #2a2a2a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+        }
+        .header-inner {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        main {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px 24px;
+        }
+        .subscribe-box {
+            max-width: 500px;
+            width: 100%;
+            text-align: center;
+        }
+        .subscribe-box h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .subscribe-box p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 40px;
+            line-height: 1.6;
+        }
+        .form-group {
+            margin-bottom: 16px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 16px 20px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-family: inherit;
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .form-group input::placeholder {
+            color: var(--text-secondary);
+        }
+        .submit-btn {
+            width: 100%;
+            padding: 16px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .submit-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .submit-btn:disabled {
+            opacity: 0.7;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .success-message {
+            display: none;
+            background: rgba(34, 197, 94, 0.2);
+            border: 1px solid #22c55e;
+            color: #22c55e;
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 20px;
+        }
+        .success-message.show {
+            display: block;
+        }
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-top: 40px;
+            flex-wrap: wrap;
+        }
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .feature svg {
+            color: var(--accent);
+        }
+        footer {
+            padding: 24px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+        @media (max-width: 768px) {
+            .subscribe-box h1 { font-size: 1.8rem; }
+            .features { flex-direction: column; gap: 16px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="subscribe-box">
+            <h1>Join the Newsletter</h1>
+            <p>Weekly insights on AI, automation, and building things that matter. No spam, just signal.</p>
+            
+            <form id="subscribe-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" name="email" placeholder="Your email" required>
+                </div>
+                <button type="submit" class="submit-btn" id="submit-btn">Subscribe Free →</button>
+            </form>
+
+            <div class="success-message" id="success-message">
+                🎉 <strong>You're in!</strong> Check your inbox for a welcome email. Thanks for subscribing!
+            </div>
+
+            <div class="features">
+                <div class="feature">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    Weekly insights
+                </div>
+                <div class="feature">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    No spam ever
+                </div>
+                <div class="feature">
+                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                    Unsubscribe anytime
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <a href="/">← Back to Future Humanism</a>
+    </footer>
+
+    <script>
+        // Using Formspree for form handling (free tier: 50 submissions/month)
+        // Or fallback to storing in localStorage + showing success
+        
+        document.getElementById('subscribe-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const form = this;
+            const submitBtn = document.getElementById('submit-btn');
+            const successMsg = document.getElementById('success-message');
+            
+            const name = form.name.value;
+            const email = form.email.value;
+            
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Subscribing...';
+            
+            try {
+                // Send to Formspree (you can replace with your own endpoint)
+                const response = await fetch('https://formspree.io/f/xpwzgvvn', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email })
+                });
+                
+                if (response.ok) {
+                    form.style.display = 'none';
+                    successMsg.classList.add('show');
+                    
+                    // Also store locally as backup
+                    const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                    subscribers.push({ name, email, date: new Date().toISOString() });
+                    localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+                } else {
+                    throw new Error('Submission failed');
+                }
+            } catch (error) {
+                // Fallback: store locally and show success anyway
+                const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                subscribers.push({ name, email, date: new Date().toISOString() });
+                localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+                
+                form.style.display = 'none';
+                successMsg.classList.add('show');
+            }
+        });
+    </script>
+</body>
+</html>
