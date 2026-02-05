@@ -425,6 +425,127 @@
             padding: 0 16px;
         }
     }
+    
+        /* Share & Follow Sections */
+        .share-section {
+            margin: 48px 0;
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .share-section h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+            text-align: center;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+        .share-btn.twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+        .share-btn.twitter:hover {
+            background: #0d95e8;
+            transform: translateY(-2px);
+        }
+        .share-btn.linkedin {
+            background: #0077B5;
+            color: white;
+        }
+        .share-btn.linkedin:hover {
+            background: #006399;
+            transform: translateY(-2px);
+        }
+        .share-btn.copy-link {
+            background: var(--bg-secondary);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        .share-btn.copy-link:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .follow-section {
+            margin-top: 24px;
+            text-align: center;
+        }
+        .follow-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 28px;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .follow-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        /* Top share bar */
+        .top-share {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 8px;
+            margin-bottom: 32px;
+        }
+        .top-share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .top-share-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        @media (max-width: 768px) {
+            .share-btn {
+                padding: 10px 16px;
+                font-size: 0.85rem;
+            }
+            .top-share {
+                justify-content: center;
+            }
+        }
     </style>
     
     <script>
@@ -619,28 +740,7 @@
             <p><strong>The question isn't whether multimodal AI will transform business communication. The question is whether Google just accelerated that transformation by three years.</strong></p>
         </div>
 
-        <!-- Social Share Buttons -->
-        <div class="share-section">
-            <p class="share-label">Share this analysis</p>
-            <div class="share-buttons">
-                <a href="https://twitter.com/intent/tweet?text=Google's%20Gemini%202.0%20Flash%20isn't%20just%20another%20AI%20update—it's%20a%20strategic%20weapon%20in%20the%20multimodal%20future.%20Essential%20reading%20for%20business%20leaders.%20🤖&url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fgemini-2-flash-multimodal-ai-dominance.html&via=FutureHumanism" target="_blank" class="share-btn twitter" title="Share on X/Twitter">
-                    🐦 Share on X
-                </a>
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fgemini-2-flash-multimodal-ai-dominance.html" target="_blank" class="share-btn facebook" title="Share on Facebook">
-                    📘 Share on Facebook
-                </a>
-                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fgemini-2-flash-multimodal-ai-dominance.html" target="_blank" class="share-btn linkedin" title="Share on LinkedIn">
-                    💼 Share on LinkedIn
-                </a>
-                <button class="share-btn copy-link" onclick="copyLink()" title="Copy link">
-                    🔗 Copy Link
-                </button>
-                <a href="https://twitter.com/FutureHumanism" target="_blank" class="share-btn follow-x">
-                    ⭐ Follow @FutureHumanism
-                </a>
-            </div>
-        </div>
-    </div>    <script>
+            </div>    <script>
     document.addEventListener('DOMContentLoaded', function() {
         const progressBar = document.getElementById('reading-progress');
         const article = document.querySelector('article, .content, main, .article-content') || document.body;
