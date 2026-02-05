@@ -1,0 +1,862 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Readiness Quiz | How AI-Ready Is Your Business? | Future Humanism</title>
+    <meta name="description" content="Take our free 2-minute quiz to discover how AI-ready your business is. Get a personalized score and actionable recommendations.">
+    <meta property="og:title" content="AI Readiness Quiz | How AI-Ready Is Your Business?">
+    <meta property="og:description" content="Take our free 2-minute quiz to discover how AI-ready your business is. Get personalized recommendations.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1a1a1a;
+            --accent: #6366F1;
+            --accent-hover: #818CF8;
+            --border: #2a2a2a;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --danger: #ef4444;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        
+        main {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+        
+        /* Progress Bar */
+        .progress-container {
+            margin-bottom: 40px;
+        }
+        .progress-bar {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            border-radius: 3px;
+            transition: width 0.4s ease;
+            width: 0%;
+        }
+        .progress-text {
+            text-align: center;
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Quiz Container */
+        .quiz-container {
+            background: var(--bg-secondary);
+            border-radius: 16px;
+            padding: 40px;
+            border: 1px solid var(--border);
+        }
+        
+        /* Intro Screen */
+        .intro-screen {
+            text-align: center;
+        }
+        .intro-screen .icon {
+            font-size: 4rem;
+            margin-bottom: 24px;
+        }
+        .intro-screen h1 {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+        }
+        .intro-screen p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .intro-features {
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+        .intro-feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        .intro-feature svg {
+            color: var(--success);
+        }
+        
+        /* Question Screen */
+        .question-screen {
+            display: none;
+        }
+        .question-screen.active {
+            display: block;
+        }
+        .question-number {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+        }
+        .question-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 32px;
+            line-height: 1.3;
+        }
+        
+        /* Options */
+        .options {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .option {
+            padding: 20px 24px;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+        .option:hover {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.1);
+        }
+        .option.selected {
+            border-color: var(--accent);
+            background: rgba(99, 102, 241, 0.15);
+        }
+        .option-letter {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            background: var(--border);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .option.selected .option-letter {
+            background: var(--accent);
+        }
+        .option-text {
+            flex: 1;
+        }
+        
+        /* Navigation */
+        .quiz-nav {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 32px;
+            gap: 16px;
+        }
+        .btn {
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: none;
+            font-family: inherit;
+        }
+        .btn-primary {
+            background: var(--accent);
+            color: white;
+        }
+        .btn-primary:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .btn-primary:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+            transform: none;
+        }
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+        }
+        .btn-secondary:hover {
+            background: var(--border);
+            color: var(--text-primary);
+        }
+        
+        /* Results Screen */
+        .results-screen {
+            display: none;
+            text-align: center;
+        }
+        .results-screen.active {
+            display: block;
+        }
+        .score-circle {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            margin: 0 auto 24px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+        .score-circle::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            padding: 6px;
+            background: conic-gradient(var(--score-color) calc(var(--score) * 3.6deg), var(--border) 0);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+        }
+        .score-number {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1;
+        }
+        .score-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        .score-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        .score-description {
+            color: var(--text-secondary);
+            font-size: 1.05rem;
+            margin-bottom: 32px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Recommendations */
+        .recommendations {
+            text-align: left;
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 32px;
+        }
+        .recommendations h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .recommendations ul {
+            list-style: none;
+        }
+        .recommendations li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            color: var(--text-secondary);
+        }
+        .recommendations li:last-child {
+            border-bottom: none;
+        }
+        .recommendations li::before {
+            content: '→';
+            color: var(--accent);
+            font-weight: bold;
+        }
+        
+        /* Email Capture */
+        .email-capture {
+            background: linear-gradient(135deg, var(--accent), #8B5CF6);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .email-capture h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .email-capture p {
+            opacity: 0.9;
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+        .email-form {
+            display: flex;
+            gap: 12px;
+        }
+        .email-form input {
+            flex: 1;
+            padding: 14px 16px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-family: inherit;
+        }
+        .email-form button {
+            padding: 14px 24px;
+            background: white;
+            color: var(--accent);
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            white-space: nowrap;
+        }
+        
+        /* Share */
+        .share-results {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+        }
+        .share-btn {
+            padding: 12px 20px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .share-btn:hover {
+            background: var(--border);
+            color: var(--text-primary);
+        }
+        
+        @media (max-width: 768px) {
+            main { padding: 24px 16px 60px; }
+            .quiz-container { padding: 24px; }
+            .intro-screen h1 { font-size: 1.6rem; }
+            .intro-features { flex-direction: column; gap: 12px; align-items: center; }
+            .question-text { font-size: 1.25rem; }
+            .option { padding: 16px; }
+            .email-form { flex-direction: column; }
+            .score-circle { width: 150px; height: 150px; }
+            .score-number { font-size: 2.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+        </div>
+    </header>
+
+    <main>
+        <div class="progress-container" id="progress-container" style="display: none;">
+            <div class="progress-bar">
+                <div class="progress-fill" id="progress-fill"></div>
+            </div>
+            <p class="progress-text"><span id="current-q">1</span> of <span id="total-q">8</span> questions</p>
+        </div>
+
+        <div class="quiz-container">
+            <!-- Intro Screen -->
+            <div class="intro-screen" id="intro-screen">
+                <div class="icon">🎯</div>
+                <h1>How AI-Ready Is Your Business?</h1>
+                <p>Take this 2-minute quiz to discover your AI readiness score and get personalized recommendations.</p>
+                <div class="intro-features">
+                    <div class="intro-feature">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        8 questions
+                    </div>
+                    <div class="intro-feature">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        2 minutes
+                    </div>
+                    <div class="intro-feature">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 20 20"><path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/></svg>
+                        Free forever
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="startQuiz()">Start Quiz →</button>
+            </div>
+
+            <!-- Questions -->
+            <div class="question-screen" id="q1">
+                <div class="question-number">Question 1 of 8</div>
+                <h2 class="question-text">How would you describe your team's current AI usage?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 1, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">We don't use any AI tools</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">A few people use ChatGPT occasionally</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">We have some AI tools integrated into workflows</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 1, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">AI is a core part of how we operate</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <div></div>
+                    <button class="btn btn-primary" id="next-1" onclick="nextQuestion(2)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q2">
+                <div class="question-number">Question 2 of 8</div>
+                <h2 class="question-text">How much time does your team spend on repetitive tasks weekly?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 2, 3)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Less than 5 hours (we've automated most)</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 2)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">5-15 hours</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 1)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">15-30 hours</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 2, 0)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">30+ hours (lots of manual work)</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(1)">← Back</button>
+                    <button class="btn btn-primary" id="next-2" onclick="nextQuestion(3)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q3">
+                <div class="question-number">Question 3 of 8</div>
+                <h2 class="question-text">Do you have documented processes for your key workflows?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 3, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">No, everything is in people's heads</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Some processes are documented</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Most key processes are documented</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 3, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Everything is documented with SOPs</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(2)">← Back</button>
+                    <button class="btn btn-primary" id="next-3" onclick="nextQuestion(4)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q4">
+                <div class="question-number">Question 4 of 8</div>
+                <h2 class="question-text">How does leadership view AI adoption?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 4, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Skeptical or concerned about risks</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Curious but not prioritizing it</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Actively exploring AI opportunities</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 4, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">AI is a strategic priority with budget</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(3)">← Back</button>
+                    <button class="btn btn-primary" id="next-4" onclick="nextQuestion(5)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q5">
+                <div class="question-number">Question 5 of 8</div>
+                <h2 class="question-text">How would you rate your team's data organization?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 5, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Data is scattered across many places</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 5, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Some centralization but inconsistent</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 5, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Well-organized with clear systems</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 5, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Structured, accessible, and AI-ready</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(4)">← Back</button>
+                    <button class="btn btn-primary" id="next-5" onclick="nextQuestion(6)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q6">
+                <div class="question-number">Question 6 of 8</div>
+                <h2 class="question-text">What's your current tech stack like?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 6, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Mostly spreadsheets and email</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 6, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Basic SaaS tools (Google Workspace, etc.)</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 6, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Integrated tools with some automation</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 6, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Modern stack with APIs and integrations</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(5)">← Back</button>
+                    <button class="btn btn-primary" id="next-6" onclick="nextQuestion(7)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q7">
+                <div class="question-number">Question 7 of 8</div>
+                <h2 class="question-text">How comfortable is your team with learning new tools?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 7, 0)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Resistant to change</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 7, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Open but need lots of training</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 7, 2)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Generally adaptable</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 7, 3)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Love trying new tech</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(6)">← Back</button>
+                    <button class="btn btn-primary" id="next-7" onclick="nextQuestion(8)" disabled>Next →</button>
+                </div>
+            </div>
+
+            <div class="question-screen" id="q8">
+                <div class="question-number">Question 8 of 8</div>
+                <h2 class="question-text">What's the main blocker to AI adoption for you?</h2>
+                <div class="options">
+                    <div class="option" onclick="selectOption(this, 8, 1)">
+                        <span class="option-letter">A</span>
+                        <span class="option-text">Don't know where to start</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 8, 1)">
+                        <span class="option-letter">B</span>
+                        <span class="option-text">Concerns about cost</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 8, 1)">
+                        <span class="option-letter">C</span>
+                        <span class="option-text">Lack of time to implement</span>
+                    </div>
+                    <div class="option" onclick="selectOption(this, 8, 2)">
+                        <span class="option-letter">D</span>
+                        <span class="option-text">Nothing major - we're ready!</span>
+                    </div>
+                </div>
+                <div class="quiz-nav">
+                    <button class="btn btn-secondary" onclick="prevQuestion(7)">← Back</button>
+                    <button class="btn btn-primary" id="next-8" onclick="showResults()" disabled>See My Results →</button>
+                </div>
+            </div>
+
+            <!-- Results Screen -->
+            <div class="results-screen" id="results-screen">
+                <div class="score-circle" id="score-circle">
+                    <span class="score-number" id="score-number">0</span>
+                    <span class="score-label">out of 100</span>
+                </div>
+                <h2 class="score-title" id="score-title">Loading...</h2>
+                <p class="score-description" id="score-description">Loading...</p>
+                
+                <div class="recommendations">
+                    <h3>🎯 Your Next Steps</h3>
+                    <ul id="recommendations-list">
+                        <!-- Filled by JS -->
+                    </ul>
+                </div>
+
+                <div class="email-capture">
+                    <h3>Get Your Full AI Readiness Report</h3>
+                    <p>Plus weekly insights on AI, automation, and building smarter businesses.</p>
+                    <form class="email-form" id="results-email-form">
+                        <input type="email" placeholder="Enter your email" required>
+                        <button type="submit">Send Report →</button>
+                    </form>
+                </div>
+
+                <div class="share-results">
+                    <a href="#" class="share-btn" id="share-twitter">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <a href="/" class="share-btn">
+                        ← Back to Home
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        let answers = {};
+        const totalQuestions = 8;
+        
+        function startQuiz() {
+            document.getElementById('intro-screen').style.display = 'none';
+            document.getElementById('q1').classList.add('active');
+            document.getElementById('progress-container').style.display = 'block';
+            updateProgress(1);
+        }
+        
+        function selectOption(element, question, score) {
+            // Clear previous selection
+            element.parentElement.querySelectorAll('.option').forEach(opt => {
+                opt.classList.remove('selected');
+            });
+            // Select this option
+            element.classList.add('selected');
+            answers[question] = score;
+            // Enable next button
+            document.getElementById('next-' + question).disabled = false;
+        }
+        
+        function nextQuestion(num) {
+            document.getElementById('q' + (num - 1)).classList.remove('active');
+            document.getElementById('q' + num).classList.add('active');
+            updateProgress(num);
+        }
+        
+        function prevQuestion(num) {
+            document.getElementById('q' + (num + 1)).classList.remove('active');
+            document.getElementById('q' + num).classList.add('active');
+            updateProgress(num);
+        }
+        
+        function updateProgress(current) {
+            const percent = ((current - 1) / totalQuestions) * 100;
+            document.getElementById('progress-fill').style.width = percent + '%';
+            document.getElementById('current-q').textContent = current;
+        }
+        
+        function showResults() {
+            // Hide questions
+            document.querySelectorAll('.question-screen').forEach(q => q.classList.remove('active'));
+            document.getElementById('progress-container').style.display = 'none';
+            
+            // Calculate score
+            const totalScore = Object.values(answers).reduce((a, b) => a + b, 0);
+            const maxScore = totalQuestions * 3;
+            const percentScore = Math.round((totalScore / maxScore) * 100);
+            
+            // Determine level and recommendations
+            let title, description, recommendations, color;
+            
+            if (percentScore >= 80) {
+                title = "AI Leader 🚀";
+                description = "You're ahead of the curve! Your organization is well-positioned to leverage advanced AI capabilities and gain competitive advantage.";
+                recommendations = [
+                    "Explore AI agents and autonomous workflows",
+                    "Consider building custom AI solutions",
+                    "Look into AI-powered decision making",
+                    "Share your knowledge - become an AI thought leader"
+                ];
+                color = '#22c55e';
+            } else if (percentScore >= 60) {
+                title = "AI Ready 💪";
+                description = "You have solid foundations in place. With some focused effort, you can unlock significant AI-powered productivity gains.";
+                recommendations = [
+                    "Identify your top 3 repetitive tasks to automate",
+                    "Train your team on advanced AI prompting",
+                    "Integrate AI into your existing workflows",
+                    "Start measuring time saved with AI"
+                ];
+                color = '#6366F1';
+            } else if (percentScore >= 40) {
+                title = "AI Curious 🔍";
+                description = "You're on the right track but there's room to grow. Focus on building foundations before scaling AI adoption.";
+                recommendations = [
+                    "Document your key processes first",
+                    "Start with ChatGPT/Claude for individual tasks",
+                    "Centralize your data and documentation",
+                    "Get leadership buy-in with small wins"
+                ];
+                color = '#f59e0b';
+            } else {
+                title = "AI Starter 🌱";
+                description = "You're at the beginning of your AI journey. That's okay! Start with the basics and build from there.";
+                recommendations = [
+                    "Begin using ChatGPT for daily tasks",
+                    "Document one key workflow this week",
+                    "Identify your biggest time sink",
+                    "Read our guide: 'Complete Guide to AI Agents'"
+                ];
+                color = '#ef4444';
+            }
+            
+            // Show results
+            document.getElementById('results-screen').classList.add('active');
+            
+            // Animate score
+            const scoreCircle = document.getElementById('score-circle');
+            scoreCircle.style.setProperty('--score-color', color);
+            scoreCircle.style.setProperty('--score', '0');
+            
+            document.getElementById('score-title').textContent = title;
+            document.getElementById('score-description').textContent = description;
+            
+            // Fill recommendations
+            const recList = document.getElementById('recommendations-list');
+            recList.innerHTML = recommendations.map(r => `<li>${r}</li>`).join('');
+            
+            // Animate score counting
+            let current = 0;
+            const increment = percentScore / 30;
+            const timer = setInterval(() => {
+                current += increment;
+                if (current >= percentScore) {
+                    current = percentScore;
+                    clearInterval(timer);
+                }
+                document.getElementById('score-number').textContent = Math.round(current);
+                scoreCircle.style.setProperty('--score', Math.round(current));
+            }, 30);
+            
+            // Set up Twitter share
+            const tweetText = `I scored ${percentScore}/100 on the AI Readiness Quiz! 🤖 Find out how AI-ready your business is:`;
+            document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent('https://futurehumanism.co/quiz.html')}&via=FutureHumanism`;
+            
+            // Store result
+            localStorage.setItem('fh_quiz_score', percentScore);
+            localStorage.setItem('fh_quiz_level', title);
+        }
+        
+        // Email form handler
+        document.getElementById('results-email-form').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const email = this.querySelector('input').value;
+            const score = localStorage.getItem('fh_quiz_score') || '?';
+            const level = localStorage.getItem('fh_quiz_level') || 'Unknown';
+            
+            // Store locally
+            const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+            subscribers.push({ 
+                email, 
+                date: new Date().toISOString(), 
+                source: 'quiz',
+                quiz_score: score,
+                quiz_level: level
+            });
+            localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+            
+            // Try Formspree
+            try {
+                await fetch('https://formspree.io/f/myzevrzl', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ email, quiz_score: score, quiz_level: level, source: 'quiz' })
+                });
+            } catch (e) {}
+            
+            this.innerHTML = '<p style="color: white; font-size: 1.1rem;">🎉 Check your inbox! Report on its way.</p>';
+        });
+    </script>
+</body>
+</html>
