@@ -262,9 +262,20 @@
                 padding: 32px 16px 80px;
             }
         }
-    </style>
+        /* Reading Progress Bar */
+    #reading-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 0%;
+        height: 3px;
+        background: linear-gradient(90deg, #FF5A5F, #FF7F7F);
+        z-index: 1000;
+        transition: width 0.1s ease-out;
+    }</style>
 </head>
 <body>
+    <div id="reading-progress"></div>
     <div class="progress-container">
         <div class="progress-bar" id="progressBar"></div>
     </div>
@@ -529,6 +540,21 @@
                 imageObserver.observe(img);
             });
         }
+    </script>    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const progressBar = document.getElementById('reading-progress');
+        const article = document.querySelector('article, .content, main, .article-content') || document.body;
+        
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+            progressBar.style.width = progress + '%';
+        }
+        
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+    });
     </script>
 </body>
 </html>

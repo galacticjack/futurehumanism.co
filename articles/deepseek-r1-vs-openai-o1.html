@@ -38,6 +38,7 @@
     <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
+    <div id="reading-progress"></div>
     <header>
         <div class="header-inner">
             <a href="/" class="logo">Future<span>Humanism</span></a>
@@ -232,6 +233,21 @@
         </div>
     </div>
 
-    <script src="/scripts.js"></script>
+    <script src="/scripts.js"></script>    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const progressBar = document.getElementById('reading-progress');
+        const article = document.querySelector('article, .content, main, .article-content') || document.body;
+        
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+            progressBar.style.width = progress + '%';
+        }
+        
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+    });
+    </script>
 </body>
 </html>
