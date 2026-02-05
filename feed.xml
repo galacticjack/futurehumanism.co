@@ -3,38 +3,120 @@
   <channel>
     <title>Future Humanism</title>
     <link>https://futurehumanism.co</link>
-    <description>Future Humanism Blog Feed</description>
+    <description>Where AI Meets Human Potential. Weekly insights on AI, automation, and building things that matter.</description>
     <language>en-us</language>
-    <lastBuildDate>Thu, 05 Feb 2026 21:37:42 +0700</lastBuildDate>
+    <lastBuildDate>Thu, 06 Feb 2026 06:30:00 +0700</lastBuildDate>
+
+    <item>
+      <title>AI Agents Getting Memory: Why Persistent Context Changes Everything</title>
+      <link>https://futurehumanism.co/articles/ai-agents-memory.html</link>
+      <guid>https://futurehumanism.co/articles/ai-agents-memory.html</guid>
+      <description>The breakthrough that transforms AI agents from smart tools into persistent digital minds.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning</title>
+      <link>https://futurehumanism.co/articles/deepseek-r1-vs-openai-o1.html</link>
+      <guid>https://futurehumanism.co/articles/deepseek-r1-vs-openai-o1.html</guid>
+      <description>DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future</title>
+      <link>https://futurehumanism.co/articles/chatgpt-pro-200-enterprise-ai-shift.html</link>
+      <guid>https://futurehumanism.co/articles/chatgpt-pro-200-enterprise-ai-shift.html</guid>
+      <description>OpenAI's premium pricing strategy reveals how enterprise AI budgets will reshape competitive landscapes.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI</title>
+      <link>https://futurehumanism.co/articles/gemini-2-flash-multimodal-ai-dominance.html</link>
+      <guid>https://futurehumanism.co/articles/gemini-2-flash-multimodal-ai-dominance.html</guid>
+      <description>Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>The $200M Deal That Just Changed Enterprise AI Forever</title>
+      <link>https://futurehumanism.co/articles/snowflake-openai-enterprise-ai-tipping-point.html</link>
+      <guid>https://futurehumanism.co/articles/snowflake-openai-enterprise-ai-tipping-point.html</guid>
+      <description>Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise transformation.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>World Models: The AI Breakthrough That Will Change Everything After LLMs</title>
+      <link>https://futurehumanism.co/articles/ai-world-models-next-breakthrough.html</link>
+      <guid>https://futurehumanism.co/articles/ai-world-models-next-breakthrough.html</guid>
+      <description>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works.</description>
+      <pubDate>Thu, 06 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>AI Agents: The Next Big Platform Shift After Mobile</title>
+      <link>https://futurehumanism.co/articles/ai-agents-platform-shift.html</link>
+      <guid>https://futurehumanism.co/articles/ai-agents-platform-shift.html</guid>
+      <description>Why agents represent the most significant platform shift since mobile.</description>
+      <pubDate>Wed, 05 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>AI Agents Are Eating Software</title>
+      <link>https://futurehumanism.co/articles/ai-agents-eating-software.html</link>
+      <guid>https://futurehumanism.co/articles/ai-agents-eating-software.html</guid>
+      <description>Software is being absorbed by agents. The UI layer is disappearing.</description>
+      <pubDate>Wed, 05 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
+
+    <item>
+      <title>The Agent Economy: How AI Will Create $1 Trillion in New Value by 2027</title>
+      <link>https://futurehumanism.co/articles/ai-agent-economy-2027.html</link>
+      <guid>https://futurehumanism.co/articles/ai-agent-economy-2027.html</guid>
+      <description>The economic revolution happening right now. Where the money is flowing.</description>
+      <pubDate>Wed, 05 Feb 2026 00:00:00 +0700</pubDate>
+    </item>
 
     <item>
       <title>The Complete Guide to AI Agents in 2025</title>
       <link>https://futurehumanism.co/articles/ai-agents-2025-guide.html</link>
       <guid>https://futurehumanism.co/articles/ai-agents-2025-guide.html</guid>
+      <description>Everything you need to know about AI agents: what they are, how they work, and why this year is different.</description>
+      <pubDate>Mon, 03 Feb 2026 00:00:00 +0700</pubDate>
     </item>
 
     <item>
       <title>Claude vs GPT-4: The Only Comparison That Actually Matters</title>
       <link>https://futurehumanism.co/articles/claude-vs-gpt-comparison.html</link>
       <guid>https://futurehumanism.co/articles/claude-vs-gpt-comparison.html</guid>
+      <description>Forget benchmarks. Here's how they actually perform on real work.</description>
+      <pubDate>Mon, 03 Feb 2026 00:00:00 +0700</pubDate>
     </item>
 
     <item>
       <title>The $50/Month Stack That Runs My Entire Business</title>
       <link>https://futurehumanism.co/articles/50-dollar-tech-stack.html</link>
       <guid>https://futurehumanism.co/articles/50-dollar-tech-stack.html</guid>
+      <description>Every tool I use to build, launch, and sell digital products—for less than a gym membership.</description>
+      <pubDate>Sun, 02 Feb 2026 00:00:00 +0700</pubDate>
     </item>
 
     <item>
-      <title>Why Most AI Side Projects Fail</title>
+      <title>Why Most AI Side Projects Fail (And How to Beat the Odds)</title>
       <link>https://futurehumanism.co/articles/why-ai-side-projects-fail.html</link>
       <guid>https://futurehumanism.co/articles/why-ai-side-projects-fail.html</guid>
+      <description>The uncomfortable truth about AI projects—and the exact playbook to be in the 10%.</description>
+      <pubDate>Sun, 02 Feb 2026 00:00:00 +0700</pubDate>
     </item>
 
     <item>
       <title>How We Automated 80% of Our Agency Work</title>
       <link>https://futurehumanism.co/articles/automate-80-percent-agency-work.html</link>
       <guid>https://futurehumanism.co/articles/automate-80-percent-agency-work.html</guid>
+      <description>The exact automations, prompts, and workflows we use to run an agency with a fraction of the headcount.</description>
+      <pubDate>Sat, 01 Feb 2026 00:00:00 +0700</pubDate>
     </item>
   </channel>
 </rss>

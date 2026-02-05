@@ -2,55 +2,110 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://futurehumanism.co/</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/about.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/articles/</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/tools/</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Articles -->
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-agents-memory.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/deepseek-r1-vs-openai-o1.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-agents-platform-shift.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <url>
     <loc>https://futurehumanism.co/articles/ai-agents-2025-guide.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/articles/claude-vs-gpt-comparison.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/articles/50-dollar-tech-stack.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/articles/why-ai-side-projects-fail.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/articles/automate-80-percent-agency-work.html</loc>
-    <lastmod>2025-02-05</lastmod>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-agents-eating-software.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-world-models-next-breakthrough.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/chatgpt-pro-200-enterprise-ai-shift.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/gemini-2-flash-multimodal-ai-dominance.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/snowflake-openai-enterprise-ai-tipping-point.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-agent-economy-2027.html</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
