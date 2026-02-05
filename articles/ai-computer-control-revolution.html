@@ -434,6 +434,27 @@
                 font-size: 0.8rem;
             }
         }
+    
+        /* Share section mobile fix */
+        @media (max-width: 768px) {
+            .share-buttons {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+            .share-btn {
+                width: 100%;
+                max-width: 250px;
+                justify-content: center;
+                white-space: nowrap;
+            }
+        }
+        /* Related article tag - purple bg white text */
+        .related-tag {
+            background: var(--accent) !important;
+            color: #ffffff !important;
+        }
+
     </style>
 </head>
 <body>
