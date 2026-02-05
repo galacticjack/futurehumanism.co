@@ -16,24 +16,6 @@
     <meta name="description" content="All articles on AI, automation, side projects, and building the future.">
     <meta property="og:title" content="All Stories | Future Humanism">
     <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": "All Stories",
-        "description": "All articles on AI, automation, side projects, and building the future.",
-        "publisher": {
-            "@type": "Organization",
-            "name": "Future Humanism",
-            "url": "https://futurehumanism.co"
-        },
-        "url": "https://futurehumanism.co/articles/",
-        "mainEntity": {
-            "@type": "ItemList",
-            "itemListElement": "Article"
-        }
-    }
-    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -92,7 +74,7 @@
         .page-header {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 60px 24px 40px;
+            padding: 60px 24px 30px;
             text-align: center;
         }
         .page-header h1 {
@@ -104,6 +86,39 @@
             color: var(--text-secondary);
             font-size: 1.1rem;
         }
+        
+        /* Category Filter */
+        .category-filter {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            justify-content: center;
+        }
+        .filter-btn {
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: 1px solid var(--border);
+            background: transparent;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-family: inherit;
+        }
+        .filter-btn:hover {
+            border-color: var(--accent);
+            color: var(--text-primary);
+        }
+        .filter-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+        
         .articles-grid {
             max-width: 1200px;
             margin: 0 auto;
@@ -117,13 +132,16 @@
             border-radius: 12px;
             overflow: hidden;
             border: 1px solid var(--border);
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s, opacity 0.3s;
             text-decoration: none;
             display: block;
         }
+        .article-card.hidden {
+            display: none;
+        }
         .article-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(255,90,95,0.15);
+            box-shadow: 0 12px 40px rgba(99,102,241,0.15);
             border-color: var(--accent);
         }
         .article-image {
@@ -170,9 +188,22 @@
         .article-meta {
             display: flex;
             justify-content: space-between;
-            color: var(--text-muted);
+            color: var(--text-secondary);
             font-size: 0.85rem;
         }
+        
+        /* No Results */
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 60px 20px;
+            color: var(--text-secondary);
+            display: none;
+        }
+        .no-results.visible {
+            display: block;
+        }
+        
         footer {
             border-top: 1px solid var(--border);
             padding: 40px 24px;
@@ -183,43 +214,35 @@
             font-size: 0.9rem;
         }
         footer a { color: var(--accent); text-decoration: none; }
+        
         @media (max-width: 768px) {
             header { padding: 12px 16px; }
             .logo { font-size: 1.1rem; }
             nav { gap: 12px; }
             nav a:not(.nav-cta) { display: none; }
             .nav-cta { padding: 8px 14px; font-size: 0.85rem; }
-            .page-header { padding: 40px 16px 32px; }
+            .page-header { padding: 40px 16px 24px; }
             .page-header h1 { font-size: 1.8rem; }
             .page-header p { font-size: 0.95rem; }
+            .category-filter { padding: 0 16px 30px; gap: 8px; }
+            .filter-btn { padding: 8px 16px; font-size: 0.85rem; }
             .articles-grid { padding: 0 16px 60px; grid-template-columns: 1fr; gap: 20px; }
             .article-content { padding: 20px; }
             .article-content h2 { font-size: 1.1rem; }
-            .article-tag { font-size: 0.7rem; padding: 4px 10px; }
+            .article-tag { font-size: 0.7rem; padding: 5px 12px; }
             footer { padding: 32px 16px; }
         }
-        /* Reading Progress Bar */
-    #reading-progress {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 0%;
-        height: 3px;
-        background: linear-gradient(90deg, #FF5A5F, #FF7F7F);
-        z-index: 1000;
-        transition: width 0.1s ease-out;
-    }</style>
+    </style>
 </head>
 <body>
-    <div id="reading-progress"></div>
     <header>
         <div class="header-inner">
             <a href="/" class="logo">Future<span>Humanism</span></a>
             <nav>
                 <a href="/">Home</a>
-                <a href="/#tools">Tools</a>
-                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
-                <a href="/subscribe.html" class="nav-cta" target="_blank">Subscribe</a>
+                <a href="/resources.html">AI Tools</a>
+                <a href="/open-source-agents.html">Open Source Agents</a>
+                <a href="/subscribe.html" class="nav-cta">Subscribe</a>
             </nav>
         </div>
     </header>
@@ -229,193 +252,22 @@
         <p>Insights on AI, automation, and building things that matter</p>
     </div>
 
+    <div class="category-filter">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="ai-agents">AI Agents</button>
+        <button class="filter-btn" data-category="ai-models">AI Models</button>
+        <button class="filter-btn" data-category="enterprise">Enterprise AI</button>
+        <button class="filter-btn" data-category="strategy">Strategy</button>
+        <button class="filter-btn" data-category="tutorials">Tutorials</button>
+    </div>
+
     <div class="articles-grid">
-        <a href="ai-computer-control-revolution.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&q=80" alt="AI Computer Control">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">AI Revolution</span>
-                <h2>AI Just Learned to Control Your Computer: The Revolution is Here</h2>
-                <p>Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation. Here's what it means for your work and business.</p>
-                <div class="article-meta">
-                    <span>Feb 7, 2026</span>
-                    <span>8 min read</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="chatgpt-pro-200-enterprise-ai-shift.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Enterprise AI Strategy">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Enterprise Strategy</span>
-                <h2>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future</h2>
-                <p>OpenAI's premium pricing strategy reveals how enterprise AI budgets will reshape competitive landscapes. Why $200/month isn't expensive—it's the cost of staying competitive.</p>
-                <div class="article-meta">
-                    <span>Feb 7, 2026</span>
-                    <span>8 min read</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="gemini-2-flash-multimodal-ai-dominance.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="Multimodal AI">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Industry Analysis</span>
-                <h2>Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI</h2>
-                <p>Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses and how it stacks up against OpenAI.</p>
-                <div class="article-meta">
-                    <span>10 min read</span>
-                    <span>February 2026</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="snowflake-openai-enterprise-ai-tipping-point.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Enterprise AI Transformation">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Breaking</span>
-                <h2>The $200M Deal That Just Changed Enterprise AI Forever</h2>
-                <p>Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation.</p>
-                <div class="article-meta">
-                    <span>8 min read</span>
-                    <span>February 2026</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="deepseek-r1-vs-openai-o1.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Reasoning">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Analysis</span>
-                <h2>DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning</h2>
-                <p>DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1 and why it changes everything.</p>
-                <div class="article-meta">
-                    <span>8 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="ai-world-models-next-breakthrough.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&q=80" alt="3D World Models">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Deep Dive</span>
-                <h2>World Models: The AI Breakthrough That Will Change Everything After LLMs</h2>
-                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next paradigm shift is here.</p>
-                <div class="article-meta">
-                    <span>10 min read</span>
-                    <span>February 2026</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="ai-agents-platform-shift.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Platform Shift">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Platform</span>
-                <h2>AI Agents: The Next Big Platform Shift After Mobile</h2>
-                <p>Why agents represent the most significant platform shift since mobile. From apps to autonomous workers.</p>
-                <div class="article-meta">
-                    <span>8 min read</span>
-                    <span>February 2026</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="ai-agents-2025-guide.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Agents">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Deep Dive</span>
-                <h2>The Complete Guide to AI Agents in 2025</h2>
-                <p>Everything you need to know about AI agents: what they are, how they work, and why this year is different.</p>
-                <div class="article-meta">
-                    <span>12 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="claude-vs-gpt-comparison.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="AI Comparison">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Comparison</span>
-                <h2>Claude vs GPT-4: The Only Comparison That Actually Matters</h2>
-                <p>Forget benchmarks. Here's how they actually perform on real work.</p>
-                <div class="article-meta">
-                    <span>5 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="50-dollar-tech-stack.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Tech Stack">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Tutorial</span>
-                <h2>The $50/Month Stack That Runs My Entire Business</h2>
-                <p>Every tool I use to build, launch, and sell digital products—for less than a gym membership.</p>
-                <div class="article-meta">
-                    <span>6 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="why-ai-side-projects-fail.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Strategy">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Strategy</span>
-                <h2>Why Most AI Side Projects Fail (And How to Beat the Odds)</h2>
-                <p>The uncomfortable truth about AI projects—and the exact playbook to be in the 10%.</p>
-                <div class="article-meta">
-                    <span>7 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="automate-80-percent-agency-work.html" class="article-card">
-            <div class="article-image">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Automation">
-            </div>
-            <div class="article-content">
-                <span class="article-tag">Case Study</span>
-                <h2>How We Automated 80% of Our Agency Work</h2>
-                <p>The exact automations, prompts, and workflows we use to run an agency with a fraction of the headcount.</p>
-                <div class="article-meta">
-                    <span>8 min read</span>
-                    <span>February 2025</span>
-                </div>
-            </div>
-        </a>
-
-        <a href="ai-agents-memory.html" class="article-card">
+        <a href="ai-agents-memory.html" class="article-card" data-category="ai-agents">
             <div class="article-image">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="AI Memory">
             </div>
             <div class="article-content">
-                <span class="article-tag">Latest</span>
+                <span class="article-tag">AI Agents</span>
                 <h2>AI Agents Getting Memory: Why Persistent Context Changes Everything</h2>
                 <p>The breakthrough that transforms AI agents from smart tools into persistent digital minds.</p>
                 <div class="article-meta">
@@ -425,12 +277,57 @@
             </div>
         </a>
 
-        <a href="ai-agents-eating-software.html" class="article-card">
+        <a href="deepseek-r1-vs-openai-o1.html" class="article-card" data-category="ai-models">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Reasoning">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">AI Models</span>
+                <h2>DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning</h2>
+                <p>DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ai-agents-platform-shift.html" class="article-card" data-category="ai-agents">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&q=80" alt="Platform Shift">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">AI Agents</span>
+                <h2>AI Agents: The Next Big Platform Shift After Mobile</h2>
+                <p>Why agents represent the most significant platform shift since mobile. From apps to autonomous workers.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ai-agents-2025-guide.html" class="article-card" data-category="ai-agents">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="AI Agents">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">AI Agents</span>
+                <h2>The Complete Guide to AI Agents in 2025</h2>
+                <p>Everything you need to know about AI agents: what they are, how they work, and why this year is different.</p>
+                <div class="article-meta">
+                    <span>12 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ai-agents-eating-software.html" class="article-card" data-category="ai-agents">
             <div class="article-image">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="AI Agents">
             </div>
             <div class="article-content">
-                <span class="article-tag">Analysis</span>
+                <span class="article-tag">AI Agents</span>
                 <h2>AI Agents Are Eating Software: Why Traditional Apps Are Becoming Obsolete</h2>
                 <p>Software is being absorbed by agents. The UI layer is disappearing. What this means for builders.</p>
                 <div class="article-meta">
@@ -440,12 +337,12 @@
             </div>
         </a>
 
-        <a href="ai-agent-economy-2027.html" class="article-card">
+        <a href="ai-agent-economy-2027.html" class="article-card" data-category="ai-agents">
             <div class="article-image">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=600&q=80" alt="AI Economy">
             </div>
             <div class="article-content">
-                <span class="article-tag">Future</span>
+                <span class="article-tag">AI Agents</span>
                 <h2>The Agent Economy: How AI Will Create $1 Trillion in New Value by 2027</h2>
                 <p>The economic revolution happening right now. Where the money is flowing and how to position yourself.</p>
                 <div class="article-meta">
@@ -454,27 +351,184 @@
                 </div>
             </div>
         </a>
+
+        <a href="claude-vs-gpt-comparison.html" class="article-card" data-category="ai-models">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=600&q=80" alt="AI Comparison">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">AI Models</span>
+                <h2>Claude vs GPT-4: The Only Comparison That Actually Matters</h2>
+                <p>Forget benchmarks. Here's how they actually perform on real work.</p>
+                <div class="article-meta">
+                    <span>5 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ai-world-models-next-breakthrough.html" class="article-card" data-category="ai-models">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1634017839464-5c339ebe3cb4?w=600&q=80" alt="3D World Models">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">AI Models</span>
+                <h2>World Models: The AI Breakthrough That Will Change Everything After LLMs</h2>
+                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works.</p>
+                <div class="article-meta">
+                    <span>10 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="chatgpt-pro-200-enterprise-ai-shift.html" class="article-card" data-category="enterprise">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Enterprise AI Strategy">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Enterprise AI</span>
+                <h2>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future</h2>
+                <p>OpenAI's premium pricing strategy reveals how enterprise AI budgets will reshape competitive landscapes.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="snowflake-openai-enterprise-ai-tipping-point.html" class="article-card" data-category="enterprise">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80" alt="Enterprise AI Transformation">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Enterprise AI</span>
+                <h2>The $200M Deal That Just Changed Enterprise AI Forever</h2>
+                <p>Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="gemini-2-flash-multimodal-ai-dominance.html" class="article-card" data-category="enterprise">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="Multimodal AI">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Enterprise AI</span>
+                <h2>Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI</h2>
+                <p>Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses.</p>
+                <div class="article-meta">
+                    <span>10 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="ai-computer-control-revolution.html" class="article-card" data-category="enterprise">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1487058792275-0ad4aaf24ca7?w=600&q=80" alt="AI Computer Control">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Enterprise AI</span>
+                <h2>AI Just Learned to Control Your Computer: The Revolution is Here</h2>
+                <p>Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="why-ai-side-projects-fail.html" class="article-card" data-category="strategy">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=600&q=80" alt="Strategy">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Strategy</span>
+                <h2>Why Most AI Side Projects Fail (And How to Beat the Odds)</h2>
+                <p>The uncomfortable truth about AI projects—and the exact playbook to be in the 10%.</p>
+                <div class="article-meta">
+                    <span>7 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="automate-80-percent-agency-work.html" class="article-card" data-category="tutorials">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600&q=80" alt="Automation">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Tutorials</span>
+                <h2>How We Automated 80% of Our Agency Work</h2>
+                <p>The exact automations, prompts, and workflows we use to run an agency with a fraction of the headcount.</p>
+                <div class="article-meta">
+                    <span>8 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <a href="50-dollar-tech-stack.html" class="article-card" data-category="tutorials">
+            <div class="article-image">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600&q=80" alt="Tech Stack">
+            </div>
+            <div class="article-content">
+                <span class="article-tag">Tutorials</span>
+                <h2>The $50/Month Stack That Runs My Entire Business</h2>
+                <p>Every tool I use to build, launch, and sell digital products—for less than a gym membership.</p>
+                <div class="article-meta">
+                    <span>6 min read</span>
+                    <span>February 2026</span>
+                </div>
+            </div>
+        </a>
+
+        <div class="no-results">
+            <p>No articles in this category yet. Check back soon!</p>
+        </div>
     </div>
 
     <footer>
-        <p>© 2025 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html" target="_blank">Newsletter</a></p>
+        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html">Newsletter</a></p>
     </footer>
-    <script src="../js/lazy-loading-fallback.js"></script>    <script>
+
+    <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const progressBar = document.getElementById('reading-progress');
-        const article = document.querySelector('article, .content, main, .article-content') || document.body;
-        
-        function updateProgress() {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
-            progressBar.style.width = progress + '%';
-        }
-        
-        window.addEventListener('scroll', updateProgress);
-        updateProgress();
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const articles = document.querySelectorAll('.article-card');
+        const noResults = document.querySelector('.no-results');
+
+        filterBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Update active state
+                filterBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const category = btn.dataset.category;
+                let visibleCount = 0;
+
+                articles.forEach(article => {
+                    if (category === 'all' || article.dataset.category === category) {
+                        article.classList.remove('hidden');
+                        visibleCount++;
+                    } else {
+                        article.classList.add('hidden');
+                    }
+                });
+
+                // Show/hide no results message
+                if (visibleCount === 0) {
+                    noResults.classList.add('visible');
+                } else {
+                    noResults.classList.remove('visible');
+                }
+            });
+        });
     });
     </script>
-    <script src="../js/lazy-loading.js"></script>
 </body>
 </html>

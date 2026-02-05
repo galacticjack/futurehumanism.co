@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open Source AI Agents | The Complete Guide | Future Humanism</title>
+    <meta name="description" content="The definitive guide to open source AI agents in 2026. OpenClaw, AutoGPT, CrewAI, and more. Compare frameworks, get started guides, and stay updated on the agent revolution.">
+    <meta property="og:title" content="Open Source AI Agents | The Complete Guide">
+    <meta property="og:description" content="The definitive guide to open source AI agents. Compare frameworks, get started guides, and stay updated on the agent revolution.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+    <meta property="og:url" content="https://futurehumanism.co/open-source-agents.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://futurehumanism.co/open-source-agents.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-tertiary: #1a1a1a;
+            --accent: #6366F1;
+            --accent-glow: rgba(99, 102, 241, 0.3);
+            --green: #10b981;
+            --orange: #f59e0b;
+            --border: #2a2a2a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { text-decoration: underline; }
+        
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        nav { display: flex; gap: 24px; align-items: center; }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--text-primary); text-decoration: none; }
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+        }
+        
+        /* Hero Section */
+        .hero {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 80px 24px 60px;
+            text-align: center;
+        }
+        .hero-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 24px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        .hero h1 span {
+            background: linear-gradient(135deg, var(--accent), #a855f7);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero p {
+            font-size: 1.25rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto 32px;
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 48px;
+            margin-top: 40px;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+        
+        /* Why Open Source */
+        .why-section {
+            background: var(--bg-secondary);
+            padding: 80px 24px;
+        }
+        .why-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 24px;
+        }
+        .why-card {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+        }
+        .why-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .why-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+        .why-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Featured Agent: OpenClaw */
+        .featured {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .featured-card {
+            background: linear-gradient(135deg, var(--bg-secondary), var(--bg-tertiary));
+            border: 2px solid var(--accent);
+            border-radius: 16px;
+            padding: 48px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 48px;
+            align-items: center;
+            box-shadow: 0 0 60px var(--accent-glow);
+        }
+        .featured-badge {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .featured-content h2 {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+        .featured-content p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+        }
+        .feature-list {
+            list-style: none;
+            margin-bottom: 32px;
+        }
+        .feature-list li {
+            padding: 8px 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .feature-list li::before {
+            content: "✓";
+            color: var(--green);
+            font-weight: 700;
+        }
+        .btn-primary {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px var(--accent-glow);
+            text-decoration: none;
+        }
+        .btn-secondary {
+            display: inline-block;
+            background: transparent;
+            color: var(--text-primary);
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            border: 1px solid var(--border);
+            margin-left: 12px;
+            transition: border-color 0.2s;
+        }
+        .btn-secondary:hover {
+            border-color: var(--accent);
+            text-decoration: none;
+        }
+        .featured-visual {
+            background: var(--bg-primary);
+            border-radius: 12px;
+            padding: 24px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.9rem;
+            overflow: hidden;
+        }
+        .terminal-header {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+        .terminal-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-red { background: #ff5f56; }
+        .dot-yellow { background: #ffbd2e; }
+        .dot-green { background: #27c93f; }
+        .terminal-code {
+            color: var(--text-secondary);
+            line-height: 1.8;
+        }
+        .terminal-code .cmd { color: var(--green); }
+        .terminal-code .comment { color: #6b7280; }
+        .terminal-code .output { color: var(--accent); }
+        
+        /* Comparison Table */
+        .comparison {
+            background: var(--bg-secondary);
+            padding: 80px 24px;
+        }
+        .comparison-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .table-wrapper {
+            overflow-x: auto;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-tertiary);
+        }
+        th, td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            background: var(--bg-primary);
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        td {
+            color: var(--text-secondary);
+        }
+        tr:last-child td { border-bottom: none; }
+        .check { color: var(--green); }
+        .cross { color: #ef4444; }
+        .partial { color: var(--orange); }
+        
+        /* Other Agents */
+        .agents-section {
+            padding: 80px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .agents-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 24px;
+        }
+        .agent-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            transition: border-color 0.2s, transform 0.2s;
+        }
+        .agent-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+        }
+        .agent-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 16px;
+        }
+        .agent-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        .agent-stars {
+            color: var(--orange);
+            font-size: 0.9rem;
+        }
+        .agent-desc {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .agent-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+        .agent-tag {
+            background: var(--bg-tertiary);
+            color: var(--text-secondary);
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+        .agent-links a {
+            margin-right: 16px;
+            font-size: 0.9rem;
+        }
+        
+        /* Getting Started */
+        .getting-started {
+            background: var(--bg-secondary);
+            padding: 80px 24px;
+        }
+        .getting-started-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .getting-started h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .getting-started p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        .steps {
+            display: grid;
+            gap: 24px;
+            text-align: left;
+        }
+        .step {
+            background: var(--bg-tertiary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--accent);
+            color: white;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+        .step-content h3 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .step-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .step-content code {
+            background: var(--bg-primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+        
+        /* Newsletter CTA */
+        .newsletter-cta {
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .newsletter-cta h2 {
+            font-size: 2rem;
+            margin-bottom: 16px;
+        }
+        .newsletter-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+        }
+        
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        footer p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        footer a { color: var(--accent); }
+        
+        @media (max-width: 768px) {
+            header { padding: 12px 16px; }
+            .logo { font-size: 1.1rem; }
+            nav { gap: 12px; }
+            nav a:not(.nav-cta) { display: none; }
+            .hero { padding: 50px 16px 40px; }
+            .hero h1 { font-size: 2rem; }
+            .hero p { font-size: 1rem; }
+            .hero-stats { gap: 24px; flex-wrap: wrap; }
+            .section-title { font-size: 1.5rem; }
+            .featured-card { grid-template-columns: 1fr; padding: 24px; }
+            .featured-content h2 { font-size: 1.75rem; }
+            .featured-visual { font-size: 0.75rem; padding: 16px; }
+            .btn-secondary { margin-left: 0; margin-top: 12px; }
+            .agents-grid { grid-template-columns: 1fr; }
+            th, td { padding: 12px; font-size: 0.85rem; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+            <nav>
+                <a href="/articles/">Stories</a>
+                <a href="/resources.html">AI Tools</a>
+                <a href="/open-source-agents.html" style="color: var(--accent);">Open Source Agents</a>
+                <a href="/subscribe.html" class="nav-cta">Subscribe</a>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="hero-badge">🚀 The Agent Revolution is Open Source</span>
+        <h1>Open Source <span>AI Agents</span></h1>
+        <p>The definitive guide to building, deploying, and running autonomous AI agents. No vendor lock-in. Full control. Unlimited potential.</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-value">50K+</div>
+                <div class="stat-label">GitHub Stars Combined</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">15+</div>
+                <div class="stat-label">Active Frameworks</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value">2026</div>
+                <div class="stat-label">Year of the Agent</div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-section">
+        <div class="why-inner">
+            <h2 class="section-title">Why Open Source Agents?</h2>
+            <div class="why-grid">
+                <div class="why-card">
+                    <div class="why-icon">🔓</div>
+                    <h3>No Vendor Lock-In</h3>
+                    <p>Run on any LLM provider. Switch between OpenAI, Anthropic, local models, or your own fine-tuned models without rewriting code.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🛠️</div>
+                    <h3>Full Customization</h3>
+                    <p>Modify every aspect of agent behavior. Add custom tools, memory systems, and workflows that match your exact use case.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">💰</div>
+                    <h3>Cost Control</h3>
+                    <p>Self-host to eliminate per-seat pricing. Run locally for development. Scale on your infrastructure, your terms.</p>
+                </div>
+                <div class="why-card">
+                    <div class="why-icon">🔒</div>
+                    <h3>Data Privacy</h3>
+                    <p>Keep sensitive data in-house. No third-party APIs touching your proprietary information. Complete audit trails.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="featured">
+        <div class="featured-card">
+            <div class="featured-content">
+                <span class="featured-badge">⭐ Featured Framework</span>
+                <h2>OpenClaw</h2>
+                <p>The most powerful open-source AI agent framework. Run autonomous agents on your Mac, server, or anywhere. Multi-modal, multi-channel, infinitely extensible.</p>
+                <ul class="feature-list">
+                    <li>Run Claude, GPT-4, or any LLM as an autonomous agent</li>
+                    <li>Connect to Telegram, Discord, Slack, SMS, and more</li>
+                    <li>Browser control, file system access, code execution</li>
+                    <li>Persistent memory with knowledge graphs</li>
+                    <li>Skills system for extensible capabilities</li>
+                    <li>Self-hosted, privacy-first, no vendor lock-in</li>
+                </ul>
+                <a href="https://github.com/openclaw/openclaw" target="_blank" class="btn-primary">View on GitHub</a>
+                <a href="https://docs.openclaw.ai" target="_blank" class="btn-secondary">Documentation</a>
+            </div>
+            <div class="featured-visual">
+                <div class="terminal-header">
+                    <span class="terminal-dot dot-red"></span>
+                    <span class="terminal-dot dot-yellow"></span>
+                    <span class="terminal-dot dot-green"></span>
+                </div>
+                <div class="terminal-code">
+                    <span class="comment"># Install OpenClaw</span><br>
+                    <span class="cmd">$</span> npm install -g openclaw<br><br>
+                    <span class="comment"># Configure your agent</span><br>
+                    <span class="cmd">$</span> openclaw init<br><br>
+                    <span class="comment"># Start the gateway</span><br>
+                    <span class="cmd">$</span> openclaw gateway start<br><br>
+                    <span class="output">🚀 Agent online</span><br>
+                    <span class="output">📱 Telegram connected</span><br>
+                    <span class="output">🧠 Memory loaded</span><br>
+                    <span class="output">Ready for commands...</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comparison">
+        <div class="comparison-inner">
+            <h2 class="section-title">Framework Comparison</h2>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>OpenClaw</th>
+                            <th>AutoGPT</th>
+                            <th>CrewAI</th>
+                            <th>LangChain</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Autonomous Operation</td>
+                            <td><span class="check">✓ Full</span></td>
+                            <td><span class="check">✓ Full</span></td>
+                            <td><span class="partial">◐ Partial</span></td>
+                            <td><span class="cross">✗ Manual</span></td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Channel (Telegram, Discord)</td>
+                            <td><span class="check">✓ Built-in</span></td>
+                            <td><span class="cross">✗ No</span></td>
+                            <td><span class="cross">✗ No</span></td>
+                            <td><span class="partial">◐ Via plugins</span></td>
+                        </tr>
+                        <tr>
+                            <td>Browser Control</td>
+                            <td><span class="check">✓ Native</span></td>
+                            <td><span class="partial">◐ Limited</span></td>
+                            <td><span class="cross">✗ No</span></td>
+                            <td><span class="partial">◐ Via tools</span></td>
+                        </tr>
+                        <tr>
+                            <td>Persistent Memory</td>
+                            <td><span class="check">✓ Graph + Vector</span></td>
+                            <td><span class="partial">◐ Basic</span></td>
+                            <td><span class="check">✓ Yes</span></td>
+                            <td><span class="check">✓ Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Multi-Agent Coordination</td>
+                            <td><span class="check">✓ Sessions</span></td>
+                            <td><span class="partial">◐ Limited</span></td>
+                            <td><span class="check">✓ Core feature</span></td>
+                            <td><span class="partial">◐ Via code</span></td>
+                        </tr>
+                        <tr>
+                            <td>Local Model Support</td>
+                            <td><span class="check">✓ Ollama, etc</span></td>
+                            <td><span class="check">✓ Yes</span></td>
+                            <td><span class="check">✓ Yes</span></td>
+                            <td><span class="check">✓ Yes</span></td>
+                        </tr>
+                        <tr>
+                            <td>Ease of Setup</td>
+                            <td><span class="check">✓ npm install</span></td>
+                            <td><span class="partial">◐ Docker</span></td>
+                            <td><span class="check">✓ pip install</span></td>
+                            <td><span class="check">✓ pip install</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <section class="agents-section">
+        <h2 class="section-title">More Open Source Agent Frameworks</h2>
+        <div class="agents-grid">
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">AutoGPT</span>
+                    <span class="agent-stars">⭐ 160K+</span>
+                </div>
+                <p class="agent-desc">The original autonomous agent. Gave the world a glimpse of what self-directing AI could do. Great for experimentation.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">Docker</span>
+                    <span class="agent-tag">Autonomous</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/Significant-Gravitas/AutoGPT" target="_blank">GitHub →</a>
+                    <a href="https://agpt.co/" target="_blank">Website →</a>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">CrewAI</span>
+                    <span class="agent-stars">⭐ 20K+</span>
+                </div>
+                <p class="agent-desc">Role-based multi-agent framework. Define crews of specialized agents that work together on complex tasks.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">Multi-Agent</span>
+                    <span class="agent-tag">Roles</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/joaomdmoura/crewAI" target="_blank">GitHub →</a>
+                    <a href="https://www.crewai.com/" target="_blank">Website →</a>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">LangChain</span>
+                    <span class="agent-stars">⭐ 85K+</span>
+                </div>
+                <p class="agent-desc">The Swiss Army knife of LLM applications. Not agent-first, but powers many agent implementations with its tooling.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">JavaScript</span>
+                    <span class="agent-tag">Framework</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/langchain-ai/langchain" target="_blank">GitHub →</a>
+                    <a href="https://langchain.com/" target="_blank">Website →</a>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">MetaGPT</span>
+                    <span class="agent-stars">⭐ 40K+</span>
+                </div>
+                <p class="agent-desc">Multi-agent framework that mimics a software company. Assigns roles like PM, Architect, Engineer to collaborate on projects.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">Multi-Agent</span>
+                    <span class="agent-tag">Software Dev</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/geekan/MetaGPT" target="_blank">GitHub →</a>
+                    <a href="https://www.deepwisdom.ai/" target="_blank">Website →</a>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">BabyAGI</span>
+                    <span class="agent-stars">⭐ 19K+</span>
+                </div>
+                <p class="agent-desc">Minimalist task-driven autonomous agent. Great for learning how agent loops work. Simple, hackable, educational.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">Minimal</span>
+                    <span class="agent-tag">Educational</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/yoheinakajima/babyagi" target="_blank">GitHub →</a>
+                </div>
+            </div>
+
+            <div class="agent-card">
+                <div class="agent-header">
+                    <span class="agent-name">SuperAGI</span>
+                    <span class="agent-stars">⭐ 15K+</span>
+                </div>
+                <p class="agent-desc">Infrastructure for building, deploying and running autonomous agents. Comes with a marketplace of tools and templates.</p>
+                <div class="agent-tags">
+                    <span class="agent-tag">Python</span>
+                    <span class="agent-tag">Infrastructure</span>
+                    <span class="agent-tag">Marketplace</span>
+                </div>
+                <div class="agent-links">
+                    <a href="https://github.com/TransformerOptimus/SuperAGI" target="_blank">GitHub →</a>
+                    <a href="https://superagi.com/" target="_blank">Website →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="getting-started">
+        <div class="getting-started-inner">
+            <h2>Get Started in 5 Minutes</h2>
+            <p>Here's how to run your first open source agent with OpenClaw:</p>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div class="step-content">
+                        <h3>Install OpenClaw</h3>
+                        <p>Run <code>npm install -g openclaw</code> to install the CLI globally.</p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div class="step-content">
+                        <h3>Add Your API Key</h3>
+                        <p>Set your OpenAI or Anthropic key: <code>openclaw config set provider.apiKey YOUR_KEY</code></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div class="step-content">
+                        <h3>Connect a Channel (Optional)</h3>
+                        <p>Add Telegram: <code>openclaw config set channels.telegram.token YOUR_BOT_TOKEN</code></p>
+                    </div>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <div class="step-content">
+                        <h3>Start Your Agent</h3>
+                        <p>Run <code>openclaw gateway start</code> and your agent is live!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="newsletter-cta">
+        <h2>Stay Updated on the Agent Revolution</h2>
+        <p>Weekly insights on AI agents, automation, and building the future. No spam.</p>
+        <a href="/subscribe.html" class="btn-primary">Subscribe to Newsletter →</a>
+    </section>
+
+    <footer>
+        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html">Newsletter</a> · <a href="/articles/">All Stories</a></p>
+    </footer>
+</body>
+</html>
