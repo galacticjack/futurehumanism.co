@@ -520,7 +520,13 @@
             display: flex;
             justify-content: center;
             gap: 16px;
-            margin-top: 24px;
+            margin-top: 32px;
+        }
+
+        .newsletter-note {
+            margin-top: 20px;
+            font-size: 0.85rem;
+            color: var(--text-muted);
         }
 
         .social-icons a {
@@ -1032,13 +1038,14 @@
     <section class="newsletter-section">
         <div class="newsletter-box">
             <h2>REFRAME <span>YOUR INBOX</span></h2>
-            <p>Weekly insights on AI, automation, and building things that matter. Join 500+ builders staying ahead.</p>
+            <p>Weekly insights on AI, automation, and building things that matter.</p>
             <form class="newsletter-form" action="https://futurehumanism.beehiiv.com/subscribe" method="POST">
                 <input type="text" name="first_name" placeholder="First Name">
                 <input type="text" name="last_name" placeholder="Last Name">
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
+            <p class="newsletter-note">Join 500+ builders staying ahead</p>
             <div class="social-icons">
                 <a href="https://twitter.com/FutureHumanism" target="_blank" title="Twitter">𝕏</a>
                 <a href="https://futurehumanism.beehiiv.com" target="_blank" title="Newsletter">✉</a>
