@@ -1,0 +1,21 @@
+{
+  "name": "Future Humanism",
+  "short_name": "FutureHumanism",
+  "description": "Where AI Meets Human Potential. Weekly tools, tutorials, and unfiltered takes for builders.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0a0a0a",
+  "theme_color": "#FF5A5F",
+  "icons": [
+    {
+      "src": "images/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "images/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}
