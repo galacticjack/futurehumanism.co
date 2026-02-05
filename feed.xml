@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+  <channel>
+    <title>Future Humanism</title>
+    <link>https://futurehumanism.co</link>
+    <description>Future Humanism Blog Feed</description>
+    <language>en-us</language>
+    <lastBuildDate>Thu, 05 Feb 2026 21:37:42 +0700</lastBuildDate>
+
+    <item>
+      <title>The Complete Guide to AI Agents in 2025</title>
+      <link>https://futurehumanism.co/articles/ai-agents-2025-guide.html</link>
+      <guid>https://futurehumanism.co/articles/ai-agents-2025-guide.html</guid>
+    </item>
+
+    <item>
+      <title>Claude vs GPT-4: The Only Comparison That Actually Matters</title>
+      <link>https://futurehumanism.co/articles/claude-vs-gpt-comparison.html</link>
+      <guid>https://futurehumanism.co/articles/claude-vs-gpt-comparison.html</guid>
+    </item>
+
+    <item>
+      <title>The $50/Month Stack That Runs My Entire Business</title>
+      <link>https://futurehumanism.co/articles/50-dollar-tech-stack.html</link>
+      <guid>https://futurehumanism.co/articles/50-dollar-tech-stack.html</guid>
+    </item>
+
+    <item>
+      <title>Why Most AI Side Projects Fail</title>
+      <link>https://futurehumanism.co/articles/why-ai-side-projects-fail.html</link>
+      <guid>https://futurehumanism.co/articles/why-ai-side-projects-fail.html</guid>
+    </item>
+
+    <item>
+      <title>How We Automated 80% of Our Agency Work</title>
+      <link>https://futurehumanism.co/articles/automate-80-percent-agency-work.html</link>
+      <guid>https://futurehumanism.co/articles/automate-80-percent-agency-work.html</guid>
+    </item>
+  </channel>
+</rss>
