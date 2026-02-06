@@ -5,7 +5,7 @@
     <link>https://futurehumanism.co</link>
     <description>Where AI meets human potential. Daily insights on AI, automation, and building things that matter.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 21:07:15 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 21:18:43 +0000</lastBuildDate>
     <atom:link href="https://futurehumanism.co/feed.xml" rel="self" type="application/rss+xml"/>
     <item>
       <title>The Great AI Model Convergence of 2026</title>
@@ -62,6 +62,14 @@
       <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/ai-computer-control-revolution.html</guid>
       <category>General</category>
+    </item>
+    <item>
+      <title>Claude vs ChatGPT for Coding in 2026: Which AI Should You Choose?</title>
+      <link>https://futurehumanism.co/articles/claude-vs-chatgpt-for-coding-2026.html</link>
+      <description>Comprehensive comparison of Claude vs ChatGPT for coding in 2026. Benchmark data, real-world tests, pricing analysis, and expert recommendations for developers choosing between AI coding assistants.</description>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://futurehumanism.co/articles/claude-vs-chatgpt-for-coding-2026.html</guid>
+      <category>AI Development</category>
     </item>
     <item>
       <title>Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming</title>
@@ -238,14 +246,6 @@
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/why-every-business-needs-ai-strategy-2026.html</guid>
       <category>Business Strategy</category>
-    </item>
-    <item>
-      <title>The Future of Search After ChatGPT: What Google Won't Tell You</title>
-      <link>https://futurehumanism.co/articles/future-of-search-after-chatgpt.html</link>
-      <description>How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.</description>
-      <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://futurehumanism.co/articles/future-of-search-after-chatgpt.html</guid>
-      <category>Search Evolution</category>
     </item>
   </channel>
 </rss>
