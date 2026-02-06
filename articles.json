@@ -1,5 +1,13 @@
 [
   {
+    "slug": "snowflake-openai-200-million-partnership",
+    "title": "Snowflake and OpenAI's $200 Million Partnership: What It Means for Enterprise AI",
+    "description": "Snowflake and OpenAI just announced a $200 million multi-year partnership. Here's why this deal signals a fundamental shift in how enterprises will deploy AI agents.",
+    "date": "2026-02-07",
+    "category": "Enterprise AI",
+    "url": "/articles/snowflake-openai-200-million-partnership.html"
+  },
+  {
     "slug": "ai-model-convergence-2026",
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
