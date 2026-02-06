@@ -285,18 +285,19 @@
             gap: 12px;
         }
         .share-btn {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            justify-content: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
             text-decoration: none;
             transition: all 0.2s;
             border: none;
             cursor: pointer;
             background: var(--bg-secondary);
             color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
         }
         .share-btn:hover { transform: translateY(-3px); }
         .share-btn.twitter:hover { background: #1DA1F2; color: white; }
@@ -819,16 +820,6 @@
 
     </article>
 
-    <div class="share-section">
-        <p class="share-label">Share & follow us</p>
-        <div class="share-buttons">
-            <a href="https://twitter.com/intent/tweet?text=DeepSeek%20R1%20vs%20OpenAI%20o1%3A%20The%20Open%20Source%20Revolution%20in%20AI%20Reasoning&url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fdeepseek-r1-vs-openai-o1.html&via=FutureHumanism" target="_blank" rel="noopener" class="share-btn twitter">Share on X</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fdeepseek-r1-vs-openai-o1.html" target="_blank" rel="noopener" class="share-btn facebook">Share on Facebook</a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fdeepseek-r1-vs-openai-o1.html" target="_blank" rel="noopener" class="share-btn linkedin">Share on LinkedIn</a>
-            <a href="#" onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Copied!'; return false;" class="share-btn copy">Copy Link</a>
-            <a href="https://twitter.com/FutureHumanism" target="_blank" rel="noopener" class="share-btn follow">Follow @FutureHumanism</a>
-        </div>
-    </div>
 
     <script src="/scripts.js"></script>    <script>
     document.addEventListener('DOMContentLoaded', function() {
