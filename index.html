@@ -1967,7 +1967,7 @@
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu">
         <button class="close-btn" onclick="closeMobileMenu()">×</button>
-        <a href="/search.html" onclick="closeMobileMenu()">🔍 Search</a>
+        <a href="/search.html" onclick="closeMobileMenu()"> Search</a>
         <a href="/" onclick="closeMobileMenu()">Home</a>
         <a href="/articles/" onclick="closeMobileMenu()">Stories</a>
         <a href="/resources.html" onclick="closeMobileMenu()">AI Tools</a>
@@ -2034,14 +2034,14 @@
                 subscribers.push({ email, date: new Date().toISOString() });
                 localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
                 
-                showToast('🎉 You\'re subscribed! Welcome aboard.');
+                showToast(' You\'re subscribed! Welcome aboard.');
                 this.reset();
             } catch (error) {
                 // Fallback: store locally
                 const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
                 subscribers.push({ email, date: new Date().toISOString() });
                 localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
-                showToast('🎉 You\'re subscribed! Welcome aboard.');
+                showToast(' You\'re subscribed! Welcome aboard.');
                 this.reset();
             }
             
@@ -2266,7 +2266,7 @@
                 });
             } catch (e) {}
             
-            this.innerHTML = '<p style="color: #22c55e; font-size: 1.1rem;">🎉 You\'re in! Check your inbox.</p>';
+            this.innerHTML = '<p style="color: #22c55e; font-size: 1.1rem;"> You\'re in! Check your inbox.</p>';
             localStorage.setItem('fh_popup_dismissed', Date.now());
             
             setTimeout(closeExitPopup, 2000);

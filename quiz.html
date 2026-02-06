@@ -429,7 +429,7 @@
         <div class="quiz-container">
             <!-- Intro Screen -->
             <div class="intro-screen" id="intro-screen">
-                <div class="icon">🎯</div>
+                <div class="icon"></div>
                 <h1>How AI-Ready Is Your Business?</h1>
                 <p>Take this 2-minute quiz to discover your AI readiness score and get personalized recommendations.</p>
                 <div class="intro-features">
@@ -676,7 +676,7 @@
                 <p class="score-description" id="score-description">Loading...</p>
                 
                 <div class="recommendations">
-                    <h3>🎯 Your Next Steps</h3>
+                    <h3> Your Next Steps</h3>
                     <ul id="recommendations-list">
                         <!-- Filled by JS -->
                     </ul>
@@ -759,7 +759,7 @@
             let title, description, recommendations, color;
             
             if (percentScore >= 80) {
-                title = "AI Leader 🚀";
+                title = "AI Leader ";
                 description = "You're ahead of the curve! Your organization is well-positioned to leverage advanced AI capabilities and gain competitive advantage.";
                 recommendations = [
                     "Explore AI agents and autonomous workflows",
@@ -769,7 +769,7 @@
                 ];
                 color = '#22c55e';
             } else if (percentScore >= 60) {
-                title = "AI Ready 💪";
+                title = "AI Ready ";
                 description = "You have solid foundations in place. With some focused effort, you can unlock significant AI-powered productivity gains.";
                 recommendations = [
                     "Identify your top 3 repetitive tasks to automate",
@@ -779,7 +779,7 @@
                 ];
                 color = '#1E90FF';
             } else if (percentScore >= 40) {
-                title = "AI Curious 🔍";
+                title = "AI Curious ";
                 description = "You're on the right track but there's room to grow. Focus on building foundations before scaling AI adoption.";
                 recommendations = [
                     "Document your key processes first",
@@ -829,7 +829,7 @@
             }, 30);
             
             // Set up Twitter share
-            const tweetText = `I scored ${percentScore}/100 on the AI Readiness Quiz! 🤖 Find out how AI-ready your business is:`;
+            const tweetText = `I scored ${percentScore}/100 on the AI Readiness Quiz!  Find out how AI-ready your business is:`;
             document.getElementById('share-twitter').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(tweetText)}&url=${encodeURIComponent('https://futurehumanism.co/quiz.html')}&via=FutureHumanism`;
             
             // Store result
@@ -864,7 +864,7 @@
                 });
             } catch (e) {}
             
-            this.innerHTML = '<p style="color: white; font-size: 1.1rem;">🎉 Check your inbox! Report on its way.</p>';
+            this.innerHTML = '<p style="color: white; font-size: 1.1rem;"> Check your inbox! Report on its way.</p>';
         });
     </script>
 </body>

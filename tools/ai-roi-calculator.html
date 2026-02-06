@@ -554,7 +554,7 @@
     
     <main>
         <div class="hero">
-            <span class="badge">⚡ Free Calculator</span>
+            <span class="badge"> Free Calculator</span>
             <h1>AI ROI Calculator</h1>
             <p>Discover how much time and money you could save by automating tasks with AI. Takes 60 seconds.</p>
         </div>
@@ -639,7 +639,7 @@
         <div class="results-section" id="results">
             <div class="calculator-card">
                 <div class="results-header">
-                    <h2>🎉 Your AI Savings Potential</h2>
+                    <h2> Your AI Savings Potential</h2>
                     <p style="color: var(--text-secondary);">Based on your inputs, here's what AI automation could save you:</p>
                 </div>
                 
@@ -661,7 +661,7 @@
                 </div>
                 
                 <div class="breakdown">
-                    <h3>📊 Calculation Breakdown</h3>
+                    <h3> Calculation Breakdown</h3>
                     <div class="breakdown-row">
                         <span class="breakdown-label">Weekly hours on repetitive tasks</span>
                         <span class="breakdown-value" id="bWeeklyHours">0 hrs</span>
@@ -719,7 +719,7 @@
                 </div>
                 
                 <div class="email-capture">
-                    <h3>📧 Get Your Detailed Report</h3>
+                    <h3> Get Your Detailed Report</h3>
                     <p>We'll send you a PDF breakdown with implementation recommendations and tool suggestions.</p>
                     <form class="email-form" id="emailForm" onsubmit="handleEmailSubmit(event)">
                         <input type="email" placeholder="your@email.com" required id="emailInput">
@@ -849,7 +849,7 @@
             document.getElementById('shareROI').textContent = roi === Infinity ? '∞' : roi + 'x';
             
             // Social share links
-            const shareText = `Just calculated my potential AI automation savings: ${formatCurrency(netAnnualSavings)}/year and ${hoursReclaimed.toLocaleString()} hours reclaimed! 🤖\n\nCalculate yours →`;
+            const shareText = `Just calculated my potential AI automation savings: ${formatCurrency(netAnnualSavings)}/year and ${hoursReclaimed.toLocaleString()} hours reclaimed! \n\nCalculate yours →`;
             const shareUrl = 'https://futurehumanism.co/tools/ai-roi-calculator.html';
             
             document.getElementById('twitterShare').href = `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
@@ -877,7 +877,7 @@
         }
         
         function copyResults() {
-            const text = `My AI Automation Savings Potential:\n\n💰 ${formatCurrency(results.netAnnualSavings)}/year in savings\n⏰ ${results.hoursReclaimed.toLocaleString()} hours reclaimed\n📈 ${results.roi}x ROI\n\nCalculate yours at futurehumanism.co/tools/ai-roi-calculator.html`;
+            const text = `My AI Automation Savings Potential:\n\n ${formatCurrency(results.netAnnualSavings)}/year in savings\n ${results.hoursReclaimed.toLocaleString()} hours reclaimed\n ${results.roi}x ROI\n\nCalculate yours at futurehumanism.co/tools/ai-roi-calculator.html`;
             
             navigator.clipboard.writeText(text).then(() => {
                 const btn = document.querySelector('.share-btn.copy');
