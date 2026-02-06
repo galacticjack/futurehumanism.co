@@ -2008,6 +2008,131 @@
             transform: translateY(0);
             opacity: 1;
         }
+
+        /* FAQ Section Styles */
+        .faq-section {
+            padding: 80px 24px;
+            background: var(--bg-secondary);
+        }
+
+        .faq-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .faq-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+
+        .faq-header h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+
+        .faq-header p {
+            color: var(--text-secondary);
+            font-size: 16px;
+        }
+
+        .faq-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+
+        .faq-item:hover {
+            border-color: var(--accent);
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 16px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            text-align: left;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--text-primary);
+            font-family: inherit;
+        }
+
+        .faq-question:hover {
+            color: var(--accent);
+        }
+
+        .faq-icon {
+            flex-shrink: 0;
+            transition: transform 0.3s ease;
+            color: var(--text-secondary);
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+            color: var(--accent);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 500px;
+        }
+
+        .faq-answer > div {
+            padding: 0 24px 20px;
+        }
+
+        .faq-answer p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .faq-answer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .faq-answer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .faq-section {
+                padding: 60px 16px;
+            }
+
+            .faq-header h2 {
+                font-size: 26px;
+            }
+
+            .faq-question {
+                padding: 16px 20px;
+                font-size: 15px;
+            }
+
+            .faq-answer > div {
+                padding: 0 20px 16px;
+            }
+        }
     </style>
     
     <!-- Schema.org structured data -->
@@ -2564,6 +2689,142 @@
         </div>
     </section>
 
+    <!-- FAQ Section -->
+    <section class="faq-section" id="faq">
+        <div class="faq-container">
+            <div class="faq-header">
+                <h2>Frequently Asked Questions</h2>
+                <p>Quick answers about AI, automation, and what we're building here</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">What is Future Humanism about?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Future Humanism explores the intersection of AI and human potential. We publish daily insights, tutorials, and tools for builders, creators, and professionals navigating the AI revolution. Our focus is on practical applications - how to use AI to amplify your work, not replace you.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">How can I start using AI to automate my work?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Start with one repetitive task you do daily. Identify your most time-consuming workflow and explore AI tools that can handle it. Our <a href="/tools/ai-workflow-quiz.html">AI Workflow Quiz</a> can help you identify which processes to automate first, and our <a href="/tools/ai-roi-calculator.html">ROI Calculator</a> shows how much time you could save.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">Will AI replace my job?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>AI won't replace you - but someone using AI might. The key is adaptation: learn to work alongside AI as a force multiplier. Our <a href="/tools/ai-job-analyzer.html">AI Job Impact Analyzer</a> can assess your specific role, and we publish regular guides on upskilling for the AI era.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">What are AI agents and why do they matter?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>AI agents are autonomous systems that can complete multi-step tasks without constant human input. Unlike chatbots that respond to single prompts, agents can research, plan, execute, and adapt. They represent the next evolution of AI - from tools you use to assistants that work for you. Read our <a href="/articles/ai-agents-complete-guide.html">Complete Guide to AI Agents</a> for a deep dive.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">How do I write better prompts for AI tools?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Great prompts are specific, provide context, and define the desired output format. Use our <a href="/tools/prompt-generator.html">AI Prompt Generator</a> to craft better prompts instantly, or explore the <a href="/tools/prompt-cheatsheet.html">Prompt Cheat Sheet</a> for templates across common use cases like writing, coding, and analysis.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                    <button class="faq-question" aria-expanded="false">
+                        <span itemprop="name">Is the newsletter free?</span>
+                        <svg class="faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="faq-answer" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                        <div itemprop="text">
+                            <p>Yes! Our newsletter is completely free. You'll get daily insights on AI, automation, and building in the age of intelligent machines. No spam, just signal. <a href="/subscribe.html">Subscribe here</a> and join thousands of builders staying ahead of the curve.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Future Humanism about?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Future Humanism explores the intersection of AI and human potential. We publish daily insights, tutorials, and tools for builders, creators, and professionals navigating the AI revolution. Our focus is on practical applications - how to use AI to amplify your work, not replace you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How can I start using AI to automate my work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Start with one repetitive task you do daily. Identify your most time-consuming workflow and explore AI tools that can handle it. Use AI workflow assessment tools to identify which processes to automate first, and ROI calculators to see how much time you could save."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Will AI replace my job?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI won't replace you - but someone using AI might. The key is adaptation: learn to work alongside AI as a force multiplier. Assess your specific role's exposure to automation and focus on upskilling for the AI era."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What are AI agents and why do they matter?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AI agents are autonomous systems that can complete multi-step tasks without constant human input. Unlike chatbots that respond to single prompts, agents can research, plan, execute, and adapt. They represent the next evolution of AI - from tools you use to assistants that work for you."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I write better prompts for AI tools?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Great prompts are specific, provide context, and define the desired output format. Use prompt generators to craft better prompts instantly, and explore cheat sheets for templates across common use cases like writing, coding, and analysis."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is the newsletter free?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! The newsletter is completely free. You'll get daily insights on AI, automation, and building in the age of intelligent machines. No spam, just signal."
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Accent Bar -->
     <div class="accent-bar"></div>
 
@@ -3098,6 +3359,28 @@
                 e.preventDefault();
                 window.location.href = '/search.html';
             }
+        });
+    </script>
+
+    <!-- FAQ Accordion -->
+    <script>
+        document.querySelectorAll('.faq-question').forEach(button => {
+            button.addEventListener('click', () => {
+                const item = button.parentElement;
+                const isActive = item.classList.contains('active');
+                
+                // Close all other items
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                    i.querySelector('.faq-question').setAttribute('aria-expanded', 'false');
+                });
+                
+                // Toggle current item
+                if (!isActive) {
+                    item.classList.add('active');
+                    button.setAttribute('aria-expanded', 'true');
+                }
+            });
         });
     </script>
     
