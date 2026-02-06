@@ -1379,6 +1379,88 @@
 <!-- Appears after 30% scroll, stays fixed at bottom -->
 <!-- Add this before </body> in articles -->
 
+
+<!-- Related Articles Section - Auto-generated for SEO -->
+<style>
+.related-articles {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border, #2a2a2a);
+}
+.related-articles h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary, #ffffff);
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+.related-card {
+    background: var(--bg-secondary, #1a1a1a);
+    border: 1px solid var(--border, #2a2a2a);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+}
+.related-card:hover {
+    border-color: var(--accent, #1E90FF);
+    transform: translateY(-2px);
+}
+.related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent, #1E90FF);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.related-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.related-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #b0b0b0);
+    line-height: 1.5;
+    margin: 0;
+}
+@media (max-width: 640px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<div class="related-articles">
+    <h3>Keep Reading</h3>
+    <div class="related-grid">
+            <a href="/articles/ai-agent-economy-2027.html" class="related-card">
+                <span class="related-category">General</span>
+                <h4>The AI Agent Economy: Why Every Business Will Have Digital Employee...</h4>
+                <p>The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transf...</p>
+            </a>
+            <a href="/articles/ai-agents-platform-shift.html" class="related-card">
+                <span class="related-category">General</span>
+                <h4>AI Agents: The Next Big Platform Shift After Mobile</h4>
+                <p>Why AI agents represent the most significant platform shift since mobile. From apps to autonomous workers - how busin...</p>
+            </a>
+            <a href="/articles/ai-agents-eating-software.html" class="related-card">
+                <span class="related-category">Business Strategy</span>
+                <h4>AI Agents Are Eating Software - Why Every Company Needs an Agent St...</h4>
+                <p>AI agents are transforming how businesses operate. From customer service to data analysis, autonomous agents are repl...</p>
+            </a>
+    </div>
+</div>
+<!-- End Related Articles -->
+
 <style>
 .sticky-cta-bar {
     position: fixed;
