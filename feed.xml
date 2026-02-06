@@ -5,16 +5,8 @@
     <link>https://futurehumanism.co</link>
     <description>Where AI meets human potential. Daily insights on AI, automation, and building things that matter.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 19:14:21 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 19:50:24 +0000</lastBuildDate>
     <atom:link href="https://futurehumanism.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks</title>
-      <link>https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html</link>
-      <description>Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.</description>
-      <pubDate>Fri, 07 Feb 2026 02:45:00 +0000</pubDate>
-      <guid>https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html</guid>
-      <category>Breaking News</category>
-    </item>
     <item>
       <title>The Great AI Model Convergence of 2026</title>
       <link>https://futurehumanism.co/articles/ai-model-convergence-2026.html</link>
@@ -78,6 +70,14 @@
       <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/shadow-ai-enterprise-crisis.html</guid>
       <category>Enterprise AI</category>
+    </item>
+    <item>
+      <title>16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks</title>
+      <link>https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html</link>
+      <description>Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.</description>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html</guid>
+      <category>Breaking News</category>
     </item>
     <item>
       <title>The Rise of Local LLMs: Running AI on Your Own Hardware</title>
@@ -246,14 +246,6 @@
       <pubDate>Fri, 06 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/crypto-market-cycles-ai-trading-signals.html</guid>
       <category>Crypto Analysis</category>
-    </item>
-    <item>
-      <title>The $50/Month Stack That Runs My Entire Business</title>
-      <link>https://futurehumanism.co/articles/50-dollar-tech-stack.html</link>
-      <description>Every tool I use to run a profitable side business for less than the cost of a gym membership.</description>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://futurehumanism.co/articles/50-dollar-tech-stack.html</guid>
-      <category>Tutorial</category>
     </item>
   </channel>
 </rss>
