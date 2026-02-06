@@ -701,6 +701,24 @@
             color: var(--text-secondary);
         }
 
+        .all-tools-btn {
+            display: inline-block;
+            margin-top: 16px;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.2s;
+        }
+
+        .all-tools-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
@@ -1830,6 +1848,7 @@
             <div class="products-header">
                 <h2>Tools for Builders</h2>
                 <p>Practical products to save time and make money</p>
+                <a href="/tools/" class="all-tools-btn">All Tools →</a>
             </div>
             <div class="products-grid">
                 <a href="/tools/ai-roi-calculator.html" class="product-card">
