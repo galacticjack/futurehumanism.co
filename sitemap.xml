@@ -243,6 +243,11 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://futurehumanism.co/tools/ai-job-analyzer.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://futurehumanism.co/tools/ai-roi-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
@@ -256,11 +261,6 @@
     <loc>https://futurehumanism.co/tools/ai-workflow-quiz.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://futurehumanism.co/tools/ai-job-analyzer.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://futurehumanism.co/tools/automation-savings-calculator.html</loc>
