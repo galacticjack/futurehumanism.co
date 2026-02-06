@@ -471,6 +471,56 @@
             font-size: 0.85rem;
         }
         
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        /* Nuclear SVG fix */
+        svg { width: 20px !important; height: 20px !important; max-width: 24px !important; max-height: 24px !important; flex-shrink: 0 !important; }
+        .logo-icon, .logo-icon img { width: 36px !important; height: 36px !important; max-width: 36px !important; max-height: 36px !important; }
+        .share-btn svg { width: 16px !important; height: 16px !important; }
+        
+
+        /* Mobile Menu Overlay */
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: var(--bg-primary);
+            z-index: 200;
+            flex-direction: column;
+            padding: 80px 24px 40px;
+        }
+
+        .mobile-menu.open {
+            display: flex;
+        }
+
+        .mobile-menu a {
+            display: block;
+            padding: 16px 0;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .mobile-menu .close-btn {
+            position: absolute;
+            top: 16px;
+            right: 16px;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 2rem;
+            cursor: pointer;
+        }
+
         /* Mobile */
         @media (max-width: 640px) {
             .hero h1 { font-size: 1.8rem; }
@@ -479,6 +529,17 @@
             .share-buttons { width: 100%; justify-content: flex-start; }
             .use-case-desc, .use-case-prompt { padding-left: 0; margin-left: 0; margin-top: 12px; }
             .header-nav { display: none; }
+            .mobile-menu-btn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 32px;
+                height: 32px;
+                font-size: 1rem;
+                background: var(--bg-secondary);
+                border: 1px solid var(--border);
+                border-radius: 5px;
+            }
         }
     </style>
 </head>
@@ -496,8 +557,22 @@
                 <a href="/tools">Tools</a>
                 <a href="/quiz">Quiz</a>
             </nav>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="openMobileMenu()">☰</button>
         </div>
     </header>
+    
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu">
+        <button class="close-btn" onclick="closeMobileMenu()">×</button>
+        <a href="/search.html" onclick="closeMobileMenu()">Search</a>
+        <a href="/" onclick="closeMobileMenu()">Home</a>
+        <a href="/articles/" onclick="closeMobileMenu()">Stories</a>
+        <a href="/tools/" onclick="closeMobileMenu()">Tools</a>
+        <a href="/about.html" onclick="closeMobileMenu()">About</a>
+        <a href="/quiz.html" onclick="closeMobileMenu()">Quiz</a>
+        <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+        <a href="/subscribe.html" style="color: var(--accent);">Subscribe →</a>
+    </div>
     
     <main>
         <section class="hero">
@@ -766,6 +841,16 @@
         document.getElementById('jobTitle').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') generateUseCases();
         });
+        
+        // Mobile menu functions
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
     </script>
 </body>
 </html>
