@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks | Future Humanism</title>
+    <meta name="description" content="Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.">
+    <meta property="og:title" content="16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks">
+    <meta property="og:description" content="Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-16-ai-agents-built-c-compiler.jpg">
+    <meta property="og:url" content="https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks",
+        "description": "Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.",
+        "author": {
+            "@type": "Person",
+            "name": "Galactic Jack"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Future Humanism",
+            "url": "https://futurehumanism.co"
+        },
+        "datePublished": "2026-02-07",
+        "dateModified": "2026-02-07",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html"
+        },
+        "image": "https://futurehumanism.co/images/og-16-ai-agents-built-c-compiler.jpg"
+    }
+    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* === RESET & VARIABLES === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --accent: #6366F1;
+            --border: #2a2a2a;
+        }
+        
+        /* === BASE === */
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        
+        a:visited { color: var(--accent); }
+        
+        /* === HEADER === */
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        /* === HERO === */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('../images/hero-ai-agents-compiler.jpg') center/cover;
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        
+        /* === ARTICLE === */
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        article h2 {
+            font-size: 1.6rem;
+            margin: 48px 0 20px;
+            color: var(--text-primary);
+        }
+        article h3 {
+            font-size: 1.25rem;
+            margin: 32px 0 16px;
+            color: var(--text-primary);
+        }
+        article p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        article ul, article ol {
+            margin: 20px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        article li {
+            margin-bottom: 12px;
+        }
+        article strong {
+            color: var(--text-primary);
+        }
+        article a {
+            color: var(--accent);
+        }
+        
+        /* === CALLOUT BOX === */
+        .callout {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .callout h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* === STATS BOX === */
+        .stats-box {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 20px;
+            background: var(--bg-secondary);
+            padding: 32px;
+            border-radius: 12px;
+            margin: 32px 0;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--accent);
+            display: block;
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }
+        
+        /* === SHARE BUTTONS === */
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            margin: 40px 0;
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .share-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        
+        /* === AUTHOR BIO === */
+        .author-bio {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 32px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin: 48px 0;
+        }
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            color: white;
+            font-weight: 700;
+        }
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        /* === RELATED ARTICLES === */
+        .related {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+        .related h3 {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .related-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+        }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-card-content {
+            padding: 16px;
+        }
+        .related-card h4 {
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .related-card span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        
+        /* === FOOTER === */
+        footer {
+            background: var(--bg-secondary);
+            padding: 60px 24px 30px;
+            margin-top: 80px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 48px;
+        }
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-column h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .footer-column a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        .footer-bottom a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            color: var(--accent);
+        }
+        
+        /* === MOBILE === */
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 1.6rem; line-height: 1.15; }
+            article { padding: 40px 20px; }
+            article h2 { font-size: 1.4rem; margin-top: 36px; }
+            .author-bio { flex-direction: column; text-align: center; }
+            .share-buttons { flex-wrap: wrap; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .stats-box { grid-template-columns: repeat(2, 1fr); }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">Future <span>Humanism</span></a>
+            <a href="../index.html" class="back-link">Back to Home</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="hero-tag">Breaking News</span>
+        <h1>16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks</h1>
+        <p class="hero-meta">February 7, 2026 | 8 min read</p>
+    </section>
+
+    <article>
+        <p>Yesterday, Anthropic dropped a bombshell that most of the tech world is still processing. Their newest model, Claude Opus 4.6, didn't just write some code. <strong>Sixteen AI agents working in parallel built a complete C compiler from scratch</strong>, capable of compiling the Linux kernel.</p>
+
+        <p>Let that sink in for a moment. Not a toy project. Not a demo. A real compiler. 100,000 lines of Rust code. Capable of building Linux, QEMU, FFmpeg, SQLite, PostgreSQL, and Redis. Built by machines that coordinated with each other like a development team.</p>
+
+        <p>This isn't incremental progress. This is a phase shift in what AI can do.</p>
+
+        <div class="stats-box">
+            <div class="stat">
+                <span class="stat-number">16</span>
+                <span class="stat-label">AI Agents</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">100K</span>
+                <span class="stat-label">Lines of Code</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">2,000</span>
+                <span class="stat-label">Sessions</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">$20K</span>
+                <span class="stat-label">Total Cost</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">2</span>
+                <span class="stat-label">Weeks</span>
+            </div>
+            <div class="stat">
+                <span class="stat-number">99%</span>
+                <span class="stat-label">GCC Test Pass Rate</span>
+            </div>
+        </div>
+
+        <h2>What Actually Happened</h2>
+        
+        <p>Anthropic researcher Nicholas Carlini led an internal experiment that sounds like science fiction but happened in a regular office building. The team deployed 16 instances of Claude Opus 4.6, each running in its own isolated container. These agents weren't just running in parallel. They were communicating with each other, dividing responsibilities, and coordinating on a shared codebase.</p>
+
+        <p>The task was deliberately chosen to be difficult: build a Rust-based C compiler that could compile the Linux kernel across x86, ARM, and RISC-V architectures. This is the kind of project that would typically require a team of experienced systems programmers working for months or years.</p>
+
+        <p>Over approximately 2,000 independent Claude Code sessions spanning two weeks, the agent team produced a working compiler. The total API cost was around $20,000. To put that in perspective, hiring a team of compiler engineers for a project like this would cost millions.</p>
+
+        <div class="callout">
+            <h4>The Key Innovation: Agent Teams</h4>
+            <p>Claude Opus 4.6 introduces "agent teams," a capability allowing multiple AI instances to divide responsibilities and collaborate on shared objectives. Instead of one model doing everything, each agent focuses on specific subtasks, improving speed and reducing bottlenecks. This is how software teams actually work, and now AI can do it too.</p>
+        </div>
+
+        <h2>Why Compilers Are Hard</h2>
+        
+        <p>If you're not a programmer, you might be wondering why this matters. A compiler is the software that translates human-readable code into machine instructions that processors can execute. It's one of the most complex pieces of software that exists.</p>
+
+        <p>Building a compiler requires:</p>
+        
+        <ul>
+            <li><strong>Deep systems knowledge</strong> about how processors work at the hardware level</li>
+            <li><strong>Understanding of programming language theory</strong> and formal grammar</li>
+            <li><strong>Optimization expertise</strong> to make the compiled code run fast</li>
+            <li><strong>Cross-platform thinking</strong> to support different processor architectures</li>
+            <li><strong>Extreme attention to detail</strong> because one bug can break everything</li>
+        </ul>
+
+        <p>The GCC compiler, which is the gold standard, has been developed by hundreds of engineers over 40 years. The AI-built compiler passed 99% of the GCC torture test suite. It can produce a bootable Linux 6.9 build. It runs Doom.</p>
+
+        <p>As one Twitter user put it: "You got to be kidding me!"</p>
+
+        <h2>How the Agents Worked Together</h2>
+        
+        <p>The fascinating part isn't just that AI built a compiler. It's how they did it. Anthropic's approach relied on a parallel workflow where each Claude agent operated in its own isolated container while coordinating through a simple synchronization process.</p>
+
+        <p>Think about how a human software team works:</p>
+        
+        <ol>
+            <li>Different developers work on different parts of the codebase</li>
+            <li>They communicate about interfaces and dependencies</li>
+            <li>They integrate their work through version control</li>
+            <li>Continuous testing catches integration problems early</li>
+        </ol>
+
+        <p>The AI agents followed a similar pattern. Carlini emphasized that high-quality testing frameworks were critical to progress. The team wrote clear verifier scripts and maintained up-to-date documentation. This allowed Claude agents to self-orient and recover from context loss between tasks, which is a common challenge with current language models.</p>
+
+        <p>In other words, the AI agents didn't just write code. They engaged in the entire software engineering process, including testing, documentation, and coordination.</p>
+
+        <h2>What This Means for Software Development</h2>
+        
+        <p>Let's be direct about the implications. If 16 AI agents can build a compiler in two weeks for $20,000, what does that mean for:</p>
+
+        <h3>The SaaS Industry</h3>
+        <p>Just days before this announcement, Anthropic unveiled Claude Cowork, which sent shockwaves through the SaaS industry. If AI can autonomously build complex software, the moat around many software businesses just got a lot smaller. Custom software that once required months of development might be weeks or days away.</p>
+
+        <h3>Software Engineers</h3>
+        <p>This doesn't mean programmers are obsolete. But it does mean the job is changing fast. The engineers who thrive will be the ones who can direct AI agents, design systems architectures, and focus on the problems that require human judgment and creativity. The ones who primarily write routine code are in trouble.</p>
+
+        <h3>Startups and Innovation</h3>
+        <p>The barrier to building software products just dropped dramatically. A founder with a good idea and $50,000 might be able to build what previously required a $5 million seed round and a team of 10 engineers. This democratizes software creation in ways we're only beginning to understand.</p>
+
+        <h3>Open Source</h3>
+        <p>If AI agents can build compilers, they can build anything. Open source projects that have languished for lack of contributors might suddenly get AI-generated patches and features. The volume of available software is about to explode.</p>
+
+        <div class="callout">
+            <h4>The $20,000 Question</h4>
+            <p>The cost matters as much as the capability. A compiler built for $20,000 changes the economics of everything. This isn't enterprise-only technology. Small teams and individual developers can access this level of capability. The implications for who can build software are profound.</p>
+        </div>
+
+        <h2>Current Limitations</h2>
+        
+        <p>The AI-built compiler isn't perfect. Honesty about limitations is important:</p>
+
+        <ul>
+            <li>It <strong>lacks a 16-bit x86 backend</strong> needed for certain Linux boot processes</li>
+            <li>It <strong>depends on GCC</strong> during some compilation stages</li>
+            <li>It <strong>trails established compilers in optimization efficiency</strong></li>
+            <li>It was built <strong>without internet access</strong>, limiting its ability to reference external documentation</li>
+        </ul>
+
+        <p>These are real limitations. But consider the trajectory. Six months ago, AI-generated code was often buggy and required significant human cleanup. A year ago, getting AI to write coherent functions was the state of the art. Now we have coordinated agent teams building compilers.</p>
+
+        <p>The limitations today are the features of tomorrow.</p>
+
+        <h2>The Bigger Picture: Agentic AI Arrives</h2>
+        
+        <p>This announcement comes alongside news that ai.com (the domain purchased by Crypto.com's CEO) is launching consumer AI agents that can operate on users' behalf, and Wrike has launched AI agents for project management. The timing isn't coincidental.</p>
+
+        <p>2026 is shaping up to be the year that AI agents go from demos to deployment. Not AI that answers questions. AI that does things. AI that coordinates with other AI. AI that builds software while you sleep.</p>
+
+        <p>The companies that figure out how to harness this capability will have enormous advantages. The ones that don't will find themselves competing against organizations that can develop software at 10x the speed and 1/10th the cost.</p>
+
+        <h2>What Comes Next</h2>
+        
+        <p>If you're a developer, now is the time to learn how to work with AI agents, not just AI assistants. The difference is crucial. An assistant helps you write code. An agent writes code while you focus on architecture and strategy.</p>
+
+        <p>If you're a business leader, start thinking about what becomes possible when software development costs drop by an order of magnitude. What products would you build? What problems would you solve?</p>
+
+        <p>If you're an investor, the picks-and-shovels play is clear: bet on the infrastructure that makes agent teams possible. The API layer. The orchestration tools. The testing frameworks.</p>
+
+        <p>And if you're just watching from the sidelines, pay attention. The world is about to get a lot weirder, a lot faster. Sixteen AI agents building a compiler in two weeks is just the beginning.</p>
+
+        <p><strong>The machines aren't coming. They're already here, and they're coding.</strong></p>
+
+        <!-- SHARE BUTTONS -->
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html&text=16%20AI%20agents%20just%20built%20a%20C%20compiler%20from%20scratch%20in%202%20weeks.%20100K%20lines%20of%20code.%20$20K%20total%20cost.%20This%20changes%20everything." target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Share on X
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html" target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://futurehumanism.co/articles/16-ai-agents-built-c-compiler.html" target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Copied!'; setTimeout(() => this.textContent='Copy Link', 2000)" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                Copy Link
+            </button>
+        </div>
+
+        <!-- AUTHOR BIO -->
+        <div class="author-bio">
+            <div class="author-avatar">GJ</div>
+            <div class="author-info">
+                <h4>Galactic Jack</h4>
+                <p>AI systems architect and automation specialist exploring the convergence of human creativity and machine intelligence. Building tools that amplify what humans do best.</p>
+            </div>
+        </div>
+
+        <!-- RELATED ARTICLES -->
+        <div class="related">
+            <h3>Keep Reading</h3>
+            <div class="related-grid">
+                <a href="ai-agents-eating-software.html" class="related-card">
+                    <img src="../images/article-ai-agents.jpg" alt="AI Agents Eating Software">
+                    <div class="related-card-content">
+                        <h4>AI Agents Are Eating Software</h4>
+                        <span>7 min read</span>
+                    </div>
+                </a>
+                <a href="agent-infrastructure-orchestration-2026.html" class="related-card">
+                    <img src="../images/article-agent-infrastructure.jpg" alt="Agent Infrastructure">
+                    <div class="related-card-content">
+                        <h4>Agent Infrastructure and Orchestration in 2026</h4>
+                        <span>10 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">Future <span>Humanism</span></a>
+                <p>Exploring the convergence of human potential and artificial intelligence. Daily insights on AI tools, automation, and the future of work.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Content</h4>
+                <a href="../index.html">Latest Articles</a>
+                <a href="../resources.html">Resources</a>
+                <a href="../about.html">About</a>
+            </div>
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <a href="../tools/replyready.html">ReplyReady</a>
+                <a href="../tools/prompt-playbook.html">Prompt Playbook</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="https://x.com/FutureHumanism" target="_blank">X / Twitter</a>
+                <a href="../subscribe.html">Newsletter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>2026 Future Humanism</span>
+            <div>
+                <a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
