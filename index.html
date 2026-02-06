@@ -191,6 +191,18 @@
             color: var(--accent);
         }
         
+        .nav-challenge {
+            color: #1E90FF !important;
+            font-weight: 600 !important;
+            background: rgba(30, 144, 255, 0.1);
+            padding: 6px 12px !important;
+            border-radius: 6px;
+            transition: all 0.2s ease !important;
+        }
+        .nav-challenge:hover {
+            background: rgba(30, 144, 255, 0.2) !important;
+        }
+        
         /* Dropdown Navigation */
         .nav-dropdown {
             position: static;
@@ -2133,6 +2145,208 @@
                 padding: 0 20px 16px;
             }
         }
+        
+        /* Challenge Section */
+        .challenge-section {
+            padding: 80px 24px;
+            background: linear-gradient(135deg, #1E90FF 0%, #6366F1 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .challenge-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+        .challenge-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+        .challenge-content h2 {
+            color: #ffffff;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.2;
+        }
+        .challenge-content h2 span {
+            display: block;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            opacity: 0.8;
+            margin-bottom: 8px;
+        }
+        .challenge-content p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.1rem;
+            margin-bottom: 24px;
+            line-height: 1.7;
+        }
+        .challenge-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 32px;
+        }
+        .challenge-feature {
+            background: rgba(255,255,255,0.15);
+            padding: 8px 16px;
+            border-radius: 20px;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .challenge-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #ffffff;
+            color: #1E90FF;
+            padding: 16px 32px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+        }
+        .challenge-cta:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 25px rgba(0,0,0,0.2);
+        }
+        .challenge-stats {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+        .challenge-stat {
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+        .challenge-stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: #ffffff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .challenge-stat-label {
+            color: rgba(255,255,255,0.8);
+            font-size: 0.95rem;
+            margin-top: 4px;
+        }
+        @media (max-width: 768px) {
+            .challenge-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+                text-align: center;
+            }
+            .challenge-content h2 {
+                font-size: 2rem;
+            }
+            .challenge-features {
+                justify-content: center;
+            }
+            .challenge-stats {
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .challenge-stat {
+                flex: 1;
+                min-width: 140px;
+            }
+        }
+        
+        /* Floating Challenge Banner */
+        .floating-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(90deg, #1E90FF 0%, #6366F1 100%);
+            padding: 12px 24px;
+            z-index: 999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 20px rgba(0,0,0,0.15);
+        }
+        .floating-banner.visible {
+            transform: translateY(0);
+        }
+        .floating-banner-text {
+            color: #ffffff;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        .floating-banner-text span {
+            opacity: 0.8;
+            font-weight: 400;
+        }
+        .floating-banner-cta {
+            background: #ffffff;
+            color: #1E90FF;
+            padding: 8px 20px;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-decoration: none;
+            white-space: nowrap;
+            transition: transform 0.2s;
+        }
+        .floating-banner-cta:hover {
+            transform: scale(1.05);
+        }
+        .floating-banner-close {
+            background: none;
+            border: none;
+            color: rgba(255,255,255,0.7);
+            cursor: pointer;
+            padding: 4px;
+            margin-left: 8px;
+        }
+        .floating-banner-close:hover {
+            color: #ffffff;
+        }
+        @media (max-width: 600px) {
+            .floating-banner {
+                flex-wrap: wrap;
+                gap: 8px;
+                padding: 10px 16px;
+            }
+            .floating-banner-text {
+                font-size: 0.85rem;
+                width: 100%;
+                text-align: center;
+            }
+            .floating-banner-text span {
+                display: none;
+            }
+        }
     </style>
     
     <!-- Schema.org structured data -->
@@ -2269,7 +2483,7 @@
                         </div>
                     </div>
                 </div>
-                
+                <a href="/challenge.html" class="nav-challenge">7-Day Challenge</a>
                 <a href="/about.html">About</a>
                 <a href="/search.html" class="nav-search" title="Search (Press /)">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
@@ -2685,6 +2899,60 @@
                         </div>
                     </div>
                 </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 7-Day Challenge Section -->
+    <section class="challenge-section" id="challenge">
+        <div class="challenge-inner">
+            <div class="challenge-content">
+                <h2>
+                    <span>Free 7-Day Challenge</span>
+                    Transform Your Workflow with AI
+                </h2>
+                <p>One simple AI task per day. 15 minutes each. By day 7, you'll have automated real parts of your work and saved hours every week.</p>
+                <div class="challenge-features">
+                    <div class="challenge-feature">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                        100% Free
+                    </div>
+                    <div class="challenge-feature">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        15 min/day
+                    </div>
+                    <div class="challenge-feature">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                        Real Results
+                    </div>
+                </div>
+                <a href="/challenge.html" class="challenge-cta">
+                    Start the Challenge
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
+            </div>
+            <div class="challenge-stats">
+                <div class="challenge-stat">
+                    <div class="challenge-stat-number">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                        500+
+                    </div>
+                    <div class="challenge-stat-label">Professionals enrolled</div>
+                </div>
+                <div class="challenge-stat">
+                    <div class="challenge-stat-number">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                        5+ hrs
+                    </div>
+                    <div class="challenge-stat-label">Saved per week on average</div>
+                </div>
+                <div class="challenge-stat">
+                    <div class="challenge-stat-number">
+                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                        4.9/5
+                    </div>
+                    <div class="challenge-stat-label">Average rating from participants</div>
+                </div>
             </div>
         </div>
     </section>
@@ -3382,6 +3650,49 @@
                 }
             });
         });
+    </script>
+
+    <!-- Floating Challenge Banner -->
+    <div class="floating-banner" id="floating-banner">
+        <span class="floating-banner-text">
+            Join the 7-Day AI Challenge <span>- One task/day, real results by day 7</span>
+        </span>
+        <a href="/challenge.html" class="floating-banner-cta">Start Free</a>
+        <button class="floating-banner-close" onclick="closeBanner()" aria-label="Close">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+    <script>
+        // Show floating banner after scroll
+        const floatingBanner = document.getElementById('floating-banner');
+        let bannerClosed = sessionStorage.getItem('challengeBannerClosed');
+        
+        if (!bannerClosed) {
+            window.addEventListener('scroll', function showBanner() {
+                if (window.scrollY > 500) {
+                    floatingBanner.classList.add('visible');
+                    window.removeEventListener('scroll', showBanner);
+                }
+            });
+        }
+        
+        function closeBanner() {
+            floatingBanner.classList.remove('visible');
+            sessionStorage.setItem('challengeBannerClosed', 'true');
+        }
+        
+        // Hide when reaching challenge section
+        const challengeSection = document.getElementById('challenge');
+        if (challengeSection) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        floatingBanner.classList.remove('visible');
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(challengeSection);
+        }
     </script>
     
 </body>
