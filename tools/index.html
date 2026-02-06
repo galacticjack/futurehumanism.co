@@ -98,6 +98,17 @@
             border-radius: 6px;
         }
         .nav-cta:hover { background: var(--accent-hover); }
+        .nav-cta-secondary {
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent) !important;
+        }
+        
+        .nav-cta-secondary:hover {
+            background: var(--accent);
+            color: white !important;
+        }
+
         .nav-dropdown { position: relative; }
         .nav-dropdown > span { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
         .nav-dropdown > span:hover { color: var(--text-primary); }
@@ -782,7 +793,8 @@
                     </a>
                 </div>
             </div>
-            <a href="/subscribe.html" class="nav-cta">Subscribe</a>
+            <a href="/free-guide" class="nav-cta nav-cta-secondary">Free Guide</a>
+                <a href="/subscribe.html" class="nav-cta">Subscribe</a>
             <button class="mobile-menu-btn" aria-label="Menu">☰</button>
         </nav>
     </div>
