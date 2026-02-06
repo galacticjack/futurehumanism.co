@@ -509,6 +509,69 @@
             height: 16px !important;
         }
 
+        /* Social Proof Bar */
+        .social-proof-bar {
+            background: linear-gradient(90deg, rgba(30, 144, 255, 0.1) 0%, rgba(30, 144, 255, 0.05) 50%, rgba(30, 144, 255, 0.1) 100%);
+            border-bottom: 1px solid rgba(30, 144, 255, 0.2);
+            padding: 10px 24px;
+        }
+        .social-proof-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .proof-stat {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .proof-number {
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: var(--accent);
+        }
+        .proof-label {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+        .proof-divider {
+            width: 4px;
+            height: 4px;
+            background: var(--text-muted);
+            border-radius: 50%;
+        }
+        .proof-live {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            margin-left: auto;
+        }
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background: #22c55e;
+            border-radius: 50%;
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.9); }
+        }
+        .live-text {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        @media (max-width: 600px) {
+            .social-proof-bar { padding: 8px 16px; }
+            .social-proof-inner { gap: 12px; }
+            .proof-divider { display: none; }
+            .proof-live { margin-left: 0; width: 100%; justify-content: center; margin-top: 4px; }
+        }
+
         /* Hero Section */
         .hero-section {
             max-width: 1400px;
@@ -2518,6 +2581,30 @@
             </nav>
         </div>
     </header>
+
+    <!-- Social Proof Bar -->
+    <div class="social-proof-bar">
+        <div class="social-proof-inner">
+            <div class="proof-stat">
+                <span class="proof-number" id="reader-count">2,400+</span>
+                <span class="proof-label">readers</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-stat">
+                <span class="proof-number">32</span>
+                <span class="proof-label">articles</span>
+            </div>
+            <div class="proof-divider"></div>
+            <div class="proof-stat">
+                <span class="proof-number">15+</span>
+                <span class="proof-label">free tools</span>
+            </div>
+            <div class="proof-live">
+                <span class="live-dot"></span>
+                <span class="live-text">Updated daily</span>
+            </div>
+        </div>
+    </div>
 
     <!-- Hero Section -->
     <section class="hero-section animate-in">
