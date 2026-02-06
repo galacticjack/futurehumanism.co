@@ -1,37 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://futurehumanism.co/articles/creator-economy-ai-tools-2026.html</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>https://futurehumanism.co/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/about.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/subscribe.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/referrals.html</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/remote-work-async-culture-2026.html</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>https://futurehumanism.co/resources.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/quiz.html</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/defi-yield-strategies-2026.html</loc>
-    <lastmod>2026-02-08</lastmod>
+    <loc>https://futurehumanism.co/search.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/tools/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/tools/ai-roi-calculator.html</loc>
+    <lastmod>2026-02-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/side-hustle-ideas-ai-era.html</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>monthly</changefreq>
+    <loc>https://futurehumanism.co/open-source-agents.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/ai-marketing-strategies-2026.html</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://futurehumanism.co/privacy.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/health-tech-wearables-2026.html</loc>
-    <lastmod>2026-02-08</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
+    <loc>https://futurehumanism.co/terms.html</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>
