@@ -148,15 +148,18 @@
         .feature svg {
             color: var(--accent);
         }
-        footer {
-            padding: 24px;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+        footer { background: #050505; color: white; padding: 40px 24px 24px; }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer-top { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 32px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .footer-brand p { font-size: 0.9rem; opacity: 0.7; line-height: 1.6; margin: 0; }
+        .footer-brand p:first-child { margin-bottom: 12px; }
+        .footer-links h4 { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; opacity: 0.5; margin-bottom: 16px; }
+        .footer-links a { display: block; font-size: 0.9rem; color: white; opacity: 0.7; text-decoration: none; margin-bottom: 10px; }
+        .footer-links a:hover { opacity: 1; }
+        .footer-bottom { padding-top: 24px; text-align: center; }
+        .footer-bottom p { font-size: 0.85rem; opacity: 0.5; margin: 0; }
+        .footer-bottom a { color: white; opacity: 0.7; text-decoration: none; }
+        @media (max-width: 768px) { .footer-top { grid-template-columns: 1fr 1fr; gap: 24px; } }
         @media (max-width: 768px) {
             .subscribe-box h1 { font-size: 1.8rem; }
             .features { flex-direction: column; gap: 16px; }
@@ -212,7 +215,33 @@
     </main>
 
     <footer>
-        <a href="/">← Back to Future Humanism</a>
+        <div class="footer-inner">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <p><strong>Future Humanism</strong></p>
+                    <p>Where AI meets human potential. Stories, tools, and insights for builders.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Content</h4>
+                    <a href="/">Home</a>
+                    <a href="/articles/">Stories</a>
+                    <a href="/about.html">About</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Tools</h4>
+                    <a href="/tools/">All Tools</a>
+                    <a href="/resources.html">AI Resources</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                    <a href="/subscribe.html">Newsletter</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2026 Future Humanism · <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></p>
+            </div>
+        </div>
     </footer>
 
     <script>
