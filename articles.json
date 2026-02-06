@@ -1,13 +1,5 @@
 [
   {
-    "slug": "shadow-ai-enterprise-crisis",
-    "title": "Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming",
-    "description": "Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.",
-    "date": "2026-02-07",
-    "category": "Enterprise AI",
-    "url": "/articles/shadow-ai-enterprise-crisis.html"
-  },
-  {
     "slug": "ai-model-convergence-2026",
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
@@ -62,6 +54,14 @@
     "date": "2026-02-07",
     "category": "General",
     "url": "/articles/ai-computer-control-revolution.html"
+  },
+  {
+    "slug": "shadow-ai-enterprise-crisis",
+    "title": "Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming",
+    "description": "Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.",
+    "date": "2026-02-07",
+    "category": "Enterprise AI",
+    "url": "/articles/shadow-ai-enterprise-crisis.html"
   },
   {
     "slug": "local-llms-running-ai-on-your-hardware",

@@ -5,16 +5,8 @@
     <link>https://futurehumanism.co</link>
     <description>Where AI meets human potential. Daily insights on AI, automation, and building things that matter.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 19:11:12 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 06 Feb 2026 19:14:21 +0000</lastBuildDate>
     <atom:link href="https://futurehumanism.co/feed.xml" rel="self" type="application/rss+xml"/>
-    <item>
-      <title>Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming</title>
-      <link>https://futurehumanism.co/articles/shadow-ai-enterprise-crisis.html</link>
-      <description>Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.</description>
-      <pubDate>Fri, 07 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://futurehumanism.co/articles/shadow-ai-enterprise-crisis.html</guid>
-      <category>Enterprise AI</category>
-    </item>
     <item>
       <title>The Great AI Model Convergence of 2026</title>
       <link>https://futurehumanism.co/articles/ai-model-convergence-2026.html</link>
@@ -70,6 +62,14 @@
       <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/ai-computer-control-revolution.html</guid>
       <category>General</category>
+    </item>
+    <item>
+      <title>Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming</title>
+      <link>https://futurehumanism.co/articles/shadow-ai-enterprise-crisis.html</link>
+      <description>Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.</description>
+      <pubDate>Sat, 07 Feb 2026 00:00:00 +0000</pubDate>
+      <guid>https://futurehumanism.co/articles/shadow-ai-enterprise-crisis.html</guid>
+      <category>Enterprise AI</category>
     </item>
     <item>
       <title>The Rise of Local LLMs: Running AI on Your Own Hardware</title>
@@ -246,14 +246,6 @@
       <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
       <guid>https://futurehumanism.co/articles/50-dollar-tech-stack.html</guid>
       <category>Tutorial</category>
-    </item>
-    <item>
-      <title>The Complete Guide to AI Agents in 2026</title>
-      <link>https://futurehumanism.co/articles/ai-agents-2026-guide.html</link>
-      <description>Everything you need to know about AI agents: what they are, how they work, and why 2026 is the year they go from demos to real workers.</description>
-      <pubDate>Thu, 05 Feb 2026 00:00:00 +0000</pubDate>
-      <guid>https://futurehumanism.co/articles/ai-agents-2026-guide.html</guid>
-      <category>Deep Dive</category>
     </item>
   </channel>
 </rss>
