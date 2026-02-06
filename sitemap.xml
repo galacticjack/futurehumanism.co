@@ -331,6 +331,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://futurehumanism.co/tools/ai-survival-kit.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://futurehumanism.co/tools/ai-tool-matchmaker.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
