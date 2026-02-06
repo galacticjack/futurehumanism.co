@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers | Future Humanism</title>
+    <meta name="description" content="Apple adds Claude Agent and OpenAI Codex to Xcode 26.3, marking the biggest shift in iOS development since SwiftUI. Here's what every developer needs to know about agentic coding.">
+    <meta property="og:title" content="Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers">
+    <meta property="og:description" content="Apple adds Claude Agent and OpenAI Codex to Xcode 26.3, marking the biggest shift in iOS development since SwiftUI. Here's what every developer needs to know about agentic coding.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-apple-xcode-agentic-coding.jpg">
+    <meta property="og:url" content="https://futurehumanism.co/articles/apple-xcode-agentic-coding.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers",
+        "description": "Apple adds Claude Agent and OpenAI Codex to Xcode 26.3, marking the biggest shift in iOS development since SwiftUI. Here's what every developer needs to know about agentic coding.",
+        "author": {
+            "@type": "Person",
+            "name": "Galactic Jack"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "Future Humanism",
+            "url": "https://futurehumanism.co"
+        },
+        "datePublished": "2026-02-07",
+        "dateModified": "2026-02-07",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://futurehumanism.co/articles/apple-xcode-agentic-coding.html"
+        },
+        "image": "https://futurehumanism.co/images/og-apple-xcode-agentic-coding.jpg"
+    }
+    </script>
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --accent: #6366F1;
+            --border: #2a2a2a;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        a:visited { color: var(--accent); }
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.6; }
+        .back-link {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(10,10,10,1)), url('../images/hero-agentic-coding.jpg') center/cover;
+            padding: 80px 24px;
+            text-align: center;
+        }
+        .hero-tag {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .hero-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+        article {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        article h2 {
+            font-size: 1.6rem;
+            margin: 48px 0 20px;
+            color: var(--text-primary);
+        }
+        article h3 {
+            font-size: 1.25rem;
+            margin: 32px 0 16px;
+            color: var(--text-primary);
+        }
+        article p {
+            margin-bottom: 20px;
+            color: var(--text-secondary);
+        }
+        article ul, article ol {
+            margin: 20px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+        article li {
+            margin-bottom: 12px;
+        }
+        article strong {
+            color: var(--text-primary);
+        }
+        .callout {
+            background: var(--bg-secondary);
+            border-left: 3px solid var(--accent);
+            padding: 24px;
+            margin: 32px 0;
+            border-radius: 0 8px 8px 0;
+        }
+        .callout h4 {
+            color: var(--accent);
+            margin-bottom: 12px;
+            font-size: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .callout p:last-child {
+            margin-bottom: 0;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            margin: 40px 0;
+            padding: 24px 0;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 10px 16px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .share-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .author-bio {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            padding: 32px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            margin: 48px 0;
+        }
+        .author-avatar {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            flex-shrink: 0;
+            color: white;
+            font-weight: 700;
+        }
+        .author-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+        .author-info p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        .related {
+            margin-top: 60px;
+            padding-top: 40px;
+            border-top: 1px solid var(--border);
+        }
+        .related h3 {
+            font-size: 1.4rem;
+            margin-bottom: 24px;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 24px;
+        }
+        .related-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: transform 0.2s;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+        }
+        .related-card img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        .related-card-content {
+            padding: 16px;
+        }
+        .related-card h4 {
+            color: var(--text-primary);
+            font-size: 1rem;
+            line-height: 1.4;
+            margin-bottom: 8px;
+        }
+        .related-card span {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        footer {
+            background: var(--bg-secondary);
+            padding: 60px 24px 30px;
+            margin-top: 80px;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 2fr repeat(3, 1fr);
+            gap: 48px;
+        }
+        .footer-brand p {
+            color: var(--text-secondary);
+            margin-top: 16px;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .footer-column h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: var(--text-primary);
+        }
+        .footer-column a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 0.95rem;
+            transition: color 0.2s;
+        }
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+        }
+        .footer-bottom a {
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+        .footer-bottom a:hover {
+            color: var(--accent);
+        }
+        @media (max-width: 768px) {
+            .hero { padding: 60px 20px; }
+            .hero h1 { font-size: 1.6rem; line-height: 1.15; }
+            article { padding: 40px 20px; }
+            article h2 { font-size: 1.4rem; margin-top: 36px; }
+            .author-bio { flex-direction: column; text-align: center; }
+            .share-buttons { flex-wrap: wrap; }
+            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="../index.html" class="logo">Future <span>Humanism</span></a>
+            <a href="../index.html" class="back-link">Back to Home</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <span class="hero-tag">AI Development</span>
+        <h1>Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers</h1>
+        <p class="hero-meta">February 7, 2026 | 8 min read</p>
+    </section>
+
+    <article>
+        <p>Apple just made the biggest move in developer tools since SwiftUI. With the release of Xcode 26.3, the company is integrating agentic AI coding capabilities directly into its flagship IDE, supporting both Anthropic's Claude Agent and OpenAI's Codex. This isn't just an incremental update. It's Apple's clearest signal yet that the future of software development runs through AI agents.</p>
+        
+        <p>For the millions of developers building iOS, macOS, watchOS, and visionOS applications, this changes everything. The question is no longer whether AI will transform how apps get built. The question is how fast you can adapt.</p>
+
+        <h2>What Apple Actually Announced</h2>
+        
+        <p>The Xcode 26.3 update introduces what Apple calls "agentic coding capabilities." In practical terms, this means AI agents can now:</p>
+        
+        <ul>
+            <li><strong>Build and test projects autonomously</strong> - Agents can compile code, run tests, and iterate without human intervention</li>
+            <li><strong>Search Apple documentation</strong> - Direct access to Apple's APIs, frameworks, and developer resources</li>
+            <li><strong>Fix issues independently</strong> - From build errors to runtime crashes, agents can diagnose and repair problems</li>
+            <li><strong>Handle multi-step tasks</strong> - Complex workflows that previously required constant developer oversight</li>
+        </ul>
+        
+        <p>The key difference from previous AI integrations is autonomy. Last summer, Apple added ChatGPT and Claude to Xcode for code suggestions and explanations. That was autocomplete on steroids. This is something fundamentally different: AI that can take a goal and work toward it independently.</p>
+
+        <div class="callout">
+            <h4>The Open Standard Angle</h4>
+            <p>Apple is using an open protocol that allows developers to connect other compatible AI agents and tools to Xcode beyond the built-in Anthropic and OpenAI integrations. This is unusually open for Apple and suggests they see agentic coding as a platform play, not a locked ecosystem.</p>
+        </div>
+
+        <h2>Why This Matters More Than You Think</h2>
+        
+        <p>Every iPhone app, every Mac app, every Apple Watch app, every Vision Pro experience goes through Xcode. By embedding agentic AI at this layer, Apple is reshaping the development experience for an entire platform ecosystem.</p>
+        
+        <p>Consider the numbers: There are over 34 million registered Apple developers. The App Store hosts more than 1.8 million apps. Every single one of those apps could now be built, maintained, and updated with agentic assistance.</p>
+        
+        <h3>The "Vibe Coding" Revolution Gets Official</h3>
+        
+        <p>For the past year, developers have been experimenting with "vibe coding" - prompting AI models to generate code, reviewing the output, and iterating until something works. Tools like Cursor, GitHub Copilot, and Replit have made this workflow increasingly mainstream.</p>
+        
+        <p>But there's been a gap. These tools work great for general-purpose development, but Apple's ecosystem has unique requirements. SwiftUI, Combine, CoreData, Metal, ARKit - these frameworks have specific patterns and conventions that general-purpose AI models sometimes miss.</p>
+        
+        <p>Apple's integration solves this by giving agents direct access to Apple's documentation and development environment. An agent building an iOS app can now understand not just Swift syntax but Apple's Human Interface Guidelines, the latest API changes, and platform-specific best practices.</p>
+
+        <h2>What Changes for Developers</h2>
+        
+        <h3>The New Development Loop</h3>
+        
+        <p>Traditional iOS development follows a predictable pattern: write code, build, test, debug, repeat. With agentic Xcode, that loop transforms:</p>
+        
+        <ol>
+            <li><strong>Describe what you want</strong> - Natural language specification of features or fixes</li>
+            <li><strong>Agent implements</strong> - AI writes code, builds project, runs tests</li>
+            <li><strong>Review and refine</strong> - Developer validates output, provides feedback</li>
+            <li><strong>Agent iterates</strong> - Based on feedback, agent improves implementation</li>
+            <li><strong>Ship</strong> - Final human approval before release</li>
+        </ol>
+        
+        <p>The developer's role shifts from writing every line of code to reviewing, directing, and making judgment calls. This isn't about replacing developers. It's about amplifying what each developer can accomplish.</p>
+        
+        <h3>The Skills That Matter Now</h3>
+        
+        <p>If agentic AI handles more of the implementation, what becomes valuable?</p>
+        
+        <ul>
+            <li><strong>Architecture and system design</strong> - Decisions about how components fit together</li>
+            <li><strong>Product judgment</strong> - Understanding what users actually need</li>
+            <li><strong>Quality assessment</strong> - Recognizing when AI output meets standards</li>
+            <li><strong>Edge case thinking</strong> - Anticipating scenarios the AI might miss</li>
+            <li><strong>Prompt engineering</strong> - Articulating requirements in ways AI understands</li>
+        </ul>
+        
+        <p>The developers who thrive will be those who view AI as a multiplier for their expertise, not a threat to it.</p>
+
+        <div class="callout">
+            <h4>Reality Check</h4>
+            <p>Agentic coding is powerful but not magic. Complex debugging, performance optimization, and novel problem-solving still require human insight. The agents excel at well-defined tasks with clear success criteria. Ambiguous requirements and edge cases remain challenging.</p>
+        </div>
+
+        <h2>The Competitive Landscape Shifts</h2>
+        
+        <p>Apple's move puts pressure on every other development environment. Visual Studio, Android Studio, JetBrains IDEs - all now face a simple question: where are your agents?</p>
+        
+        <p>Google has been experimenting with AI in Android Studio, but nothing as comprehensive as what Apple just announced. Microsoft's Copilot integration in Visual Studio is strong for code completion but lacks the autonomous capabilities Xcode now offers.</p>
+        
+        <p>The battleground for developer tools has shifted. It's no longer about syntax highlighting, debugging interfaces, or build speed. It's about how effectively AI agents can work within the environment.</p>
+        
+        <h3>The App Quality Question</h3>
+        
+        <p>Critics will ask: if AI can build apps faster, does quality suffer? Early evidence suggests the opposite. Agents can run comprehensive test suites, check for memory leaks, verify accessibility compliance, and catch common bugs - all automatically.</p>
+        
+        <p>The apps that suffer are those built by developers who treat agents as a shortcut to ship faster without understanding what's being shipped. The apps that excel are those where developers use agents to achieve higher quality at greater speed.</p>
+
+        <h2>How to Prepare</h2>
+        
+        <h3>For Individual Developers</h3>
+        
+        <ol>
+            <li><strong>Get access now</strong> - Xcode 26.3 is in beta for registered developers. Don't wait for the public release.</li>
+            <li><strong>Set up your API keys</strong> - You'll need Anthropic and/or OpenAI API accounts connected to Xcode</li>
+            <li><strong>Start small</strong> - Use agents for isolated tasks before trusting them with complex features</li>
+            <li><strong>Document your prompts</strong> - What instructions produce the best results? Build your personal playbook.</li>
+            <li><strong>Review critically</strong> - Never ship code you don't understand, regardless of who or what wrote it</li>
+        </ol>
+        
+        <h3>For Teams and Companies</h3>
+        
+        <ul>
+            <li><strong>Update your code review process</strong> - AI-generated code needs human review. Make this explicit in your workflow.</li>
+            <li><strong>Consider API costs</strong> - Agentic coding consumes API credits. Budget accordingly.</li>
+            <li><strong>Train your team</strong> - Not everyone will adapt at the same pace. Invest in upskilling.</li>
+            <li><strong>Protect sensitive code</strong> - Understand what goes to external APIs and what stays local.</li>
+        </ul>
+
+        <h2>The Bigger Picture</h2>
+        
+        <p>Apple's move validates a trend that's been building for years: AI agents are becoming core infrastructure for software development. Not a nice-to-have. Not an experiment. Infrastructure.</p>
+        
+        <p>The implications extend beyond iOS development. If the world's most valuable company is betting this heavily on agentic coding, every software organization needs to pay attention.</p>
+        
+        <p>We're entering an era where the question isn't whether you'll work with AI agents, but how effectively you'll collaborate with them. Xcode 26.3 is a milestone on that journey, but it's far from the destination.</p>
+        
+        <p>The developers who embrace this shift - who learn to direct agents effectively, who maintain high standards while working at higher speed, who see AI as a partner rather than a replacement - will build the next generation of software. Everyone else will be catching up.</p>
+
+        <div class="callout">
+            <h4>The Bottom Line</h4>
+            <p>Apple adding agentic coding to Xcode isn't just a product update. It's a statement about the future of software development. The question for every developer: are you ready to work differently?</p>
+        </div>
+
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?url=https://futurehumanism.co/articles/apple-xcode-agentic-coding.html&text=Apple%20Embraces%20Agentic%20Coding%3A%20What%20Xcode%2026.3%20Means%20for%20Developers" target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Share on X
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://futurehumanism.co/articles/apple-xcode-agentic-coding.html" target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://futurehumanism.co/articles/apple-xcode-agentic-coding.html" target="_blank" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+            <button onclick="navigator.clipboard.writeText(window.location.href); this.textContent='Copied!'; setTimeout(() => this.textContent='Copy Link', 2000)" class="share-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                Copy Link
+            </button>
+        </div>
+
+        <div class="author-bio">
+            <div class="author-avatar">GJ</div>
+            <div class="author-info">
+                <h4>Galactic Jack</h4>
+                <p>AI systems architect and automation specialist exploring the convergence of human creativity and machine intelligence. Building tools that amplify what humans do best.</p>
+            </div>
+        </div>
+
+        <div class="related">
+            <h3>Keep Reading</h3>
+            <div class="related-grid">
+                <a href="ai-agents-2026-guide.html" class="related-card">
+                    <img src="../images/hero-agents.jpg" alt="AI Agents 2026 Guide">
+                    <div class="related-card-content">
+                        <h4>The Complete Guide to AI Agents in 2026</h4>
+                        <span>12 min read</span>
+                    </div>
+                </a>
+                <a href="build-your-first-ai-agent-practical-guide.html" class="related-card">
+                    <img src="../images/hero-build-agent.jpg" alt="Build Your First AI Agent">
+                    <div class="related-card-content">
+                        <h4>Build Your First AI Agent: A Practical Guide</h4>
+                        <span>15 min read</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </article>
+
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-brand">
+                <a href="../index.html" class="logo">Future <span>Humanism</span></a>
+                <p>Exploring the convergence of human potential and artificial intelligence. Daily insights on AI tools, automation, and the future of work.</p>
+            </div>
+            <div class="footer-column">
+                <h4>Content</h4>
+                <a href="../index.html">Latest Articles</a>
+                <a href="../resources.html">Resources</a>
+                <a href="../about.html">About</a>
+            </div>
+            <div class="footer-column">
+                <h4>Tools</h4>
+                <a href="../tools.html">Free Tools</a>
+            </div>
+            <div class="footer-column">
+                <h4>Connect</h4>
+                <a href="https://x.com/FutureHumanism" target="_blank">X / Twitter</a>
+                <a href="../subscribe.html">Newsletter</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <span>2026 Future Humanism</span>
+            <div>
+                <a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
