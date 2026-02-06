@@ -21,6 +21,9 @@ jobs:
         with:
           python-version: '3.11'
       
+      - name: Validate articles
+        run: python scripts/validate-articles.py || echo "::warning::Some articles have issues"
+      
       - name: Run build script
         run: python scripts/build.py
       
