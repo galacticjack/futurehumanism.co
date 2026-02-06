@@ -110,6 +110,21 @@
         a {
             color: var(--accent);
         }
+        
+        /* Nuclear SVG fix - prevent explosion */
+        svg {
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 24px !important;
+            max-height: 24px !important;
+            flex-shrink: 0 !important;
+        }
+        .logo-icon, .logo-icon img {
+            width: 36px !important;
+            height: 36px !important;
+            max-width: 36px !important;
+            max-height: 36px !important;
+        }
         footer { background: #050505; color: white; padding: 40px 24px 24px; }
         .footer-inner { max-width: 1200px; margin: 0 auto; }
         .footer-top { display: grid; grid-template-columns: 2fr repeat(3, 1fr); gap: 32px; padding-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); }
