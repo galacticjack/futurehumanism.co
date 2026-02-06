@@ -63,12 +63,6 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://futurehumanism.co/articles/ai-agent-security-vulnerabilities-2026.html</loc>
-    <lastmod>2026-02-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://futurehumanism.co/articles/agent-infrastructure-orchestration-2026.html</loc>
     <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
@@ -83,6 +77,12 @@
   <url>
     <loc>https://futurehumanism.co/articles/ai-agent-economy-2027.html</loc>
     <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://futurehumanism.co/articles/ai-agent-security-vulnerabilities-2026.html</loc>
+    <lastmod>2026-02-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

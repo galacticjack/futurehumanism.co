@@ -1,13 +1,5 @@
 [
   {
-    "slug": "ai-agent-security-vulnerabilities-2026",
-    "title": "AI Agent Security: The Vulnerabilities That Could Bring Down Your Enterprise",
-    "description": "BodySnatcher, lateral movement, and agent-to-agent attacks are exposing critical flaws in enterprise AI deployments. Learn how to protect your organization from the next wave of AI security threats.",
-    "date": "2026-02-07",
-    "category": "Security",
-    "url": "/articles/ai-agent-security-vulnerabilities-2026.html"
-  },
-  {
     "slug": "ai-model-convergence-2026",
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
@@ -126,6 +118,14 @@
     "date": "2026-02-07",
     "category": "AI Tools",
     "url": "/articles/best-ai-coding-assistants-beginners-2026.html"
+  },
+  {
+    "slug": "ai-agent-security-vulnerabilities-2026",
+    "title": "AI Agent Security: The Vulnerabilities That Could Bring Down Your Enterprise",
+    "description": "BodySnatcher, lateral movement, and agent-to-agent attacks are exposing critical flaws in enterprise AI deployments. Learn how to protect your organization from the next wave of AI security threats.",
+    "date": "2026-02-07",
+    "category": "Security Alert",
+    "url": "/articles/ai-agent-security-vulnerabilities-2026.html"
   },
   {
     "slug": "local-llms-running-ai-on-your-hardware",
