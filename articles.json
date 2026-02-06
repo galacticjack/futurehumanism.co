@@ -8,20 +8,12 @@
     "url": "/articles/ai-model-convergence-2026.html"
   },
   {
-    "slug": "chatgpt-pro-200-enterprise-ai-shift",
-    "title": "ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future",
-    "description": "OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape corporate budgets and competitive landscapes in 2026.",
+    "slug": "ai-agents-eating-software",
+    "title": "AI Agents Are Eating Software - Why Every Company Needs an Agent Strategy in 2026",
+    "description": "AI agents are transforming how businesses operate. From customer service to data analysis, autonomous agents are replacing traditional software workflows. Here's why every company needs an agent strategy now.",
     "date": "2026-02-07",
-    "category": "Enterprise AI Strategy",
-    "url": "/articles/chatgpt-pro-200-enterprise-ai-shift.html"
-  },
-  {
-    "slug": "ai-computer-control-revolution",
-    "title": "AI Just Learned to Control Your Computer: The Revolution is Here",
-    "description": "Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation. Here's what it means for your work and business.",
-    "date": "2026-02-07",
-    "category": "General",
-    "url": "/articles/ai-computer-control-revolution.html"
+    "category": "Business Strategy",
+    "url": "/articles/ai-agents-eating-software.html"
   },
   {
     "slug": "agent-infrastructure-orchestration-2026",
@@ -32,12 +24,12 @@
     "url": "/articles/agent-infrastructure-orchestration-2026.html"
   },
   {
-    "slug": "ai-agents-eating-software",
-    "title": "AI Agents Are Eating Software - Why Every Company Needs an Agent Strategy in 2026",
-    "description": "AI agents are transforming how businesses operate. From customer service to data analysis, autonomous agents are replacing traditional software workflows. Here's why every company needs an agent strategy now.",
+    "slug": "chatgpt-pro-200-enterprise-ai-shift",
+    "title": "ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future",
+    "description": "OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape corporate budgets and competitive landscapes in 2026.",
     "date": "2026-02-07",
-    "category": "Business Strategy",
-    "url": "/articles/ai-agents-eating-software.html"
+    "category": "Enterprise AI Strategy",
+    "url": "/articles/chatgpt-pro-200-enterprise-ai-shift.html"
   },
   {
     "slug": "gemini-2-flash-multimodal-ai-dominance",
@@ -48,28 +40,12 @@
     "url": "/articles/gemini-2-flash-multimodal-ai-dominance.html"
   },
   {
-    "slug": "future-of-search-after-chatgpt",
-    "title": "The Future of Search After ChatGPT: What Google Won't Tell You",
-    "description": "How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.",
-    "date": "2026-02-06",
-    "category": "Search Evolution",
-    "url": "/articles/future-of-search-after-chatgpt.html"
-  },
-  {
-    "slug": "nocode-automation-stacks-solopreneurs",
-    "title": "No-Code Automation Stacks for Solopreneurs: Complete Setup Guide",
-    "description": "Build powerful automation stacks without coding. Complete blueprints for solopreneurs to automate marketing, sales, operations, and customer service.",
-    "date": "2026-02-06",
-    "category": "No-Code Automation",
-    "url": "/articles/nocode-automation-stacks-solopreneurs.html"
-  },
-  {
-    "slug": "deepseek-r1-vs-openai-o1",
-    "title": "DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning",
-    "description": "DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1 and why it changes everything.",
-    "date": "2026-02-06",
-    "category": "Analysis",
-    "url": "/articles/deepseek-r1-vs-openai-o1.html"
+    "slug": "ai-computer-control-revolution",
+    "title": "AI Just Learned to Control Your Computer: The Revolution is Here",
+    "description": "Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation. Here's what it means for your work and business.",
+    "date": "2026-02-07",
+    "category": "General",
+    "url": "/articles/ai-computer-control-revolution.html"
   },
   {
     "slug": "local-llms-running-ai-on-your-hardware",
@@ -80,12 +56,12 @@
     "url": "/articles/local-llms-running-ai-on-your-hardware.html"
   },
   {
-    "slug": "ai-tools-replacing-saas-subscriptions",
-    "title": "AI Tools Are Replacing SaaS Subscriptions: The Great Unbundling",
-    "description": "How AI is making specialized SaaS tools obsolete. Why you can replace $500+/month in subscriptions with smart AI workflows that cost $50.",
+    "slug": "ai-world-models-next-breakthrough",
+    "title": "World Models: The AI Breakthrough That Will Change Everything After LLMs",
+    "description": "Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next paradigm shift is here.",
     "date": "2026-02-06",
-    "category": "SaaS Disruption",
-    "url": "/articles/ai-tools-replacing-saas-subscriptions.html"
+    "category": "Deep Dive",
+    "url": "/articles/ai-world-models-next-breakthrough.html"
   },
   {
     "slug": "remote-work-async-culture-2026",
@@ -104,6 +80,102 @@
     "url": "/articles/health-tech-wearables-2026.html"
   },
   {
+    "slug": "ai-agent-economy-2027",
+    "title": "The AI Agent Economy: Why Every Business Will Have Digital Employees by 2027",
+    "description": "The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transform every industry by 2027.",
+    "date": "2026-02-06",
+    "category": "General",
+    "url": "/articles/ai-agent-economy-2027.html"
+  },
+  {
+    "slug": "creator-economy-ai-tools-2026",
+    "title": "The Creator Economy in 2026: AI Tools That Actually Move the Needle",
+    "description": "How creators are using AI to produce more content, grow faster, and build sustainable businesses. The tools, workflows, and strategies that work.",
+    "date": "2026-02-06",
+    "category": "Creator Economy",
+    "url": "/articles/creator-economy-ai-tools-2026.html"
+  },
+  {
+    "slug": "build-your-first-ai-agent-practical-guide",
+    "title": "How to Build Your First AI Agent: The Complete Practical Guide",
+    "description": "Step-by-step guide to building your first AI agent without coding. Real examples, tools, and strategies for automating your work and creating value.",
+    "date": "2026-02-06",
+    "category": "Practical AI",
+    "url": "/articles/build-your-first-ai-agent-practical-guide.html"
+  },
+  {
+    "slug": "snowflake-openai-enterprise-ai-tipping-point",
+    "title": "The $200M Deal That Just Changed Enterprise AI Forever",
+    "description": "Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation. What every business needs to know.",
+    "date": "2026-02-06",
+    "category": "Breaking Enterprise AI",
+    "url": "/articles/snowflake-openai-enterprise-ai-tipping-point.html"
+  },
+  {
+    "slug": "building-passive-income-ai-automation",
+    "title": "Building Passive Income with AI Automation: Real Strategies That Work",
+    "description": "Discover proven strategies to build passive income streams using AI automation. Real examples, tools, and step-by-step blueprints for creating sustainable revenue.",
+    "date": "2026-02-06",
+    "category": "Passive Income",
+    "url": "/articles/building-passive-income-ai-automation.html"
+  },
+  {
+    "slug": "side-hustle-ideas-ai-era",
+    "title": "12 Side Hustles That Actually Work in the AI Era",
+    "description": "Side hustle ideas that leverage AI instead of competing with it. Real opportunities with realistic income expectations and how to get started.",
+    "date": "2026-02-06",
+    "category": "Money & Careers",
+    "url": "/articles/side-hustle-ideas-ai-era.html"
+  },
+  {
+    "slug": "ai-marketing-strategies-2026",
+    "title": "AI Marketing in 2026: What's Working and What's Hype",
+    "description": "The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from teams seeing actual results.",
+    "date": "2026-02-06",
+    "category": "Marketing",
+    "url": "/articles/ai-marketing-strategies-2026.html"
+  },
+  {
+    "slug": "defi-yield-strategies-2026",
+    "title": "DeFi Yield in 2026: Strategies That Survive Bear Markets",
+    "description": "The sustainable yield strategies that work in any market condition. Risk management, protocol selection, and the math behind real DeFi returns.",
+    "date": "2026-02-06",
+    "category": "Crypto & DeFi",
+    "url": "/articles/defi-yield-strategies-2026.html"
+  },
+  {
+    "slug": "deepseek-r1-vs-openai-o1",
+    "title": "DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning",
+    "description": "DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1 and why it changes everything.",
+    "date": "2026-02-06",
+    "category": "Analysis",
+    "url": "/articles/deepseek-r1-vs-openai-o1.html"
+  },
+  {
+    "slug": "nocode-automation-stacks-solopreneurs",
+    "title": "No-Code Automation Stacks for Solopreneurs: Complete Setup Guide",
+    "description": "Build powerful automation stacks without coding. Complete blueprints for solopreneurs to automate marketing, sales, operations, and customer service.",
+    "date": "2026-02-06",
+    "category": "No-Code Automation",
+    "url": "/articles/nocode-automation-stacks-solopreneurs.html"
+  },
+  {
+    "slug": "ai-agents-memory",
+    "title": "AI Agents Getting Memory: Why Persistent Context Changes Everything",
+    "description": "The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy, business applications, and the future of work.",
+    "date": "2026-02-06",
+    "category": "Breaking Technology",
+    "url": "/articles/ai-agents-memory.html"
+  },
+  {
+    "slug": "ai-tools-replacing-saas-subscriptions",
+    "title": "AI Tools Are Replacing SaaS Subscriptions: The Great Unbundling",
+    "description": "How AI is making specialized SaaS tools obsolete. Why you can replace $500+/month in subscriptions with smart AI workflows that cost $50.",
+    "date": "2026-02-06",
+    "category": "SaaS Disruption",
+    "url": "/articles/ai-tools-replacing-saas-subscriptions.html"
+  },
+  {
     "slug": "prompt-engineering-that-actually-works",
     "title": "Prompt Engineering That Actually Works: Beyond Basic Tips",
     "description": "Advanced prompt engineering techniques that consistently produce better AI outputs. Real examples, tested strategies, and the psychology behind effective prompts.",
@@ -120,12 +192,20 @@
     "url": "/articles/ai-agents-platform-shift.html"
   },
   {
-    "slug": "build-your-first-ai-agent-practical-guide",
-    "title": "How to Build Your First AI Agent: The Complete Practical Guide",
-    "description": "Step-by-step guide to building your first AI agent without coding. Real examples, tools, and strategies for automating your work and creating value.",
+    "slug": "why-every-business-needs-ai-strategy-2026",
+    "title": "Why Every Business Needs an AI Strategy in 2026: The Competitive Reality",
+    "description": "AI is no longer optional for business success. Learn why every company needs an AI strategy in 2026 and how to build one that drives real results.",
     "date": "2026-02-06",
-    "category": "Practical AI",
-    "url": "/articles/build-your-first-ai-agent-practical-guide.html"
+    "category": "Business Strategy",
+    "url": "/articles/why-every-business-needs-ai-strategy-2026.html"
+  },
+  {
+    "slug": "future-of-search-after-chatgpt",
+    "title": "The Future of Search After ChatGPT: What Google Won't Tell You",
+    "description": "How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.",
+    "date": "2026-02-06",
+    "category": "Search Evolution",
+    "url": "/articles/future-of-search-after-chatgpt.html"
   },
   {
     "slug": "crypto-market-cycles-ai-trading-signals",
@@ -136,100 +216,12 @@
     "url": "/articles/crypto-market-cycles-ai-trading-signals.html"
   },
   {
-    "slug": "creator-economy-ai-tools-2026",
-    "title": "The Creator Economy in 2026: AI Tools That Actually Move the Needle",
-    "description": "How creators are using AI to produce more content, grow faster, and build sustainable businesses. The tools, workflows, and strategies that work.",
-    "date": "2026-02-06",
-    "category": "Creator Economy",
-    "url": "/articles/creator-economy-ai-tools-2026.html"
-  },
-  {
-    "slug": "ai-agents-memory",
-    "title": "AI Agents Getting Memory: Why Persistent Context Changes Everything",
-    "description": "The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy, business applications, and the future of work.",
-    "date": "2026-02-06",
-    "category": "Breaking Technology",
-    "url": "/articles/ai-agents-memory.html"
-  },
-  {
-    "slug": "why-every-business-needs-ai-strategy-2026",
-    "title": "Why Every Business Needs an AI Strategy in 2026: The Competitive Reality",
-    "description": "AI is no longer optional for business success. Learn why every company needs an AI strategy in 2026 and how to build one that drives real results.",
-    "date": "2026-02-06",
-    "category": "Business Strategy",
-    "url": "/articles/why-every-business-needs-ai-strategy-2026.html"
-  },
-  {
-    "slug": "side-hustle-ideas-ai-era",
-    "title": "12 Side Hustles That Actually Work in the AI Era",
-    "description": "Side hustle ideas that leverage AI instead of competing with it. Real opportunities with realistic income expectations and how to get started.",
-    "date": "2026-02-06",
-    "category": "Money & Careers",
-    "url": "/articles/side-hustle-ideas-ai-era.html"
-  },
-  {
-    "slug": "snowflake-openai-enterprise-ai-tipping-point",
-    "title": "The $200M Deal That Just Changed Enterprise AI Forever",
-    "description": "Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation. What every business needs to know.",
-    "date": "2026-02-06",
-    "category": "Breaking Enterprise AI",
-    "url": "/articles/snowflake-openai-enterprise-ai-tipping-point.html"
-  },
-  {
-    "slug": "ai-world-models-next-breakthrough",
-    "title": "World Models: The AI Breakthrough That Will Change Everything After LLMs",
-    "description": "Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next paradigm shift is here.",
-    "date": "2026-02-06",
-    "category": "Deep Dive",
-    "url": "/articles/ai-world-models-next-breakthrough.html"
-  },
-  {
-    "slug": "building-passive-income-ai-automation",
-    "title": "Building Passive Income with AI Automation: Real Strategies That Work",
-    "description": "Discover proven strategies to build passive income streams using AI automation. Real examples, tools, and step-by-step blueprints for creating sustainable revenue.",
-    "date": "2026-02-06",
-    "category": "Passive Income",
-    "url": "/articles/building-passive-income-ai-automation.html"
-  },
-  {
-    "slug": "ai-agent-economy-2027",
-    "title": "The AI Agent Economy: Why Every Business Will Have Digital Employees by 2027",
-    "description": "The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transform every industry by 2027.",
-    "date": "2026-02-06",
-    "category": "General",
-    "url": "/articles/ai-agent-economy-2027.html"
-  },
-  {
-    "slug": "defi-yield-strategies-2026",
-    "title": "DeFi Yield in 2026: Strategies That Survive Bear Markets",
-    "description": "The sustainable yield strategies that work in any market condition. Risk management, protocol selection, and the math behind real DeFi returns.",
-    "date": "2026-02-06",
-    "category": "Crypto & DeFi",
-    "url": "/articles/defi-yield-strategies-2026.html"
-  },
-  {
-    "slug": "ai-marketing-strategies-2026",
-    "title": "AI Marketing in 2026: What's Working and What's Hype",
-    "description": "The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from teams seeing actual results.",
-    "date": "2026-02-06",
-    "category": "Marketing",
-    "url": "/articles/ai-marketing-strategies-2026.html"
-  },
-  {
-    "slug": "why-ai-side-projects-fail",
-    "title": "Why Most AI Side Projects Fail (And How to Beat the Odds)",
-    "description": "The uncomfortable truth about why 90% of AI side projects never make money-and the exact playbook to be in the 10%.",
+    "slug": "50-dollar-tech-stack",
+    "title": "The $50/Month Stack That Runs My Entire Business",
+    "description": "Every tool I use to run a profitable side business for less than the cost of a gym membership.",
     "date": "2026-02-05",
-    "category": "Strategy",
-    "url": "/articles/why-ai-side-projects-fail.html"
-  },
-  {
-    "slug": "automate-80-percent-agency-work",
-    "title": "How We Automated 80% of Our Agency Work",
-    "description": "The exact automations, prompts, and workflows we use to run a digital agency with a fraction of the headcount.",
-    "date": "2026-02-05",
-    "category": "Case Study",
-    "url": "/articles/automate-80-percent-agency-work.html"
+    "category": "Tutorial",
+    "url": "/articles/50-dollar-tech-stack.html"
   },
   {
     "slug": "ai-agents-2026-guide",
@@ -248,11 +240,19 @@
     "url": "/articles/claude-vs-gpt-comparison.html"
   },
   {
-    "slug": "50-dollar-tech-stack",
-    "title": "The $50/Month Stack That Runs My Entire Business",
-    "description": "Every tool I use to run a profitable side business for less than the cost of a gym membership.",
+    "slug": "why-ai-side-projects-fail",
+    "title": "Why Most AI Side Projects Fail (And How to Beat the Odds)",
+    "description": "The uncomfortable truth about why 90% of AI side projects never make money-and the exact playbook to be in the 10%.",
     "date": "2026-02-05",
-    "category": "Tutorial",
-    "url": "/articles/50-dollar-tech-stack.html"
+    "category": "Strategy",
+    "url": "/articles/why-ai-side-projects-fail.html"
+  },
+  {
+    "slug": "automate-80-percent-agency-work",
+    "title": "How We Automated 80% of Our Agency Work",
+    "description": "The exact automations, prompts, and workflows we use to run a digital agency with a fraction of the headcount.",
+    "date": "2026-02-05",
+    "category": "Case Study",
+    "url": "/articles/automate-80-percent-agency-work.html"
   }
 ]
