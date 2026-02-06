@@ -587,6 +587,158 @@
         }
         
         .fade-in { animation: fadeIn 0.3s ease; }
+        
+        /* Challenge Banner */
+        .challenge-banner {
+            display: none;
+            background: linear-gradient(135deg, #1E90FF 0%, #0066CC 100%);
+            padding: 12px 20px;
+            text-align: center;
+            animation: slideDown 0.5s ease;
+        }
+        .challenge-banner.visible { display: block; }
+        .challenge-banner-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+        .challenge-emoji { font-size: 1.5rem; }
+        .challenge-text { font-size: 0.95rem; }
+        .challenge-text strong { color: #FFD700; }
+        
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        /* Challenge Result Comparison */
+        .challenge-result {
+            display: none;
+            background: var(--bg-card);
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .challenge-result.visible { display: block; animation: fadeIn 0.5s ease; }
+        .challenge-result.won { border-color: #22c55e; }
+        .challenge-result.lost { border-color: #ef4444; }
+        .challenge-result.tied { border-color: #eab308; }
+        .challenge-result-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .challenge-result.won .challenge-result-title { color: #22c55e; }
+        .challenge-result.lost .challenge-result-title { color: #ef4444; }
+        .challenge-result.tied .challenge-result-title { color: #eab308; }
+        .challenge-result-text {
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+        .score-comparison {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 16px;
+        }
+        .score-box {
+            text-align: center;
+        }
+        .score-box-label {
+            font-size: 0.75rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+        .score-box-value {
+            font-size: 2rem;
+            font-weight: 800;
+        }
+        .score-box.you .score-box-value { color: var(--accent); }
+        .score-box.them .score-box-value { color: var(--text-secondary); }
+        
+        /* Challenge Friend Section */
+        .challenge-friend-section {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+        .challenge-friend-section h4 {
+            font-size: 1rem;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .nickname-input {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 12px;
+        }
+        .nickname-input input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.9rem;
+        }
+        .nickname-input input::placeholder { color: var(--text-muted); }
+        .nickname-input input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .challenge-link-box {
+            display: none;
+            margin-top: 12px;
+        }
+        .challenge-link-box.visible { display: block; }
+        .challenge-link-row {
+            display: flex;
+            gap: 8px;
+        }
+        .challenge-link-row input {
+            flex: 1;
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 0.8rem;
+        }
+        .challenge-share-btns {
+            display: flex;
+            gap: 8px;
+            margin-top: 12px;
+            flex-wrap: wrap;
+        }
+        .challenge-share-btns button {
+            flex: 1;
+            min-width: 100px;
+            padding: 10px 16px;
+            border-radius: 8px;
+            border: none;
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            transition: transform 0.2s, opacity 0.2s;
+        }
+        .challenge-share-btns button:hover { transform: translateY(-2px); }
+        .challenge-share-btns .share-x { background: #000; color: #fff; }
+        .challenge-share-btns .share-whatsapp { background: #25D366; color: #fff; }
+        .challenge-share-btns .share-copy { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); }
     </style>
 </head>
 <body>
@@ -598,6 +750,16 @@
     </header>
     
     <main>
+        <!-- Challenge Banner (shown when visiting via shared link) -->
+        <div class="challenge-banner" id="challengeBanner">
+            <div class="challenge-banner-content">
+                <span class="challenge-emoji">⚔️</span>
+                <span class="challenge-text">
+                    <strong id="challengerName">Someone</strong> scored <strong id="challengerScore">70%</strong> and challenged you to beat them!
+                </span>
+            </div>
+        </div>
+        
         <!-- Start Screen -->
         <div class="start-screen" id="startScreen">
             <div class="game-icon">🤖 vs 👤</div>
@@ -699,8 +861,53 @@
                 </div>
             </div>
             
+            <!-- Challenge Result (shown when completing a challenge) -->
+            <div class="challenge-result" id="challengeResult">
+                <h3 class="challenge-result-title" id="challengeResultTitle">You Won!</h3>
+                <p class="challenge-result-text" id="challengeResultText">You beat their score by 10%!</p>
+                <div class="score-comparison">
+                    <div class="score-box you">
+                        <div class="score-box-label">Your Score</div>
+                        <div class="score-box-value" id="yourFinalScore">80%</div>
+                    </div>
+                    <div class="score-box them">
+                        <div class="score-box-label" id="theirLabel">Their Score</div>
+                        <div class="score-box-value" id="theirFinalScore">70%</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Challenge a Friend Section -->
+            <div class="challenge-friend-section">
+                <h4>⚔️ Challenge a Friend</h4>
+                <div class="nickname-input">
+                    <input type="text" id="challengerNickname" placeholder="Your name (optional)" maxlength="20">
+                    <button class="btn btn-primary" onclick="generateChallengeLink()" style="white-space: nowrap;">Create Link</button>
+                </div>
+                <div class="challenge-link-box" id="challengeLinkBox">
+                    <div class="challenge-link-row">
+                        <input type="text" id="challengeLink" readonly>
+                        <button class="btn btn-secondary" onclick="copyChallengeLink()">Copy</button>
+                    </div>
+                    <div class="challenge-share-btns">
+                        <button class="share-x" onclick="shareChallengeX()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                            Share on X
+                        </button>
+                        <button class="share-whatsapp" onclick="shareChallengeWhatsApp()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            WhatsApp
+                        </button>
+                        <button class="share-copy" onclick="copyChallengeLink()">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                            Copy
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
             <div class="share-section">
-                <h3>Challenge your friends</h3>
+                <h3>Or share directly</h3>
                 <div class="share-buttons">
                     <a href="#" class="share-btn twitter" id="shareTwitter" target="_blank">
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
@@ -1088,6 +1295,9 @@
                 'value': percentage
             });
             
+            // Show challenge result if this was a challenge
+            showChallengeResult(percentage);
+            
             // Show email capture after 3 seconds
             if (typeof triggerEmailCaptureOnResults === 'function') {
                 triggerEmailCaptureOnResults({
@@ -1105,6 +1315,148 @@
             btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
             setTimeout(() => { btn.innerHTML = originalText; }, 2000);
         }
+        
+        // ===== CHALLENGE MODE - VIRAL LOOP =====
+        let challengeData = null;
+        let finalScore = 0;
+        
+        // Check if we arrived from a challenge link
+        function checkForChallenge() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const challengeParam = urlParams.get('c');
+            
+            if (challengeParam) {
+                try {
+                    // Decode challenge data (base64 encoded JSON)
+                    const decoded = atob(challengeParam);
+                    challengeData = JSON.parse(decoded);
+                    
+                    // Show challenge banner
+                    document.getElementById('challengeBanner').classList.add('visible');
+                    document.getElementById('challengerName').textContent = challengeData.name || 'Someone';
+                    document.getElementById('challengerScore').textContent = challengeData.score + '%';
+                    
+                    // Track challenge visit
+                    gtag('event', 'challenge_received', {
+                        'event_category': 'viral',
+                        'event_label': challengeData.name || 'anonymous',
+                        'value': challengeData.score
+                    });
+                } catch (e) {
+                    console.log('Invalid challenge data');
+                }
+            }
+        }
+        
+        // Generate challenge link
+        function generateChallengeLink() {
+            const nickname = document.getElementById('challengerNickname').value.trim() || 'Someone';
+            const percentage = parseInt(document.getElementById('resultScore').textContent);
+            
+            // Create challenge data object
+            const data = {
+                name: nickname,
+                score: percentage,
+                ts: Date.now()
+            };
+            
+            // Encode as base64
+            const encoded = btoa(JSON.stringify(data));
+            const challengeUrl = `https://futurehumanism.co/tools/ai-or-human.html?c=${encoded}`;
+            
+            // Show the link box
+            document.getElementById('challengeLink').value = challengeUrl;
+            document.getElementById('challengeLinkBox').classList.add('visible');
+            
+            // Track challenge creation
+            gtag('event', 'challenge_created', {
+                'event_category': 'viral',
+                'event_label': nickname,
+                'value': percentage
+            });
+        }
+        
+        // Copy challenge link
+        function copyChallengeLink() {
+            const linkInput = document.getElementById('challengeLink');
+            linkInput.select();
+            document.execCommand('copy');
+            
+            // Visual feedback
+            const btns = document.querySelectorAll('.challenge-share-btns .share-copy, .challenge-link-row .btn-secondary');
+            btns.forEach(btn => {
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Copied!';
+                setTimeout(() => { btn.innerHTML = originalText; }, 2000);
+            });
+            
+            gtag('event', 'challenge_link_copied', { 'event_category': 'viral' });
+        }
+        
+        // Share challenge on X
+        function shareChallengeX() {
+            const percentage = document.getElementById('resultScore').textContent;
+            const nickname = document.getElementById('challengerNickname').value.trim() || 'I';
+            const link = document.getElementById('challengeLink').value || `https://futurehumanism.co/tools/ai-or-human.html`;
+            const text = encodeURIComponent(`${nickname} scored ${percentage} on the AI vs Human quiz. Think you can beat that?\n\nTake the challenge:`);
+            window.open(`https://twitter.com/intent/tweet?text=${text}&url=${encodeURIComponent(link)}&via=FutureHumanism`, '_blank');
+            gtag('event', 'challenge_shared', { 'event_category': 'viral', 'event_label': 'x' });
+        }
+        
+        // Share challenge on WhatsApp
+        function shareChallengeWhatsApp() {
+            const percentage = document.getElementById('resultScore').textContent;
+            const nickname = document.getElementById('challengerNickname').value.trim() || 'I';
+            const link = document.getElementById('challengeLink').value || `https://futurehumanism.co/tools/ai-or-human.html`;
+            const text = encodeURIComponent(`${nickname} scored ${percentage} on the AI vs Human quiz! Can you beat that? Take the challenge: ${link}`);
+            window.open(`https://wa.me/?text=${text}`, '_blank');
+            gtag('event', 'challenge_shared', { 'event_category': 'viral', 'event_label': 'whatsapp' });
+        }
+        
+        // Show challenge results comparison
+        function showChallengeResult(myScore) {
+            if (!challengeData) return;
+            
+            const resultEl = document.getElementById('challengeResult');
+            const titleEl = document.getElementById('challengeResultTitle');
+            const textEl = document.getElementById('challengeResultText');
+            const yourScoreEl = document.getElementById('yourFinalScore');
+            const theirScoreEl = document.getElementById('theirFinalScore');
+            const theirLabelEl = document.getElementById('theirLabel');
+            
+            yourScoreEl.textContent = myScore + '%';
+            theirScoreEl.textContent = challengeData.score + '%';
+            theirLabelEl.textContent = (challengeData.name || 'Their') + "'s Score";
+            
+            // Remove existing classes
+            resultEl.classList.remove('won', 'lost', 'tied');
+            
+            if (myScore > challengeData.score) {
+                resultEl.classList.add('won');
+                titleEl.textContent = 'You Beat Them!';
+                textEl.textContent = `You scored ${myScore - challengeData.score}% higher than ${challengeData.name || 'them'}! Now challenge someone else.`;
+            } else if (myScore < challengeData.score) {
+                resultEl.classList.add('lost');
+                titleEl.textContent = 'They Won This Round!';
+                textEl.textContent = `${challengeData.name || 'They'} scored ${challengeData.score - myScore}% higher. Try again or challenge a different friend!`;
+            } else {
+                resultEl.classList.add('tied');
+                titleEl.textContent = "It's a Tie!";
+                textEl.textContent = `You both scored ${myScore}%! Equal AI detection skills. Challenge another friend!`;
+            }
+            
+            resultEl.classList.add('visible');
+            
+            // Track challenge completion
+            gtag('event', 'challenge_completed', {
+                'event_category': 'viral',
+                'event_label': myScore > challengeData.score ? 'won' : (myScore < challengeData.score ? 'lost' : 'tied'),
+                'value': myScore
+            });
+        }
+        
+        // Initialize challenge check on page load
+        checkForChallenge();
     </script>
     
     <!-- Schema.org markup -->
