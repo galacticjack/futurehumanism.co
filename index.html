@@ -895,11 +895,12 @@
         .view-all-btn:hover {
             background: var(--accent-hover);
             transform: translateY(-2px);
-            color: white;
+            color: white !important;
         }
 
-        .view-all-btn:visited {
-            color: white;
+        .view-all-btn:visited,
+        .view-all-btn:visited:hover {
+            color: white !important;
         }
 
         /* Reframing Section */
@@ -961,11 +962,12 @@
         }
 
         .category-link:visited {
-            color: #ffffff;
+            color: #ffffff !important;
         }
 
-        .category-link:hover {
-            color: #ffffff;
+        .category-link:hover,
+        .category-link:visited:hover {
+            color: #ffffff !important;
             background: #3BA0FF;
             transform: translateY(-2px);
         }
