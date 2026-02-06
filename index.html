@@ -187,7 +187,7 @@
             transform: translateY(-1px);
         }
 
-        .nav-search {
+        .nav-search, .nav-share {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -197,15 +197,16 @@
             background: var(--bg-secondary);
             border: 1px solid var(--border);
             transition: all 0.2s;
+            cursor: pointer;
         }
-        .nav-search:hover {
+        .nav-search:hover, .nav-share:hover {
             border-color: var(--accent);
             color: var(--accent) !important;
         }
-        .nav-search svg {
+        .nav-search svg, .nav-share svg {
             color: var(--text-secondary);
         }
-        .nav-search:hover svg {
+        .nav-search:hover svg, .nav-share:hover svg {
             color: var(--accent);
         }
 
@@ -1417,6 +1418,9 @@
                 <a href="/search.html" class="nav-search" title="Search (Press /)">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
                 </a>
+                <button class="nav-share" onclick="shareHomepage()" title="Share">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </button>
                 <a href="/subscribe.html" class="nav-cta" target="_blank">Subscribe</a>
                 <button class="mobile-menu-btn" aria-label="Menu">☰</button>
             </nav>
@@ -1937,6 +1941,19 @@
     </div>
 
     <script>
+        // Share homepage
+        function shareHomepage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'Future Humanism - Where AI Meets Human Potential',
+                    url: 'https://futurehumanism.co'
+                });
+            } else {
+                navigator.clipboard.writeText('https://futurehumanism.co');
+                alert('Link copied to clipboard!');
+            }
+        }
+
         // Mobile menu
         function openMobileMenu() {
             document.getElementById('mobile-menu').classList.add('open');
