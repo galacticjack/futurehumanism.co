@@ -84,6 +84,11 @@
             max-height: 16px !important;
         }
         
+        /* Hide mobile menu by default on desktop */
+        .mobile-menu {
+            display: none !important;
+        }
+        
         header {
             padding: 16px 0;
             border-bottom: 1px solid var(--border);
@@ -202,9 +207,9 @@
                 border-radius: 5px;
             }
 
-            /* Mobile Menu Overlay */
+            /* Mobile Menu Overlay - show on mobile */
             .mobile-menu {
-                display: flex;
+                display: flex !important;
                 position: fixed;
                 inset: 0;
                 background: var(--bg-primary);
