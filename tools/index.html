@@ -1,1548 +1,409 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W0SQN4JHN2');
-    </script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-W0SQN4JHN2');</script>
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1E90FF">
-    <title>Free AI Tools for Builders | Future Humanism</title>
-    <meta name="description" content="Free tools for freelancers, founders, and operators. Calculators, quizzes, and utilities that actually help you work smarter.">
-    <meta property="og:title" content="Free AI Tools for Builders | Future Humanism">
-    <meta property="og:description" content="Free tools for freelancers, founders, and operators. Calculators, quizzes, and utilities that actually help you work smarter.">
+    <title>Free AI Tools | Future Humanism</title>
+    <meta name="description" content="17 free AI tools for builders, founders, and operators. Quizzes, calculators, generators - all free, no signup required.">
+    <meta property="og:title" content="Free AI Tools | Future Humanism">
+    <meta property="og:description" content="17 free AI tools for builders. Quizzes, calculators, generators - all free.">
     <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
     <link rel="canonical" href="https://futurehumanism.co/tools/">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --text-muted: #707070;
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #1a1a1a;
+            --bg: #0a0a0a;
+            --bg-card: #141414;
+            --bg-hover: #1a1a1a;
+            --border: #252525;
+            --text: #ffffff;
+            --text-dim: #888;
             --accent: #1E90FF;
-            --accent-hover: #3BA0FF;
-            --border: #2a2a2a;
         }
         body {
             font-family: 'Inter', sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
+            background: var(--bg);
+            color: var(--text);
             line-height: 1.5;
-            overflow-x: hidden;
+            min-height: 100vh;
         }
-        a { color: var(--accent); text-decoration: none; }
-        a:hover { color: var(--accent-hover); }
+        a { color: inherit; text-decoration: none; }
         
-        /* NUCLEAR SVG FIX - constrain all SVGs */
-        svg {
-            max-width: 100% !important;
-            max-height: 200px !important;
-            overflow: hidden !important;
-        }
-        .product-visual svg,
-        .product-card-icon,
-        .mobile-menu svg,
-        nav svg,
-        footer svg {
-            width: 80px !important;
-            height: 80px !important;
-            max-width: 80px !important;
-            max-height: 80px !important;
-        }
-        .product-card-icon {
-            width: 48px !important;
-            height: 48px !important;
-            max-width: 48px !important;
-            max-height: 48px !important;
-        }
-        nav svg, .mega-menu svg, .dropdown-menu svg {
-            width: 20px !important;
-            height: 20px !important;
-            max-width: 20px !important;
-            max-height: 20px !important;
-        }
-        footer svg {
-            width: 20px !important;
-            height: 20px !important;
-            max-width: 20px !important;
-            max-height: 20px !important;
-        }
-        .mobile-menu-topics svg {
-            width: 16px !important;
-            height: 16px !important;
-            max-width: 16px !important;
-            max-height: 16px !important;
-        }
-        
-        /* Hide mobile menu by default on desktop */
-        .mobile-menu {
-            display: none !important;
-        }
-        
+        /* Header */
         header {
-            padding: 16px 0;
+            padding: 16px 24px;
             border-bottom: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
             position: sticky;
             top: 0;
             background: rgba(10,10,10,0.95);
             backdrop-filter: blur(10px);
             z-index: 100;
         }
-        .header-inner {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 24px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
         .logo {
             display: flex;
             align-items: center;
             gap: 10px;
-            text-decoration: none;
-        }
-        .logo-icon {
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            overflow: hidden;
-            border: 2px solid rgba(255,255,255,0.1);
-        }
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .logo-text {
             font-weight: 700;
-            font-size: 1.4rem;
-            color: var(--text-primary);
+            font-size: 15px;
         }
-        .logo-text span { font-weight: 400; opacity: 0.6; }
-        nav { display: flex; gap: 24px; }
-        nav a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-weight: 500;
+        .logo img {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+        }
+        .nav-links {
+            display: flex;
+            gap: 24px;
+            align-items: center;
+        }
+        .nav-links a {
+            font-size: 13px;
+            color: var(--text-dim);
             transition: color 0.2s;
         }
-        nav a:hover { color: var(--text-primary); }
-        .nav-cta {
+        .nav-links a:hover { color: var(--text); }
+        .nav-links .btn {
             background: var(--accent);
-            color: white !important;
-            padding: 10px 20px;
+            color: #fff;
+            padding: 8px 16px;
             border-radius: 6px;
-        }
-        .nav-cta:hover { background: var(--accent-hover); }
-        .nav-cta-secondary {
-            background: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent) !important;
+            font-weight: 500;
         }
         
-        .nav-cta-secondary:hover {
-            background: var(--accent);
-            color: white !important;
-        }
-
-        .nav-dropdown { position: relative; }
-        .nav-dropdown > span { cursor: pointer; display: flex; align-items: center; gap: 4px; color: var(--text-secondary); font-weight: 500; transition: color 0.2s; }
-        .nav-dropdown > span:hover { color: var(--text-primary); }
-        .nav-dropdown .chevron { width: 16px; height: 16px; transition: transform 0.2s; }
-        .nav-dropdown:hover .chevron { transform: rotate(180deg); }
-        .mega-menu { position: absolute; top: 100%; left: 50%; transform: translateX(-50%) translateY(10px); background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 16px; padding: 24px; min-width: 700px; opacity: 0; visibility: hidden; transition: all 0.2s; box-shadow: 0 20px 50px rgba(0,0,0,0.5); z-index: 1000; }
-        .nav-dropdown:hover .mega-menu { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
-        .mega-menu-inner { display: grid; grid-template-columns: 1fr 1fr 200px; gap: 24px; }
-        .mega-menu-section h4 { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-secondary); margin-bottom: 16px; }
-        .mega-menu-grid { display: flex; flex-direction: column; gap: 8px; }
-        .mega-menu-item { display: flex; align-items: flex-start; gap: 12px; padding: 10px 12px; border-radius: 8px; text-decoration: none; transition: background 0.2s; }
-        .mega-menu-item:hover { background: rgba(255,255,255,0.05); }
-        .mega-menu-item svg { width: 20px; height: 20px; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
-        .mega-menu-item-content h5 { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
-        .mega-menu-item-content p { font-size: 0.75rem; color: var(--text-secondary); }
-        .mega-menu-featured { background: rgba(255,255,255,0.03); border-radius: 12px; padding: 16px; }
-        .mega-menu-featured img { width: 100%; height: 100px; object-fit: cover; border-radius: 8px; margin-bottom: 12px; }
-        .mega-menu-featured h5 { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 8px; line-height: 1.3; }
-        .mega-menu-featured p { font-size: 0.75rem; color: var(--text-secondary); margin-bottom: 12px; line-height: 1.4; }
-        .mega-menu-featured a { font-size: 0.8rem; color: var(--accent); text-decoration: none; font-weight: 500; }
-        .mega-menu-featured a:hover { text-decoration: underline; }
-        .nav-search { display: flex; align-items: center; padding: 8px; color: var(--text-secondary); }
-        .nav-search:hover { color: var(--text-primary); }
-        .share-dropdown .nav-share-btn { display: flex; align-items: center; padding: 8px; cursor: pointer; color: var(--text-secondary); transition: color 0.2s; }
-        .share-dropdown .nav-share-btn:hover { color: var(--text-primary); }
-        .dropdown-menu { position: absolute; top: 100%; right: 0; background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; padding: 8px; min-width: 180px; opacity: 0; visibility: hidden; transition: all 0.2s; box-shadow: 0 10px 30px rgba(0,0,0,0.3); z-index: 1000; }
-        .share-dropdown:hover .dropdown-menu { opacity: 1; visibility: visible; }
-        .dropdown-menu a { display: flex; align-items: center; gap: 10px; padding: 10px 12px; color: var(--text-secondary); text-decoration: none; border-radius: 8px; font-size: 0.9rem; transition: all 0.2s; }
-        .dropdown-menu a:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
-        .dropdown-menu a svg { width: 16px; height: 16px; }
-        .dropdown-divider { height: 1px; background: var(--border); margin: 8px 0; }
-        .mobile-menu-btn { display: none !important; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
-        /* Nuclear SVG fix */
-        svg { width: 20px !important; height: 20px !important; max-width: 24px !important; max-height: 24px !important; flex-shrink: 0 !important; }
-        .chevron { width: 16px !important; height: 16px !important; }
-        .logo-icon, .logo-icon img { width: 36px !important; height: 36px !important; max-width: 36px !important; max-height: 36px !important; }
-        .nav-search svg, .share-dropdown svg { width: 18px !important; height: 18px !important; }
-        .dropdown-menu a svg { width: 16px !important; height: 16px !important; }
-        .mega-menu-item svg { width: 20px !important; height: 20px !important; }
-        .mobile-menu { display: none !important; }
-        
-
-        @media (max-width: 900px) {
-            .mega-menu { min-width: 90vw; left: 0; transform: translateX(-20%); }
-            .mega-menu-inner { grid-template-columns: 1fr 1fr; }
-            .mega-menu-section:last-child { display: none; }
-        }
-        @media (max-width: 768px) {
-            .nav-dropdown, .nav-search, .share-dropdown, .nav-cta, .nav-cta-secondary { display: none !important; }
-            .mobile-menu-btn { 
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                width: 32px;
-                height: 32px;
-                font-size: 1rem;
-                background: var(--bg-secondary);
-                border: 1px solid var(--border);
-                border-radius: 5px;
-            }
-
-            /* Mobile Menu Overlay - show on mobile */
-            .mobile-menu {
-                display: flex !important;
-                position: fixed;
-                inset: 0;
-                background: var(--bg-primary);
-                z-index: 200;
-                flex-direction: column;
-                padding: 0;
-                overflow-y: auto;
-                transform: translateX(100%);
-                transition: transform 0.3s ease;
-            }
-
-            .mobile-menu.open {
-                transform: translateX(0);
-            }
-
-            .mobile-menu-header {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-                padding: 16px 20px;
-                border-bottom: 1px solid var(--border);
-                position: sticky;
-                top: 0;
-                background: var(--bg-primary);
-                z-index: 10;
-            }
-
-            .mobile-menu-header .logo {
-                display: flex;
-                align-items: center;
-                gap: 8px;
-            }
-
-            .mobile-menu-header .logo-icon {
-                width: 32px;
-                height: 32px;
-            }
-
-            .mobile-menu-header .logo-text {
-                font-size: 1.1rem;
-            }
-
-            .mobile-menu .close-btn {
-                background: none;
-                border: none;
-                color: var(--text-primary);
-                font-size: 1.5rem;
-                cursor: pointer;
-                width: 40px;
-                height: 40px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                border-radius: 8px;
-                transition: background 0.2s;
-            }
-
-            .mobile-menu .close-btn:hover {
-                background: var(--bg-secondary);
-            }
-
-            .mobile-menu-content {
-                padding: 20px;
-                display: flex;
-                flex-direction: column;
-                gap: 24px;
-            }
-
-            .mobile-menu-section {
-                display: flex;
-                flex-direction: column;
-                gap: 4px;
-            }
-
-            .mobile-menu-section-title {
-                font-size: 0.7rem;
-                font-weight: 600;
-                text-transform: uppercase;
-                letter-spacing: 1.5px;
-                color: var(--text-muted);
-                padding: 8px 12px 4px;
-            }
-
-            .mobile-menu a {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-                padding: 14px 12px;
-                font-size: 1rem;
-                color: var(--text-primary);
-                text-decoration: none;
-                border-radius: 10px;
-                transition: background 0.2s;
-            }
-
-            .mobile-menu a:hover, .mobile-menu a:active {
-                background: var(--bg-secondary);
-            }
-
-            .mobile-menu a svg {
-                width: 20px;
-                height: 20px;
-                color: var(--text-secondary);
-                flex-shrink: 0;
-            }
-
-            .mobile-menu-topics {
-                display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 8px;
-            }
-
-            .mobile-menu-topics a {
-                padding: 12px;
-                font-size: 0.9rem;
-                background: var(--bg-secondary);
-                border-radius: 8px;
-                justify-content: flex-start;
-            }
-
-            .mobile-menu-topics a svg {
-                width: 16px;
-                height: 16px;
-            }
-
-            .mobile-menu-cta {
-                margin-top: auto;
-                padding: 20px;
-                border-top: 1px solid var(--border);
-            }
-
-            .mobile-menu .mobile-menu-cta a {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                gap: 8px;
-                width: 100%;
-                padding: 14px 20px;
-                background: var(--accent);
-                color: white !important;
-                font-weight: 600;
-                font-size: 1rem;
-                border-radius: 10px;
-                text-decoration: none;
-            }
-            
-            .mobile-menu .mobile-menu-cta a svg {
-                color: white !important;
-                width: 18px;
-                height: 18px;
-            }
-
-            .mobile-menu-social {
-                display: flex;
-                justify-content: center;
-                gap: 16px;
-                margin-top: 16px;
-            }
-
-            .mobile-menu-social a {
-                width: 44px;
-                height: 44px;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                background: var(--bg-secondary);
-                border-radius: 50%;
-                padding: 0;
-            }
-
-            .mobile-menu-social a svg {
-                width: 20px;
-                height: 20px;
-            }
-        }
-        
-        .page-header {
-            max-width: 800px;
+        /* Main */
+        main {
+            max-width: 1200px;
             margin: 0 auto;
-            padding: 80px 24px 60px;
+            padding: 40px 24px 80px;
+        }
+        
+        /* Hero */
+        .hero {
             text-align: center;
+            margin-bottom: 50px;
         }
-        .page-header h1 {
-            font-size: 3rem;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-        .page-header p {
-            color: var(--text-secondary);
-            font-size: 1.2rem;
-            line-height: 1.6;
-        }
-        
-        /* Section Headers */
-        .section-header {
-            max-width: 1000px;
-            margin: 0 auto 32px;
-            padding: 0 24px;
-        }
-        .section-header h2 {
-            font-size: 1.5rem;
+        .hero h1 {
+            font-size: 36px;
             font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
+            margin-bottom: 12px;
         }
-        .section-header h2::before {
-            content: "";
-            display: block;
-            width: 4px;
-            height: 24px;
-            background: var(--accent);
-            border-radius: 2px;
-        }
-        
-        .products-section {
-            max-width: 1000px;
+        .hero p {
+            font-size: 16px;
+            color: var(--text-dim);
+            max-width: 500px;
             margin: 0 auto;
-            padding: 0 24px 40px;
         }
-        .product-full {
-            background: var(--bg-secondary);
-            border-radius: 16px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            margin-bottom: 24px;
-            display: grid;
-            grid-template-columns: 1fr 1.5fr;
-            transition: border-color 0.2s;
-        }
-        .product-full:hover {
-            border-color: var(--accent);
-        }
-        .product-visual {
-            background: #141414;
-            padding: 60px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .product-visual svg {
-            width: 80px;
-            height: 80px;
-            color: var(--accent);
-        }
-        .product-details {
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-        .product-badge {
+        .tool-count {
             display: inline-block;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
+            background: rgba(30,144,255,0.15);
+            color: var(--accent);
             padding: 6px 14px;
             border-radius: 20px;
-            margin-bottom: 12px;
-            width: fit-content;
+            font-size: 13px;
+            font-weight: 500;
+            margin-top: 16px;
         }
-        .badge-free {
-            background: rgba(30, 144, 255, 0.15);
-            color: var(--accent);
-        }
-        .badge-new {
-            background: rgba(30, 144, 255, 0.15);
-            color: var(--accent);
-        }
-        .badge-soon {
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text-secondary);
-        }
-        .product-details h3 {
-            font-size: 1.6rem;
-            font-weight: 700;
-            margin-bottom: 12px;
-        }
-        .product-details p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .product-features {
-            list-style: none;
-            margin-bottom: 24px;
-        }
-        .product-features li {
-            color: var(--text-secondary);
-            padding: 6px 0;
-            padding-left: 24px;
-            position: relative;
-            font-size: 0.9rem;
-        }
-        .product-features li::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 8px;
-            height: 8px;
-            background: var(--accent);
-            border-radius: 50%;
-        }
-        .product-cta {
+        
+        /* Categories */
+        .categories {
             display: flex;
-            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin-bottom: 40px;
+        }
+        .cat-btn {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: var(--text-dim);
+        }
+        .cat-btn:hover, .cat-btn.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: #fff;
+        }
+        
+        /* Grid */
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
             gap: 16px;
         }
-        .price {
-            font-size: 1.5rem;
-            font-weight: 700;
-        }
-        .price span {
-            font-size: 0.9rem;
-            font-weight: 400;
-            color: var(--text-muted);
-        }
-        .btn-primary {
-            background: var(--accent);
-            color: white;
-            padding: 12px 28px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 600;
+        
+        /* Card */
+        .tool-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
             transition: all 0.2s;
-            display: inline-block;
-            font-size: 0.95rem;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
         }
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            color: white;
-            transform: translateY(-2px);
-        }
-        .btn-secondary {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 0.9rem;
-        }
-        
-        /* Smaller product cards for coming soon */
-        .products-grid {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 0 24px 60px;
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-        .product-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 28px;
-            transition: border-color 0.2s;
-        }
-        .product-card:hover {
+        .tool-card:hover {
             border-color: var(--accent);
-        }
-        .product-card-icon {
-            width: 48px;
-            height: 48px;
-            margin-bottom: 16px;
-            color: var(--accent);
-        }
-        .product-card h3 {
-            font-size: 1.1rem;
-            font-weight: 700;
-            margin-bottom: 8px;
-        }
-        .product-card p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-            margin-bottom: 16px;
-        }
-        .product-card .price {
-            font-size: 1.2rem;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(30,144,255,0.1);
         }
         
-        .guarantee {
-            max-width: 600px;
-            margin: 20px auto 60px;
-            text-align: center;
-            padding: 32px;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            border: 1px solid var(--border);
+        .tool-icon {
+            width: 40px;
+            height: 40px;
+            background: rgba(30,144,255,0.1);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
         }
-        .guarantee h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
+        
+        .tool-card h3 {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.3;
         }
-        .guarantee p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        
+        .tool-card p {
+            font-size: 13px;
+            color: var(--text-dim);
+            line-height: 1.5;
+            flex-grow: 1;
+        }
+        
+        .tool-tag {
+            font-size: 11px;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 500;
+        }
+        
+        /* Coming Soon */
+        .tool-card.coming-soon {
+            opacity: 0.6;
+        }
+        .tool-card.coming-soon:hover {
+            transform: none;
+            border-color: var(--border);
+        }
+        .coming-badge {
+            font-size: 10px;
+            background: #333;
+            padding: 3px 8px;
+            border-radius: 4px;
+            color: #888;
         }
         
         /* Footer */
         footer {
             border-top: 1px solid var(--border);
-            padding: 48px 24px;
-            background: var(--bg-primary);
+            padding: 30px 24px;
+            text-align: center;
         }
-        .footer-inner {
-            max-width: 1400px;
-            margin: 0 auto;
+        footer p {
+            font-size: 13px;
+            color: var(--text-dim);
         }
-        .footer-grid {
-            display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 40px;
-        }
-        .footer-brand p {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.7;
-            margin-top: 12px;
-        }
-        .footer-links h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-        .footer-links ul {
-            list-style: none;
-        }
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        .footer-links a {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .footer-links a:hover {
-            color: var(--text-primary);
-        }
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-        }
-        .footer-bottom p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        .footer-social {
-            display: flex;
-            gap: 16px;
-        }
-        .footer-social a {
-            color: var(--text-muted);
-            transition: color 0.2s;
-        }
-        .footer-social a:hover {
-            color: var(--accent);
-        }
+        footer a { color: var(--accent); }
         
-        @media (max-width: 768px) {
-            header { padding: 12px 16px; }
-            .logo-text { font-size: 1.1rem; }
-            nav { gap: 12px; }
-            nav a:not(.nav-cta) { display: none; }
-            .nav-cta { padding: 8px 14px; font-size: 0.85rem; }
-            .page-header { padding: 50px 16px 40px; }
-            .page-header h1 { font-size: 2rem; }
-            .page-header p { font-size: 1rem; }
-            .products-section { padding: 0 16px 40px; }
-            .section-header { padding: 0 16px; margin-bottom: 24px; }
-            .section-header h2 { font-size: 1.25rem; }
-            .product-full { grid-template-columns: 1fr; margin-bottom: 20px; }
-            .product-visual { padding: 32px; }
-            .product-visual svg { width: 60px; height: 60px; }
-            .product-details { padding: 24px 20px; }
-            .product-details h3 { font-size: 1.3rem; }
-            .product-features { margin-bottom: 20px; }
-            .product-features li { padding: 5px 0 5px 22px; font-size: 0.85rem; }
-            .price { font-size: 1.3rem; }
-            .btn-primary { padding: 11px 22px; font-size: 0.9rem; }
-            .products-grid { grid-template-columns: 1fr; padding: 0 16px 40px; }
-            .guarantee { margin: 20px 16px 40px; padding: 24px 20px; }
-            .guarantee h3 { font-size: 1.1rem; }
-            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
-            .footer-brand { grid-column: 1 / -1; }
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+        /* Mobile */
+        @media (max-width: 600px) {
+            .nav-links { display: none; }
+            .hero h1 { font-size: 28px; }
+            .tools-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+            .tool-card { padding: 16px; }
+            .tool-card h3 { font-size: 14px; }
+            .tool-card p { font-size: 12px; }
+            .tool-icon { width: 36px; height: 36px; font-size: 18px; }
         }
     </style>
 </head>
 <body>
-<header>
-    <div class="header-inner">
+    <header>
         <a href="/" class="logo">
-            <div class="logo-icon"><img loading="lazy" src="/images/profile.jpg" alt="Future Humanism"></div>
-            <div class="logo-text">Future<span>Humanism</span></div>
+            <img src="../images/profile.jpg" alt="Future Humanism">
+            <span>Future Humanism</span>
         </a>
-        <nav>
-            <div class="nav-dropdown">
-                <span>Explore <svg class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
-                <div class="mega-menu">
-                    <div class="mega-menu-inner">
-                        <div class="mega-menu-section">
-                            <h4>Browse Content</h4>
-                            <div class="mega-menu-grid">
-                                <a href="/articles/" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>All Stories</h5>
-                                        <p>Browse 32+ articles</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?sort=latest" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Latest</h5>
-                                        <p>Fresh insights daily</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?sort=popular" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Most Popular</h5>
-                                        <p>Reader favorites</p>
-                                    </div>
-                                </a>
-                                <a href="/tools/" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Free Tools</h5>
-                                        <p>Calculators & utilities</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mega-menu-section">
-                            <h4>Topics</h4>
-                            <div class="mega-menu-grid">
-                                <a href="/articles/?cat=ai-agents" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 8V4M12 16v4M8 12H4M16 12h4"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>AI Agents</h5>
-                                        <p>Autonomous systems</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?cat=ai-models" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>AI Models</h5>
-                                        <p>LLMs & capabilities</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?cat=automation" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Automation</h5>
-                                        <p>Workflows & efficiency</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?cat=strategy" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Strategy</h5>
-                                        <p>Business & growth</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?cat=tutorials" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Tutorials</h5>
-                                        <p>Step-by-step guides</p>
-                                    </div>
-                                </a>
-                                <a href="/articles/?cat=crypto" class="mega-menu-item">
-                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M9 9h4.5a1.5 1.5 0 0 1 0 3H9m0 0h5a1.5 1.5 0 0 1 0 3H9"/></svg>
-                                    <div class="mega-menu-item-content">
-                                        <h5>Crypto & DeFi</h5>
-                                        <p>Web3 & trading</p>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mega-menu-section">
-                            <h4>Featured Guide</h4>
-                            <div class="mega-menu-featured">
-                                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="AI Agents Guide">
-                                <h5>The Complete Guide to AI Agents in 2026</h5>
-                                <p>Everything you need to know about autonomous AI systems.</p>
-                                <a href="/articles/ai-agents-2026-guide.html">Read the guide →</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+        <nav class="nav-links">
+            <a href="/articles/">Articles</a>
+            <a href="/tools/" style="color: var(--text);">Tools</a>
             <a href="/about.html">About</a>
-            <a href="/search.html" class="nav-search" title="Search (Press /)">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
-            </a>
-            <div class="nav-dropdown share-dropdown">
-                <span class="nav-share-btn">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
-                </span>
-                <div class="dropdown-menu share-menu">
-                    <a href="#" onclick="shareToX(); return false;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                        Share on X
-                    </a>
-                    <a href="#" onclick="shareToLinkedIn(); return false;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                        Share on LinkedIn
-                    </a>
-                    <a href="#" onclick="shareToFacebook(); return false;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                        Share on Facebook
-                    </a>
-                    <div class="dropdown-divider"></div>
-                    <a href="#" onclick="copyLink(); return false;" id="copy-link-btn">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
-                        Copy Link
-                    </a>
-                </div>
-            </div>
-            <a href="/free-guide" class="nav-cta nav-cta-secondary">Free Guide</a>
-                <a href="/subscribe.html" class="nav-cta">Subscribe</a>
-            <button class="mobile-menu-btn" aria-label="Menu">☰</button>
+            <a href="/subscribe.html" class="btn">Subscribe</a>
         </nav>
-    </div>
-</header>
-
-    <div class="page-header">
-        <h1>Free Tools for Builders</h1>
-        <p>Calculators, quizzes, and utilities that actually help. No signup required, no paywalls. Just useful stuff.</p>
-    </div>
-
-    <!-- FEATURED LEAD MAGNET -->
-    <div class="section-header">
-        <h2>Featured Download</h2>
-    </div>
+    </header>
     
-    <div class="products-section">
-        <!-- Prompt Cheatsheet -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(30, 144, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 14.25v-2.625a3.375 3.375 0 00-3.375-3.375h-1.5A1.125 1.125 0 0113.5 7.125v-1.5a3.375 3.375 0 00-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 00-9-9z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">Free Download</span>
-                <h3>50 AI Prompts That Actually Work</h3>
-                <p>Battle-tested prompts for writing, coding, marketing, research, and productivity. Copy, paste, get results. No fluff, just prompts that deliver.</p>
-                <ul class="product-features">
-                    <li>10 writing prompts for content and copy</li>
-                    <li>10 coding prompts for debugging and building</li>
-                    <li>10 marketing prompts for growth</li>
-                    <li>10 productivity prompts for getting more done</li>
-                    <li>10 research prompts for deep learning</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="prompt-cheatsheet.html" class="btn-primary">Get the Cheatsheet</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- FREE TOOLS SECTION -->
-    <div class="section-header">
-        <h2>Free Tools</h2>
-    </div>
-    
-    <div class="products-section">
-        <!-- AI Prompt Generator - FEATURED -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(30, 144, 255, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a3e 0%, #2e1a4e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"/>
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">Featured</span>
-                <h3>AI Prompt Generator</h3>
-                <p>Stop guessing. Build prompts that actually work for ChatGPT, Claude, and Gemini. Choose your task, customize the details, and get an optimized prompt in seconds.</p>
-                <ul class="product-features">
-                    <li>50+ templates for writing, coding, marketing, and more</li>
-                    <li>Instant prompt quality scoring</li>
-                    <li>One-click copy and share to social</li>
-                    <li>Works with any AI model</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="prompt-generator.html" class="btn-primary">Generate Prompts</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Productivity Score - VIRAL SHAREABLE BADGE -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(30, 144, 255, 0.25) 0%, rgba(0, 212, 255, 0.15) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #0f3460 0%, #1a1a2e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>AI Productivity Score</h3>
-                <p>Calculate how efficiently you use AI in 60 seconds. Get your score out of 100, see your tier (Beginner to Power User), and download a shareable badge for social media.</p>
-                <ul class="product-features">
-                    <li>6 questions, under 60 seconds</li>
-                    <li>Score 0-100 with tier ranking</li>
-                    <li>Downloadable badge for social sharing</li>
-                    <li>Personalized tips to level up</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-productivity-score.html" class="btn-primary">Get Your Score</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI OR HUMAN? - VIRAL GAME -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.3) 0%, rgba(34, 197, 94, 0.3) 100%); border: 2px solid rgba(168, 85, 247, 0.4);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a3e 0%, #1a3e1a 100%);">
-                <div style="font-size: 64px;">🤖👤</div>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new" style="background: linear-gradient(135deg, #a855f7, #22c55e);">Viral Game</span>
-                <h3>AI or Human? Can You Tell?</h3>
-                <p>Test your ability to spot AI-generated text. 10 rounds, 10 seconds each. Most people only score 62%. Can you beat the average?</p>
-                <ul class="product-features">
-                    <li>10 timed rounds of AI vs human detection</li>
-                    <li>Instant feedback with explanations</li>
-                    <li>Get ranked: Elite Detector to Robot Sympathizer</li>
-                    <li>Share your score to challenge friends</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-or-human.html" class="btn-primary" style="background: linear-gradient(135deg, #a855f7, #22c55e);">Play Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Tool Matchmaker - NEW VIRAL QUIZ -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(30, 144, 255, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #0a1628 0%, #1a0a38 100%);">
-                <div style="font-size: 64px;">🤖🎯</div>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new" style="background: linear-gradient(135deg, #1E90FF, #8b5cf6);">Hot Quiz</span>
-                <h3>AI Tool Matchmaker</h3>
-                <p>ChatGPT, Claude, Gemini, or Perplexity? Answer 5 quick questions and discover which AI tool is the perfect match for YOUR workflow. Get personalized recommendations.</p>
-                <ul class="product-features">
-                    <li>5 questions, 60 seconds to complete</li>
-                    <li>Match score with your ideal AI tool</li>
-                    <li>See alternatives ranked by compatibility</li>
-                    <li>Shareable results to compare with friends</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-tool-matchmaker.html" class="btn-primary" style="background: linear-gradient(135deg, #1E90FF, #8b5cf6);">Find My Match</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Skills Gap Finder - NEW VIRAL QUIZ -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(168, 85, 247, 0.2) 0%, rgba(30, 144, 255, 0.2) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a3e 0%, #2e1a4e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.438 60.438 0 0 0-.491 6.347A48.62 48.62 0 0 1 12 20.904a48.62 48.62 0 0 1 8.232-4.41 60.46 60.46 0 0 0-.491-6.347m-15.482 0a50.636 50.636 0 0 0-2.658-.813A59.906 59.906 0 0 1 12 3.493a59.903 59.903 0 0 1 10.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.717 50.717 0 0 1 12 13.489a50.702 50.702 0 0 1 7.74-3.342M6.75 15a.75.75 0 1 0 0-1.5.75.75 0 0 0 0 1.5Zm0 0v-3.675A55.378 55.378 0 0 1 12 8.443m-7.007 11.55A5.981 5.981 0 0 0 6.75 15.75v-1.5" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New Quiz</span>
-                <h3>AI Skills Gap Finder</h3>
-                <p>Discover your AI blind spots in 2 minutes. Get your personalized AI Readiness Score, see where you rank vs other professionals, and get a custom learning path.</p>
-                <ul class="product-features">
-                    <li>5 quick questions, 2 minutes to complete</li>
-                    <li>See where you rank vs 12,000+ professionals</li>
-                    <li>Personalized action plan for your gaps</li>
-                    <li>Shareable score to challenge colleagues</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-skills-gap.html" class="btn-primary">Find My Gaps</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Job Impact Analyzer - VIRAL TOOL -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(239, 68, 68, 0.15) 0%, rgba(249, 115, 22, 0.15) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #2e1a1a 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387m4.5 8.006c-.194.165-.42.295-.673.38A23.978 23.978 0 0112 15.75c-2.648 0-5.195-.429-7.577-1.22a2.016 2.016 0 01-.673-.38m0 0A2.18 2.18 0 013 12.489V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m7.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v.894m7.5 0a48.667 48.667 0 00-7.5 0M12 12.75h.008v.008H12v-.008z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">Hot</span>
-                <h3>AI Job Impact Analyzer</h3>
-                <p>Will AI affect your career? Enter your job title to get your personalized AI Exposure Score, see which tasks are at risk, and receive actionable recommendations to stay ahead.</p>
-                <ul class="product-features">
-                    <li>Get your AI Exposure Score (0-100)</li>
-                    <li>See automation risk by task type</li>
-                    <li>Personalized career action plan</li>
-                    <li>Share your score on X and LinkedIn</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-job-analyzer.html" class="btn-primary">Analyze My Job</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Workflow Quiz - NEW -->
-        <div class="product-full" style="background: linear-gradient(135deg, rgba(139, 92, 246, 0.15) 0%, rgba(30, 144, 255, 0.15) 100%);">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New Quiz</span>
-                <h3>What's Your AI Workflow Type?</h3>
-                <p>Are you a Power User, Automator, Explorer, or Critical Thinker? Take this 2-minute quiz to discover how you naturally work with AI and get personalized tips to level up.</p>
-                <ul class="product-features">
-                    <li>8 questions, 2 minutes to complete</li>
-                    <li>Personalized tips based on your type</li>
-                    <li>Shareable results to challenge friends</li>
-                    <li>No sign-up required to take the quiz</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-workflow-quiz.html" class="btn-primary">Take the Quiz</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Headline Analyzer -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>AI Headline Analyzer</h3>
-                <p>Write headlines that get clicks. Get an instant score with actionable tips to improve your blog titles, email subjects, and ad copy. Share your score to challenge friends.</p>
-                <ul class="product-features">
-                    <li>Instant headline scoring (0-100)</li>
-                    <li>Power word and emotional analysis</li>
-                    <li>Specific improvement tips</li>
-                    <li>Shareable results for social proof</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="headline-analyzer.html" class="btn-primary">Analyze Your Headline</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI ROI Calculator -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-free">Free</span>
-                <h3>AI ROI Calculator</h3>
-                <p>Discover how much time and money you could save by automating tasks with AI. Get your personalized savings estimate in 60 seconds.</p>
-                <ul class="product-features">
-                    <li>Calculate annual savings potential</li>
-                    <li>See hours you could reclaim</li>
-                    <li>Get ROI on AI tool investment</li>
-                    <li>Shareable results for stakeholders</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-roi-calculator.html" class="btn-primary">Calculate Savings</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- Automation Savings Calculator -->
-        <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #064e3b 0%, #0f766e 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V13.5zm0 2.25h.008v.008H8.25v-.008zm0 2.25h.008v.008H8.25V18zm2.498-6.75h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V13.5zm0 2.25h.007v.008h-.007v-.008zm0 2.25h.007v.008h-.007V18zm2.504-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zm0 2.25h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V18zm2.498-6.75h.008v.008h-.008v-.008zm0 2.25h.008v.008h-.008V13.5zM8.25 6h7.5v2.25h-7.5V6zM12 2.25c-1.892 0-3.758.11-5.593.322C5.307 2.7 4.5 3.65 4.5 4.757V19.5a2.25 2.25 0 002.25 2.25h10.5a2.25 2.25 0 002.25-2.25V4.757c0-1.108-.806-2.057-1.907-2.185A48.507 48.507 0 0012 2.25z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>AI Automation Savings Calculator</h3>
-                <p>Calculate exactly how much time and money you could save by automating repetitive tasks with AI. Get personalized recommendations and a shareable results card to show your team.</p>
-                <ul class="product-features">
-                    <li>Select tasks you actually do daily</li>
-                    <li>Get weekly, monthly, and annual savings</li>
-                    <li>Personalized automation recommendations</li>
-                    <li>Shareable results card for social media</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="automation-savings-calculator.html" class="btn-primary">Calculate Your Savings</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Use Case Generator -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>AI Use Case Generator</h3>
-                <p>Enter your job title and get 10 personalized AI use cases with ready-to-use prompts. Works for any profession. Share your results and challenge colleagues.</p>
-                <ul class="product-features">
-                    <li>Personalized for YOUR job</li>
-                    <li>10 use cases with copy-paste prompts</li>
-                    <li>Impact ratings for each use case</li>
-                    <li>Shareable results on X and LinkedIn</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-use-case-generator.html" class="btn-primary">Generate Use Cases</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Side Project Generator - NEW -->
-        <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1e3a5f 0%, #2563eb 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>AI Side Project Generator</h3>
-                <p>Find your next $1K/month side project! Get 5 personalized AI-powered business ideas based on your skills, with revenue potential and step-by-step roadmaps. Share your blueprint!</p>
-                <ul class="product-features">
-                    <li>5 ideas matched to YOUR skills</li>
-                    <li>Revenue potential for each project</li>
-                    <li>Time-to-first-dollar estimates</li>
-                    <li>Step-by-step launch roadmaps</li>
-                    <li>Shareable results card for social</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-side-project-generator.html" class="btn-primary">Generate My Ideas</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- AI Readiness Quiz -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-free">Free</span>
-                <h3>AI Readiness Quiz</h3>
-                <p>Take this 2-minute quiz to discover how ready you are for AI. Get a personalized score and actionable recommendations tailored to your situation.</p>
-                <ul class="product-features">
-                    <li>2-minute assessment</li>
-                    <li>Personalized AI readiness score</li>
-                    <li>Specific recommendations for your stage</li>
-                    <li>No signup required to see results</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="ai-readiness-quiz.html" class="btn-primary">Take the Quiz</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- TestiCard -->
-        <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #3b2e4d 0%, #4a3d5c 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M7.5 8.25h9m-9 3H12m-9.75 1.51c0 1.6 1.123 2.994 2.707 3.227 1.129.166 2.27.293 3.423.379.35.026.67.21.865.501L12 21l2.755-4.133a1.14 1.14 0 01.865-.501 48.172 48.172 0 003.423-.379c1.584-.233 2.707-1.626 2.707-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0012 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>TestiCard: Testimonial Image Generator</h3>
-                <p>Turn client feedback into beautiful, shareable testimonial cards. Choose from 4 styles, add avatars, download as PNG. Perfect for social media and websites.</p>
-                <ul class="product-features">
-                    <li>4 card styles (light, dark, gradient, minimal)</li>
-                    <li>Custom avatar or auto-initials</li>
-                    <li>Download PNG or copy to clipboard</li>
-                    <li>100% free, no signup required</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="https://galacticjack.github.io/testicard/" target="_blank" class="btn-primary">Create Card</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- BizCalc -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>BizCalc: Freelancer Profit Calculator</h3>
-                <p>Are you actually making money? Find your real hourly rate after taxes, expenses, and unpaid work. Most freelancers are shocked by the results.</p>
-                <ul class="product-features">
-                    <li>Calculate your TRUE hourly rate</li>
-                    <li>See profit margin after all expenses</li>
-                    <li>Factor in unpaid admin time</li>
-                    <li>Get pricing recommendations</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="https://galacticjack.github.io/bizcalc/" target="_blank" class="btn-primary">Calculate Now</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- ProofDrop -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>ProofDrop: Client Approval Tool</h3>
-                <p>Stop chasing clients for approvals. Upload your work, share a link, get feedback. Track what's approved and what needs changes. No more email chains.</p>
-                <ul class="product-features">
-                    <li>Upload images or paste links</li>
-                    <li>Generate shareable approval links</li>
-                    <li>One-click approve or request changes</li>
-                    <li>Dashboard to track all proofs</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="https://galacticjack.github.io/proofdrop/" target="_blank" class="btn-primary">Try ProofDrop</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- RateRight -->
-        <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #1a2e1a 0%, #2e4e1a 100%);">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>RateRight: Freelance Rate Calculator</h3>
-                <p>Stop undercharging. Enter your income goals, expenses, and time constraints to find the hourly rate you actually need. Full breakdown included.</p>
-                <ul class="product-features">
-                    <li>Calculate minimum sustainable rate</li>
-                    <li>See day, week, and monthly rates</li>
-                    <li>Compare your current rate vs. goal</li>
-                    <li>Full breakdown of the math</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="https://galacticjack.github.io/rate-calculator/" target="_blank" class="btn-primary">Calculate Rate</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- SEO Quick Audit -->
-        <div class="product-full">
-            <div class="product-visual">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5" width="80" height="80">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-                </svg>
-            </div>
-            <div class="product-details">
-                <span class="product-badge badge-new">New</span>
-                <h3>SEO Quick Audit</h3>
-                <p>Instant website health check. Enter any URL, get a 0-100 SEO score with 10 actionable checks. No signup required.</p>
-                <ul class="product-features">
-                    <li>Title, meta description, H1 analysis</li>
-                    <li>Mobile-friendliness and HTTPS check</li>
-                    <li>Image alt tags and social meta</li>
-                    <li>3 free audits per day</li>
-                </ul>
-                <div class="product-cta">
-                    <span class="price">Free</span>
-                    <a href="https://galacticjack.github.io/seo-quick-audit/" target="_blank" class="btn-primary">Run Audit</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- PAID PRODUCTS SECTION -->
-    <div class="section-header">
-        <h2>Premium Products</h2>
-    </div>
-    
-    <div class="products-grid">
-        <!-- Prompt Playbook -->
-        <div class="product-card">
-            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
-            </svg>
-            <span class="product-badge badge-soon">Coming Soon</span>
-            <h3>AI Prompt Playbook</h3>
-            <p>50+ battle-tested prompts for marketers, founders, and operators. Stop starting from scratch.</p>
-            <div class="product-cta">
-                <a href="/subscribe.html" class="btn-secondary">Get notified</a>
-            </div>
-        </div>
-
-        <!-- Automation Starter Kit -->
-        <div class="product-card">
-            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
-            </svg>
-            <span class="product-badge badge-soon">Coming Soon</span>
-            <h3>Automation Starter Kit</h3>
-            <p>Templates and workflows to automate 10+ hours of repetitive work every week.</p>
-            <div class="product-cta">
-                <a href="/subscribe.html" class="btn-secondary">Get notified</a>
-            </div>
-        </div>
-
-        <!-- ReplyReady Pro -->
-        <div class="product-card">
-            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-            </svg>
-            <span class="product-badge badge-soon">Coming Soon</span>
-            <h3>ReplyReady Pro</h3>
-            <p>Grade your cold emails before you send them. 30+ signals analyzed to boost reply rates.</p>
-            <div class="product-cta">
-                <a href="/subscribe.html" class="btn-secondary">Get notified</a>
-            </div>
-        </div>
-
-        <!-- LinkVault -->
-        <div class="product-card">
-            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
-                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
-            </svg>
-            <span class="product-badge badge-soon">Coming Soon</span>
-            <h3>LinkVault</h3>
-            <p>Organize all your affiliate links in one dashboard. Track commissions, check link health, export data.</p>
-            <div class="product-cta">
-                <a href="/subscribe.html" class="btn-secondary">Get notified</a>
-            </div>
-        </div>
-    </div>
-
-    <div class="guarantee">
-        <h3>Built for Builders</h3>
-        <p>These tools exist because we use them ourselves. No enterprise fluff, no feature bloat. Just the stuff that actually helps you get work done.</p>
-    </div>
-
-    <footer>
-        <div class="footer-inner">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <a href="/" class="logo">
-                        <div class="logo-icon"><img src="../images/profile.jpg" alt="Future Humanism"></div>
-                        <div class="logo-text">Future<span>Humanism</span></div>
-                    </a>
-                    <p>Reframing the future, one insight at a time. Daily tools, tutorials, and unfiltered takes for builders navigating the AI revolution.</p>
-                </div>
-                <div class="footer-links">
-                    <h4>Content</h4>
-                    <ul>
-                        <li><a href="/articles/">All Articles</a></li>
-                        <li><a href="/tools/">Free Tools</a></li>
-                        <li><a href="/resources.html">Resources</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Connect</h4>
-                    <ul>
-                        <li><a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a></li>
-                        <li><a href="/subscribe.html">Newsletter</a></li>
-                        <li><a href="/about.html">About</a></li>
-                    </ul>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <ul>
-                        <li><a href="/privacy.html">Privacy Policy</a></li>
-                        <li><a href="/terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>2026 Future Humanism. All rights reserved.</p>
-                <div class="footer-social">
-                    <a href="https://twitter.com/FutureHumanism" target="_blank" aria-label="Twitter">
-                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-header">
-            <a href="/" class="logo">
-                <div class="logo-icon"><img src="../images/profile.jpg" alt=""></div>
-                <span class="logo-text">Future<span>Humanism</span></span>
-            </a>
-            <button class="close-btn" onclick="closeMobileMenu()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
-            </button>
+    <main>
+        <div class="hero">
+            <h1>Free AI Tools</h1>
+            <p>Quizzes, calculators, and generators to help you work smarter with AI. All free, no signup required.</p>
+            <span class="tool-count">17 Tools Available</span>
         </div>
         
-        <div class="mobile-menu-content">
-            <div class="mobile-menu-section">
-                <div class="mobile-menu-section-title">Browse</div>
-                <a href="/" onclick="closeMobileMenu()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-                    Home
-                </a>
-                <a href="/articles/" onclick="closeMobileMenu()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-                    All Stories
-                </a>
-                <a href="/articles/ai-agents-2026-guide.html" onclick="closeMobileMenu()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                    Featured Guide
-                </a>
-                <a href="/tools/" onclick="closeMobileMenu()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                    Free Tools
-                </a>
-                <a href="/about.html" onclick="closeMobileMenu()">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    About
-                </a>
-            </div>
-
-            <div class="mobile-menu-section">
-                <div class="mobile-menu-section-title">Topics</div>
-                <div class="mobile-menu-topics">
-                    <a href="/articles/?cat=ai-agents" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
-                        AI Agents
-                    </a>
-                    <a href="/articles/?cat=ai-models" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
-                        AI Models
-                    </a>
-                    <a href="/articles/?cat=automation" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
-                        Automation
-                    </a>
-                    <a href="/articles/?cat=strategy" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
-                        Strategy
-                    </a>
-                    <a href="/articles/?cat=tutorials" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
-                        Tutorials
-                    </a>
-                    <a href="/articles/?cat=crypto" onclick="closeMobileMenu()">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
-                        Crypto & DeFi
-                    </a>
-                </div>
-            </div>
+        <div class="categories">
+            <button class="cat-btn active" data-cat="all">All Tools</button>
+            <button class="cat-btn" data-cat="quiz">Quizzes</button>
+            <button class="cat-btn" data-cat="calculator">Calculators</button>
+            <button class="cat-btn" data-cat="generator">Generators</button>
+            <button class="cat-btn" data-cat="analyzer">Analyzers</button>
         </div>
-
-        <div class="mobile-menu-cta">
-            <a href="/subscribe.html" onclick="closeMobileMenu()">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                Subscribe for Free
+        
+        <div class="tools-grid">
+            <!-- Quizzes -->
+            <a href="ai-readiness-quiz.html" class="tool-card" data-cat="quiz">
+                <div class="tool-icon">🎯</div>
+                <span class="tool-tag">Quiz</span>
+                <h3>AI Readiness Assessment</h3>
+                <p>How AI-ready is your business? Get a score and recommendations.</p>
             </a>
-            <div class="mobile-menu-social">
-                <a href="https://twitter.com/FutureHumanism" target="_blank" aria-label="X/Twitter">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
-                </a>
-                <a href="https://www.linkedin.com/company/futurehumanism" target="_blank" aria-label="LinkedIn">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                </a>
-            </div>
+            
+            <a href="ai-productivity-score.html" class="tool-card" data-cat="quiz">
+                <div class="tool-icon">⚡</div>
+                <span class="tool-tag">Quiz</span>
+                <h3>AI Productivity Score</h3>
+                <p>Measure how effectively you're using AI in your workflow.</p>
+            </a>
+            
+            <a href="ai-workflow-quiz.html" class="tool-card" data-cat="quiz">
+                <div class="tool-icon">🔄</div>
+                <span class="tool-tag">Quiz</span>
+                <h3>AI Workflow Quiz</h3>
+                <p>Find which of your workflows are ripe for AI automation.</p>
+            </a>
+            
+            <a href="ai-skills-gap.html" class="tool-card" data-cat="quiz">
+                <div class="tool-icon">📊</div>
+                <span class="tool-tag">Quiz</span>
+                <h3>AI Skills Gap Analyzer</h3>
+                <p>Identify the AI skills you need to develop.</p>
+            </a>
+            
+            <a href="ai-or-human.html" class="tool-card" data-cat="quiz">
+                <div class="tool-icon">🤖</div>
+                <span class="tool-tag">Quiz</span>
+                <h3>AI or Human?</h3>
+                <p>Can you tell if text was written by AI or a human?</p>
+            </a>
+            
+            <!-- Calculators -->
+            <a href="ai-roi-calculator.html" class="tool-card" data-cat="calculator">
+                <div class="tool-icon">💰</div>
+                <span class="tool-tag">Calculator</span>
+                <h3>AI ROI Calculator</h3>
+                <p>Calculate the return on investment for AI tools.</p>
+            </a>
+            
+            <a href="automation-savings-calculator.html" class="tool-card" data-cat="calculator">
+                <div class="tool-icon">⏱️</div>
+                <span class="tool-tag">Calculator</span>
+                <h3>Automation Savings</h3>
+                <p>How much time and money can you save with automation?</p>
+            </a>
+            
+            <!-- Generators -->
+            <a href="prompt-generator.html" class="tool-card" data-cat="generator">
+                <div class="tool-icon">✨</div>
+                <span class="tool-tag">Generator</span>
+                <h3>AI Prompt Generator</h3>
+                <p>Generate effective prompts for any task in seconds.</p>
+            </a>
+            
+            <a href="ai-use-case-generator.html" class="tool-card" data-cat="generator">
+                <div class="tool-icon">💡</div>
+                <span class="tool-tag">Generator</span>
+                <h3>AI Use Case Generator</h3>
+                <p>Discover AI use cases for your industry and role.</p>
+            </a>
+            
+            <a href="ai-side-project-generator.html" class="tool-card" data-cat="generator">
+                <div class="tool-icon">🚀</div>
+                <span class="tool-tag">Generator</span>
+                <h3>Side Project Ideas</h3>
+                <p>Get AI-powered side project ideas based on your skills.</p>
+            </a>
+            
+            <!-- Analyzers -->
+            <a href="ai-job-analyzer.html" class="tool-card" data-cat="analyzer">
+                <div class="tool-icon">👔</div>
+                <span class="tool-tag">Analyzer</span>
+                <h3>AI Job Impact Analyzer</h3>
+                <p>How will AI affect your job? Get a personalized report.</p>
+            </a>
+            
+            <a href="headline-analyzer.html" class="tool-card" data-cat="analyzer">
+                <div class="tool-icon">📝</div>
+                <span class="tool-tag">Analyzer</span>
+                <h3>Headline Analyzer</h3>
+                <p>Score your headlines 0-100 with improvement tips.</p>
+            </a>
+            
+            <a href="ai-tool-matchmaker.html" class="tool-card" data-cat="analyzer">
+                <div class="tool-icon">🔍</div>
+                <span class="tool-tag">Analyzer</span>
+                <h3>AI Tool Matchmaker</h3>
+                <p>Find the perfect AI tools for your specific needs.</p>
+            </a>
+            
+            <!-- Resources -->
+            <a href="prompt-cheatsheet.html" class="tool-card" data-cat="generator">
+                <div class="tool-icon">📋</div>
+                <span class="tool-tag">Resource</span>
+                <h3>Prompt Cheatsheet</h3>
+                <p>Copy-paste prompts for common tasks.</p>
+            </a>
+            
+            <!-- Coming Soon -->
+            <a href="prompt-playbook.html" class="tool-card coming-soon" data-cat="generator">
+                <div class="tool-icon">📚</div>
+                <span class="tool-tag">Resource</span>
+                <h3>AI Prompt Playbook</h3>
+                <p>50+ battle-tested prompts for pros.</p>
+                <span class="coming-badge">Coming Soon</span>
+            </a>
+            
+            <a href="replyready.html" class="tool-card coming-soon" data-cat="analyzer">
+                <div class="tool-icon">📧</div>
+                <span class="tool-tag">Analyzer</span>
+                <h3>ReplyReady</h3>
+                <p>Grade your cold emails before sending.</p>
+                <span class="coming-badge">Coming Soon</span>
+            </a>
         </div>
-    </div>
-
+    </main>
+    
+    <footer>
+        <p><a href="/">Future Humanism</a> · <a href="/articles/">Articles</a> · <a href="/about.html">About</a> · <a href="/subscribe.html">Subscribe</a></p>
+    </footer>
+    
     <script>
-    const shareUrl = window.location.href;
-    const shareTitle = document.title;
-    function shareToX() { window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&via=FutureHumanism`, '_blank'); }
-    function shareToLinkedIn() { window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank'); }
-    function shareToFacebook() { window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank'); }
-    function copyLink() { navigator.clipboard.writeText(shareUrl); document.getElementById('copy-link-btn').innerHTML = 'Copied!'; }
-    
-    // Mobile menu functions
-    function openMobileMenu() {
-        document.getElementById('mobile-menu').classList.add('open');
-        document.body.style.overflow = 'hidden';
-    }
-    function closeMobileMenu() {
-        document.getElementById('mobile-menu').classList.remove('open');
-        document.body.style.overflow = '';
-    }
-    document.querySelector('.mobile-menu-btn').addEventListener('click', openMobileMenu);
+        // Category filter
+        document.querySelectorAll('.cat-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.cat-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const cat = btn.dataset.cat;
+                document.querySelectorAll('.tool-card').forEach(card => {
+                    if (cat === 'all' || card.dataset.cat === cat) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
     </script>
-    
-    <!-- Social Proof Engine -->
-    <script src="../js/social-proof.js"></script>
 </body>
 </html>
