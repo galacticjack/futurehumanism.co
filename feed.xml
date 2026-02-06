@@ -5,8 +5,16 @@
     <link>https://futurehumanism.co</link>
     <description>Where AI meets human potential. Daily insights on AI, automation, and building things that matter.</description>
     <language>en-us</language>
-    <lastBuildDate>Fri, 06 Feb 2026 23:27:13 +0000</lastBuildDate>
+    <lastBuildDate>Sat, 07 Feb 2026 06:31:00 +0000</lastBuildDate>
     <atom:link href="https://futurehumanism.co/feed.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>AI Agent Security: The Vulnerabilities That Could Bring Down Your Enterprise</title>
+      <link>https://futurehumanism.co/articles/ai-agent-security-vulnerabilities-2026.html</link>
+      <description>BodySnatcher, lateral movement, and agent-to-agent attacks are exposing critical flaws in enterprise AI deployments. Learn how to protect your organization from the next wave of AI security threats.</description>
+      <pubDate>Sat, 07 Feb 2026 06:31:00 +0000</pubDate>
+      <guid>https://futurehumanism.co/articles/ai-agent-security-vulnerabilities-2026.html</guid>
+      <category>Security</category>
+    </item>
     <item>
       <title>The Great AI Model Convergence of 2026</title>
       <link>https://futurehumanism.co/articles/ai-model-convergence-2026.html</link>
