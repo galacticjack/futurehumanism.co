@@ -726,19 +726,26 @@
 
         .product-image {
             height: 180px;
-            background: var(--accent);
+            background: #1a1a2e;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 4rem;
+        }
+
+        .product-image svg {
+            width: 64px;
+            height: 64px;
+            stroke: white;
+            stroke-width: 1.5;
+            fill: none;
         }
 
         .product-card:nth-child(2) .product-image {
-            background: #8b5cf6;
+            background: #16213e;
         }
 
         .product-card:nth-child(3) .product-image {
-            background: #10b981;
+            background: #0f0f23;
         }
 
         .product-content {
@@ -1332,12 +1339,12 @@
     <!-- Hero Section -->
     <section class="hero-section animate-in">
         <div class="hero-grid">
-            <a href="articles/ai-agents-memory.html" class="hero-main">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=1200&q=80" alt="AI Memory Revolution">
+            <a href="articles/ai-agents-2025-guide.html" class="hero-main">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI Agents 2025">
                 <div class="hero-overlay">
-                    <span class="hero-tag">Latest Issue</span>
-                    <h1 class="hero-title">AI Agents Getting Memory: Why Persistent Context Changes Everything</h1>
-                    <p class="hero-excerpt">The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy and business applications.</p>
+                    <span class="hero-tag">Featured Guide</span>
+                    <h1 class="hero-title">The Complete Guide to AI Agents in 2025</h1>
+                    <p class="hero-excerpt">Everything you need to know about AI agents: what they are, how they work, and why they're reshaping how we build software and run businesses.</p>
                 </div>
                 <div class="read-indicator">
                     <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -1409,7 +1416,7 @@
             <a href="articles/claude-vs-gpt-comparison.html" class="story-card">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=600&q=80" alt="AI Brain">
                 <div class="card-overlay">
-                    <p class="card-title">Claude vs GPT-4: The Only Comparison That Actually Matters</p>
+                    <p class="card-title">Claude 4 vs GPT-5.2: The Only Comparison That Actually Matters</p>
                 </div>
                 <span class="card-duration">5 min</span>
             </a>
@@ -1465,7 +1472,7 @@
     <section style="padding: 40px 24px; background: #6366F1;">
         <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
             <div style="flex: 1; min-width: 280px;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px;">🎯 How AI-Ready Is Your Business?</h3>
+                <h3 style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px;">How AI-Ready Is Your Business?</h3>
                 <p style="color: rgba(255,255,255,0.9); font-size: 1rem;">Take our free 2-minute quiz and get a personalized score with actionable recommendations.</p>
             </div>
             <a href="/quiz.html" style="display: inline-block; padding: 14px 32px; background: white; color: #6366F1; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; transition: transform 0.2s, box-shadow 0.2s; white-space: nowrap;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 20px rgba(0,0,0,0.2)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">Take the Quiz →</a>
@@ -1503,7 +1510,7 @@
             <a href="articles/claude-vs-gpt-comparison.html" class="story-card">
                 <img loading="lazy" src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=600&q=80" alt="Laptop">
                 <div class="card-overlay">
-                    <p class="card-title">Claude vs GPT-4: The Only Comparison That Matters</p>
+                    <p class="card-title">Claude 4 vs GPT-5.2: The Only Comparison That Matters</p>
                 </div>
                 <span class="card-duration">5 min</span>
             </a>
@@ -1568,7 +1575,9 @@
             </div>
             <div class="products-grid">
                 <a href="/subscribe.html" target="_blank" class="product-card">
-                    <div class="product-image">✉️</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
                     <div class="product-content">
                         <h3>ReplyReady Pro</h3>
                         <p>Grade your cold emails before you send them. 30+ signals analyzed. Zero guesswork.</p>
@@ -1579,7 +1588,9 @@
                     </div>
                 </a>
                 <a href="/subscribe.html" target="_blank" class="product-card">
-                    <div class="product-image">📝</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+                    </div>
                     <div class="product-content">
                         <h3>AI Prompt Playbook</h3>
                         <p>50+ battle-tested prompts for marketers, founders, and operators. Copy, paste, profit.</p>
@@ -1590,7 +1601,9 @@
                     </div>
                 </a>
                 <a href="/subscribe.html" target="_blank" class="product-card">
-                    <div class="product-image">🚀</div>
+                    <div class="product-image">
+                        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                    </div>
                     <div class="product-content">
                         <h3>Automation Starter Kit</h3>
                         <p>Templates, workflows, and guides to automate 10+ hours of work every week.</p>
