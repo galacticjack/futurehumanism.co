@@ -248,6 +248,11 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://futurehumanism.co/tools/ai-readiness-quiz.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://futurehumanism.co/tools/ai-roi-calculator.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
