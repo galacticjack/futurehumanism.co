@@ -88,6 +88,14 @@
             line-height: 1.5;
             font-size: 15px;
         }
+        
+        /* Keep links blue even when visited */
+        a:visited {
+            color: inherit;
+        }
+        a[href]:not(.card):not(.article-card):visited {
+            color: var(--accent);
+        }
 
         /* Page Load Animation */
         @keyframes fadeIn {
