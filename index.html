@@ -753,17 +753,32 @@
         .product-image svg {
             width: 64px;
             height: 64px;
-            stroke: white;
             stroke-width: 1.5;
             fill: none;
         }
 
-        .product-card:nth-child(2) .product-image {
-            background: #16213e;
+        /* First card - Blue */
+        .product-card:nth-child(1) .product-image {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        }
+        .product-card:nth-child(1) .product-image svg {
+            stroke: #3b82f6;
         }
 
+        /* Second card - Purple */
+        .product-card:nth-child(2) .product-image {
+            background: linear-gradient(135deg, #1a1a2e 0%, #2d1b4e 100%);
+        }
+        .product-card:nth-child(2) .product-image svg {
+            stroke: #8b5cf6;
+        }
+
+        /* Third card - Green */
         .product-card:nth-child(3) .product-image {
-            background: #0f0f23;
+            background: linear-gradient(135deg, #0f1f1a 0%, #0f2922 100%);
+        }
+        .product-card:nth-child(3) .product-image svg {
+            stroke: #10b981;
         }
 
         .product-content {
