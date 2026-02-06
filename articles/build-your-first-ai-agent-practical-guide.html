@@ -829,6 +829,946 @@
         }
 
     </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress-bar"></div>
+
+    <header>
+        <div class="header-inner">
+            <a href="../" class="logo">Future Humanism</a>
+            <a href="../articles/" class="back-link">← All Articles</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-tag">Practical AI</div>
+        <h1>How to Build Your First AI Agent: The Complete Practical Guide</h1>
+        <div class="hero-meta">February 6, 2026 • 12 min read</div>
+    </section>
+
+    <article>
+        <p>Building an AI agent sounds complex, but it doesn't have to be. In the next 12 minutes, you'll learn exactly how to create your first useful AI agent without writing a single line of code-and more importantly, why this skill will become as essential as email in 2026.</p>
+
+        <p>I've built dozens of AI agents over the past year, from simple notification bots to complex workflow orchestrators. The game-changer? You don't need to be a developer. The best AI agents often come from people who understand the problem, not necessarily the code.</p>
+
+        <h2>What Makes an AI Agent Different from ChatGPT</h2>
+
+        <p>ChatGPT is reactive-you ask, it responds. An AI agent is proactive-it watches, decides, and acts on your behalf. Think of ChatGPT as a very smart consultant you call when needed. An AI agent is like having a smart assistant who knows your workflow and handles routine tasks automatically.</p>
+
+        <p>The key difference: <strong>AI agents have three capabilities ChatGPT lacks</strong>:</p>
+
+        <ol>
+            <li><strong>Memory</strong> - They remember previous interactions and build context over time</li>
+            <li><strong>Tools</strong> - They can interact with other software, APIs, and systems</li>
+            <li><strong>Triggers</strong> - They can initiate actions based on events, schedules, or conditions</li>
+        </ol>
+
+        <p>This combination turns AI from a question-answering tool into an automation partner that can handle complex, multi-step workflows.</p>
+
+        <h2>The Three Types of AI Agents Worth Building</h2>
+
+        <p>Not all AI agents are created equal. Based on my experience building them for myself and clients, there are three types that consistently deliver value:</p>
+
+        <h3>1. The Monitor Agent</h3>
+
+        <p>Watches specific data sources and alerts you when something important happens. Examples: competitor pricing changes, news mentions, inventory levels, social media sentiment shifts.</p>
+
+        <div class="tool-card">
+            <h4>Real Example: Competitor Price Monitor</h4>
+            <p>I built an agent that monitors competitor pricing across 15 products daily. When a competitor drops prices by more than 10%, it sends a Slack message with the details and suggests response strategies. This single agent saved us $12,000 in lost sales last quarter by enabling faster pricing responses.</p>
+        </div>
+
+        <h3>2. The Processor Agent</h3>
+
+        <p>Takes incoming data and transforms it into actionable insights. Examples: email summarization, lead qualification, content analysis, customer support ticket routing.</p>
+
+        <h3>3. The Executor Agent</h3>
+
+        <p>Performs routine tasks automatically. Examples: social media posting, invoice generation, follow-up sequences, data entry, report creation.</p>
+
+        <p>Start with a Monitor Agent-they're easiest to build and provide immediate value by keeping you informed without manual checking.</p>
+
+        <h2>Tools You Need (The No-Code Stack)</h2>
+
+        <p>Here's my proven stack for building AI agents without coding. I've tested dozens of tools; these consistently work:</p>
+
+        <div class="tool-card">
+            <h4>Zapier (Automation)</h4>
+            <h5>$20-50/month</h5>
+            <p>The automation backbone. Connects 5,000+ apps and services. Think of it as the nervous system of your AI agent-it moves data between tools and triggers actions.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>OpenAI API (Intelligence)</h4>
+            <h5>$20-100/month</h5>
+            <p>The brain of your agent. ChatGPT via API is more reliable and customizable than ChatGPT Plus for automation. You control the prompts, memory, and behavior precisely.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>Airtable (Memory)</h4>
+            <h5>$0-50/month</h5>
+            <p>Your agent's memory bank. Stores interaction history, learned preferences, and contextual data. Much better than basic spreadsheets for complex agent workflows.</p>
+        </div>
+
+        <div class="tool-card">
+            <h4>Webhook.site (Testing)</h4>
+            <h5>Free</h5>
+            <p>Essential for testing your agent's outputs before connecting to real systems. Saves you from embarrassing mishaps during development.</p>
+        </div>
+
+        <p><strong>Total cost to start</strong>: $40-200/month. Cheaper than hiring a part-time assistant, more reliable than a full-time intern.</p>
+
+        <h2>Building Your First Agent: The Email Summarizer</h2>
+
+        <p>Let's build something immediately useful: an agent that reads your important emails and sends you intelligent daily summaries. This took me 2 hours to build and saves 30 minutes daily.</p>
+
+        <div class="step-box">
+            <h4>Step 1: Define the Goal</h4>
+            <p>Every effective AI agent starts with a clear, specific goal. Vague goals create confused agents.</p>
+            <p><strong>Bad goal</strong>: "Help me with email"<br>
+            <strong>Good goal</strong>: "Read emails from 5 key clients daily, identify action items, and send me a summary with priority levels"</p>
+        </div>
+
+        <div class="step-box">
+            <h4>Step 2: Set Up the Data Source</h4>
+            <p>In Zapier, create a new Zap with Gmail as the trigger. Set it to fire when new emails arrive from specific senders or with certain labels.</p>
+            <p><strong>Pro tip</strong>: Start with just 2-3 email senders. You can expand later once the agent is working reliably.</p>
+        </div>
+
+        <div class="step-box">
+            <h4>Step 3: Create the AI Processing Step</h4>
+            <p>Add an OpenAI step in your Zap. This is where you define how your agent thinks. Your prompt is crucial-it's your agent's personality and instructions.</p>
+            <p><strong>Example prompt</strong>:<br>
+            "You are an executive assistant. Analyze this email and provide:<br>
+            1. Two-sentence summary<br>
+            2. Priority level (High/Medium/Low)<br>
+            3. Action items for the recipient<br>
+            4. Deadline information if mentioned<br>
+            Be concise but thorough."</p>
+        </div>
+
+        <div class="step-box">
+            <h4>Step 4: Set Up Memory Storage</h4>
+            <p>Connect your Zap to Airtable to store email summaries. This creates a searchable history and lets your agent learn patterns over time.</p>
+            <p>Include fields for: Date, Sender, Subject, Summary, Priority, Action Items, Status.</p>
+        </div>
+
+        <div class="step-box">
+            <h4>Step 5: Configure the Output</h4>
+            <p>Add a final step to send the summary to your preferred channel-Slack, email, or SMS. I recommend Slack for its formatting capabilities and integration options.</p>
+        </div>
+
+        <div class="step-box">
+            <h4>Step 6: Test Thoroughly</h4>
+            <p>Send test emails and verify your agent responds correctly. Check edge cases: long emails, urgent messages, emails with attachments.</p>
+            <p><strong>Test with different email types</strong>: meeting requests, project updates, sales inquiries, support tickets.</p>
+        </div>
+
+        <h2>Making Your Agent Smarter Over Time</h2>
+
+        <p>A basic agent is just the beginning. Here's how to evolve yours into something genuinely intelligent:</p>
+
+        <h3>Add Context Awareness</h3>
+
+        <p>Enhance your AI prompts with relevant context from your stored data. For the email summarizer, include recent interaction history with each sender so the agent understands ongoing conversations.</p>
+
+        <h3>Implement Feedback Loops</h3>
+
+        <p>Create simple ways to rate your agent's outputs. Add thumbs up/down reactions to Slack summaries, then use this feedback to refine your prompts monthly.</p>
+
+        <h3>Build Conditional Logic</h3>
+
+        <p>Use Zapier's filters and paths to make your agent handle different scenarios intelligently. For example, urgent emails get immediate notifications while routine updates get batched into daily summaries.</p>
+
+        <h3>Enable Two-Way Communication</h3>
+
+        <p>Advanced agents can ask clarifying questions. If your email summarizer encounters an ambiguous deadline, it can message you for clarification before processing.</p>
+
+        <div class="highlight-box">
+            <p><strong>Pro tip</strong>: Start simple and add one enhancement per week. Complex agents built all at once usually fail. Simple agents that evolve gradually become indispensable.</p>
+        </div>
+
+        <h2>Common Mistakes and How to Avoid Them</h2>
+
+        <p>I've seen hundreds of AI agent projects fail. Here are the patterns that kill projects and how to avoid them:</p>
+
+        <h3>Mistake 1: Trying to Automate Everything at Once</h3>
+
+        <p><strong>The problem</strong>: New builders try to replace their entire workflow with one mega-agent.<br>
+        <strong>The fix</strong>: Start with one specific, repetitive task. Master that, then expand.</p>
+
+        <h3>Mistake 2: Vague or Overly Complex Prompts</h3>
+
+        <p><strong>The problem</strong>: "Please help me be more productive with my email" produces inconsistent results.<br>
+        <strong>The fix</strong>: Be specific about inputs, processing steps, and expected outputs.</p>
+
+        <h3>Mistake 3: No Error Handling</h3>
+
+        <p><strong>The problem</strong>: When your agent encounters unexpected data, it breaks silently.<br>
+        <strong>The fix</strong>: Build error notifications and fallback behaviors into every workflow.</p>
+
+        <h3>Mistake 4: Ignoring Privacy and Security</h3>
+
+        <p><strong>The problem</strong>: Sending sensitive business data through third-party AI services without consideration.<br>
+        <strong>The fix</strong>: Understand data handling policies, use business accounts, and avoid personal information in prompts.</p>
+
+        <h3>Mistake 5: Not Measuring Value</h3>
+
+        <p><strong>The problem</strong>: Building agents because they're cool, not because they solve real problems.<br>
+        <strong>The fix</strong>: Track time saved, decisions improved, or errors prevented. If you can't measure the value, don't build it.</p>
+
+        <h2>Advanced Agent Ideas for Your Second Project</h2>
+
+        <p>Once you've mastered a basic agent, here are proven concepts for your next builds:</p>
+
+        <h3>The Content Curator</h3>
+
+        <p>Scans industry news, filters for relevance to your business, and compiles weekly briefings with key insights and implications.</p>
+
+        <h3>The Meeting Intelligence Agent</h3>
+
+        <p>Processes meeting transcripts, extracts action items, identifies who's responsible for what, and follows up on overdue items.</p>
+
+        <h3>The Customer Insight Synthesizer</h3>
+
+        <p>Analyzes customer support conversations, survey responses, and feedback to identify emerging patterns and opportunities.</p>
+
+        <h3>The Competitive Intelligence Agent</h3>
+
+        <p>Monitors competitor websites, pricing, product announcements, and hiring patterns to spot strategic shifts early.</p>
+
+        <p>Each of these follows the same pattern: specific trigger, intelligent processing, valuable output, memory storage, and continuous improvement.</p>
+
+        <h2>The Economics of AI Agents</h2>
+
+        <p>Here's the math that matters: my email summarizer costs about $50/month to run but saves me 150 minutes weekly. At my hourly rate, that's a 10x return on investment.</p>
+
+        <p>But the real value isn't just time savings-it's the <em>quality</em> improvements:</p>
+
+        <ul>
+            <li>Never missing important deadlines because they're extracted consistently</li>
+            <li>Better prioritization because sentiment analysis identifies truly urgent items</li>
+            <li>Reduced cognitive load because summaries are pre-processed and structured</li>
+            <li>Improved response times because action items are immediately clear</li>
+        </ul>
+
+        <p>The productivity compound effect kicks in quickly. Better information processing leads to better decisions, which leads to better outcomes, which leads to more time for high-value work.</p>
+
+        <h2>Looking Ahead: Where This Goes</h2>
+
+        <p>We're still early in the AI agent revolution. The tools I've described today will seem primitive compared to what's coming in 2026:</p>
+
+        <ul>
+            <li><strong>Voice-first agents</strong> that understand natural conversation and respond intelligently</li>
+            <li><strong>Multi-modal agents</strong> that can analyze images, documents, and video alongside text</li>
+            <li><strong>Collaborative agent networks</strong> where your agents communicate with other agents to solve complex problems</li>
+            <li><strong>Predictive agents</strong> that anticipate your needs and take action before you realize you need them</li>
+        </ul>
+
+        <p>But here's the key: the fundamentals I've taught you today-clear goals, specific prompts, memory systems, feedback loops-will remain constant. Master these basics now, and you'll be ready to leverage whatever comes next.</p>
+
+        <div class="highlight-box">
+            <p><strong>Your assignment</strong>: Build your first AI agent this week. Start with the email summarizer or adapt it to your specific workflow. Don't spend more than 4 hours on version 1. Get it working, then iterate.</p>
+        </div>
+
+        <p>The future belongs to people who can effectively collaborate with AI. Not just prompt engineers or developers, but anyone who understands how to define problems clearly, structure workflows logically, and measure results systematically.</p>
+
+        <p>Your first AI agent won't change your life overnight. But it will change how you think about automation, efficiency, and the relationship between human creativity and machine capability. And that mindset shift? That's where the real transformation begins.</p>
+
+        <p>The question isn't whether you'll work with AI agents. It's whether you'll start building them now, while the learning curve is manageable, or later, when they're table stakes for staying competitive.</p>
+
+        <p>Choose now. Your future self will thank you.</p>
+    </article>
+
+    <!-- Share This Article -->
+    <div class="share-section">
+        <h4>Share This Article</h4>
+        <div class="share-buttons">
+            <a href="https://twitter.com/intent/tweet?text=Just%20learned%20how%20to%20build%20my%20first%20AI%20agent%20without%20coding!%20This%20practical%20guide%20shows%20exactly%20how%20to%20get%20started.%20&url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fbuild-your-first-ai-agent-practical-guide.html&via=FutureHumanism" target="_blank" class="share-btn twitter">
+                 Share on X
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fbuild-your-first-ai-agent-practical-guide.html" target="_blank" class="share-btn linkedin">
+                 LinkedIn
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fbuild-your-first-ai-agent-practical-guide.html" target="_blank" class="share-btn facebook">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                Facebook
+            </a>
+            <button class="share-btn copy-link" onclick="copyLink()">
+                 Copy Link
+            </button>
+        </div>
+        <div class="follow-section">
+            <a href="https://twitter.com/FutureHumanism" target="_blank" class="follow-btn">
+                Follow @FutureHumanism
+            </a>
+        </div>
+    </div>
+
+    <!-- Author Bio -->
+    <div class="author-bio">
+        <img src="../images/profile.jpg" alt="Author" class="author-avatar">
+        <div class="author-info">
+            <h4>Written by Future Humanism</h4>
+            <p>Exploring where AI meets human potential. Weekly insights on automation, side projects, and building things that matter.</p>
+            <a href="https://twitter.com/FutureHumanism" target="_blank" class="author-follow">Follow on X →</a>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+        <h3>Keep Reading</h3>
+        <div class="related-grid">
+            <a href="ai-agents-2026-guide.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80" alt="AI Agents Guide">
+                <div class="related-content">
+                    <span class="related-tag">Guide</span>
+                    <h4>The Complete Guide to AI Agents in 2026</h4>
+                </div>
+            </a>
+            <a href="automate-80-percent-agency-work.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&q=80" alt="Automation">
+                <div class="related-content">
+                    <span class="related-tag">Automation</span>
+                    <h4>How We Automated 80% of Our Agency Work</h4>
+                </div>
+            </a>
+            <a href="why-ai-side-projects-fail.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80" alt="Side Projects">
+                <div class="related-content">
+                    <span class="related-tag">Strategy</span>
+                    <h4>Why Most AI Side Projects Fail</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('article');
+            const progressBar = document.getElementById('progress-bar');
+            
+            if (article) {
+                const articleStart = article.offsetTop;
+                const articleHeight = article.offsetHeight;
+                const scrolled = window.scrollY - articleStart;
+                
+                const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
+                progressBar.style.width = progress * 100 + '%';
+            }
+        });
+
+        // Copy link functionality
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.querySelector('.copy-link');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = ' Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            }).catch(() => {
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const btn = document.querySelector('.copy-link');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = ' Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+
+
+<!-- Exit Intent Popup Component - Include before 
+    <script>
+        // Share functions
+        const shareUrl = window.location.href;
+        const shareTitle = document.title;
+        
+        function shareToX() {
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                const btn = document.getElementById('copy-link-btn');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Mobile menu
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+    </script>
+
+</body> -->
+<div id="exit-popup" class="exit-popup">
+    <div class="exit-popup-content">
+        <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close popup">&times;</button>
+        
+        <div class="exit-popup-badge">FREE DOWNLOAD</div>
+        <h2>Before you go...</h2>
+        <p class="exit-popup-lead">Grab our <strong>AI Prompt Cheatsheet</strong> with 50+ battle-tested prompts that actually work.</p>
+        
+        <div class="exit-popup-features">
+            <span>ChatGPT prompts</span>
+            <span>Claude prompts</span>
+            <span>Coding prompts</span>
+        </div>
+        
+        <form id="exit-popup-form" class="exit-popup-form">
+            <input type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+            <button type="submit">Get the Cheatsheet</button>
+        </form>
+        <p class="exit-popup-note">Join 500+ builders. No spam, ever.</p>
+    </div>
+</div>
+
+<style>
+    .exit-popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        z-index: 10000;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    .exit-popup.show {
+        display: flex;
+        animation: fadeIn 0.25s ease;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .exit-popup-content {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 1px solid rgba(30, 144, 255, 0.3);
+        border-radius: 16px;
+        padding: 40px 36px;
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        animation: slideUp 0.3s ease;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .exit-popup-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s;
+        padding: 4px;
+    }
+    .exit-popup-close:hover {
+        color: #fff;
+    }
+    .exit-popup-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 100%);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+    }
+    .exit-popup-content h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .exit-popup-lead {
+        color: #b0b0b0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+    .exit-popup-lead strong {
+        color: #1E90FF;
+    }
+    .exit-popup-features {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .exit-popup-features span {
+        background: rgba(30, 144, 255, 0.15);
+        color: #1E90FF;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 12px;
+    }
+    .exit-popup-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .exit-popup-form input {
+        padding: 14px 16px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        font-size: 15px;
+        font-family: inherit;
+        transition: border-color 0.2s;
+    }
+    .exit-popup-form input:focus {
+        outline: none;
+        border-color: #1E90FF;
+    }
+    .exit-popup-form input::placeholder {
+        color: #666;
+    }
+    .exit-popup-form button {
+        padding: 14px 24px;
+        background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-family: inherit;
+    }
+    .exit-popup-form button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
+    }
+    .exit-popup-form button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+    .exit-popup-note {
+        font-size: 12px;
+        color: #666;
+        margin-top: 12px;
+    }
+    .exit-popup-success {
+        color: #22c55e;
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+    @media (max-width: 480px) {
+        .exit-popup-content {
+            padding: 32px 24px;
+        }
+        .exit-popup-content h2 {
+            font-size: 1.3rem;
+        }
+        .exit-popup-features span {
+            font-size: 11px;
+            padding: 4px 10px;
+        }
+    }
+
+        /* Mega Menu Navigation */
+        header {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border);
+            position: sticky;
+            top: 0;
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 100;
+        }
+        
+        .header-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .logo-text {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #ffffff;
+        }
+
+        .logo-text span {
+            font-weight: 400;
+            color: rgba(255, 255, 255, 0.6);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 28px;
+        }
+        
+        nav > a, .nav-dropdown > span {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+            cursor: pointer;
+        }
+        
+        nav > a:hover, .nav-dropdown:hover > span {
+            color: var(--accent);
+        }
+        
+        nav > a:visited {
+            color: var(--text-secondary);
+        }
+        
+        nav > a:visited:hover {
+            color: var(--accent);
+        }
+        
+        /* Dropdown Navigation */
+        .nav-dropdown {
+            position: static;
+        }
+        
+        .nav-dropdown > span {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .nav-dropdown > span svg.chevron {
+            width: 12px;
+            height: 12px;
+            transition: transform 0.2s;
+        }
+        
+        .nav-dropdown:hover > span svg.chevron {
+            transform: rotate(180deg);
+        }
+        
+        /* Mega Menu */
+        .mega-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border-top: 1px solid var(--border);
+            padding: 32px 0;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.25s ease;
+            z-index: 1000;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+        }
+        
+        .nav-dropdown:hover .mega-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        
+        .mega-menu-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 300px;
+            gap: 40px;
+        }
+        
+        .mega-menu-section h4 {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+            font-weight: 600;
+        }
+        
+        .mega-menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+        }
+        
+        .mega-menu-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px;
+            border-radius: 10px;
+            text-decoration: none;
+            transition: all 0.15s;
+        }
+        
+        .mega-menu-item:hover {
+            background: rgba(30, 144, 255, 0.08);
+        }
+        
+        .mega-menu-item svg {
+            width: 20px;
+            height: 20px;
+            color: var(--accent);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .mega-menu-item-content h5 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 2px;
+        }
+        
+        .mega-menu-item-content p {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+        
+        .mega-menu-item:hover h5 {
+            color: var(--accent);
+        }
+        
+        /* Featured Card in Mega Menu */
+        .mega-menu-featured {
+            background: linear-gradient(135deg, rgba(30,144,255,0.1) 0%, rgba(30,144,255,0.05) 100%);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid rgba(30,144,255,0.2);
+        }
+        
+        .mega-menu-featured img {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 12px;
+        }
+        
+        .mega-menu-featured h5 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.3;
+        }
+        
+        .mega-menu-featured p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .mega-menu-featured a {
+            font-size: 0.8rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+        }
+        
+        .mega-menu-featured a:hover {
+            text-decoration: underline;
+        }
+        
+        /* Simple dropdown for share */
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(10px);
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 8px;
+            min-width: 200px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.2s ease;
+            z-index: 1000;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+        }
+        
+        .share-dropdown {
+            position: relative;
+        }
+        
+        .share-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(4px);
+        }
+        
+        .dropdown-menu a {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 10px 14px;
+            color: var(--text-primary);
+            text-decoration: none;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.15s;
+        }
+        
+        .dropdown-menu a:hover {
+            background: rgba(30, 144, 255, 0.1);
+            color: var(--accent);
+        }
+        
+        .dropdown-menu a svg {
+            width: 16px;
+            height: 16px;
+            opacity: 0.7;
+        }
+        
+        .dropdown-divider {
+            height: 1px;
+            background: var(--border);
+            margin: 8px 0;
+        }
+
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 10px 20px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+
+        .nav-cta:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+
+        .nav-search, .nav-share-btn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+        .nav-search:hover, .share-dropdown:hover .nav-share-btn {
+            border-color: var(--accent);
+        }
+        .nav-search svg, .nav-share-btn svg {
+            color: var(--text-secondary);
+        }
+        .nav-search:hover svg, .share-dropdown:hover .nav-share-btn svg {
+            color: var(--accent);
+        }
+        
+        .share-dropdown .dropdown-menu {
+            min-width: 180px;
+        }
+        
+        .share-menu a svg {
+            width: 16px;
+            height: 16px;
+        }
+        
+        .share-menu a:nth-child(1):hover { color: #1DA1F2; }
+        .share-menu a:nth-child(2):hover { color: #0077B5; }
+        .share-menu a:nth-child(3):hover { color: #1877F2; }
+        .share-menu a:nth-child(5):hover { color: #10b981; }
+
+        /* Mobile Menu Button */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+    </style>
 
 <script>
 (function() {
