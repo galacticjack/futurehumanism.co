@@ -38,18 +38,50 @@
             background: var(--bg-primary);
             color: var(--text-primary);
             line-height: 1.5;
+            overflow-x: hidden;
         }
         a { color: var(--accent); text-decoration: none; }
         a:hover { color: var(--accent-hover); }
         
-        /* Global SVG constraint - prevent explosion */
+        /* NUCLEAR SVG FIX - constrain all SVGs */
         svg {
-            max-width: 100%;
-            height: auto;
+            max-width: 100% !important;
+            max-height: 200px !important;
+            overflow: hidden !important;
         }
-        svg:not([width]):not([class*="icon"]) {
-            max-width: 100px;
-            max-height: 100px;
+        .product-visual svg,
+        .product-card-icon,
+        .mobile-menu svg,
+        nav svg,
+        footer svg {
+            width: 80px !important;
+            height: 80px !important;
+            max-width: 80px !important;
+            max-height: 80px !important;
+        }
+        .product-card-icon {
+            width: 48px !important;
+            height: 48px !important;
+            max-width: 48px !important;
+            max-height: 48px !important;
+        }
+        nav svg, .mega-menu svg, .dropdown-menu svg {
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 20px !important;
+            max-height: 20px !important;
+        }
+        footer svg {
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 20px !important;
+            max-height: 20px !important;
+        }
+        .mobile-menu-topics svg {
+            width: 16px !important;
+            height: 16px !important;
+            max-width: 16px !important;
+            max-height: 16px !important;
         }
         
         header {
