@@ -1486,7 +1486,7 @@
     <section class="hero-section animate-in">
         <div class="hero-grid">
             <a href="articles/ai-agents-2026-guide.html" class="hero-main">
-                <img src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=600&q=80" alt="AI Agents 2026" data-no-lazy="true">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI Agents 2026" data-no-lazy="true">
                 <div class="hero-overlay">
                     <span class="hero-tag">Featured Guide</span>
                     <h1 class="hero-title">The Complete Guide to AI Agents in 2026</h1>
@@ -1500,6 +1500,7 @@
                 <!-- Populated by JavaScript with random articles -->
             </div>
             <script>
+            // Random sidebar articles - v2
             (function() {
                 const latestArticles = [
                     { slug: 'creator-economy-ai-tools-2026', title: 'Creator Economy 2026: AI Tools That Move the Needle', topic: 'Lifestyle', img: 'photo-1611162617474-5b21e879e113' },
@@ -1514,13 +1515,16 @@
                     { slug: 'crypto-market-cycles-ai-trading-signals', title: 'Crypto Market Cycles and AI Trading Signals', topic: 'Crypto & DeFi', img: 'photo-1518546305927-5a555bb7020d' }
                 ];
                 
-                // Shuffle and pick 2
-                const shuffled = latestArticles.sort(() => Math.random() - 0.5);
-                const picked = shuffled.slice(0, 2);
+                // Fisher-Yates shuffle for true randomness
+                for (let i = latestArticles.length - 1; i > 0; i--) {
+                    const j = Math.floor(Math.random() * (i + 1));
+                    [latestArticles[i], latestArticles[j]] = [latestArticles[j], latestArticles[i]];
+                }
+                const picked = latestArticles.slice(0, 2);
                 
                 const sidebar = document.getElementById('hero-sidebar');
-                picked.forEach((article, i) => {
-                    sidebar.innerHTML += `
+                if (sidebar) {
+                    sidebar.innerHTML = picked.map((article, i) => `
                         <a href="articles/${article.slug}.html" class="sidebar-card animate-in delay-${i+1}">
                             <img loading="lazy" src="https://images.unsplash.com/${article.img}?w=600&q=80" alt="${article.topic}">
                             <div class="card-overlay">
@@ -1528,8 +1532,8 @@
                                 <span class="card-topic">${article.topic}</span>
                             </div>
                         </a>
-                    `;
-                });
+                    `).join('');
+                }
             })();
             </script>
         </div>
