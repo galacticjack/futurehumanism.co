@@ -592,6 +592,18 @@
             border-color: var(--accent);
         }
         
+        .share-btn-download {
+            background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+            color: white;
+        }
+        
+        .share-btn-download:hover {
+            background: linear-gradient(135deg, #059669 0%, #047857 100%);
+        }
+        
+        /* Hidden canvas for image generation */
+        #resultCanvas { display: none; }
+        
         /* CTA Section */
         .cta-section {
             background: var(--bg-secondary);
@@ -1041,7 +1053,14 @@
                     <div class="share-label">annual savings potential</div>
                     <div class="share-logo">Calculated at Future <span>Humanism</span></div>
                     
+                    <!-- Hidden canvas for shareable image -->
+                    <canvas id="resultCanvas" width="1200" height="630"></canvas>
+                    
                     <div class="share-buttons">
+                        <button class="share-btn share-btn-download" onclick="downloadResultImage()">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                            Download
+                        </button>
                         <a class="share-btn share-btn-twitter" id="twitterShare" target="_blank">
                             <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24">
                                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -1364,6 +1383,114 @@
                     btn.innerHTML = originalText;
                 }, 2000);
             });
+        }
+        
+        function generateResultCard() {
+            const canvas = document.getElementById('resultCanvas');
+            const ctx = canvas.getContext('2d');
+            const w = 1200;
+            const h = 630;
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, w, h);
+            gradient.addColorStop(0, '#0a0a0a');
+            gradient.addColorStop(0.5, '#1a1a2e');
+            gradient.addColorStop(1, '#16213e');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, w, h);
+            
+            // Add subtle glow
+            const glowGradient = ctx.createRadialGradient(w/2, h/2, 0, w/2, h/2, 400);
+            glowGradient.addColorStop(0, 'rgba(30, 144, 255, 0.15)');
+            glowGradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = glowGradient;
+            ctx.fillRect(0, 0, w, h);
+            
+            // Logo/Brand text
+            ctx.font = '600 24px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.textAlign = 'center';
+            ctx.fillText('futurehumanism.co', w/2, 80);
+            
+            // Main savings number
+            const annualValue = document.getElementById('shareValue').textContent;
+            ctx.font = '800 110px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#22c55e';
+            ctx.textAlign = 'center';
+            ctx.fillText(annualValue, w/2, 250);
+            
+            // Subtitle
+            ctx.font = '500 32px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.fillText('annual AI automation savings potential', w/2, 310);
+            
+            // Divider line
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(w/2 - 200, 370);
+            ctx.lineTo(w/2 + 200, 370);
+            ctx.stroke();
+            
+            // Stats row
+            const statsY = 450;
+            const statsSpacing = 280;
+            
+            // Weekly hours saved
+            const weeklyHours = document.getElementById('weeklyHours').textContent;
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(weeklyHours + 'h', w/2 - statsSpacing, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('hours saved/week', w/2 - statsSpacing, statsY + 35);
+            
+            // Monthly hours
+            const monthlyHours = document.getElementById('monthlyHours').textContent;
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(monthlyHours + 'h', w/2, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('hours/month', w/2, statsY + 35);
+            
+            // Days reclaimed
+            const daysReclaimed = document.getElementById('daysReclaimed').textContent;
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(daysReclaimed, w/2 + statsSpacing, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('days reclaimed/year', w/2 + statsSpacing, statsY + 35);
+            
+            // CTA
+            ctx.font = '600 24px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.fillText('Calculate yours at futurehumanism.co/tools/automation-savings-calculator', w/2, 580);
+        }
+        
+        function downloadResultImage() {
+            generateResultCard();
+            const canvas = document.getElementById('resultCanvas');
+            const annualValue = document.getElementById('shareValue').textContent.replace('$', '').replace(',', '');
+            
+            const link = document.createElement('a');
+            link.download = 'my-ai-automation-savings-' + annualValue + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download_result_image', {
+                    'tool': 'automation_savings_calculator'
+                });
+            }
+            
+            // Feedback
+            const btn = document.querySelector('.share-btn-download');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 13l4 4L19 7"/></svg> Downloaded!';
+            setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
         }
         
         function resetCalculator() {

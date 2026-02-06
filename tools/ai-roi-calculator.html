@@ -475,9 +475,11 @@
             display: flex;
             gap: 12px;
             margin-bottom: 24px;
+            flex-wrap: wrap;
         }
         .share-btn {
             flex: 1;
+            min-width: 120px;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -488,11 +490,18 @@
             font-weight: 600;
             font-size: 0.9rem;
             transition: transform 0.2s;
+            cursor: pointer;
+            border: none;
         }
         .share-btn:hover { transform: translateY(-2px); }
         .share-btn.twitter { background: #1DA1F2; color: white; }
         .share-btn.linkedin { background: #0A66C2; color: white; }
         .share-btn.copy { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+        .share-btn.download { background: linear-gradient(135deg, #10B981 0%, #059669 100%); color: white; }
+        .share-btn.download:hover { background: linear-gradient(135deg, #059669 0%, #047857 100%); }
+        
+        /* Hidden canvas for image generation */
+        #resultCanvas { display: none; }
         
         /* Email Capture */
         .email-capture {
@@ -887,7 +896,18 @@
                     </div>
                 </div>
                 
+                <!-- Hidden canvas for shareable image -->
+                <canvas id="resultCanvas" width="1200" height="630"></canvas>
+                
                 <div class="share-buttons">
+                    <button class="share-btn download" onclick="downloadResultImage()">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download
+                    </button>
+                    <button class="share-btn download" onclick="shareWithImage()" style="background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                        Share Image
+                    </button>
                     <a href="#" class="share-btn twitter" id="twitterShare" target="_blank">
                         <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                         Share on X
@@ -1072,6 +1092,137 @@
             });
             
             gtag('event', 'share_results', { 'method': 'copy' });
+        }
+        
+        function generateResultCard() {
+            const canvas = document.getElementById('resultCanvas');
+            const ctx = canvas.getContext('2d');
+            
+            // Canvas size (1200x630 is optimal for Twitter/LinkedIn)
+            const w = 1200;
+            const h = 630;
+            
+            // Background gradient
+            const gradient = ctx.createLinearGradient(0, 0, w, h);
+            gradient.addColorStop(0, '#0a0a0a');
+            gradient.addColorStop(0.5, '#1a1a2e');
+            gradient.addColorStop(1, '#16213e');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, w, h);
+            
+            // Add subtle pattern/glow
+            const glowGradient = ctx.createRadialGradient(w/2, h/2, 0, w/2, h/2, 400);
+            glowGradient.addColorStop(0, 'rgba(99, 102, 241, 0.15)');
+            glowGradient.addColorStop(1, 'transparent');
+            ctx.fillStyle = glowGradient;
+            ctx.fillRect(0, 0, w, h);
+            
+            // Logo/Brand text
+            ctx.font = '600 24px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.6)';
+            ctx.textAlign = 'center';
+            ctx.fillText('futurehumanism.co', w/2, 80);
+            
+            // Main savings number
+            ctx.font = '800 120px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#10B981';
+            ctx.textAlign = 'center';
+            ctx.fillText(formatCurrency(results.netAnnualSavings), w/2, 260);
+            
+            // Subtitle
+            ctx.font = '500 32px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.9)';
+            ctx.fillText('potential annual savings with AI automation', w/2, 320);
+            
+            // Divider line
+            ctx.strokeStyle = 'rgba(255, 255, 255, 0.2)';
+            ctx.lineWidth = 2;
+            ctx.beginPath();
+            ctx.moveTo(w/2 - 200, 380);
+            ctx.lineTo(w/2 + 200, 380);
+            ctx.stroke();
+            
+            // Stats row
+            const statsY = 450;
+            const statsSpacing = 280;
+            
+            // Hours saved
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(results.hoursReclaimed.toLocaleString(), w/2 - statsSpacing, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('hours saved/year', w/2 - statsSpacing, statsY + 35);
+            
+            // ROI
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            const roiText = results.roi === Infinity ? '∞' : results.roi + 'x';
+            ctx.fillText(roiText, w/2, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('ROI', w/2, statsY + 35);
+            
+            // Team size
+            ctx.font = '700 48px Inter, system-ui, sans-serif';
+            ctx.fillStyle = '#ffffff';
+            ctx.fillText(results.teamSize, w/2 + statsSpacing, statsY);
+            ctx.font = '400 20px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+            ctx.fillText('team members', w/2 + statsSpacing, statsY + 35);
+            
+            // CTA
+            ctx.font = '600 24px Inter, system-ui, sans-serif';
+            ctx.fillStyle = 'rgba(255, 255, 255, 0.5)';
+            ctx.fillText('Calculate yours at futurehumanism.co/tools/ai-roi-calculator', w/2, 580);
+        }
+        
+        function downloadResultImage() {
+            generateResultCard();
+            const canvas = document.getElementById('resultCanvas');
+            
+            // Create download link
+            const link = document.createElement('a');
+            link.download = 'my-ai-savings-' + formatCurrency(results.netAnnualSavings).replace('$', '') + '.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+            
+            // Track event
+            gtag('event', 'download_result_image', {
+                'annual_savings': results.netAnnualSavings,
+                'tool': 'ai_roi_calculator'
+            });
+            
+            // Feedback
+            const btn = document.querySelector('.share-btn.download');
+            const originalHTML = btn.innerHTML;
+            btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Downloaded!';
+            setTimeout(() => { btn.innerHTML = originalHTML; }, 2000);
+        }
+        
+        async function shareWithImage() {
+            generateResultCard();
+            const canvas = document.getElementById('resultCanvas');
+            
+            try {
+                const blob = await new Promise(resolve => canvas.toBlob(resolve, 'image/png'));
+                const file = new File([blob], 'my-ai-savings.png', { type: 'image/png' });
+                
+                if (navigator.canShare && navigator.canShare({ files: [file] })) {
+                    await navigator.share({
+                        title: 'My AI Savings Potential',
+                        text: `I could save ${formatCurrency(results.netAnnualSavings)}/year with AI automation!`,
+                        url: 'https://futurehumanism.co/tools/ai-roi-calculator.html',
+                        files: [file]
+                    });
+                    gtag('event', 'share_with_image', { 'method': 'native_share' });
+                } else {
+                    downloadResultImage();
+                }
+            } catch (err) {
+                console.log('Share failed:', err);
+                downloadResultImage();
+            }
         }
         
         function handleEmailSubmit(e) {
