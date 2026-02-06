@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free AI Headline Analyzer | Score Your Headlines Instantly | Future Humanism</title>
+    <meta name="description" content="Free headline analyzer tool. Get an instant score and actionable tips to write headlines that get clicks. Analyze emotional impact, word balance, SEO, and more.">
+    <meta name="keywords" content="headline analyzer, headline score, blog title analyzer, headline grader, emotional headline analyzer, SEO headline tool">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Free AI Headline Analyzer | Score Your Headlines">
+    <meta property="og:description" content="Get an instant score and actionable tips to write headlines that convert. Free tool from Future Humanism.">
+    <meta property="og:image" content="https://futurehumanism.co/images/headline-analyzer-og.jpg">
+    <meta property="og:url" content="https://futurehumanism.co/tools/headline-analyzer.html">
+    <meta property="og:type" content="website">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@FutureHumanism">
+    <meta name="twitter:title" content="Free AI Headline Analyzer | Score Your Headlines">
+    <meta name="twitter:description" content="My headline scored [SCORE]/100! Analyze yours free.">
+    
+    <link rel="canonical" href="https://futurehumanism.co/tools/headline-analyzer.html">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What makes a good headline?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Good headlines have 6-12 words, use power words and emotional triggers, include numbers when relevant, create curiosity or urgency, and clearly communicate value. The best headlines balance clarity with intrigue."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long should a headline be?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Optimal headline length is 6-12 words or 50-70 characters. This ensures full visibility in search results and social shares while providing enough context to communicate value."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Do numbers in headlines increase clicks?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, headlines with numbers get 36% more clicks on average. Odd numbers (7, 9, 11) tend to perform slightly better than even numbers. Specific numbers are more credible than rounded ones."
+                }
+            }
+        ]
+    }
+    </script>
+    
+    <!-- WebApplication Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "AI Headline Analyzer",
+        "url": "https://futurehumanism.co/tools/headline-analyzer.html",
+        "applicationCategory": "Marketing Tool",
+        "operatingSystem": "Web Browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "description": "Free AI-powered headline analyzer that scores your headlines and provides actionable improvement tips."
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #1a1a1a;
+            --text-secondary: #666666;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-card: #ffffff;
+            --accent: #6366F1;
+            --accent-light: #818CF8;
+            --accent-bg: #EEF2FF;
+            --border: #e5e7eb;
+            --success: #10B981;
+            --success-bg: #D1FAE5;
+            --warning: #F59E0B;
+            --warning-bg: #FEF3C7;
+            --danger: #EF4444;
+            --danger-bg: #FEE2E2;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: var(--bg-primary);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: var(--text-primary);
+            text-decoration: none;
+        }
+        .logo span { font-weight: 400; opacity: 0.5; }
+        nav { display: flex; gap: 20px; align-items: center; }
+        nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        nav a:hover { color: var(--text-primary); }
+        .nav-cta {
+            background: var(--accent);
+            color: white !important;
+            padding: 8px 16px;
+            border-radius: 6px;
+        }
+        .nav-cta:hover { background: var(--accent-light); }
+        
+        .hero {
+            text-align: center;
+            padding: 60px 24px 40px;
+            background: linear-gradient(180deg, var(--accent-bg) 0%, var(--bg-secondary) 100%);
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+        }
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .analyzer-container {
+            max-width: 800px;
+            margin: -20px auto 60px;
+            padding: 0 24px;
+        }
+        .input-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+        }
+        .input-label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--text-primary);
+        }
+        .headline-input {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1.1rem;
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            outline: none;
+            transition: border-color 0.2s;
+            font-family: inherit;
+        }
+        .headline-input:focus {
+            border-color: var(--accent);
+        }
+        .char-count {
+            text-align: right;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-top: 8px;
+        }
+        .analyze-btn {
+            width: 100%;
+            padding: 16px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: all 0.2s;
+        }
+        .analyze-btn:hover {
+            background: var(--accent-light);
+            transform: translateY(-1px);
+        }
+        .analyze-btn:disabled {
+            background: #ccc;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Results */
+        .results-section {
+            display: none;
+            margin-top: 32px;
+        }
+        .results-section.visible { display: block; }
+        
+        .score-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        .score-ring {
+            width: 160px;
+            height: 160px;
+            margin: 0 auto 24px;
+            position: relative;
+        }
+        .score-ring svg {
+            transform: rotate(-90deg);
+            width: 100%;
+            height: 100%;
+        }
+        .score-ring circle {
+            fill: none;
+            stroke-width: 12;
+        }
+        .score-ring .bg { stroke: var(--border); }
+        .score-ring .progress {
+            stroke: var(--accent);
+            stroke-linecap: round;
+            transition: stroke-dashoffset 1s ease-out, stroke 0.3s;
+        }
+        .score-number {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 3rem;
+            font-weight: 800;
+        }
+        .score-label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .score-description {
+            color: var(--text-secondary);
+        }
+        
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .metric-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 20px;
+            border: 1px solid var(--border);
+        }
+        .metric-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 8px;
+        }
+        .metric-name {
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        .metric-score {
+            font-weight: 700;
+            font-size: 0.9rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+        }
+        .metric-score.good { background: var(--success-bg); color: var(--success); }
+        .metric-score.okay { background: var(--warning-bg); color: var(--warning); }
+        .metric-score.bad { background: var(--danger-bg); color: var(--danger); }
+        .metric-bar {
+            height: 6px;
+            background: var(--border);
+            border-radius: 3px;
+            overflow: hidden;
+        }
+        .metric-bar-fill {
+            height: 100%;
+            border-radius: 3px;
+            transition: width 0.6s ease-out;
+        }
+        .metric-bar-fill.good { background: var(--success); }
+        .metric-bar-fill.okay { background: var(--warning); }
+        .metric-bar-fill.bad { background: var(--danger); }
+        
+        .tips-card {
+            background: var(--bg-card);
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+            border: 1px solid var(--border);
+            margin-bottom: 24px;
+        }
+        .tips-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .tip-item {
+            display: flex;
+            gap: 12px;
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .tip-item:last-child { border-bottom: none; }
+        .tip-icon {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            font-size: 0.8rem;
+        }
+        .tip-icon.positive { background: var(--success-bg); color: var(--success); }
+        .tip-icon.negative { background: var(--danger-bg); color: var(--danger); }
+        .tip-icon.neutral { background: var(--warning-bg); color: var(--warning); }
+        .tip-text {
+            font-size: 0.95rem;
+            color: var(--text-secondary);
+        }
+        .tip-text strong { color: var(--text-primary); }
+        
+        /* Share section */
+        .share-card {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-light) 100%);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            color: white;
+        }
+        .share-title {
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 8px;
+        }
+        .share-subtitle {
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .share-buttons {
+            display: flex;
+            gap: 12px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            border-radius: 8px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            text-decoration: none;
+        }
+        .share-btn:hover { background: rgba(255,255,255,0.3); }
+        .share-btn svg { width: 18px; height: 18px; }
+        
+        /* FAQ Section */
+        .faq-section {
+            max-width: 800px;
+            margin: 0 auto 60px;
+            padding: 0 24px;
+        }
+        .faq-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            border: 1px solid var(--border);
+        }
+        .faq-question {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+        }
+        
+        /* Footer CTA */
+        .footer-cta {
+            background: var(--bg-card);
+            border-top: 1px solid var(--border);
+            padding: 60px 24px;
+            text-align: center;
+        }
+        .footer-cta h2 {
+            font-size: 1.75rem;
+            margin-bottom: 12px;
+        }
+        .footer-cta p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .email-form {
+            display: flex;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto;
+        }
+        .email-input {
+            flex: 1;
+            padding: 14px 18px;
+            border: 2px solid var(--border);
+            border-radius: 8px;
+            font-size: 1rem;
+            outline: none;
+        }
+        .email-input:focus { border-color: var(--accent); }
+        .email-btn {
+            padding: 14px 28px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s;
+            white-space: nowrap;
+        }
+        .email-btn:hover { background: var(--accent-light); }
+        
+        footer {
+            padding: 24px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+        }
+        footer a { color: var(--text-secondary); }
+        
+        /* Mobile */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.75rem; }
+            .hero { padding: 40px 20px 30px; }
+            .input-card, .tips-card, .share-card { padding: 24px; }
+            .score-card { padding: 32px 24px; }
+            nav { gap: 12px; }
+            nav a:not(.nav-cta) { display: none; }
+            .email-form { flex-direction: column; }
+            .share-buttons { flex-direction: column; }
+            .share-btn { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">Future<span>Humanism</span></a>
+            <nav>
+                <a href="/articles/">Articles</a>
+                <a href="/tools/">Tools</a>
+                <a href="/resources.html">Resources</a>
+                <a href="/subscribe.html" class="nav-cta">Subscribe</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <h1>AI Headline Analyzer</h1>
+        <p>Get an instant score and actionable tips to write headlines that get clicks. Free, no signup required.</p>
+    </section>
+    
+    <div class="analyzer-container">
+        <div class="input-card">
+            <label class="input-label" for="headline">Enter your headline</label>
+            <input 
+                type="text" 
+                id="headline" 
+                class="headline-input" 
+                placeholder="e.g., 7 Proven Strategies to Double Your Email Open Rates"
+                maxlength="150"
+            >
+            <div class="char-count"><span id="charCount">0</span>/150 characters</div>
+            <button id="analyzeBtn" class="analyze-btn" disabled>Analyze My Headline</button>
+        </div>
+        
+        <div id="results" class="results-section">
+            <div class="score-card">
+                <div class="score-ring">
+                    <svg viewBox="0 0 160 160">
+                        <circle class="bg" cx="80" cy="80" r="70"/>
+                        <circle class="progress" id="scoreRing" cx="80" cy="80" r="70" 
+                            stroke-dasharray="440" stroke-dashoffset="440"/>
+                    </svg>
+                    <div class="score-number" id="scoreNumber">0</div>
+                </div>
+                <div class="score-label" id="scoreLabel">Analyzing...</div>
+                <div class="score-description" id="scoreDesc"></div>
+            </div>
+            
+            <div class="metrics-grid" id="metricsGrid"></div>
+            
+            <div class="tips-card">
+                <div class="tips-title">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                    </svg>
+                    Improvement Tips
+                </div>
+                <div id="tipsList"></div>
+            </div>
+            
+            <div class="share-card">
+                <div class="share-title">Share Your Score!</div>
+                <div class="share-subtitle">Challenge your friends to beat your headline score</div>
+                <div class="share-buttons">
+                    <a href="#" id="shareTwitter" class="share-btn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <a href="#" id="shareLinkedIn" class="share-btn" target="_blank">
+                        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Share on LinkedIn
+                    </a>
+                    <button id="copyLink" class="share-btn">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                        Copy Link
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <section class="faq-section">
+        <h2 class="faq-title">Headline Writing FAQ</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">What makes a good headline?</div>
+            <div class="faq-answer">Good headlines have 6-12 words, use power words and emotional triggers, include numbers when relevant, create curiosity or urgency, and clearly communicate value. The best headlines balance clarity with intrigue.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">How long should a headline be?</div>
+            <div class="faq-answer">Optimal headline length is 6-12 words or 50-70 characters. This ensures full visibility in search results and social shares while providing enough context to communicate value.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">Do numbers in headlines increase clicks?</div>
+            <div class="faq-answer">Yes, headlines with numbers get 36% more clicks on average. Odd numbers (7, 9, 11) tend to perform slightly better than even numbers. Specific numbers are more credible than rounded ones.</div>
+        </div>
+        
+        <div class="faq-item">
+            <div class="faq-question">What are power words?</div>
+            <div class="faq-answer">Power words trigger emotional responses that drive action. Examples include: Free, Secret, Proven, Instant, Guaranteed, Exclusive, Simple, Ultimate, and Surprising. Use 1-2 per headline for best results.</div>
+        </div>
+    </section>
+    
+    <section class="footer-cta">
+        <h2>Want More Marketing Tips?</h2>
+        <p>Join 2,000+ marketers getting weekly insights on AI, content strategy, and growth tactics.</p>
+        <form class="email-form" action="https://futurehumanism.beehiiv.com/subscribe" method="GET" target="_blank">
+            <input type="email" name="email" class="email-input" placeholder="Enter your email" required>
+            <button type="submit" class="email-btn">Subscribe Free</button>
+        </form>
+    </section>
+    
+    <footer>
+        <a href="/">Future Humanism</a> &middot; 
+        <a href="/tools/">More Free Tools</a> &middot; 
+        <a href="/privacy.html">Privacy</a>
+    </footer>
+    
+    <script>
+        // Power words that increase emotional impact
+        const powerWords = [
+            'free', 'secret', 'proven', 'instant', 'guaranteed', 'exclusive', 'simple',
+            'ultimate', 'surprising', 'shocking', 'amazing', 'incredible', 'essential',
+            'powerful', 'breakthrough', 'revolutionary', 'discover', 'master', 'boost',
+            'skyrocket', 'explode', 'transform', 'unlock', 'hack', 'tricks', 'mistakes',
+            'avoid', 'stop', 'never', 'always', 'best', 'worst', 'top', 'first', 'last',
+            'new', 'now', 'today', 'quick', 'fast', 'easy', 'complete', 'definitive',
+            'comprehensive', 'actionable', 'practical', 'effective', 'successful'
+        ];
+        
+        // Emotional trigger words
+        const emotionalWords = [
+            'love', 'hate', 'fear', 'angry', 'happy', 'sad', 'excited', 'worried',
+            'frustrated', 'confused', 'overwhelmed', 'inspired', 'motivated', 'curious',
+            'surprised', 'amazed', 'shocked', 'terrified', 'thrilled', 'delighted'
+        ];
+        
+        // Common weak words to avoid
+        const weakWords = [
+            'very', 'really', 'just', 'actually', 'basically', 'literally', 'things',
+            'stuff', 'nice', 'good', 'bad', 'great', 'awesome', 'interesting'
+        ];
+        
+        // Question starters that perform well
+        const questionStarters = ['how', 'why', 'what', 'when', 'where', 'who', 'which'];
+        
+        const input = document.getElementById('headline');
+        const charCount = document.getElementById('charCount');
+        const analyzeBtn = document.getElementById('analyzeBtn');
+        const results = document.getElementById('results');
+        
+        input.addEventListener('input', function() {
+            const len = this.value.length;
+            charCount.textContent = len;
+            analyzeBtn.disabled = len < 5;
+        });
+        
+        analyzeBtn.addEventListener('click', analyzeHeadline);
+        input.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter' && !analyzeBtn.disabled) {
+                analyzeHeadline();
+            }
+        });
+        
+        function analyzeHeadline() {
+            const headline = input.value.trim();
+            if (headline.length < 5) return;
+            
+            // Track event
+            gtag('event', 'analyze_headline', {
+                'headline_length': headline.length
+            });
+            
+            const analysis = performAnalysis(headline);
+            displayResults(analysis, headline);
+        }
+        
+        function performAnalysis(headline) {
+            const words = headline.toLowerCase().split(/\s+/);
+            const wordCount = words.length;
+            const charCount = headline.length;
+            
+            // 1. Length Score (optimal: 6-12 words, 50-70 chars)
+            let lengthScore = 100;
+            if (wordCount < 4) lengthScore = 40;
+            else if (wordCount < 6) lengthScore = 70;
+            else if (wordCount > 15) lengthScore = 50;
+            else if (wordCount > 12) lengthScore = 75;
+            
+            // 2. Power Words Score
+            const foundPowerWords = words.filter(w => powerWords.includes(w.replace(/[^a-z]/g, '')));
+            let powerScore = Math.min(100, foundPowerWords.length * 35);
+            if (foundPowerWords.length === 0) powerScore = 30;
+            
+            // 3. Emotional Impact
+            const foundEmotional = words.filter(w => emotionalWords.includes(w.replace(/[^a-z]/g, '')));
+            let emotionalScore = foundEmotional.length > 0 ? 85 : 50;
+            
+            // 4. Number Check (headlines with numbers perform 36% better)
+            const hasNumber = /\d/.test(headline);
+            let numberScore = hasNumber ? 90 : 55;
+            
+            // 5. Question or How-To Format
+            const startsWithQuestion = questionStarters.some(q => headline.toLowerCase().startsWith(q));
+            const isHowTo = headline.toLowerCase().includes('how to');
+            let formatScore = (startsWithQuestion || isHowTo) ? 85 : 60;
+            
+            // 6. Clarity (no weak words)
+            const foundWeak = words.filter(w => weakWords.includes(w));
+            let clarityScore = 100 - (foundWeak.length * 15);
+            clarityScore = Math.max(40, clarityScore);
+            
+            // 7. Capitalization (Title Case is best)
+            const titleCaseWords = headline.split(' ').filter(w => /^[A-Z]/.test(w));
+            const titleCaseRatio = titleCaseWords.length / wordCount;
+            let capsScore = titleCaseRatio > 0.6 ? 85 : 60;
+            
+            // Calculate overall score (weighted average)
+            const overall = Math.round(
+                (lengthScore * 0.2) +
+                (powerScore * 0.2) +
+                (emotionalScore * 0.15) +
+                (numberScore * 0.15) +
+                (formatScore * 0.1) +
+                (clarityScore * 0.1) +
+                (capsScore * 0.1)
+            );
+            
+            return {
+                overall,
+                metrics: {
+                    length: { score: lengthScore, words: wordCount, chars: charCount },
+                    power: { score: powerScore, found: foundPowerWords },
+                    emotional: { score: emotionalScore, found: foundEmotional },
+                    number: { score: numberScore, hasNumber },
+                    format: { score: formatScore, isQuestion: startsWithQuestion, isHowTo },
+                    clarity: { score: clarityScore, weakWords: foundWeak }
+                }
+            };
+        }
+        
+        function displayResults(analysis, headline) {
+            results.classList.add('visible');
+            results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Animate score ring
+            const ring = document.getElementById('scoreRing');
+            const circumference = 2 * Math.PI * 70;
+            const offset = circumference - (analysis.overall / 100) * circumference;
+            
+            setTimeout(() => {
+                ring.style.strokeDashoffset = offset;
+                
+                // Color based on score
+                if (analysis.overall >= 75) {
+                    ring.style.stroke = 'var(--success)';
+                } else if (analysis.overall >= 50) {
+                    ring.style.stroke = 'var(--warning)';
+                } else {
+                    ring.style.stroke = 'var(--danger)';
+                }
+            }, 100);
+            
+            // Animate number
+            animateNumber('scoreNumber', 0, analysis.overall, 1000);
+            
+            // Set label and description
+            const label = document.getElementById('scoreLabel');
+            const desc = document.getElementById('scoreDesc');
+            
+            if (analysis.overall >= 80) {
+                label.textContent = 'Excellent!';
+                desc.textContent = 'This headline is highly optimized for clicks and engagement.';
+            } else if (analysis.overall >= 65) {
+                label.textContent = 'Good';
+                desc.textContent = 'Solid headline with room for improvement.';
+            } else if (analysis.overall >= 50) {
+                label.textContent = 'Average';
+                desc.textContent = 'Consider the tips below to boost performance.';
+            } else {
+                label.textContent = 'Needs Work';
+                desc.textContent = 'This headline could use significant improvements.';
+            }
+            
+            // Display metrics
+            const metricsGrid = document.getElementById('metricsGrid');
+            metricsGrid.innerHTML = `
+                ${createMetricCard('Word Count', analysis.metrics.length.score, `${analysis.metrics.length.words} words`)}
+                ${createMetricCard('Power Words', analysis.metrics.power.score, analysis.metrics.power.found.length > 0 ? analysis.metrics.power.found.join(', ') : 'None found')}
+                ${createMetricCard('Has Number', analysis.metrics.number.score, analysis.metrics.number.hasNumber ? 'Yes' : 'No')}
+                ${createMetricCard('Clarity', analysis.metrics.clarity.score, analysis.metrics.clarity.weakWords.length > 0 ? `Weak: ${analysis.metrics.clarity.weakWords.join(', ')}` : 'Clean')}
+            `;
+            
+            // Generate tips
+            const tipsList = document.getElementById('tipsList');
+            tipsList.innerHTML = generateTips(analysis);
+            
+            // Setup share buttons
+            setupShareButtons(analysis.overall, headline);
+        }
+        
+        function createMetricCard(name, score, detail) {
+            const level = score >= 75 ? 'good' : score >= 50 ? 'okay' : 'bad';
+            return `
+                <div class="metric-card">
+                    <div class="metric-header">
+                        <span class="metric-name">${name}</span>
+                        <span class="metric-score ${level}">${score}/100</span>
+                    </div>
+                    <div class="metric-bar">
+                        <div class="metric-bar-fill ${level}" style="width: ${score}%"></div>
+                    </div>
+                    <div style="font-size: 0.8rem; color: var(--text-secondary); margin-top: 8px;">${detail}</div>
+                </div>
+            `;
+        }
+        
+        function generateTips(analysis) {
+            const tips = [];
+            const m = analysis.metrics;
+            
+            if (m.length.words < 6) {
+                tips.push({ type: 'negative', text: '<strong>Too short:</strong> Add more context. Aim for 6-12 words for optimal engagement.' });
+            } else if (m.length.words > 12) {
+                tips.push({ type: 'negative', text: '<strong>Too long:</strong> Trim unnecessary words. Headlines over 12 words lose impact.' });
+            } else {
+                tips.push({ type: 'positive', text: '<strong>Great length:</strong> Your headline is in the optimal 6-12 word range.' });
+            }
+            
+            if (m.power.found.length === 0) {
+                tips.push({ type: 'negative', text: '<strong>Add power words:</strong> Try "proven," "secret," "essential," or "ultimate" to boost emotional impact.' });
+            } else {
+                tips.push({ type: 'positive', text: `<strong>Power words found:</strong> "${m.power.found.join('", "')}" adds emotional punch.` });
+            }
+            
+            if (!m.number.hasNumber) {
+                tips.push({ type: 'neutral', text: '<strong>Consider adding a number:</strong> Headlines with numbers get 36% more clicks. "7 Ways to..." or "3 Steps to..."' });
+            } else {
+                tips.push({ type: 'positive', text: '<strong>Number included:</strong> Great! Numbers make headlines more specific and credible.' });
+            }
+            
+            if (m.clarity.weakWords.length > 0) {
+                tips.push({ type: 'negative', text: `<strong>Remove weak words:</strong> "${m.clarity.weakWords.join('", "')}" dilutes your message. Use stronger alternatives.` });
+            }
+            
+            if (!m.format.isQuestion && !m.format.isHowTo) {
+                tips.push({ type: 'neutral', text: '<strong>Try a question format:</strong> "How to..." or "Why do..." headlines often perform better.' });
+            }
+            
+            return tips.map(tip => `
+                <div class="tip-item">
+                    <div class="tip-icon ${tip.type}">${tip.type === 'positive' ? '✓' : tip.type === 'negative' ? '!' : '→'}</div>
+                    <div class="tip-text">${tip.text}</div>
+                </div>
+            `).join('');
+        }
+        
+        function setupShareButtons(score, headline) {
+            const shareText = `My headline scored ${score}/100 on the AI Headline Analyzer! 📝\n\n"${headline}"\n\nTest yours free:`;
+            const shareUrl = 'https://futurehumanism.co/tools/headline-analyzer.html';
+            
+            document.getElementById('shareTwitter').href = 
+                `https://twitter.com/intent/tweet?text=${encodeURIComponent(shareText)}&url=${encodeURIComponent(shareUrl)}`;
+            
+            document.getElementById('shareLinkedIn').href = 
+                `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
+            
+            document.getElementById('copyLink').onclick = function() {
+                navigator.clipboard.writeText(shareUrl);
+                this.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg> Copied!';
+                setTimeout(() => {
+                    this.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg> Copy Link';
+                }, 2000);
+            };
+        }
+        
+        function animateNumber(id, start, end, duration) {
+            const el = document.getElementById(id);
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const eased = 1 - Math.pow(1 - progress, 3); // ease-out cubic
+                const current = Math.round(start + (end - start) * eased);
+                el.textContent = current;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+    </script>
+</body>
+</html>
