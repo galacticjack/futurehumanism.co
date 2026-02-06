@@ -1,0 +1,6 @@
+/* Article Author Bio CSS - Copy this to all articles */
+.author-bio { display: flex; gap: 20px; padding: 24px; background: var(--bg-secondary); border-radius: 12px; margin: 48px 0; }
+.author-avatar { width: 60px; height: 60px; border-radius: 50%; object-fit: cover; }
+.author-info h4 { color: var(--text-primary); margin-bottom: 8px; }
+.author-info p { font-size: 0.9rem; margin: 0; }
+@media (max-width: 768px) { .author-bio { flex-direction: column; text-align: center; align-items: center; } }
