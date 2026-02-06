@@ -338,6 +338,15 @@
             font-weight: 700;
             line-height: 1.3;
         }
+        
+        .sidebar-card .card-topic {
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            color: var(--accent);
+            margin-top: 6px;
+        }
 
         .sidebar-card:hover img {
             transform: scale(1.05);
@@ -1486,20 +1495,42 @@
                     <svg viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                 </div>
             </a>
-            <div class="hero-sidebar">
-                <a href="articles/creator-economy-ai-tools-2026.html" class="sidebar-card animate-in delay-1">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1611162617474-5b21e879e113?w=600&q=80" alt="Creator Economy">
-                    <div class="card-overlay">
-                        <p class="card-title">Creator Economy 2026: AI Tools That Move the Needle</p>
-                    </div>
-                </a>
-                <a href="articles/side-hustle-ideas-ai-era.html" class="sidebar-card animate-in delay-2">
-                    <img loading="lazy" src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=80" alt="Side Hustles">
-                    <div class="card-overlay">
-                        <p class="card-title">12 Side Hustles That Work in the AI Era</p>
-                    </div>
-                </a>
+            <div class="hero-sidebar" id="hero-sidebar">
+                <!-- Populated by JavaScript with random articles -->
             </div>
+            <script>
+            (function() {
+                const latestArticles = [
+                    { slug: 'creator-economy-ai-tools-2026', title: 'Creator Economy 2026: AI Tools That Move the Needle', topic: 'Lifestyle', img: 'photo-1611162617474-5b21e879e113' },
+                    { slug: 'side-hustle-ideas-ai-era', title: '12 Side Hustles That Work in the AI Era', topic: 'Lifestyle', img: 'photo-1554224155-6726b3ff858f' },
+                    { slug: 'remote-work-async-culture-2026', title: 'Remote Work 2026: Why Async-First Companies Are Winning', topic: 'Lifestyle', img: 'photo-1522071820081-009f0129c71c' },
+                    { slug: 'health-tech-wearables-2026', title: 'Health Tech and Wearables: The 2026 Stack', topic: 'Lifestyle', img: 'photo-1576091160399-112ba8d25d1d' },
+                    { slug: 'defi-yield-strategies-2026', title: 'DeFi Yield Strategies That Actually Work in 2026', topic: 'Crypto & DeFi', img: 'photo-1639762681485-074b7f938ba0' },
+                    { slug: 'ai-marketing-strategies-2026', title: 'AI Marketing Strategies That Work in 2026', topic: 'Strategy', img: 'photo-1533750349088-cd871a92f312' },
+                    { slug: 'snowflake-openai-enterprise-ai-tipping-point', title: 'The $200M Deal That Changed Enterprise AI', topic: 'Enterprise AI', img: 'photo-1558494949-ef010cbdcc31' },
+                    { slug: 'agent-infrastructure-orchestration-2026', title: 'Agent Infrastructure and Orchestration in 2026', topic: 'AI Agents', img: 'photo-1451187580459-43490279c0fa' },
+                    { slug: 'ai-model-convergence-2026', title: 'AI Model Convergence: Why All LLMs Look the Same', topic: 'AI Models', img: 'photo-1555949963-ff9fe0c870eb' },
+                    { slug: 'crypto-market-cycles-ai-trading-signals', title: 'Crypto Market Cycles and AI Trading Signals', topic: 'Crypto & DeFi', img: 'photo-1518546305927-5a555bb7020d' }
+                ];
+                
+                // Shuffle and pick 2
+                const shuffled = latestArticles.sort(() => Math.random() - 0.5);
+                const picked = shuffled.slice(0, 2);
+                
+                const sidebar = document.getElementById('hero-sidebar');
+                picked.forEach((article, i) => {
+                    sidebar.innerHTML += `
+                        <a href="articles/${article.slug}.html" class="sidebar-card animate-in delay-${i+1}">
+                            <img loading="lazy" src="https://images.unsplash.com/${article.img}?w=600&q=80" alt="${article.topic}">
+                            <div class="card-overlay">
+                                <p class="card-title">${article.title}</p>
+                                <span class="card-topic">${article.topic}</span>
+                            </div>
+                        </a>
+                    `;
+                });
+            })();
+            </script>
         </div>
     </section>
 
