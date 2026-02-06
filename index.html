@@ -89,11 +89,11 @@
             font-size: 15px;
         }
         
-        /* Keep links blue even when visited */
+        /* Keep links blue even when visited - except hero and cards */
         a:visited {
             color: inherit;
         }
-        a[href]:not(.card):not(.article-card):visited {
+        a[href]:not(.card):not(.article-card):not(.hero-main):not(.story-card):not(.sidebar-card):visited {
             color: var(--accent);
         }
 
@@ -289,6 +289,7 @@
             font-weight: 700;
             line-height: 1.2;
             margin-bottom: 10px;
+            color: #ffffff !important;
         }
 
         .hero-excerpt {
@@ -556,21 +557,20 @@
             font-family: 'Inter', sans-serif;
             font-size: 0.85rem;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.9);
+            color: #ffffff;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             padding: 10px 20px;
-            background: rgba(255, 255, 255, 0.08);
-            border: 1px solid rgba(255, 255, 255, 0.15);
+            background: var(--accent);
+            border: none;
             border-radius: 25px;
             transition: all 0.2s ease;
         }
 
         .category-link:hover {
             color: #ffffff;
-            background: var(--accent);
-            border-color: var(--accent);
+            background: #3BA0FF;
             transform: translateY(-2px);
         }
 
