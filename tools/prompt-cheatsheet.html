@@ -1,0 +1,1107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>50 AI Prompts That Actually Work | Free Cheatsheet | Future Humanism</title>
+    <meta name="description" content="Download our free cheatsheet of 50 battle-tested AI prompts for writing, coding, marketing, and productivity. No fluff, just prompts that deliver results.">
+    <meta property="og:title" content="50 AI Prompts That Actually Work | Free Cheatsheet">
+    <meta property="og:description" content="Battle-tested prompts for ChatGPT, Claude, and more. Free download.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+    <meta property="og:url" content="https://futurehumanism.co/tools/prompt-cheatsheet">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@FutureHumanism">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+    <link rel="canonical" href="https://futurehumanism.co/tools/prompt-cheatsheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FAQ Schema for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What are the best AI prompts for writing?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The best AI writing prompts include specific context, desired tone, target audience, and examples. For instance: 'Write a [format] about [topic] for [audience] in the style of [example]. Focus on [key points].'"
+        }
+      },{
+        "@type": "Question",
+        "name": "How do I get better responses from ChatGPT?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use role prompting ('Act as a...'), provide examples, specify format, ask for step-by-step reasoning, and iterate with follow-up questions. Chain-of-thought prompting significantly improves complex task outputs."
+        }
+      }]
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #707070;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1a1a1a;
+            --accent: #1E90FF;
+            --accent-hover: #3BA0FF;
+            --border: #2a2a2a;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --purple: #a855f7;
+            --pink: #ec4899;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.4rem;
+            color: var(--text-primary);
+        }
+        .logo-text span { font-weight: 400; opacity: 0.6; }
+        .header-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+        
+        /* Hero Section */
+        .hero {
+            padding: 60px 24px 40px;
+            text-align: center;
+            background: linear-gradient(180deg, var(--bg-secondary) 0%, var(--bg-primary) 100%);
+        }
+        .hero-badge {
+            display: inline-block;
+            background: rgba(30, 144, 255, 0.15);
+            color: var(--accent);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 16px;
+        }
+        .hero h1 span {
+            background: linear-gradient(90deg, var(--accent), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .hero-subtitle {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto 30px;
+        }
+        .hero-stats {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--accent);
+        }
+        .stat-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        /* Gate Section */
+        .gate-section {
+            padding: 40px 24px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .gate-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+        }
+        .gate-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .gate-card p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 24px;
+        }
+        .email-form {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 16px;
+        }
+        .email-form input {
+            flex: 1;
+            padding: 14px 16px;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        .email-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .email-form button {
+            padding: 14px 24px;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .email-form button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+        }
+        .privacy-note {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+        
+        /* Cheatsheet Content (initially hidden) */
+        .cheatsheet-content {
+            display: none;
+            padding: 40px 24px 80px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .cheatsheet-content.visible {
+            display: block;
+        }
+        
+        /* Category Sections */
+        .category {
+            margin-bottom: 48px;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 1px solid var(--border);
+        }
+        .category-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+        }
+        .category-icon.writing { background: rgba(168, 85, 247, 0.2); }
+        .category-icon.coding { background: rgba(34, 197, 94, 0.2); }
+        .category-icon.marketing { background: rgba(236, 72, 153, 0.2); }
+        .category-icon.productivity { background: rgba(30, 144, 255, 0.2); }
+        .category-icon.research { background: rgba(245, 158, 11, 0.2); }
+        
+        .category h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+        }
+        .category-count {
+            background: var(--bg-secondary);
+            color: var(--text-muted);
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin-left: auto;
+        }
+        
+        /* Prompt Cards */
+        .prompts-grid {
+            display: grid;
+            gap: 16px;
+        }
+        .prompt-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.2s;
+        }
+        .prompt-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-2px);
+        }
+        .prompt-title {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .prompt-title .number {
+            color: var(--accent);
+            font-size: 0.85rem;
+        }
+        .prompt-text {
+            background: var(--bg-secondary);
+            border-radius: 8px;
+            padding: 14px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            line-height: 1.5;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            position: relative;
+        }
+        .prompt-text code {
+            color: var(--accent);
+        }
+        .copy-btn {
+            position: absolute;
+            top: 8px;
+            right: 8px;
+            padding: 6px 12px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.75rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .copy-btn.copied {
+            background: var(--success);
+            border-color: var(--success);
+            color: white;
+        }
+        .prompt-tip {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .prompt-tip strong {
+            color: var(--text-secondary);
+        }
+        
+        /* Share Section */
+        .share-section {
+            background: linear-gradient(135deg, rgba(30, 144, 255, 0.1) 0%, rgba(168, 85, 247, 0.1) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 32px;
+            text-align: center;
+            margin-top: 48px;
+        }
+        .share-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 8px;
+        }
+        .share-section p {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        .share-btn.twitter {
+            background: #1da1f2;
+            color: white;
+        }
+        .share-btn.linkedin {
+            background: #0077b5;
+            color: white;
+        }
+        .share-btn.copy-link {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+        .share-btn:hover {
+            transform: translateY(-2px);
+            opacity: 0.9;
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+        }
+        .footer-cta {
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .footer-cta h4 {
+            font-size: 1.2rem;
+            margin-bottom: 8px;
+        }
+        .footer-cta p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+        }
+        .footer-cta a {
+            display: inline-block;
+            padding: 14px 28px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            transition: all 0.2s;
+        }
+        .footer-cta a:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Responsive */
+        @media (max-width: 600px) {
+            .email-form {
+                flex-direction: column;
+            }
+            .hero-stats {
+                gap: 24px;
+            }
+            .header-nav {
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <img src="/images/logo.png" alt="Future Humanism" onerror="this.parentElement.innerHTML='FH'">
+                </div>
+                <div class="logo-text">Future<span>Humanism</span></div>
+            </a>
+            <nav class="header-nav">
+                <a href="/">Home</a>
+                <a href="/tools/">Tools</a>
+                <a href="/articles.json">Articles</a>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="hero-badge">FREE DOWNLOAD</div>
+        <h1>50 AI Prompts That <span>Actually Work</span></h1>
+        <p class="hero-subtitle">Battle-tested prompts for writing, coding, marketing, research, and productivity. No fluff. Just copy, paste, and get results.</p>
+        <div class="hero-stats">
+            <div class="stat">
+                <div class="stat-number">50</div>
+                <div class="stat-label">Ready-to-use prompts</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Categories</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Free forever</div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Email Gate -->
+    <section class="gate-section" id="gate">
+        <div class="gate-card">
+            <h3>Get Instant Access</h3>
+            <p>Enter your email to unlock all 50 prompts. We'll also send you weekly AI tips.</p>
+            <form class="email-form" id="emailForm">
+                <input type="email" placeholder="your@email.com" required id="emailInput">
+                <button type="submit">Unlock</button>
+            </form>
+            <p class="privacy-note">No spam. Unsubscribe anytime. <a href="/privacy" style="color:var(--accent)">Privacy Policy</a></p>
+        </div>
+    </section>
+    
+    <!-- Cheatsheet Content (hidden until email) -->
+    <section class="cheatsheet-content" id="cheatsheet">
+        
+        <!-- Category 1: Writing -->
+        <div class="category">
+            <div class="category-header">
+                <div class="category-icon writing">&#x270D;</div>
+                <h2>Writing Prompts</h2>
+                <span class="category-count">10 prompts</span>
+            </div>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#1</span> Blog Post Outline</div>
+                    <div class="prompt-text">
+                        Write a detailed blog post outline about <code>[topic]</code>. Target audience: <code>[audience]</code>. Include a hook, 5-7 main sections with subpoints, and a conclusion with CTA. Make it actionable.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Replace placeholders, then ask for the full post section by section.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#2</span> Rewrite for Clarity</div>
+                    <div class="prompt-text">
+                        Rewrite this text to be clearer and more concise. Keep the same meaning but use simpler words, shorter sentences, and active voice. Remove jargon. Text: <code>[paste text]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Works great for emails, docs, and landing page copy.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#3</span> Email Subject Lines</div>
+                    <div class="prompt-text">
+                        Generate 10 email subject lines for <code>[purpose/offer]</code>. Target: <code>[audience]</code>. Mix styles: curiosity, urgency, benefit-driven, question, and personalized. Keep under 50 characters.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Test 2-3 of these with your audience to find what resonates.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#4</span> Twitter/X Thread</div>
+                    <div class="prompt-text">
+                        Write a viral Twitter thread about <code>[topic]</code>. Format: Hook tweet (max 280 chars), 5-7 value tweets, conclusion with CTA. Use short sentences, line breaks, and make each tweet standalone.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> The hook is everything. If it doesn't grab attention, iterate on it first.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#5</span> Product Description</div>
+                    <div class="prompt-text">
+                        Write a compelling product description for <code>[product]</code>. Include: headline, 3 key benefits (not features), social proof placeholder, and CTA. Tone: <code>[professional/casual/luxury]</code>. Max 150 words.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Focus on what the customer gets, not what the product does.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#6</span> LinkedIn Post</div>
+                    <div class="prompt-text">
+                        Write a LinkedIn post sharing <code>[insight/lesson/story]</code>. Start with a hook line. Use short paragraphs (1-2 sentences). End with a question to encourage comments. Professional but human tone.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Personal stories + professional lessons = highest engagement.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#7</span> Cold Email</div>
+                    <div class="prompt-text">
+                        Write a cold email to <code>[prospect type]</code> offering <code>[service/product]</code>. Keep under 100 words. Personalize opening, show you understand their problem, provide proof, clear CTA. No salesy language.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> The best cold emails sound like they were written just for that person.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#8</span> Story Hook</div>
+                    <div class="prompt-text">
+                        Write 5 opening hooks for a story about <code>[topic/experience]</code>. Each hook should create curiosity and make the reader want to continue. Styles: in medias res, shocking stat, question, bold statement, scene-setting.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Test these hooks with friends. Pick the one that gets "wait, what happened?"</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#9</span> SEO Meta Description</div>
+                    <div class="prompt-text">
+                        Write 3 SEO meta descriptions for a page about <code>[topic]</code>. Include the keyword <code>[keyword]</code> naturally. 150-160 characters. Include a benefit and implicit CTA. Make it click-worthy.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Check Google results for your keyword to see what competitors are doing.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#10</span> Testimonial Request</div>
+                    <div class="prompt-text">
+                        Write a friendly email asking a happy customer for a testimonial. Make it easy: include 3 specific questions they can answer. Keep it short. Mention how their story can help others.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Specific questions get better testimonials than "can you write a review?"</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 2: Coding -->
+        <div class="category">
+            <div class="category-header">
+                <div class="category-icon coding">&#x1F4BB;</div>
+                <h2>Coding Prompts</h2>
+                <span class="category-count">10 prompts</span>
+            </div>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#11</span> Code Review</div>
+                    <div class="prompt-text">
+                        Review this code for bugs, performance issues, and best practices. Explain each issue and provide the fixed code. Language: <code>[language]</code>. Code: <code>[paste code]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Ask for specific focus areas like security, readability, or performance.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#12</span> Debug Error</div>
+                    <div class="prompt-text">
+                        I'm getting this error: <code>[error message]</code>. Here's my code: <code>[paste code]</code>. Explain why this error occurs, provide the fix, and explain how to prevent it in the future.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Include the full stack trace if available.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#13</span> Convert Code</div>
+                    <div class="prompt-text">
+                        Convert this code from <code>[source language]</code> to <code>[target language]</code>. Maintain the same functionality. Use idiomatic patterns for the target language. Add comments explaining key differences.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Great for porting projects or learning a new language.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#14</span> Write Tests</div>
+                    <div class="prompt-text">
+                        Write unit tests for this function using <code>[testing framework]</code>. Cover: happy path, edge cases, error handling. Include descriptive test names. Function: <code>[paste function]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Ask for additional tests for specific scenarios you're worried about.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#15</span> Explain Code</div>
+                    <div class="prompt-text">
+                        Explain this code line by line like I'm a junior developer. What does it do, why was it written this way, and what are potential gotchas? Code: <code>[paste code]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Use this to understand unfamiliar codebases quickly.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#16</span> Regex Pattern</div>
+                    <div class="prompt-text">
+                        Write a regex pattern to match <code>[describe what you need]</code>. Provide the pattern, explain each part, and give 3 example matches and 2 non-matches. Language context: <code>[JS/Python/etc]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Regex varies by language. Always specify your environment.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#17</span> API Endpoint</div>
+                    <div class="prompt-text">
+                        Design a REST API endpoint for <code>[functionality]</code>. Include: HTTP method, URL structure, request body schema, response schema, error responses, and example curl command. Framework: <code>[Express/FastAPI/etc]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Ask for authentication and rate limiting patterns too.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#18</span> Refactor for Performance</div>
+                    <div class="prompt-text">
+                        Refactor this code for better performance. Current complexity: <code>[if known]</code>. Target: faster execution/less memory. Explain the improvements and trade-offs. Code: <code>[paste code]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Mention your scale (100 items vs 1M items) for relevant optimizations.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#19</span> Database Schema</div>
+                    <div class="prompt-text">
+                        Design a database schema for <code>[application type]</code>. Include tables, relationships, indexes, and constraints. Explain normalization decisions. Database: <code>[PostgreSQL/MongoDB/etc]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Describe your query patterns for better index recommendations.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#20</span> CLI Command</div>
+                    <div class="prompt-text">
+                        Write a <code>[bash/zsh/PowerShell]</code> command to <code>[task description]</code>. Explain each part of the command. Include error handling if applicable. Provide safer alternatives if the command is destructive.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Always test destructive commands on a small sample first.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 3: Marketing -->
+        <div class="category">
+            <div class="category-header">
+                <div class="category-icon marketing">&#x1F4E3;</div>
+                <h2>Marketing Prompts</h2>
+                <span class="category-count">10 prompts</span>
+            </div>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#21</span> Value Proposition</div>
+                    <div class="prompt-text">
+                        Write 5 value proposition statements for <code>[product/service]</code>. Target audience: <code>[audience]</code>. Main benefit: <code>[benefit]</code>. Format: What it is + who it's for + main benefit + differentiator.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Test with real customers. The one that makes them say "that's exactly what I need" wins.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#22</span> Ad Copy Variations</div>
+                    <div class="prompt-text">
+                        Write 5 ad copy variations for <code>[product]</code> targeting <code>[audience]</code>. Include: headline (max 30 chars), description (max 90 chars), CTA. Styles: benefit-focused, problem-solution, social proof, urgency, curiosity.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Specify the platform (Google, Meta, LinkedIn) for format-appropriate copy.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#23</span> Landing Page Copy</div>
+                    <div class="prompt-text">
+                        Write landing page copy for <code>[product]</code>. Include: headline, subheadline, 3 benefit sections with icons, social proof section, FAQ (5 questions), and CTA. Conversion-focused, not feature-focused.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Include your best testimonial quote for the social proof section.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#24</span> Competitor Analysis</div>
+                    <div class="prompt-text">
+                        Analyze <code>[competitor name/URL]</code> vs our product <code>[your product]</code>. Compare: positioning, pricing, features, target audience, messaging. Identify gaps we can exploit and threats to address.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Provide competitor screenshots or copy for more accurate analysis.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#25</span> Content Calendar</div>
+                    <div class="prompt-text">
+                        Create a 4-week content calendar for <code>[brand/product]</code>. Platform: <code>[platform]</code>. Goal: <code>[awareness/engagement/conversions]</code>. Include post ideas, content types, and best posting times.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Mix educational, entertaining, and promotional content (70/20/10 rule).</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#26</span> Customer Avatar</div>
+                    <div class="prompt-text">
+                        Create a detailed customer avatar for <code>[product/service]</code>. Include: demographics, psychographics, pain points, goals, objections, where they hang out online, how they make decisions, and trigger phrases they use.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Base this on real customer interviews when possible.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#27</span> Email Sequence</div>
+                    <div class="prompt-text">
+                        Write a 5-email welcome sequence for <code>[product/newsletter]</code>. Goal: build trust and convert to <code>[action]</code>. Include subject lines and send timing. Tone: <code>[professional/friendly/bold]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Email 1 should deliver immediate value, not pitch.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#28</span> Case Study Outline</div>
+                    <div class="prompt-text">
+                        Create a case study outline for <code>[customer success story]</code>. Structure: challenge, solution, implementation, results (with numbers), key quote, and lessons learned. Make it skimmable.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Specific numbers (37% increase, not "significant increase") are more credible.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#29</span> Objection Handling</div>
+                    <div class="prompt-text">
+                        List the top 10 objections for <code>[product/service]</code> and write rebuttals for each. Format: Objection, empathetic acknowledgment, reframe, evidence/proof, pivot to benefit.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Use these in sales calls, FAQ sections, and landing page copy.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#30</span> Referral Program</div>
+                    <div class="prompt-text">
+                        Design a referral program for <code>[product/service]</code>. Include: reward structure, messaging, email templates (invite + reward notification), and 3 share message templates for referrers.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Two-sided rewards (referrer + referee both get something) convert better.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 4: Productivity -->
+        <div class="category">
+            <div class="category-header">
+                <div class="category-icon productivity">&#x26A1;</div>
+                <h2>Productivity Prompts</h2>
+                <span class="category-count">10 prompts</span>
+            </div>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#31</span> Meeting Summary</div>
+                    <div class="prompt-text">
+                        Summarize this meeting transcript. Extract: key decisions, action items (with owners and deadlines), open questions, and next steps. Format as bullet points. Transcript: <code>[paste transcript]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Works great with auto-transcribed Zoom/Meet recordings.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#32</span> Prioritize Tasks</div>
+                    <div class="prompt-text">
+                        Help me prioritize these tasks using the Eisenhower Matrix (urgent/important). Tasks: <code>[list tasks]</code>. For each task, explain your reasoning. Then give me a recommended order.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Add deadlines and estimated effort for better prioritization.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#33</span> Break Down Project</div>
+                    <div class="prompt-text">
+                        Break down this project into actionable tasks: <code>[project description]</code>. Estimate time for each task. Identify dependencies. Flag potential blockers. Suggest milestones for a <code>[timeline]</code> deadline.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Add buffer time for tasks you've never done before.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#34</span> Decision Matrix</div>
+                    <div class="prompt-text">
+                        Help me decide between: <code>[options]</code>. Criteria that matter to me: <code>[criteria]</code>. Create a weighted decision matrix. Score each option. Provide a recommendation with reasoning.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Rank your criteria by importance for more accurate weighting.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#35</span> Simplify Complex Topic</div>
+                    <div class="prompt-text">
+                        Explain <code>[complex topic]</code> like I'm 10 years old. Use simple words, analogies, and examples from everyday life. Then give me the "adult version" with proper terminology I should learn.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Great for learning new domains quickly.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#36</span> Brainstorm Ideas</div>
+                    <div class="prompt-text">
+                        Generate 20 ideas for <code>[challenge/goal]</code>. Include a mix of safe, moderate, and wild ideas. Don't self-censor. After listing, highlight the 3 with highest potential and explain why.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> The wild ideas often spark the best realistic solutions.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#37</span> Standard Operating Procedure</div>
+                    <div class="prompt-text">
+                        Create an SOP for <code>[process]</code>. Include: purpose, scope, step-by-step instructions, decision points, common mistakes to avoid, and quality checks. Format for easy following.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Have someone unfamiliar with the process try following it and note where they get stuck.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#38</span> Feedback Request</div>
+                    <div class="prompt-text">
+                        Write a feedback request email for <code>[project/work]</code>. Be specific about what feedback I need. Make it easy to respond. Include context about constraints and goals. Keep it short.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Ask 2-3 specific questions instead of "what do you think?"</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#39</span> Learn New Skill</div>
+                    <div class="prompt-text">
+                        Create a 30-day learning plan for <code>[skill]</code>. Current level: <code>[beginner/intermediate]</code>. Daily time available: <code>[X hours]</code>. Include resources, milestones, and practical exercises.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Build in review days. Spaced repetition beats cramming.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#40</span> Weekly Review</div>
+                    <div class="prompt-text">
+                        Help me do a weekly review. Here's what I accomplished: <code>[wins]</code>. Challenges: <code>[struggles]</code>. Ask me 5 reflection questions, then help me set 3 priorities for next week.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Schedule this as a recurring Friday afternoon ritual.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Category 5: Research -->
+        <div class="category">
+            <div class="category-header">
+                <div class="category-icon research">&#x1F50D;</div>
+                <h2>Research Prompts</h2>
+                <span class="category-count">10 prompts</span>
+            </div>
+            <div class="prompts-grid">
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#41</span> Topic Deep Dive</div>
+                    <div class="prompt-text">
+                        Give me a comprehensive overview of <code>[topic]</code>. Cover: history, current state, key players, trends, controversies, and future outlook. Include sources I should explore for deeper learning.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Follow up with "What are the most common misconceptions about this?"</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#42</span> Compare Options</div>
+                    <div class="prompt-text">
+                        Compare <code>[option A]</code> vs <code>[option B]</code> for <code>[use case]</code>. Create a comparison table with: features, pricing, pros, cons, best for, and red flags. End with a recommendation.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Specify what matters most to you for a tailored recommendation.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#43</span> Summarize Document</div>
+                    <div class="prompt-text">
+                        Summarize this document in 3 levels: 1) One sentence, 2) One paragraph, 3) Key points with details. Highlight anything surprising or that contradicts common belief. Document: <code>[paste content]</code>
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> For long documents, process in chunks and ask for a meta-summary at the end.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#44</span> Find Gaps</div>
+                    <div class="prompt-text">
+                        Analyze this market/industry: <code>[industry]</code>. Identify: unmet needs, underserved segments, emerging opportunities, and problems people are paying to solve badly. Think like a startup founder.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Cross-reference with Reddit/Twitter complaints in that industry.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#45</span> Devil's Advocate</div>
+                    <div class="prompt-text">
+                        I believe <code>[thesis/opinion]</code>. Play devil's advocate. Give me the strongest arguments against my position. What evidence would change my mind? What am I missing?
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Use this before making big decisions or publishing hot takes.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#46</span> Extract Insights</div>
+                    <div class="prompt-text">
+                        Analyze these customer reviews/feedback: <code>[paste feedback]</code>. Identify: top 5 themes, sentiment distribution, specific pain points mentioned, feature requests, and quotable praise for marketing.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Include star ratings if available for sentiment calibration.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#47</span> Trend Analysis</div>
+                    <div class="prompt-text">
+                        What are the emerging trends in <code>[industry/field]</code> for the next 2-3 years? For each trend: evidence it's real, who's leading, implications for <code>[my context]</code>, and how to prepare.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Ask which trends are overhyped and which are underestimated.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#48</span> Expert Interview Prep</div>
+                    <div class="prompt-text">
+                        I'm interviewing an expert in <code>[field]</code> about <code>[topic]</code>. Generate 15 interview questions: 5 foundational, 5 deep-dive, 5 provocative/contrarian. Order from rapport-building to challenging.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> Include follow-up probes for each question.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#49</span> Fact Check</div>
+                    <div class="prompt-text">
+                        Fact-check this claim: <code>[claim]</code>. Rate confidence: high/medium/low. Provide supporting and contradicting evidence. Note what additional information would be needed for certainty.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> For recent events, verify with authoritative sources directly.</p>
+                </div>
+                
+                <div class="prompt-card">
+                    <div class="prompt-title"><span class="number">#50</span> Research Rabbit Hole</div>
+                    <div class="prompt-text">
+                        I want to deeply understand <code>[topic]</code>. Give me: 5 foundational concepts to master first, 3 seminal papers/books, 5 experts to follow, 3 counterintuitive insights, and a learning path for 4 weeks.
+                        <button class="copy-btn" onclick="copyPrompt(this)">Copy</button>
+                    </div>
+                    <p class="prompt-tip"><strong>Pro tip:</strong> This is how you go from zero to competent in any field fast.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Share Section -->
+        <div class="share-section">
+            <h3>Found this useful?</h3>
+            <p>Share it with someone who could use better AI prompts.</p>
+            <div class="share-buttons">
+                <a href="https://twitter.com/intent/tweet?text=Just%20found%20this%20awesome%20free%20cheatsheet%20of%2050%20AI%20prompts%20that%20actually%20work.%20Prompts%20for%20writing%2C%20coding%2C%20marketing%2C%20and%20more.&url=https://futurehumanism.co/tools/prompt-cheatsheet" target="_blank" class="share-btn twitter">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Share on X
+                </a>
+                <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://futurehumanism.co/tools/prompt-cheatsheet" target="_blank" class="share-btn linkedin">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                    Share on LinkedIn
+                </a>
+                <button class="share-btn copy-link" onclick="copyLink()">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                    Copy Link
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="footer-cta">
+            <h4>Want more AI insights?</h4>
+            <p>Get weekly tips, tools, and tutorials for navigating the AI revolution.</p>
+            <a href="/subscribe">Subscribe to the Newsletter</a>
+        </div>
+    </footer>
+    
+    <script>
+        // Check if already unlocked
+        const isUnlocked = localStorage.getItem('promptCheatsheetUnlocked');
+        if (isUnlocked) {
+            document.getElementById('gate').style.display = 'none';
+            document.getElementById('cheatsheet').classList.add('visible');
+        }
+        
+        // Email form handler
+        document.getElementById('emailForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('emailInput').value;
+            
+            // Store email (in production, send to newsletter service)
+            localStorage.setItem('promptCheatsheetUnlocked', 'true');
+            localStorage.setItem('subscriberEmail', email);
+            
+            // Track event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'lead_magnet_unlock', {
+                    'event_category': 'engagement',
+                    'event_label': 'prompt_cheatsheet'
+                });
+            }
+            
+            // Show content
+            document.getElementById('gate').style.display = 'none';
+            document.getElementById('cheatsheet').classList.add('visible');
+            
+            // Scroll to content
+            document.getElementById('cheatsheet').scrollIntoView({ behavior: 'smooth' });
+        });
+        
+        // Copy prompt function
+        function copyPrompt(btn) {
+            const promptText = btn.parentElement.textContent.replace('Copy', '').trim();
+            navigator.clipboard.writeText(promptText);
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+                btn.classList.remove('copied');
+            }, 2000);
+            
+            // Track copy
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'copy_prompt', {
+                    'event_category': 'engagement'
+                });
+            }
+        }
+        
+        // Copy link function
+        function copyLink() {
+            navigator.clipboard.writeText('https://futurehumanism.co/tools/prompt-cheatsheet');
+            const btn = document.querySelector('.copy-link');
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+            setTimeout(() => {
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg> Copy Link';
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
