@@ -1721,7 +1721,7 @@
                 border-top: 1px solid var(--border);
             }
 
-            .mobile-menu-cta a {
+            .mobile-menu .mobile-menu-cta a {
                 display: flex;
                 align-items: center;
                 justify-content: center;
@@ -1729,11 +1729,17 @@
                 width: 100%;
                 padding: 14px 20px;
                 background: var(--accent);
-                color: white;
+                color: white !important;
                 font-weight: 600;
                 font-size: 1rem;
                 border-radius: 10px;
                 text-decoration: none;
+            }
+            
+            .mobile-menu .mobile-menu-cta a svg {
+                color: white !important;
+                width: 18px;
+                height: 18px;
             }
 
             .mobile-menu-social {
