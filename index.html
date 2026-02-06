@@ -548,22 +548,30 @@
         .category-grid {
             display: flex;
             flex-wrap: wrap;
-            gap: 12px 24px;
+            gap: 12px;
+            justify-content: flex-start;
         }
 
         .category-link {
             font-family: 'Inter', sans-serif;
-            font-size: 0.95rem;
+            font-size: 0.85rem;
             font-weight: 600;
-            color: rgba(255, 255, 255, 0.85);
+            color: rgba(255, 255, 255, 0.9);
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: color 0.2s;
+            padding: 10px 20px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            transition: all 0.2s ease;
         }
 
         .category-link:hover {
             color: #ffffff;
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-2px);
         }
 
         /* Newsletter Modal Style */
@@ -1653,18 +1661,18 @@
                 <p>Future Humanism explores where AI meets human potential, one insight at a time. Weekly stories for builders navigating the most interesting time in tech history.</p>
             </div>
             <div class="category-grid">
-                <a href="#stories" class="category-link">AI Tools</a>
-                <a href="#stories" class="category-link">Automation</a>
-                <a href="#stories" class="category-link">Side Projects</a>
-                <a href="#stories" class="category-link">Productivity</a>
-                <a href="#stories" class="category-link">No-Code</a>
-                <a href="#stories" class="category-link">Marketing</a>
-                <a href="#stories" class="category-link">Strategy</a>
-                <a href="#stories" class="category-link">Tutorials</a>
-                <a href="#stories" class="category-link">Deep Dives</a>
-                <a href="#stories" class="category-link">Case Studies</a>
-                <a href="#stories" class="category-link">Crypto & AI</a>
-                <a href="#stories" class="category-link">Building in Public</a>
+                <a href="articles/" class="category-link">AI Tools</a>
+                <a href="articles/" class="category-link">Automation</a>
+                <a href="articles/" class="category-link">Side Projects</a>
+                <a href="articles/" class="category-link">Productivity</a>
+                <a href="articles/" class="category-link">No-Code</a>
+                <a href="articles/" class="category-link">Marketing</a>
+                <a href="articles/" class="category-link">Strategy</a>
+                <a href="articles/" class="category-link">Tutorials</a>
+                <a href="articles/" class="category-link">Deep Dives</a>
+                <a href="articles/" class="category-link">Case Studies</a>
+                <a href="articles/" class="category-link">Crypto & AI</a>
+                <a href="articles/" class="category-link">Building in Public</a>
             </div>
         </div>
     </section>
