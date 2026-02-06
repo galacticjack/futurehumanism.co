@@ -4,7 +4,7 @@
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
     "date": "2026-02-08",
-    "category": "General",
+    "category": "AI Analysis",
     "url": "/articles/ai-model-convergence-2026.html"
   },
   {
@@ -12,7 +12,7 @@
     "title": "AI Agents Are Eating Software - Why Every Company Needs an Agent Strategy in 2026",
     "description": "AI agents are transforming how businesses operate. From customer service to data analysis, autonomous agents are replacing traditional software workflows. Here's why every company needs an agent strategy now.",
     "date": "2026-02-07",
-    "category": "General",
+    "category": "Business Strategy",
     "url": "/articles/ai-agents-eating-software.html"
   },
   {
@@ -20,7 +20,7 @@
     "title": "Agent Infrastructure: Why 2026 Is The Year of Orchestrated AI Systems",
     "description": "Explore the shift to multiagent AI systems in 2026, enterprise governance challenges, key frameworks like LangGraph & AutoGen, infrastructure scaling, and future predictions in orchestrated AI.",
     "date": "2026-02-07",
-    "category": "General",
+    "category": "AI Agents",
     "url": "/articles/agent-infrastructure-orchestration-2026.html"
   },
   {
@@ -28,7 +28,7 @@
     "title": "ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future",
     "description": "OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape corporate budgets and competitive landscapes in 2026.",
     "date": "2026-02-07",
-    "category": "General",
+    "category": "Enterprise AI Strategy",
     "url": "/articles/chatgpt-pro-200-enterprise-ai-shift.html"
   },
   {
@@ -36,7 +36,7 @@
     "title": "Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI",
     "description": "Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses and how it stacks up against OpenAI's multimodal future.",
     "date": "2026-02-07",
-    "category": "General",
+    "category": "Industry Analysis",
     "url": "/articles/gemini-2-flash-multimodal-ai-dominance.html"
   },
   {
@@ -52,7 +52,7 @@
     "title": "The Rise of Local LLMs: Running AI on Your Own Hardware",
     "description": "Why running AI models locally is becoming the smart choice for privacy, cost control, and performance. Complete guide to setting up your own AI infrastructure.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Local AI",
     "url": "/articles/local-llms-running-ai-on-your-hardware.html"
   },
   {
@@ -60,7 +60,7 @@
     "title": "World Models: The AI Breakthrough That Will Change Everything After LLMs",
     "description": "Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next paradigm shift is here.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Deep Dive",
     "url": "/articles/ai-world-models-next-breakthrough.html"
   },
   {
@@ -68,7 +68,7 @@
     "title": "Remote Work in 2026: The Async-First Companies Winning the Talent War",
     "description": "Why the best companies have abandoned real-time communication. The tools, practices, and culture shifts defining the future of remote work.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Future of Work",
     "url": "/articles/remote-work-async-culture-2026.html"
   },
   {
@@ -76,7 +76,7 @@
     "title": "Health Tech in 2026: What Your Wearables Can Actually Tell You Now",
     "description": "The health metrics worth tracking, the wearables that deliver, and how AI is turning biometric data into actionable health insights.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Health & Wellness",
     "url": "/articles/health-tech-wearables-2026.html"
   },
   {
@@ -92,7 +92,7 @@
     "title": "The Creator Economy in 2026: AI Tools That Actually Move the Needle",
     "description": "How creators are using AI to produce more content, grow faster, and build sustainable businesses. The tools, workflows, and strategies that work.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Creator Economy",
     "url": "/articles/creator-economy-ai-tools-2026.html"
   },
   {
@@ -100,7 +100,7 @@
     "title": "How to Build Your First AI Agent: The Complete Practical Guide",
     "description": "Step-by-step guide to building your first AI agent without coding. Real examples, tools, and strategies for automating your work and creating value.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Practical AI",
     "url": "/articles/build-your-first-ai-agent-practical-guide.html"
   },
   {
@@ -108,7 +108,7 @@
     "title": "The $200M Deal That Just Changed Enterprise AI Forever",
     "description": "Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation. What every business needs to know.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Breaking Enterprise AI",
     "url": "/articles/snowflake-openai-enterprise-ai-tipping-point.html"
   },
   {
@@ -116,7 +116,7 @@
     "title": "Building Passive Income with AI Automation: Real Strategies That Work",
     "description": "Discover proven strategies to build passive income streams using AI automation. Real examples, tools, and step-by-step blueprints for creating sustainable revenue.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Passive Income",
     "url": "/articles/building-passive-income-ai-automation.html"
   },
   {
@@ -124,7 +124,7 @@
     "title": "12 Side Hustles That Actually Work in the AI Era",
     "description": "Side hustle ideas that leverage AI instead of competing with it. Real opportunities with realistic income expectations and how to get started.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Money & Careers",
     "url": "/articles/side-hustle-ideas-ai-era.html"
   },
   {
@@ -132,7 +132,7 @@
     "title": "AI Marketing in 2026: What's Working and What's Hype",
     "description": "The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from teams seeing actual results.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Marketing",
     "url": "/articles/ai-marketing-strategies-2026.html"
   },
   {
@@ -140,7 +140,7 @@
     "title": "DeFi Yield in 2026: Strategies That Survive Bear Markets",
     "description": "The sustainable yield strategies that work in any market condition. Risk management, protocol selection, and the math behind real DeFi returns.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Crypto & DeFi",
     "url": "/articles/defi-yield-strategies-2026.html"
   },
   {
@@ -148,7 +148,7 @@
     "title": "DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning",
     "description": "DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1 and why it changes everything.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Analysis",
     "url": "/articles/deepseek-r1-vs-openai-o1.html"
   },
   {
@@ -156,7 +156,7 @@
     "title": "No-Code Automation Stacks for Solopreneurs: Complete Setup Guide",
     "description": "Build powerful automation stacks without coding. Complete blueprints for solopreneurs to automate marketing, sales, operations, and customer service.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "No-Code Automation",
     "url": "/articles/nocode-automation-stacks-solopreneurs.html"
   },
   {
@@ -164,7 +164,7 @@
     "title": "AI Agents Getting Memory: Why Persistent Context Changes Everything",
     "description": "The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy, business applications, and the future of work.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Breaking Technology",
     "url": "/articles/ai-agents-memory.html"
   },
   {
@@ -172,7 +172,7 @@
     "title": "AI Tools Are Replacing SaaS Subscriptions: The Great Unbundling",
     "description": "How AI is making specialized SaaS tools obsolete. Why you can replace $500+/month in subscriptions with smart AI workflows that cost $50.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "SaaS Disruption",
     "url": "/articles/ai-tools-replacing-saas-subscriptions.html"
   },
   {
@@ -180,7 +180,7 @@
     "title": "Prompt Engineering That Actually Works: Beyond Basic Tips",
     "description": "Advanced prompt engineering techniques that consistently produce better AI outputs. Real examples, tested strategies, and the psychology behind effective prompts.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "AI Mastery",
     "url": "/articles/prompt-engineering-that-actually-works.html"
   },
   {
@@ -196,7 +196,7 @@
     "title": "Why Every Business Needs an AI Strategy in 2026: The Competitive Reality",
     "description": "AI is no longer optional for business success. Learn why every company needs an AI strategy in 2026 and how to build one that drives real results.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Business Strategy",
     "url": "/articles/why-every-business-needs-ai-strategy-2026.html"
   },
   {
@@ -204,7 +204,7 @@
     "title": "The Future of Search After ChatGPT: What Google Won't Tell You",
     "description": "How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Search Evolution",
     "url": "/articles/future-of-search-after-chatgpt.html"
   },
   {
@@ -212,7 +212,7 @@
     "title": "Crypto Market Cycles and AI Trading Signals: What the Data Actually Shows",
     "description": "Analyze crypto market patterns with AI. Real data, tested strategies, and practical signals for understanding market cycles beyond the hype.",
     "date": "2026-02-06",
-    "category": "General",
+    "category": "Crypto Analysis",
     "url": "/articles/crypto-market-cycles-ai-trading-signals.html"
   },
   {
@@ -220,7 +220,7 @@
     "title": "The $50/Month Stack That Runs My Entire Business",
     "description": "Every tool I use to run a profitable side business for less than the cost of a gym membership.",
     "date": "2026-02-05",
-    "category": "General",
+    "category": "Tutorial",
     "url": "/articles/50-dollar-tech-stack.html"
   },
   {
@@ -228,7 +228,7 @@
     "title": "The Complete Guide to AI Agents in 2026",
     "description": "Everything you need to know about AI agents: what they are, how they work, and why 2026 is the year they go from demos to real workers.",
     "date": "2026-02-05",
-    "category": "General",
+    "category": "Deep Dive",
     "url": "/articles/ai-agents-2026-guide.html"
   },
   {
@@ -236,7 +236,7 @@
     "title": "Claude vs ChatGPT: The Only Comparison That Actually Matters",
     "description": "Forget benchmarks. Here's how Claude and ChatGPT actually perform on real work-coding, writing, analysis, and reasoning.",
     "date": "2026-02-05",
-    "category": "General",
+    "category": "Comparison",
     "url": "/articles/claude-vs-gpt-comparison.html"
   },
   {
@@ -244,7 +244,7 @@
     "title": "Why Most AI Side Projects Fail (And How to Beat the Odds)",
     "description": "The uncomfortable truth about why 90% of AI side projects never make money-and the exact playbook to be in the 10%.",
     "date": "2026-02-05",
-    "category": "General",
+    "category": "Strategy",
     "url": "/articles/why-ai-side-projects-fail.html"
   },
   {
@@ -252,7 +252,7 @@
     "title": "How We Automated 80% of Our Agency Work",
     "description": "The exact automations, prompts, and workflows we use to run a digital agency with a fraction of the headcount.",
     "date": "2026-02-05",
-    "category": "General",
+    "category": "Case Study",
     "url": "/articles/automate-80-percent-agency-work.html"
   }
 ]
