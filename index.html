@@ -1367,6 +1367,34 @@
             opacity: 1;
         }
     </style>
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Future Humanism",
+      "url": "https://futurehumanism.co",
+      "description": "Where AI meets human potential. Weekly insights, tools, and tutorials for builders navigating the AI revolution.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "Future Humanism",
+        "url": "https://futurehumanism.co",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://futurehumanism.co/images/og-image.jpg"
+        },
+        "sameAs": [
+          "https://twitter.com/FutureHumanism"
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://futurehumanism.co/search.html?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
 </head>
 <body>
 
@@ -2051,6 +2079,6 @@
             }
         });
     </script>
-    <script src="js/lazy-loading.js"></script>
+    <script src="js/lazy-loading.js" defer></script>
 </body>
 </html>
