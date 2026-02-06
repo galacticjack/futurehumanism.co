@@ -223,7 +223,7 @@
         .hero-section {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 32px 24px;
+            padding: 32px 24px 48px;
         }
 
         /* Hero Grid - Clean 2-column layout */
@@ -231,7 +231,9 @@
             display: grid;
             grid-template-columns: 2fr 1fr;
             gap: 16px;
-            height: 380px;
+            height: 400px;
+            max-height: 400px;
+            overflow: hidden;
         }
 
         .hero-main {
@@ -443,7 +445,7 @@
 
         .story-card {
             flex-shrink: 0;
-            width: 300px;
+            width: 260px;
             scroll-snap-align: start;
             position: relative;
             border-radius: 10px;
@@ -454,7 +456,7 @@
 
         .story-card img {
             width: 100%;
-            aspect-ratio: 4/3;
+            aspect-ratio: 16/10;
             object-fit: cover;
             transition: transform 0.4s ease;
         }
