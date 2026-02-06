@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Free AI Use Case Generator | Get 10 AI Ideas for Your Job | Future Humanism</title>
+    <meta name="title" content="Free AI Use Case Generator | Get 10 AI Ideas for Your Job">
+    <meta name="description" content="Enter your job title and get 10 personalized AI use cases you can implement today. Free tool with ready-to-use prompts for every profession.">
+    <meta name="keywords" content="AI use cases, AI for work, AI prompts by job, ChatGPT for professionals, AI productivity, AI automation ideas">
+    <link rel="canonical" href="https://futurehumanism.co/tools/ai-use-case-generator">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://futurehumanism.co/tools/ai-use-case-generator">
+    <meta property="og:title" content="Free AI Use Case Generator | 10 AI Ideas for Your Job">
+    <meta property="og:description" content="Enter your job title and get 10 personalized AI use cases you can implement today. Free tool with ready-to-use prompts.">
+    <meta property="og:image" content="https://futurehumanism.co/images/og-ai-use-case-generator.jpg">
+    
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://futurehumanism.co/tools/ai-use-case-generator">
+    <meta name="twitter:title" content="Free AI Use Case Generator | 10 AI Ideas for Your Job">
+    <meta name="twitter:description" content="Enter your job title and get 10 personalized AI use cases with ready-to-use prompts.">
+    <meta name="twitter:image" content="https://futurehumanism.co/images/og-ai-use-case-generator.jpg">
+    <meta name="twitter:site" content="@FutureHumanism">
+    
+    <!-- Schema.org FAQ markup for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What AI tools can I use in my job?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The best AI tools for your job depend on your role. This generator provides personalized AI use cases based on your specific profession, with ready-to-use prompts for ChatGPT, Claude, and other AI assistants."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can AI help me be more productive at work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI can automate repetitive tasks, help with writing and analysis, generate ideas, summarize documents, and assist with decision-making. Our generator shows you the top 10 use cases specific to your profession."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this AI use case generator free?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, the AI Use Case Generator is completely free. Enter your job title and instantly receive 10 personalized AI applications with prompts you can copy and use immediately."
+          }
+        }
+      ]
+    }
+    </script>
+    
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        :root {
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #707070;
+            --bg-primary: #0a0a0a;
+            --bg-secondary: #141414;
+            --bg-card: #1a1a1a;
+            --accent: #1E90FF;
+            --accent-hover: #3BA0FF;
+            --border: #2a2a2a;
+            --success: #22c55e;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        /* Header */
+        header {
+            padding: 16px 24px;
+            border-bottom: 1px solid var(--border);
+            background: rgba(10,10,10,0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .header-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+        .logo-icon {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid rgba(255,255,255,0.1);
+        }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo-text {
+            font-weight: 700;
+            font-size: 1.3rem;
+            color: var(--text-primary);
+        }
+        .header-nav a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            margin-left: 24px;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .header-nav a:hover { color: var(--accent); }
+        
+        /* Main */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 24px;
+        }
+        
+        /* Hero */
+        .hero {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 16px;
+            line-height: 1.15;
+        }
+        .hero h1 span {
+            color: var(--accent);
+        }
+        .hero p {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        /* Input Form */
+        .generator-form {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+        .form-group {
+            margin-bottom: 24px;
+        }
+        .form-group label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+        .form-group input, .form-group select {
+            width: 100%;
+            padding: 16px 20px;
+            font-size: 1rem;
+            background: var(--bg-secondary);
+            border: 2px solid var(--border);
+            border-radius: 10px;
+            color: var(--text-primary);
+            transition: border-color 0.2s;
+        }
+        .form-group input:focus, .form-group select:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        .form-group input::placeholder {
+            color: var(--text-muted);
+        }
+        .form-group select option {
+            background: var(--bg-secondary);
+        }
+        .form-hint {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-top: 8px;
+        }
+        
+        .generate-btn {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: var(--accent);
+            color: white;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .generate-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        .generate-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        /* Results */
+        .results {
+            display: none;
+        }
+        .results.show {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .results-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        .results-header h2 {
+            font-size: 1.5rem;
+        }
+        .results-header h2 span {
+            color: var(--accent);
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .share-btn {
+            padding: 10px 16px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .share-btn:hover {
+            background: var(--bg-secondary);
+            border-color: var(--accent);
+        }
+        .share-btn.twitter { border-color: #1DA1F2; }
+        .share-btn.twitter:hover { background: rgba(29, 161, 242, 0.1); }
+        .share-btn.linkedin { border-color: #0A66C2; }
+        .share-btn.linkedin:hover { background: rgba(10, 102, 194, 0.1); }
+        .share-btn.copy { border-color: var(--success); }
+        .share-btn.copy:hover { background: rgba(34, 197, 94, 0.1); }
+        
+        .use-case-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 16px;
+            transition: border-color 0.2s;
+        }
+        .use-case-card:hover {
+            border-color: var(--accent);
+        }
+        .use-case-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+            margin-bottom: 14px;
+        }
+        .use-case-number {
+            background: var(--accent);
+            color: white;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 0.9rem;
+            flex-shrink: 0;
+        }
+        .use-case-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+        .use-case-desc {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 16px;
+            padding-left: 48px;
+        }
+        .use-case-prompt {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 16px;
+            margin-left: 48px;
+            position: relative;
+        }
+        .prompt-label {
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        .prompt-text {
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.85rem;
+            color: var(--text-primary);
+            line-height: 1.5;
+            white-space: pre-wrap;
+        }
+        .copy-prompt-btn {
+            position: absolute;
+            top: 12px;
+            right: 12px;
+            padding: 6px 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .copy-prompt-btn:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+        }
+        .copy-prompt-btn.copied {
+            background: var(--success);
+            border-color: var(--success);
+            color: white;
+        }
+        
+        /* Impact Badge */
+        .impact-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 4px 10px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            border-radius: 20px;
+            margin-left: auto;
+        }
+        .impact-high {
+            background: rgba(34, 197, 94, 0.15);
+            color: #22c55e;
+        }
+        .impact-medium {
+            background: rgba(245, 158, 11, 0.15);
+            color: #f59e0b;
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-secondary) 100%);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .cta-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 12px;
+        }
+        .cta-section p {
+            color: var(--text-secondary);
+            margin-bottom: 24px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .cta-btn {
+            display: inline-block;
+            padding: 16px 32px;
+            font-size: 1rem;
+            font-weight: 700;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: all 0.2s;
+        }
+        .cta-btn:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 40px 24px;
+            text-align: center;
+            margin-top: 60px;
+        }
+        .footer-inner {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+        }
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+        .footer-copy {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        /* Mobile */
+        @media (max-width: 640px) {
+            .hero h1 { font-size: 1.8rem; }
+            .generator-form { padding: 24px; }
+            .results-header { flex-direction: column; align-items: flex-start; }
+            .share-buttons { width: 100%; justify-content: flex-start; }
+            .use-case-desc, .use-case-prompt { padding-left: 0; margin-left: 0; margin-top: 12px; }
+            .header-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-inner">
+            <a href="/" class="logo">
+                <div class="logo-icon">
+                    <img src="../images/logo-icon.png" alt="Future Humanism">
+                </div>
+                <span class="logo-text">Future Humanism</span>
+            </a>
+            <nav class="header-nav">
+                <a href="/articles">Articles</a>
+                <a href="/tools">Tools</a>
+                <a href="/quiz">Quiz</a>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>AI Use Case Generator<br><span>for Your Job</span></h1>
+            <p>Enter your job title and get 10 personalized AI applications with ready-to-use prompts you can implement today.</p>
+        </section>
+        
+        <div class="generator-form">
+            <div class="form-group">
+                <label for="jobTitle">What's your job title?</label>
+                <input type="text" id="jobTitle" placeholder="e.g., Marketing Manager, Software Developer, Real Estate Agent..." autocomplete="off">
+                <p class="form-hint">Be specific for better results (e.g., "B2B SaaS Sales Rep" instead of just "Sales")</p>
+            </div>
+            <div class="form-group">
+                <label for="experienceLevel">AI Experience Level</label>
+                <select id="experienceLevel">
+                    <option value="beginner">Beginner - Just getting started with AI</option>
+                    <option value="intermediate" selected>Intermediate - Use AI occasionally</option>
+                    <option value="advanced">Advanced - Use AI daily, want advanced tactics</option>
+                </select>
+            </div>
+            <button class="generate-btn" onclick="generateUseCases()">Generate My AI Use Cases</button>
+        </div>
+        
+        <div class="results" id="results">
+            <div class="results-header">
+                <h2>10 AI Use Cases for <span id="resultJobTitle"></span></h2>
+                <div class="share-buttons">
+                    <button class="share-btn twitter" onclick="shareTwitter()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </button>
+                    <button class="share-btn linkedin" onclick="shareLinkedIn()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        LinkedIn
+                    </button>
+                    <button class="share-btn copy" onclick="copyResults()">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>
+                        Copy All
+                    </button>
+                </div>
+            </div>
+            
+            <div id="useCasesList"></div>
+            
+            <div class="cta-section">
+                <h3>Want 50+ More Prompts?</h3>
+                <p>Get our free AI Power User's Playbook with battle-tested prompts, workflows, and strategies.</p>
+                <a href="/free-guide" class="cta-btn">Download Free Guide</a>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/articles">Articles</a>
+                <a href="/tools">All Tools</a>
+                <a href="/quiz">AI Quiz</a>
+                <a href="/about">About</a>
+            </div>
+            <p class="footer-copy">Future Humanism. Reframing the future, one insight at a time.</p>
+        </div>
+    </footer>
+    
+    <script>
+        // Use case database by job category
+        const useCaseDatabase = {
+            marketing: [
+                { title: "Write High-Converting Ad Copy", desc: "Generate multiple variations of ad copy optimized for different platforms and audiences.", prompt: "Act as a senior copywriter. Write 5 variations of ad copy for [product/service] targeting [audience]. Each variation should use a different psychological trigger (urgency, social proof, curiosity, fear of missing out, aspiration). Format: Hook | Body | CTA", impact: "high" },
+                { title: "Competitive Analysis Reports", desc: "Analyze competitors' messaging, positioning, and content strategy in minutes.", prompt: "Analyze [competitor name]'s marketing strategy based on their website and social presence. Cover: 1) Value proposition 2) Target audience 3) Key messaging themes 4) Content pillars 5) Gaps I can exploit. Be specific and actionable.", impact: "high" },
+                { title: "Content Calendar Generation", desc: "Create a month's worth of content ideas with hooks and angles.", prompt: "Create a 30-day content calendar for [brand/topic] across [platforms]. For each post include: Date | Platform | Content type | Hook | Key message | CTA | Hashtags. Mix educational, entertaining, and promotional content 70/20/10.", impact: "high" },
+                { title: "Email Sequence Writing", desc: "Draft nurture sequences, welcome series, or promotional campaigns.", prompt: "Write a 5-email welcome sequence for [business type]. Goal: build trust and drive first purchase. Include: Subject line | Preview text | Email body | CTA. Use storytelling and progressively increase commitment.", impact: "high" },
+                { title: "SEO Keyword Clustering", desc: "Organize keywords into topic clusters for content planning.", prompt: "I have these keywords: [paste keywords]. Group them into topic clusters with: 1) Pillar topic 2) Supporting subtopics 3) Search intent for each 4) Content type recommendation 5) Internal linking strategy.", impact: "medium" },
+                { title: "Landing Page Copy Review", desc: "Get actionable feedback on landing page copy and structure.", prompt: "Review this landing page copy for [goal]. Analyze: 1) Headline clarity and impact 2) Value proposition strength 3) Social proof effectiveness 4) CTA clarity 5) Objection handling. Score each 1-10 and give specific rewrites for weak areas:\n\n[paste copy]", impact: "high" },
+                { title: "Customer Persona Development", desc: "Create detailed buyer personas from limited data.", prompt: "Create a detailed buyer persona for [product/service]. Include: Demographics | Psychographics | Goals & motivations | Pain points & frustrations | Objections to buying | Where they hang out online | How they make decisions | Key messages that resonate.", impact: "medium" },
+                { title: "Social Media Reply Templates", desc: "Create templates for common customer interactions.", prompt: "Create 10 reply templates for [brand] social media. Cover: Positive feedback | Complaints | Product questions | Price objections | Shipping questions. Tone: [describe brand voice]. Each should feel personal, not robotic.", impact: "medium" },
+                { title: "A/B Test Hypothesis Generation", desc: "Generate data-backed hypotheses for testing.", prompt: "I want to improve [metric] on [page/campaign]. Current performance: [data]. Generate 10 A/B test hypotheses in format: 'If we [change], then [metric] will [improve] because [reasoning].' Prioritize by expected impact and effort.", impact: "high" },
+                { title: "Influencer Outreach Scripts", desc: "Personalized outreach messages that actually get replies.", prompt: "Write 3 outreach email variations for approaching [type of influencer] about [collaboration type]. Research shows they care about [topics]. Make it personal, valuable, and not salesy. Include follow-up sequence.", impact: "medium" }
+            ],
+            sales: [
+                { title: "Personalized Cold Outreach", desc: "Research prospects and craft hyper-personalized messages.", prompt: "Research [prospect name] at [company]. Based on their LinkedIn, company news, and industry: 1) Find 3 personalization hooks 2) Identify likely pain points 3) Write a cold email that opens with insight about them, connects to a problem you solve, and proposes a specific next step.", impact: "high" },
+                { title: "Objection Response Library", desc: "Build a library of responses to common objections.", prompt: "Create responses to these sales objections for [product/service]: 1) 'Too expensive' 2) 'Need to think about it' 3) 'Already using competitor' 4) 'Not a priority right now' 5) 'Need to talk to my team'. Each response should acknowledge, reframe, and advance.", impact: "high" },
+                { title: "Discovery Call Questions", desc: "Generate probing questions that uncover real needs.", prompt: "Create 15 discovery call questions for selling [product/service] to [buyer type]. Organize by: Situation questions | Problem questions | Implication questions | Need-payoff questions. Each should uncover information that helps qualify and close.", impact: "high" },
+                { title: "Proposal Executive Summary", desc: "Turn call notes into compelling proposal summaries.", prompt: "Based on these discovery call notes, write a proposal executive summary that: 1) Restates their goals in their words 2) Highlights key challenges uncovered 3) Positions our solution as the bridge 4) Quantifies expected outcomes 5) Creates urgency. Notes:\n\n[paste notes]", impact: "high" },
+                { title: "Follow-Up Sequence", desc: "Never let a deal go cold with strategic follow-ups.", prompt: "Create a 7-touch follow-up sequence for prospects who went dark after [stage]. Mix: Value-add emails | Social proof | Urgency creators | Pattern interrupts. Each touchpoint should give them a reason to re-engage, not just 'checking in.'", impact: "high" },
+                { title: "Competitive Battlecards", desc: "Prepare for competitive conversations.", prompt: "Create a competitive battlecard: Us vs [Competitor]. Include: Their positioning | Our differentiators | Common objections when they're in the deal | Trap questions to ask | Proof points that favor us | When to walk away.", impact: "high" },
+                { title: "ROI Calculator Inputs", desc: "Build the business case for your solution.", prompt: "Help me build an ROI model for [solution]. For a [company size/type]: 1) What metrics would improve? 2) What are reasonable improvement %s? 3) How do we quantify time savings? 4) What indirect benefits matter? 5) What's a conservative vs optimistic scenario?", impact: "medium" },
+                { title: "LinkedIn Connection Messages", desc: "Connect with prospects without being spammy.", prompt: "Write 5 LinkedIn connection request messages for reaching [buyer persona]. No selling in the request. Goal: get accepted. Follow-up message sequence for after they accept. Tone: helpful peer, not desperate salesperson.", impact: "medium" },
+                { title: "Case Study Interviews", desc: "Extract compelling stories from customer calls.", prompt: "I'm interviewing a customer for a case study. They achieved [result] using our [product]. Give me: 15 interview questions | How to probe for quotable soundbites | Framework for structuring their story (Challenge → Solution → Results).", impact: "medium" },
+                { title: "Deal Review Preparation", desc: "Prep for pipeline reviews with structured analysis.", prompt: "Analyze this deal for pipeline review: [deal details]. Assess: 1) Qualification score (MEDDIC/BANT) 2) Red flags 3) Missing information 4) Competitive threats 5) Recommended next steps 6) Risk of slipping 7) What would you ask rep?", impact: "medium" }
+            ],
+            developer: [
+                { title: "Code Review Assistant", desc: "Get detailed code reviews with improvement suggestions.", prompt: "Review this code for: 1) Bugs and edge cases 2) Performance issues 3) Security vulnerabilities 4) Readability improvements 5) Best practice violations. Explain each issue and provide fixed code:\n\n```[language]\n[paste code]\n```", impact: "high" },
+                { title: "Documentation Generator", desc: "Turn code into clear, comprehensive documentation.", prompt: "Generate documentation for this code: 1) Overview of what it does 2) Parameters/inputs explained 3) Return values 4) Usage examples 5) Edge cases and error handling 6) Dependencies. Target audience: developers unfamiliar with this codebase.\n\n```[language]\n[code]\n```", impact: "high" },
+                { title: "Debug Assistance", desc: "Systematically troubleshoot issues.", prompt: "Help me debug this issue: [describe problem]. Here's the error: [error message]. Here's the relevant code: [code]. Here's what I've tried: [attempts]. Walk through: 1) What's likely causing this 2) How to verify 3) Potential fixes ranked by likelihood.", impact: "high" },
+                { title: "Architecture Design Review", desc: "Evaluate system design decisions.", prompt: "Review this architecture for [system type]: [describe architecture]. Evaluate: 1) Scalability 2) Single points of failure 3) Data consistency approach 4) Security considerations 5) Cost implications 6) Alternative approaches I should consider.", impact: "high" },
+                { title: "Test Case Generation", desc: "Create comprehensive test coverage.", prompt: "Generate test cases for this function: [function]. Include: 1) Happy path tests 2) Edge cases 3) Error conditions 4) Boundary values 5) Integration considerations. Provide actual test code in [framework].", impact: "high" },
+                { title: "Regex Pattern Builder", desc: "Create and explain complex regex patterns.", prompt: "I need a regex pattern to [describe what you want to match/extract]. Provide: 1) The regex pattern 2) Step-by-step explanation of each part 3) Test cases that should match 4) Test cases that should NOT match 5) Any gotchas or limitations.", impact: "medium" },
+                { title: "API Design Review", desc: "Design RESTful APIs following best practices.", prompt: "I'm designing an API for [functionality]. Review my endpoints: [list endpoints]. Evaluate: 1) RESTful conventions 2) Naming consistency 3) Error response format 4) Authentication approach 5) Versioning strategy 6) Pagination design.", impact: "medium" },
+                { title: "Refactoring Guide", desc: "Plan code improvements systematically.", prompt: "This code works but needs refactoring: [code]. Create a refactoring plan: 1) Code smells identified 2) Refactoring techniques to apply 3) Order of operations (what to do first) 4) How to ensure nothing breaks 5) Show the refactored version.", impact: "medium" },
+                { title: "Learning New Technology", desc: "Get personalized learning paths for new tech.", prompt: "I'm a [experience level] developer learning [technology]. My background: [relevant experience]. Create a learning plan: 1) Key concepts to understand first 2) Hands-on projects to build (progressive difficulty) 3) Common pitfalls to avoid 4) Resources ranked by quality 5) Timeline estimate.", impact: "medium" },
+                { title: "Performance Optimization", desc: "Find and fix performance bottlenecks.", prompt: "This code is slow: [code]. Context: [how it's used, data sizes]. Analyze: 1) Time complexity 2) Space complexity 3) Specific bottlenecks 4) Optimization options with tradeoffs 5) Optimized version with explanations.", impact: "high" }
+            ],
+            finance: [
+                { title: "Financial Report Summarization", desc: "Extract key insights from lengthy financial documents.", prompt: "Summarize this financial report for executive presentation: [paste report]. Extract: 1) Key metrics and YoY changes 2) Positive trends to highlight 3) Concerns requiring attention 4) Comparison to forecasts 5) Recommended actions. Keep it to one page.", impact: "high" },
+                { title: "Variance Analysis", desc: "Quickly analyze budget vs actual variances.", prompt: "Analyze these budget variances: [paste data]. For each significant variance: 1) Root cause hypothesis 2) Whether it's one-time or recurring 3) Impact on full-year forecast 4) Recommended action 5) Questions to ask department heads.", impact: "high" },
+                { title: "Financial Model Audit", desc: "Check spreadsheet models for errors.", prompt: "Review this financial model logic: [describe model structure and key formulas]. Check for: 1) Circular reference risks 2) Hardcoded values that should be variables 3) Formula consistency issues 4) Missing sensitivity analyses 5) Assumption documentation gaps.", impact: "high" },
+                { title: "Investor Update Drafts", desc: "Write clear, compelling investor communications.", prompt: "Write a monthly investor update email. Data: [key metrics]. Cover: 1) Highlights (what went well) 2) Key metrics with context 3) Challenges and how we're addressing them 4) Ask (if any) 5) What's next. Tone: confident but honest.", impact: "high" },
+                { title: "Due Diligence Checklists", desc: "Create comprehensive DD checklists for deals.", prompt: "Create a due diligence checklist for [deal type: M&A/investment/vendor]. Categories: Financial | Legal | Operational | Technical | Commercial. For each item: What to request | Red flags to watch for | How to verify.", impact: "medium" },
+                { title: "Board Presentation Prep", desc: "Structure board meeting materials effectively.", prompt: "Help me prepare board materials for [meeting type]. Key topics: [list]. For each topic create: 1) One-slide summary 2) Supporting data needed 3) Anticipated questions 4) Recommended framing 5) Decision or update?", impact: "high" },
+                { title: "Scenario Modeling", desc: "Build and analyze different financial scenarios.", prompt: "Create 3 scenarios for [business decision]: Conservative | Base | Optimistic. For each: Key assumptions | Revenue impact | Cost impact | Cash flow implications | Break-even analysis | Key risks. Format as decision-ready analysis.", impact: "high" },
+                { title: "Financial Policy Drafting", desc: "Create clear, compliant financial policies.", prompt: "Draft a policy for [policy type: expense approval/travel/procurement]. Include: 1) Purpose and scope 2) Approval thresholds 3) Required documentation 4) Exceptions process 5) Consequences for violations. Tone: clear, not bureaucratic.", impact: "medium" },
+                { title: "KPI Definition and Tracking", desc: "Define meaningful financial metrics.", prompt: "Help define KPIs for [department/business]. For each KPI: 1) Clear definition and formula 2) Why it matters 3) Target-setting approach 4) Data source 5) Reporting frequency 6) Who's accountable. Avoid vanity metrics.", impact: "medium" },
+                { title: "Vendor Negotiation Prep", desc: "Prepare for contract negotiations.", prompt: "I'm negotiating [contract type] with [vendor]. Deal size: [amount]. Help me prepare: 1) Industry benchmarks for pricing 2) Terms to negotiate beyond price 3) BATNA options 4) Questions to uncover their flexibility 5) Walk-away points.", impact: "medium" }
+            ],
+            hr: [
+                { title: "Job Description Writing", desc: "Create inclusive, accurate job postings that attract talent.", prompt: "Write a job description for [role]. Include: Role overview (2-3 sentences) | Key responsibilities (6-8 bullets) | Requirements (must-have vs nice-to-have clearly separated) | What we offer | Inclusive language. Avoid: jargon, gendered language, impossible requirements.", impact: "high" },
+                { title: "Interview Question Banks", desc: "Create structured interview questions by competency.", prompt: "Create interview questions for [role] assessing: [competencies]. For each competency: 2 behavioral questions (STAR format) | 1 situational question | What good/bad answers look like | Follow-up probes. Ensure legal compliance.", impact: "high" },
+                { title: "Offer Letter Drafting", desc: "Create clear, compelling offer letters.", prompt: "Draft an offer letter for [role] at [company]. Include: Position and reporting | Start date | Compensation breakdown | Benefits summary | Contingencies | Excitement about them joining. Tone: warm and professional, not legal-ese.", impact: "medium" },
+                { title: "Performance Review Prep", desc: "Turn notes into structured performance feedback.", prompt: "Based on these notes about [employee], write performance review content: [paste notes]. Structure: 1) Key accomplishments with specific examples 2) Areas of strength 3) Development areas with actionable suggestions 4) Goals for next period. Balanced and growth-focused.", impact: "high" },
+                { title: "Policy Communication", desc: "Translate HR policies into clear employee communication.", prompt: "Rewrite this HR policy for employee communication: [paste policy]. Make it: 1) Easy to understand (8th grade reading level) 2) Clear on what employees need to do 3) Explains the 'why' 4) Includes FAQs 5) Specifies who to contact for questions.", impact: "medium" },
+                { title: "Onboarding Checklist", desc: "Create comprehensive new hire onboarding plans.", prompt: "Create a 90-day onboarding plan for [role]. Week 1: [essentials]. Month 1: [foundations]. Month 2-3: [independence]. Include: What | Who's responsible | Success criteria | Check-in points. Mix: administrative, cultural, role-specific.", impact: "high" },
+                { title: "Exit Interview Analysis", desc: "Find patterns in departure feedback.", prompt: "Analyze these exit interview responses for patterns: [paste responses]. Identify: 1) Common themes 2) Department-specific issues 3) Fixable vs unfixable factors 4) Comparison to previous periods 5) Recommended actions prioritized by impact.", impact: "medium" },
+                { title: "Training Content Outlines", desc: "Structure effective training programs.", prompt: "Create a training outline for [topic] for [audience]. Duration: [time]. Include: Learning objectives | Module breakdown | Activities/exercises | Assessment approach | Materials needed | Follow-up reinforcement plan.", impact: "medium" },
+                { title: "Difficult Conversation Scripts", desc: "Prepare for tough management conversations.", prompt: "Help me prepare for a conversation about [issue: PIP/termination/conflict] with [employee situation]. Give me: 1) Opening statement 2) Key points to cover 3) How to respond to likely reactions 4) Documentation requirements 5) Follow-up actions.", impact: "high" },
+                { title: "Employee Survey Analysis", desc: "Turn survey data into actionable insights.", prompt: "Analyze these employee survey results: [paste data]. Provide: 1) Top 3 strengths to maintain 2) Top 3 concerns to address 3) Department/team differences 4) Comparison to benchmarks if possible 5) Recommended action plan with owners.", impact: "high" }
+            ],
+            default: [
+                { title: "Meeting Notes to Action Items", desc: "Transform messy meeting notes into clear next steps.", prompt: "Convert these meeting notes into structured output: 1) Key decisions made 2) Action items (WHO | WHAT | BY WHEN) 3) Open questions to resolve 4) Topics for follow-up meeting. Notes:\n\n[paste notes]", impact: "high" },
+                { title: "Email Drafting and Tone Adjustment", desc: "Write professional emails for any situation.", prompt: "Write an email for this situation: [describe]. Recipient: [who]. Goal: [what you want]. Tone: [professional/friendly/firm]. Include: Clear subject line | Purpose in first sentence | Details | Specific ask | Appropriate sign-off.", impact: "high" },
+                { title: "Document Summarization", desc: "Extract key points from long documents quickly.", prompt: "Summarize this document in 3 formats: 1) One-paragraph executive summary 2) Bullet points of key facts 3) What decisions/actions does this require from the reader. Document:\n\n[paste document]", impact: "high" },
+                { title: "Presentation Outline Creation", desc: "Structure compelling presentations.", prompt: "Create a presentation outline for [topic]. Audience: [who]. Goal: [what you want them to do/think]. Duration: [time]. Include: Hook/opening | Key message | Supporting points with evidence | Objection handling | Strong close with CTA.", impact: "high" },
+                { title: "Process Documentation", desc: "Turn tribal knowledge into clear procedures.", prompt: "Document this process: [describe process]. Create: 1) When to use this process 2) Prerequisites 3) Step-by-step instructions (numbered) 4) Decision points and how to handle 5) Common mistakes to avoid 6) Who to contact if stuck.", impact: "medium" },
+                { title: "Weekly Status Reports", desc: "Write clear, valuable status updates.", prompt: "Write a weekly status report. Accomplished this week: [list]. In progress: [list]. Blockers: [list]. Format as: Highlights (what matters) | Details (if they want to dig in) | Help needed | Plan for next week. Keep it scannable.", impact: "medium" },
+                { title: "Research and Comparison", desc: "Compare options and make recommendations.", prompt: "Compare [options] for [purpose]. For each option analyze: 1) Pros 2) Cons 3) Best for (use case) 4) Cost considerations 5) Risk factors. End with: Recommendation for our situation [describe context] and why.", impact: "medium" },
+                { title: "Brainstorming Partner", desc: "Generate and refine ideas systematically.", prompt: "Brainstorm [topic/problem]. First, generate 20 ideas without filtering. Then: 1) Group by theme 2) Identify most promising 5 3) For each promising idea, list: quick wins to test it | potential pitfalls | resources needed | how to measure success.", impact: "medium" },
+                { title: "Feedback Delivery", desc: "Structure constructive feedback conversations.", prompt: "Help me give feedback about [issue] to [person/role]. Structure it as: 1) Specific observation (facts, not judgments) 2) Impact of the behavior 3) What I'd like to see instead 4) Offer to help 5) Questions to understand their perspective.", impact: "high" },
+                { title: "Learning Plan Creation", desc: "Create structured plans to learn new skills.", prompt: "I want to learn [skill] for [purpose]. Current level: [beginner/intermediate]. Time available: [hours/week]. Create a plan: 1) Key concepts to master in order 2) Practice exercises 3) Projects to build 4) How to measure progress 5) Timeline with milestones.", impact: "medium" }
+            ]
+        };
+        
+        // Job category mapping
+        function categorizeJob(jobTitle) {
+            const title = jobTitle.toLowerCase();
+            if (title.includes('marketing') || title.includes('brand') || title.includes('content') || title.includes('seo') || title.includes('social media') || title.includes('copywriter') || title.includes('growth')) return 'marketing';
+            if (title.includes('sales') || title.includes('account executive') || title.includes('business development') || title.includes('sdr') || title.includes('bdr')) return 'sales';
+            if (title.includes('developer') || title.includes('engineer') || title.includes('programmer') || title.includes('software') || title.includes('devops') || title.includes('frontend') || title.includes('backend') || title.includes('full stack')) return 'developer';
+            if (title.includes('finance') || title.includes('accountant') || title.includes('cfo') || title.includes('analyst') || title.includes('controller') || title.includes('treasury') || title.includes('investment')) return 'finance';
+            if (title.includes('hr') || title.includes('human resources') || title.includes('recruiter') || title.includes('talent') || title.includes('people ops') || title.includes('people operations')) return 'hr';
+            return 'default';
+        }
+        
+        // Personalize prompts
+        function personalizePrompt(prompt, jobTitle) {
+            return prompt.replace(/\[product\/service\]/g, 'your product/service')
+                        .replace(/\[company\]/g, 'your company')
+                        .replace(/\[audience\]/g, 'your target audience')
+                        .replace(/\[brand\/topic\]/g, jobTitle + '-related content')
+                        .replace(/\[competitor name\]/g, 'your main competitor')
+                        .replace(/\[business type\]/g, 'your business')
+                        .replace(/\[platforms\]/g, 'your platforms')
+                        .replace(/\[goal\]/g, 'your goal');
+        }
+        
+        let currentJobTitle = '';
+        let currentUseCases = [];
+        
+        function generateUseCases() {
+            const jobTitleInput = document.getElementById('jobTitle');
+            const experienceLevel = document.getElementById('experienceLevel').value;
+            const jobTitle = jobTitleInput.value.trim();
+            
+            if (!jobTitle) {
+                jobTitleInput.style.borderColor = '#ef4444';
+                jobTitleInput.focus();
+                return;
+            }
+            jobTitleInput.style.borderColor = 'var(--border)';
+            
+            currentJobTitle = jobTitle;
+            const category = categorizeJob(jobTitle);
+            let useCases = [...useCaseDatabase[category]];
+            
+            // Add some generic ones if category is specific
+            if (category !== 'default') {
+                const genericCases = useCaseDatabase.default.slice(0, 3);
+                useCases = [...useCases.slice(0, 7), ...genericCases];
+            }
+            
+            // Shuffle and take 10
+            useCases = useCases.sort(() => Math.random() - 0.5).slice(0, 10);
+            currentUseCases = useCases;
+            
+            // Display results
+            document.getElementById('resultJobTitle').textContent = jobTitle;
+            const listContainer = document.getElementById('useCasesList');
+            listContainer.innerHTML = useCases.map((uc, i) => `
+                <div class="use-case-card">
+                    <div class="use-case-header">
+                        <div class="use-case-number">${i + 1}</div>
+                        <div class="use-case-title">${uc.title}</div>
+                        <span class="impact-badge impact-${uc.impact}">${uc.impact === 'high' ? 'High Impact' : 'Medium Impact'}</span>
+                    </div>
+                    <p class="use-case-desc">${uc.desc}</p>
+                    <div class="use-case-prompt">
+                        <div class="prompt-label">Ready-to-Use Prompt</div>
+                        <div class="prompt-text">${personalizePrompt(uc.prompt, jobTitle)}</div>
+                        <button class="copy-prompt-btn" onclick="copyPrompt(this, ${i})">Copy</button>
+                    </div>
+                </div>
+            `).join('');
+            
+            document.getElementById('results').classList.add('show');
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Track in GA
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'generate_use_cases', {
+                    'job_title': jobTitle,
+                    'category': category,
+                    'experience_level': experienceLevel
+                });
+            }
+        }
+        
+        function copyPrompt(btn, index) {
+            const prompt = currentUseCases[index].prompt;
+            navigator.clipboard.writeText(personalizePrompt(prompt, currentJobTitle));
+            btn.textContent = 'Copied!';
+            btn.classList.add('copied');
+            setTimeout(() => {
+                btn.textContent = 'Copy';
+                btn.classList.remove('copied');
+            }, 2000);
+        }
+        
+        function copyResults() {
+            const text = currentUseCases.map((uc, i) => 
+                `${i + 1}. ${uc.title}\n${uc.desc}\n\nPrompt:\n${personalizePrompt(uc.prompt, currentJobTitle)}`
+            ).join('\n\n---\n\n');
+            
+            const header = `10 AI Use Cases for ${currentJobTitle}\nGenerated at futurehumanism.co/tools/ai-use-case-generator\n\n`;
+            navigator.clipboard.writeText(header + text);
+            
+            const btn = document.querySelector('.share-btn.copy');
+            btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg> Copied!';
+            setTimeout(() => {
+                btn.innerHTML = '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg> Copy All';
+            }, 2000);
+        }
+        
+        function shareTwitter() {
+            const text = `Just discovered 10 AI use cases for my job as a ${currentJobTitle}! \n\nFree tool that gives you ready-to-use prompts:`;
+            const url = 'https://futurehumanism.co/tools/ai-use-case-generator';
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        function shareLinkedIn() {
+            const url = 'https://futurehumanism.co/tools/ai-use-case-generator';
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        // Enter key support
+        document.getElementById('jobTitle').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') generateUseCases();
+        });
+    </script>
+</body>
+</html>
