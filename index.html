@@ -1422,6 +1422,132 @@
             opacity: 0.7;
         }
 
+        /* Testimonials Section */
+        .testimonials-section {
+            background: var(--bg-secondary);
+            padding: 80px 24px;
+        }
+        
+        .testimonials-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .testimonials-header {
+            text-align: center;
+            margin-bottom: 48px;
+        }
+        
+        .testimonials-header h2 {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        
+        .testimonials-header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .testimonial-card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 28px;
+            transition: transform 0.2s, border-color 0.2s;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-4px);
+            border-color: var(--accent);
+        }
+        
+        .testimonial-quote {
+            font-size: 1rem;
+            line-height: 1.7;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+            position: relative;
+        }
+        
+        .testimonial-quote::before {
+            content: '"';
+            position: absolute;
+            top: -20px;
+            left: -5px;
+            font-size: 4rem;
+            color: var(--accent);
+            opacity: 0.3;
+            font-family: Georgia, serif;
+            line-height: 1;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        
+        .testimonial-avatar {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent), #60a5fa);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 1rem;
+            color: white;
+        }
+        
+        .testimonial-info h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+        
+        .testimonial-info p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        
+        .testimonials-cta {
+            text-align: center;
+            margin-top: 48px;
+        }
+        
+        .testimonials-cta a {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--accent);
+            color: white;
+            padding: 14px 28px;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: background 0.2s, transform 0.2s;
+        }
+        
+        .testimonials-cta a:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 900px) {
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* About Section */
         .about-section {
             background: #1e1e1e;
@@ -3230,6 +3356,60 @@
             <div class="stat-item">
                 <h3>Daily</h3>
                 <p>Fresh insights delivered</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section" id="testimonials">
+        <div class="testimonials-inner">
+            <div class="testimonials-header">
+                <h2>What Readers Are Saying</h2>
+                <p>Join thousands of builders getting smarter about AI every day</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        Finally, AI content that isn't just hype. The tools section alone has saved me hours of research. Using the ROI calculator convinced my boss to approve our AI budget.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">JT</div>
+                        <div class="testimonial-info">
+                            <h4>James T.</h4>
+                            <p>Product Manager, Fintech Startup</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        I went from zero AI knowledge to automating 40% of my weekly reports. The 7-day challenge was the perfect starting point. Now I can't imagine working without AI tools.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">SK</div>
+                        <div class="testimonial-info">
+                            <h4>Sarah K.</h4>
+                            <p>Marketing Director</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-quote">
+                        The prompt generator is insane. I used to spend 20 minutes crafting the perfect prompt. Now it takes 30 seconds. My content output has tripled since finding this site.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">MR</div>
+                        <div class="testimonial-info">
+                            <h4>Mike R.</h4>
+                            <p>Freelance Writer & Creator</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="testimonials-cta">
+                <a href="/subscribe.html">
+                    Join the Community
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </a>
             </div>
         </div>
     </section>
