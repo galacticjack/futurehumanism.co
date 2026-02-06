@@ -51,7 +51,7 @@
     
     // Function to setup lazy loading for images
     function setupLazyLoading() {
-        const images = document.querySelectorAll('img[data-src], img[loading="lazy"]:not([data-processed])');
+        const images = document.querySelectorAll('img[data-src], img[loading="lazy"]:not([data-processed]):not([data-no-lazy])');
         
         images.forEach(img => {
             // Mark as processed to avoid double processing

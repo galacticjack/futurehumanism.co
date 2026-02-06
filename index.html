@@ -1019,11 +1019,18 @@
         @media (max-width: 1024px) {
             .hero-grid {
                 grid-template-columns: 1fr;
+                height: auto;
+            }
+
+            .hero-main {
+                height: 300px;
             }
 
             .hero-sidebar {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
+                height: auto;
+                margin-top: 16px;
             }
 
             .reframing-inner {
@@ -1414,7 +1421,7 @@
     <section class="hero-section animate-in">
         <div class="hero-grid">
             <a href="articles/ai-agents-2026-guide.html" class="hero-main">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI Agents 2026">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=1200&q=80" alt="AI Agents 2026" data-no-lazy="true">
                 <div class="hero-overlay">
                     <span class="hero-tag">Featured Guide</span>
                     <h1 class="hero-title">The Complete Guide to AI Agents in 2026</h1>
