@@ -120,7 +120,42 @@
         .dropdown-menu a:hover { background: rgba(255,255,255,0.05); color: var(--text-primary); }
         .dropdown-menu a svg { width: 16px; height: 16px; }
         .dropdown-divider { height: 1px; background: var(--border); margin: 8px 0; }
-        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu-btn { display: none !important; background: none; border: none; color: var(--text-primary); font-size: 1.5rem; cursor: pointer; }
+        
+        /* Nuclear SVG fix - prevent explosion */
+        svg {
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 24px !important;
+            max-height: 24px !important;
+            flex-shrink: 0 !important;
+        }
+        .chevron {
+            width: 16px !important;
+            height: 16px !important;
+        }
+        .logo-icon, .logo-icon img {
+            width: 36px !important;
+            height: 36px !important;
+            max-width: 36px !important;
+            max-height: 36px !important;
+        }
+        .nav-search svg, .share-dropdown svg {
+            width: 18px !important;
+            height: 18px !important;
+        }
+        .dropdown-menu a svg {
+            width: 16px !important;
+            height: 16px !important;
+        }
+        .mega-menu-item svg {
+            width: 20px !important;
+            height: 20px !important;
+        }
+        .mobile-menu {
+            display: none !important;
+        }
+        
         @media (max-width: 900px) {
             .mega-menu { min-width: 90vw; left: 0; transform: translateX(-20%); }
             .mega-menu-inner { grid-template-columns: 1fr 1fr; }
@@ -129,7 +164,7 @@
         @media (max-width: 768px) {
             .nav-dropdown, .nav-search, .share-dropdown { display: none; }
             .mobile-menu-btn { 
-                display: flex;
+                display: flex !important;
                 align-items: center;
                 justify-content: center;
                 width: 32px;
