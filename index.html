@@ -804,6 +804,53 @@
             color: #ba68c8;
         }
 
+        /* Quiz CTA Section */
+        .quiz-cta-section {
+            padding: 40px 24px;
+            background: var(--bg-secondary);
+            border-top: 2px solid #1E90FF;
+            border-bottom: 2px solid #1E90FF;
+        }
+        .quiz-cta-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 24px;
+        }
+        .quiz-cta-text {
+            flex: 1;
+            min-width: 280px;
+        }
+        .quiz-cta-text h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 8px;
+        }
+        .quiz-cta-text p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        .quiz-cta-btn {
+            display: inline-block;
+            padding: 14px 32px;
+            background: #1E90FF;
+            color: white;
+            font-weight: 700;
+            font-size: 1rem;
+            border-radius: 8px;
+            text-decoration: none;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .quiz-cta-btn:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+        }
+
         /* Accent Bar */
         .accent-bar {
             height: 60px;
@@ -1133,6 +1180,14 @@
             .newsletter-form input,
             .newsletter-form button {
                 width: 100%;
+            }
+
+            .quiz-cta-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .quiz-cta-text {
+                min-width: auto;
             }
 
             .products-section {
@@ -1468,13 +1523,13 @@
     </section>
 
     <!-- AI Readiness Quiz CTA -->
-    <section style="padding: 40px 24px; background: var(--bg-secondary); border-top: 2px solid #1E90FF; border-bottom: 2px solid #1E90FF;">
-        <div style="max-width: 900px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 24px;">
-            <div style="flex: 1; min-width: 280px;">
-                <h3 style="font-size: 1.5rem; font-weight: 700; color: white; margin-bottom: 8px;">How AI-Ready Is Your Business?</h3>
-                <p style="color: var(--text-secondary); font-size: 1rem;">Take our free 2-minute quiz and get a personalized score with actionable recommendations.</p>
+    <section class="quiz-cta-section">
+        <div class="quiz-cta-inner">
+            <div class="quiz-cta-text">
+                <h3>How AI-Ready Is Your Business?</h3>
+                <p>Take our free 2-minute quiz and get a personalized score with actionable recommendations.</p>
             </div>
-            <a href="/quiz.html" style="display: inline-block; padding: 14px 32px; background: #1E90FF; color: white; font-weight: 700; font-size: 1rem; border-radius: 8px; text-decoration: none; border: none; transition: all 0.2s; white-space: nowrap;" onmouseover="this.style.opacity='0.9';this.style.transform='translateY(-2px)'" onmouseout="this.style.opacity='1';this.style.transform='none'">Take the Quiz →</a>
+            <a href="/quiz.html" class="quiz-cta-btn">Take the Quiz →</a>
         </div>
     </section>
 
