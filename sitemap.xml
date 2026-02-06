@@ -261,6 +261,12 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://futurehumanism.co/tools/ai-glossary.html</loc>
+    <lastmod>2026-02-07</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://futurehumanism.co/tools/ai-job-analyzer.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
