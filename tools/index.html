@@ -17,6 +17,7 @@
     <meta property="og:title" content="Free AI Tools for Builders | Future Humanism">
     <meta property="og:description" content="Free tools for freelancers, founders, and operators. Calculators, quizzes, and utilities that actually help you work smarter.">
     <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+    <link rel="canonical" href="https://futurehumanism.co/tools/">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
@@ -26,8 +27,9 @@
             --text-secondary: #b0b0b0;
             --text-muted: #707070;
             --bg-primary: #0a0a0a;
-            --bg-secondary: #141414;
-            --accent: #6366F1;
+            --bg-secondary: #1a1a1a;
+            --accent: #1E90FF;
+            --accent-hover: #3BA0FF;
             --border: #2a2a2a;
         }
         body {
@@ -36,6 +38,9 @@
             color: var(--text-primary);
             line-height: 1.5;
         }
+        a { color: var(--accent); text-decoration: none; }
+        a:hover { color: var(--accent-hover); }
+        
         header {
             padding: 16px 24px;
             border-bottom: 1px solid var(--border);
@@ -90,6 +95,8 @@
             padding: 10px 20px;
             border-radius: 6px;
         }
+        .nav-cta:hover { background: var(--accent-hover); }
+        
         .page-header {
             max-width: 800px;
             margin: 0 auto;
@@ -148,11 +155,16 @@
             border-color: var(--accent);
         }
         .product-visual {
+            background: #141414;
             padding: 60px;
             display: flex;
             align-items: center;
             justify-content: center;
-            font-size: 5rem;
+        }
+        .product-visual svg {
+            width: 80px;
+            height: 80px;
+            color: var(--accent);
         }
         .product-details {
             padding: 40px;
@@ -171,16 +183,16 @@
             width: fit-content;
         }
         .badge-free {
-            background: rgba(16, 185, 129, 0.2);
-            color: #34d399;
+            background: rgba(30, 144, 255, 0.15);
+            color: var(--accent);
         }
         .badge-new {
-            background: rgba(99, 102, 241, 0.2);
-            color: #818CF8;
+            background: rgba(30, 144, 255, 0.15);
+            color: var(--accent);
         }
         .badge-soon {
-            background: rgba(156, 39, 176, 0.2);
-            color: #ba68c8;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text-secondary);
         }
         .product-details h3 {
             font-size: 1.6rem;
@@ -205,11 +217,15 @@
             font-size: 0.9rem;
         }
         .product-features li::before {
-            content: "✓";
-            color: #66bb6a;
+            content: "";
             position: absolute;
             left: 0;
-            font-weight: 600;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: var(--accent);
+            border-radius: 50%;
         }
         .product-cta {
             display: flex;
@@ -237,7 +253,8 @@
             font-size: 0.95rem;
         }
         .btn-primary:hover {
-            background: #818CF8;
+            background: var(--accent-hover);
+            color: white;
             transform: translateY(-2px);
         }
         .btn-secondary {
@@ -267,8 +284,10 @@
             border-color: var(--accent);
         }
         .product-card-icon {
-            font-size: 2.5rem;
+            width: 48px;
+            height: 48px;
             margin-bottom: 16px;
+            color: var(--accent);
         }
         .product-card h3 {
             font-size: 1.1rem;
@@ -302,20 +321,76 @@
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
+        
+        /* Footer */
         footer {
             border-top: 1px solid var(--border);
-            padding: 40px 24px;
-            text-align: center;
+            padding: 48px 24px;
+            background: var(--bg-primary);
         }
-        footer p {
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 48px;
+            margin-bottom: 40px;
+        }
+        .footer-brand p {
             color: var(--text-secondary);
             font-size: 0.9rem;
+            line-height: 1.7;
+            margin-top: 12px;
         }
-        footer a { color: var(--accent); text-decoration: none; }
+        .footer-links h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+        .footer-links ul {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        .footer-links a {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+        .footer-links a:hover {
+            color: var(--text-primary);
+        }
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+        }
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        .footer-social {
+            display: flex;
+            gap: 16px;
+        }
+        .footer-social a {
+            color: var(--text-muted);
+            transition: color 0.2s;
+        }
+        .footer-social a:hover {
+            color: var(--accent);
+        }
         
         @media (max-width: 768px) {
             header { padding: 12px 16px; }
-            .logo { font-size: 1.1rem; }
+            .logo-text { font-size: 1.1rem; }
             nav { gap: 12px; }
             nav a:not(.nav-cta) { display: none; }
             .nav-cta { padding: 8px 14px; font-size: 0.85rem; }
@@ -326,7 +401,8 @@
             .section-header { padding: 0 16px; margin-bottom: 24px; }
             .section-header h2 { font-size: 1.25rem; }
             .product-full { grid-template-columns: 1fr; margin-bottom: 20px; }
-            .product-visual { padding: 32px; font-size: 3.5rem; }
+            .product-visual { padding: 32px; }
+            .product-visual svg { width: 60px; height: 60px; }
             .product-details { padding: 24px 20px; }
             .product-details h3 { font-size: 1.3rem; }
             .product-features { margin-bottom: 20px; }
@@ -336,7 +412,9 @@
             .products-grid { grid-template-columns: 1fr; padding: 0 16px 40px; }
             .guarantee { margin: 20px 16px 40px; padding: 24px 20px; }
             .guarantee h3 { font-size: 1.1rem; }
-            footer { padding: 32px 16px; }
+            .footer-grid { grid-template-columns: 1fr 1fr; gap: 32px; }
+            .footer-brand { grid-column: 1 / -1; }
+            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
         }
     </style>
 </head>
@@ -350,6 +428,7 @@
             <nav>
                 <a href="/">Home</a>
                 <a href="/articles/">Articles</a>
+                <a href="/tools/">Tools</a>
                 <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
                 <a href="/subscribe.html" class="nav-cta">Subscribe</a>
             </nav>
@@ -367,10 +446,12 @@
     </div>
     
     <div class="products-section">
-        <!-- Headline Analyzer - NEW FEATURED -->
+        <!-- Headline Analyzer -->
         <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);">
-                <span style="font-size: 4rem; color: white; opacity: 0.9;">📝</span>
+            <div class="product-visual">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10" />
+                </svg>
             </div>
             <div class="product-details">
                 <span class="product-badge badge-new">New</span>
@@ -391,8 +472,10 @@
 
         <!-- AI ROI Calculator -->
         <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 100%);">
-                <span style="font-size: 4rem; color: white; opacity: 0.9;">💰</span>
+            <div class="product-visual">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
             </div>
             <div class="product-details">
                 <span class="product-badge badge-free">Free</span>
@@ -413,8 +496,10 @@
 
         <!-- AI Readiness Quiz -->
         <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);">
-                <span style="font-size: 4rem; color: white; opacity: 0.9;">🧠</span>
+            <div class="product-visual">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9.879 7.519c1.171-1.025 3.071-1.025 4.242 0 1.172 1.025 1.172 2.687 0 3.712-.203.179-.43.326-.67.442-.745.361-1.45.999-1.45 1.827v.75M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9 5.25h.008v.008H12v-.008z" />
+                </svg>
             </div>
             <div class="product-details">
                 <span class="product-badge badge-free">Free</span>
@@ -435,8 +520,10 @@
 
         <!-- BizCalc -->
         <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%);">
-                <span style="font-size: 4rem; color: white; opacity: 0.9;">📊</span>
+            <div class="product-visual">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" />
+                </svg>
             </div>
             <div class="product-details">
                 <span class="product-badge badge-new">New</span>
@@ -457,8 +544,10 @@
 
         <!-- ProofDrop -->
         <div class="product-full">
-            <div class="product-visual" style="background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);">
-                <span style="font-size: 4rem; color: white; opacity: 0.9;">✅</span>
+            <div class="product-visual">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
             </div>
             <div class="product-details">
                 <span class="product-badge badge-new">New</span>
@@ -486,48 +575,52 @@
     <div class="products-grid">
         <!-- Prompt Playbook -->
         <div class="product-card">
-            <div class="product-card-icon"></div>
+            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
             <span class="product-badge badge-soon">Coming Soon</span>
             <h3>AI Prompt Playbook</h3>
             <p>50+ battle-tested prompts for marketers, founders, and operators. Stop starting from scratch.</p>
             <div class="product-cta">
-                <span class="price">$9</span>
                 <a href="/subscribe.html" class="btn-secondary">Get notified</a>
             </div>
         </div>
 
         <!-- Automation Starter Kit -->
         <div class="product-card">
-            <div class="product-card-icon"></div>
+            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12a7.5 7.5 0 0015 0m-15 0a7.5 7.5 0 1115 0m-15 0H3m16.5 0H21m-1.5 0H12m-8.457 3.077l1.41-.513m14.095-5.13l1.41-.513M5.106 17.785l1.15-.964m11.49-9.642l1.149-.964M7.501 19.795l.75-1.3m7.5-12.99l.75-1.3m-6.063 16.658l.26-1.477m2.605-14.772l.26-1.477m0 17.726l-.26-1.477M10.698 4.614l-.26-1.477M16.5 19.794l-.75-1.299M7.5 4.205L12 12m6.894 5.785l-1.149-.964M6.256 7.178l-1.15-.964m15.352 8.864l-1.41-.513M4.954 9.435l-1.41-.514M12.002 12l-3.75 6.495" />
+            </svg>
             <span class="product-badge badge-soon">Coming Soon</span>
             <h3>Automation Starter Kit</h3>
             <p>Templates and workflows to automate 10+ hours of repetitive work every week.</p>
             <div class="product-cta">
-                <span class="price">$12</span>
                 <a href="/subscribe.html" class="btn-secondary">Get notified</a>
             </div>
         </div>
 
         <!-- ReplyReady Pro -->
         <div class="product-card">
-            <div class="product-card-icon">✉️</div>
+            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
             <span class="product-badge badge-soon">Coming Soon</span>
             <h3>ReplyReady Pro</h3>
             <p>Grade your cold emails before you send them. 30+ signals analyzed to boost reply rates.</p>
             <div class="product-cta">
-                <span class="price">$29<span>/mo</span></span>
                 <a href="/subscribe.html" class="btn-secondary">Get notified</a>
             </div>
         </div>
 
         <!-- LinkVault -->
         <div class="product-card">
-            <div class="product-card-icon"></div>
+            <svg class="product-card-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.19 8.688a4.5 4.5 0 011.242 7.244l-4.5 4.5a4.5 4.5 0 01-6.364-6.364l1.757-1.757m13.35-.622l1.757-1.757a4.5 4.5 0 00-6.364-6.364l-4.5 4.5a4.5 4.5 0 001.242 7.244" />
+            </svg>
             <span class="product-badge badge-soon">Coming Soon</span>
             <h3>LinkVault</h3>
             <p>Organize all your affiliate links in one dashboard. Track commissions, check link health, export data.</p>
             <div class="product-cta">
-                <span class="price">$19<span>/mo</span></span>
                 <a href="/subscribe.html" class="btn-secondary">Get notified</a>
             </div>
         </div>
@@ -539,7 +632,48 @@
     </div>
 
     <footer>
-        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html">Newsletter</a></p>
+        <div class="footer-inner">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="/" class="logo">
+                        <div class="logo-icon"><img src="../images/profile.jpg" alt="Future Humanism"></div>
+                        <div class="logo-text">Future<span>Humanism</span></div>
+                    </a>
+                    <p>Reframing the future, one insight at a time. Daily tools, tutorials, and unfiltered takes for builders navigating the AI revolution.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Content</h4>
+                    <ul>
+                        <li><a href="/articles/">All Articles</a></li>
+                        <li><a href="/tools/">Free Tools</a></li>
+                        <li><a href="/resources.html">Resources</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a></li>
+                        <li><a href="/subscribe.html">Newsletter</a></li>
+                        <li><a href="/about.html">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="/privacy.html">Privacy Policy</a></li>
+                        <li><a href="/terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>2026 Future Humanism. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="https://twitter.com/FutureHumanism" target="_blank" aria-label="Twitter">
+                        <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    </a>
+                </div>
+            </div>
+        </div>
     </footer>
 </body>
 </html>
