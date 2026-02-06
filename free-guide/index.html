@@ -35,7 +35,7 @@
     <meta name="twitter:image" content="https://futurehumanism.co/images/og-free-guide.jpg">
     <meta name="twitter:site" content="@FutureHumanism">
     
-    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     
     <style>
@@ -59,6 +59,21 @@
             color: var(--text-primary);
             min-height: 100vh;
             line-height: 1.6;
+        }
+        
+        /* Nuclear SVG fix */
+        svg {
+            width: 20px !important;
+            height: 20px !important;
+            max-width: 24px !important;
+            max-height: 24px !important;
+            flex-shrink: 0 !important;
+        }
+        .logo-icon, .logo-icon img {
+            width: 36px !important;
+            height: 36px !important;
+            max-width: 36px !important;
+            max-height: 36px !important;
         }
         
         /* Header */
@@ -418,6 +433,10 @@
             background: #0A66C2;
             color: white;
         }
+        .share-btn.facebook {
+            background: #1877F2;
+            color: white;
+        }
         .share-btn.copy {
             background: var(--bg-card);
             color: var(--text-primary);
@@ -450,7 +469,7 @@
         <div class="header-inner">
             <a href="/" class="logo">
                 <div class="logo-icon">
-                    <img src="images/logo.png" alt="Future Humanism">
+                    <img src="../images/profile.jpg" alt="Future Humanism">
                 </div>
                 <span class="logo-text">Future Humanism</span>
             </a>
@@ -502,9 +521,37 @@
             <p>Join 1,000+ AI practitioners. No spam, unsubscribe anytime.</p>
             
             <div class="email-form-container">
-                <!-- Beehiiv embed -->
-                <iframe src="https://embeds.beehiiv.com/f4e5a15b-f858-4e2a-a31d-35de70d8bf69?slim=true" data-test-id="beehiiv-embed" height="52" frameborder="0" scrolling="no" style="margin: 0; border-radius: 0px !important; background-color: transparent;"></iframe>
+                <form id="guide-form" class="guide-form" style="display: flex; gap: 12px; max-width: 500px; margin: 0 auto;">
+                    <input type="email" name="email" placeholder="Enter your email" required style="flex: 1; padding: 14px 18px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg-card); color: white; font-size: 16px;">
+                    <button type="submit" style="padding: 14px 28px; background: var(--accent); color: white; border: none; border-radius: 8px; font-weight: 600; cursor: pointer; white-space: nowrap;">Get Free Guide</button>
+                </form>
+                <p id="form-success" style="display: none; color: var(--success); margin-top: 16px;">Check your inbox! The guide is on its way.</p>
             </div>
+            <script>
+            document.getElementById('guide-form').addEventListener('submit', async function(e) {
+                e.preventDefault();
+                const email = this.querySelector('input[name="email"]').value;
+                const btn = this.querySelector('button');
+                btn.textContent = 'Sending...';
+                btn.disabled = true;
+                try {
+                    await fetch('https://formspree.io/f/myzevrzl', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                        body: JSON.stringify({ email: email, source: 'free-guide-page' })
+                    });
+                    this.style.display = 'none';
+                    document.getElementById('form-success').style.display = 'block';
+                    if (typeof gtag === 'function') {
+                        gtag('event', 'guide_download', { event_category: 'conversion' });
+                    }
+                } catch(err) {
+                    btn.textContent = 'Get Free Guide';
+                    btn.disabled = false;
+                    alert('Something went wrong. Please try again.');
+                }
+            });
+            </script>
             
             <p class="trust-line">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
