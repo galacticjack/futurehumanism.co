@@ -1087,6 +1087,15 @@
                 'event_label': rank.name,
                 'value': percentage
             });
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: percentage,
+                    toolName: 'AI or Human Quiz',
+                    type: 'quiz'
+                }, 3000);
+            }
         }
         
         function copyLink() {

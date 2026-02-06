@@ -798,6 +798,15 @@
                     'experience_level': experienceLevel
                 });
             }
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: 75,
+                    toolName: 'AI Use Case Generator',
+                    type: 'calculator'
+                }, 3000);
+            }
         }
         
         function copyPrompt(btn, index) {

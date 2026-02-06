@@ -1086,6 +1086,9 @@
         <p class="back-link"><a href="/tools/">← View all tools</a></p>
     </footer>
 
+    <!-- Email Capture Component -->
+    <script src="../components/email-capture.js"></script>
+
     <script>
         // Word lists for analysis
         const POWER_WORDS = [
@@ -1276,6 +1279,15 @@
 
             // Scroll to results
             results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: analysis.totalScore,
+                    toolName: 'Headline Analyzer',
+                    type: 'calculator'
+                }, 3000);
+            }
         }
 
         function animateScore(target) {

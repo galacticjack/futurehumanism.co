@@ -844,6 +844,15 @@
                     'industry': industry,
                     'ai_exposure_score': finalScore
                 });
+                
+                // Show email capture after 3 seconds
+                if (typeof triggerEmailCaptureOnResults === 'function') {
+                    triggerEmailCaptureOnResults({
+                        score: finalScore,
+                        toolName: 'AI Job Impact Analyzer',
+                        type: 'calculator'
+                    }, 4500); // 1.5s animation + 3s delay
+                }
             }, 1500);
         }
         

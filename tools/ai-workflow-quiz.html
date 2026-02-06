@@ -994,6 +994,15 @@
                 'event_label': dominantType
             });
             
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: typeof total !== 'undefined' ? total : 75,
+                    toolName: 'AI Workflow Quiz',
+                    type: 'quiz'
+                }, 3000);
+            }
+            
             // Store result for sharing
             window.quizResult = {
                 type: dominantType,

@@ -614,6 +614,9 @@
     <!-- Canvas for shareable card -->
     <canvas id="badgeCanvas" width="600" height="315" style="display: none;"></canvas>
     
+    <!-- Email Capture Component -->
+    <script src="../components/email-capture.js"></script>
+    
     <script>
         const questions = [
             {
@@ -858,6 +861,13 @@
                 'event_label': 'AI Productivity Score',
                 'value': total
             });
+            
+            // Show email capture after 3 seconds
+            triggerEmailCaptureOnResults({
+                score: total,
+                toolName: 'AI Productivity Score',
+                type: 'quiz'
+            }, 3000);
         }
         
         function shareTwitter() {

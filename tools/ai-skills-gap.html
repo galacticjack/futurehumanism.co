@@ -917,6 +917,9 @@
         <p>© 2026 <a href="/">Future Humanism</a> · <a href="/tools/">More Free Tools</a></p>
     </footer>
 
+    <!-- Email Capture Component -->
+    <script src="../components/email-capture.js"></script>
+
     <script>
         // Quiz State
         let currentQuestion = 1;
@@ -1083,6 +1086,15 @@
                 'score': score,
                 'level': level.label
             });
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: typeof total !== 'undefined' ? total : 75,
+                    toolName: 'AI Skills Gap Analyzer',
+                    type: 'calculator'
+                }, 3000);
+            }
 
             // Scroll to top of results
             window.scrollTo({ top: 0, behavior: 'smooth' });

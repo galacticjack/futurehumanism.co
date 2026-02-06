@@ -1070,6 +1070,16 @@
                 'team_size': teamSize
             });
             
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                const roiScore = Math.min(100, Math.round((netAnnualSavings / 10000) * 10));
+                triggerEmailCaptureOnResults({
+                    score: roiScore,
+                    toolName: 'AI ROI Calculator',
+                    type: 'calculator'
+                }, 3000);
+            }
+            
             // Scroll to top of results
             window.scrollTo({ top: 0, behavior: 'smooth' });
         }

@@ -1323,6 +1323,15 @@
                 'value': totalScore
             });
             
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: totalScore,
+                    toolName: 'AI Readiness Assessment',
+                    type: 'quiz'
+                }, 3000);
+            }
+            
             // Generate shareable result card
             setTimeout(() => {
                 generateResultCard(totalScore, level, adoption, strategy, adaptability, preparedness);

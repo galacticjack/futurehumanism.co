@@ -1371,6 +1371,15 @@
                     'weekly_hours': totalWeeklySaved,
                     'role': userData.role
                 });
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: typeof total !== 'undefined' ? total : 75,
+                    toolName: 'Automation Savings Calculator',
+                    type: 'calculator'
+                }, 3000);
+            }
             }
         }
         
