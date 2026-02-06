@@ -141,6 +141,12 @@
             color: var(--accent);
         }
         
+        nav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
         nav a {
             color: var(--text-secondary);
             text-decoration: none;
@@ -151,6 +157,60 @@
         
         nav a:hover {
             color: var(--accent);
+        }
+        
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            padding: 0.5rem;
+        }
+        
+        .hamburger span {
+            width: 24px;
+            height: 2px;
+            background: var(--text-primary);
+            margin: 3px 0;
+            transition: 0.3s;
+        }
+        
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 60px;
+            left: 0;
+            right: 0;
+            background: var(--bg-secondary);
+            border-bottom: 1px solid var(--border);
+            padding: 1rem;
+            z-index: 99;
+        }
+        
+        .mobile-menu.active {
+            display: block;
+        }
+        
+        .mobile-menu a {
+            display: block;
+            padding: 0.75rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            border-radius: 8px;
+        }
+        
+        .mobile-menu a:hover {
+            background: var(--bg-card);
+            color: var(--accent);
+        }
+        
+        @media (max-width: 768px) {
+            nav a {
+                display: none;
+            }
+            
+            .hamburger {
+                display: flex;
+            }
         }
         
         /* Hero */
@@ -738,9 +798,21 @@
                 <a href="/tools/">All Tools</a>
                 <a href="/articles/">Articles</a>
                 <a href="/about.html">About</a>
+                <div class="hamburger" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
     </header>
+    
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/tools/">All Tools</a>
+        <a href="/articles/">Articles</a>
+        <a href="/about.html">About</a>
+        <a href="/">Home</a>
+    </div>
     
     <section class="hero">
         <h1>AI <span>Prompt Generator</span></h1>
@@ -1482,6 +1554,21 @@ Provide a comprehensive response that fully addresses the request.`,
         
         // Initialize on load
         init();
+        
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+        
+        // Close mobile menu when clicking outside
+        document.addEventListener('click', function(e) {
+            const menu = document.getElementById('mobileMenu');
+            const hamburger = document.querySelector('.hamburger');
+            if (!menu.contains(e.target) && !hamburger.contains(e.target)) {
+                menu.classList.remove('active');
+            }
+        });
     </script>
 </body>
 </html>
