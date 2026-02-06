@@ -535,6 +535,68 @@
                 justify-content: center;
             }
         }
+            /* Share Section - Clean */
+        .share-section {
+            margin: 48px 0;
+            padding: 32px 0;
+            border-top: 1px solid var(--border);
+        }
+        .share-section h4 {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            border: none;
+            cursor: pointer;
+            font-family: inherit;
+        }
+        .share-btn.twitter { background: #000; color: white; }
+        .share-btn.twitter:hover { background: #333; }
+        .share-btn.linkedin { background: #0077B5; color: white; }
+        .share-btn.linkedin:hover { background: #006396; }
+        .share-btn.copy-link { background: var(--bg-secondary); color: var(--text-primary); border: 1px solid var(--border); }
+        .share-btn.copy-link:hover { border-color: var(--accent); }
+        .share-btn svg { width: 16px; height: 16px; flex-shrink: 0; }
+        .follow-section { text-align: center; }
+        .follow-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 28px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .follow-btn:hover { border-color: var(--accent); }
+        .follow-btn svg { width: 18px; height: 18px; }
+        @media (max-width: 480px) {
+            .share-buttons { flex-direction: column; align-items: center; }
+            .share-btn { width: 200px; justify-content: center; }
+        }
     </style>
     <script>
         // Reading Progress Bar
