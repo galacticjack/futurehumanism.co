@@ -1,13 +1,5 @@
 [
   {
-    "slug": "agentic-ai-100-billion-market-2026",
-    "title": "The $100 Billion Agentic AI Boom: Why 2026 Is the Year AI Agents Go Mainstream",
-    "description": "The agentic AI market is exploding from $4.5B to $100B by 2033. Here's what enterprises, startups, and professionals need to know about the autonomous AI revolution reshaping every industry.",
-    "date": "2026-02-07",
-    "category": "AI Market Analysis",
-    "url": "/articles/agentic-ai-100-billion-market-2026.html"
-  },
-  {
     "slug": "ai-model-convergence-2026",
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
@@ -30,6 +22,14 @@
     "date": "2026-02-07",
     "category": "AI Agents",
     "url": "/articles/agent-infrastructure-orchestration-2026.html"
+  },
+  {
+    "slug": "agentic-ai-100-billion-market-2026",
+    "title": "The $100 Billion Agentic AI Boom: Why 2026 Is the Year AI Agents Go Mainstream",
+    "description": "The agentic AI market is exploding from $4.5B to $100B by 2033. Here's what enterprises, startups, and professionals need to know about the autonomous AI revolution reshaping every industry.",
+    "date": "2026-02-07",
+    "category": "AI Market Analysis",
+    "url": "/articles/agentic-ai-100-billion-market-2026.html"
   },
   {
     "slug": "chatgpt-pro-200-enterprise-ai-shift",
