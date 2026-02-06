@@ -296,6 +296,7 @@
             border-top: 1px solid var(--border);
         }
         .share-section h4 {
+            text-align: left;
             font-size: 0.85rem;
             color: var(--text-secondary);
             text-transform: uppercase;
@@ -305,7 +306,7 @@
         }
         .share-buttons {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start;
             gap: 12px;
             flex-wrap: wrap;
             margin-bottom: 24px;
@@ -855,7 +856,7 @@ Create an outline first, get approval, then write the full piece.</div>
         background: rgba(0,0,0,0.85);
         z-index: 10000;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-start;
         padding: 20px;
     }
     .exit-popup.show {
@@ -926,7 +927,7 @@ Create an outline first, get approval, then write the full piece.</div>
     }
     .exit-popup-features {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         gap: 8px;
         flex-wrap: wrap;
         margin-bottom: 20px;
