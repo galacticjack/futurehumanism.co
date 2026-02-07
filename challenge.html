@@ -1044,6 +1044,9 @@
             
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
+            const btn = this.querySelector('button');
+            btn.textContent = 'Signing up...';
+            btn.disabled = true;
             
             // Track signup
             if (typeof gtag !== 'undefined') {
@@ -1053,15 +1056,32 @@
                 });
             }
             
-            // Redirect to Beehiiv with pre-filled email
-            const beehiivUrl = `https://futurehumanism.beehiiv.com/subscribe?email=${encodeURIComponent(email)}&utm_source=challenge&utm_medium=web`;
-            
-            // Show success and open Beehiiv in new tab
-            document.getElementById('signupBox').style.display = 'none';
-            document.getElementById('successMessage').classList.add('show');
-            
-            // Open Beehiiv subscription
-            window.open(beehiivUrl, '_blank');
+            // Submit to Formspree
+            try {
+                const response = await fetch('https://formspree.io/f/myzevrzl', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        name: name,
+                        email: email,
+                        source: '7-day-challenge',
+                        _subject: 'New 7-Day AI Challenge Signup!'
+                    })
+                });
+                
+                if (response.ok) {
+                    document.getElementById('signupBox').style.display = 'none';
+                    document.getElementById('successMessage').classList.add('show');
+                } else {
+                    btn.textContent = 'Try Again';
+                    btn.disabled = false;
+                    alert('Signup failed. Please try again.');
+                }
+            } catch (err) {
+                btn.textContent = 'Try Again';
+                btn.disabled = false;
+                alert('Network error. Please try again.');
+            }
         });
         
         // Copy link function
