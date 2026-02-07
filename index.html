@@ -935,35 +935,52 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            gap: 20px;
-            margin-top: 24px;
+            gap: 16px;
+            margin-top: 32px;
+            padding: 16px 0;
+            position: relative;
+            z-index: 10;
         }
         
         .stories-nav-btn {
-            padding: 12px 24px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
+            padding: 14px 28px;
+            background: var(--accent);
+            border: none;
             border-radius: 8px;
-            color: var(--text-primary);
-            font-size: 0.9rem;
+            color: white !important;
+            font-size: 0.95rem;
             font-weight: 600;
             cursor: pointer;
             transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
+            pointer-events: auto;
+            -webkit-appearance: none;
+            appearance: none;
         }
         
         .stories-nav-btn:hover:not(:disabled) {
-            border-color: var(--accent);
-            color: var(--accent);
+            background: var(--accent-hover);
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
+        }
+        
+        .stories-nav-btn:active:not(:disabled) {
+            transform: translateY(0);
         }
         
         .stories-nav-btn:disabled {
-            opacity: 0.4;
+            background: var(--bg-secondary);
+            color: var(--text-muted) !important;
+            opacity: 0.5;
             cursor: not-allowed;
+            box-shadow: none;
         }
         
         .stories-page-info {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 500;
+            padding: 0 12px;
         }
 
         .grid-story-card {
@@ -3766,7 +3783,11 @@
             const pageSpan = document.getElementById('storiesPage');
             const totalSpan = document.getElementById('storiesTotalPages');
             
-            if (!grid || !prevBtn || !nextBtn) return;
+            if (!grid || !prevBtn || !nextBtn) {
+                console.log('Pagination elements not found');
+                return;
+            }
+            console.log('Pagination initialized');
             
             const cards = Array.from(grid.querySelectorAll('.grid-story-card'));
             const perPage = 12; // 3 rows of 4
