@@ -4,7 +4,7 @@
     "title": "Snowflake and OpenAI's $200 Million Partnership: What It Means for Enterprise AI",
     "description": "Snowflake and OpenAI just announced a $200 million multi-year partnership. Here's why this deal signals a fundamental shift in how enterprises will deploy AI agents and what it means for the future of business intelligence.",
     "date": "2026-02-07",
-    "category": "Enterprise AI",
+    "category": "General",
     "url": "/articles/snowflake-openai-200-million-partnership.html"
   },
   {
@@ -12,7 +12,7 @@
     "title": "AI Agents Are Eating Software - Why Every Company Needs an Agent Strategy in 2026",
     "description": "AI agents are transforming how businesses operate. From customer service to data analysis, autonomous agents are replacing traditional software workflows. Here's why every company needs an agent strategy now.",
     "date": "2026-02-07",
-    "category": "Business Strategy",
+    "category": "General",
     "url": "/articles/ai-agents-eating-software.html"
   },
   {
@@ -20,7 +20,7 @@
     "title": "The $50/Month Stack That Runs My Entire Business",
     "description": "Every tool I use to run a profitable side business for less than the cost of a gym membership.",
     "date": "2026-02-07",
-    "category": "Tutorial",
+    "category": "General",
     "url": "/articles/50-dollar-tech-stack.html"
   },
   {
@@ -28,7 +28,7 @@
     "title": "Agent Infrastructure: Why 2026 Is The Year of Orchestrated AI Systems",
     "description": "Explore the shift to multiagent AI systems in 2026, enterprise governance challenges, key frameworks like LangGraph & AutoGen, infrastructure scaling, and future predictions in orchestrated AI.",
     "date": "2026-02-07",
-    "category": "AI Agents",
+    "category": "General",
     "url": "/articles/agent-infrastructure-orchestration-2026.html"
   },
   {
@@ -36,7 +36,7 @@
     "title": "The Rise of Local LLMs: Running AI on Your Own Hardware",
     "description": "Why running AI models locally is becoming the smart choice for privacy, cost control, and performance. Complete guide to setting up your own AI infrastructure.",
     "date": "2026-02-07",
-    "category": "Local AI",
+    "category": "General",
     "url": "/articles/local-llms-running-ai-on-your-hardware.html"
   },
   {
@@ -44,7 +44,7 @@
     "title": "World Models: The AI Breakthrough That Will Change Everything After LLMs",
     "description": "Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next paradigm shift is here.",
     "date": "2026-02-07",
-    "category": "Deep Dive",
+    "category": "General",
     "url": "/articles/ai-world-models-next-breakthrough.html"
   },
   {
@@ -52,7 +52,7 @@
     "title": "The Complete Guide to AI Agents in 2026",
     "description": "Everything you need to know about AI agents: what they are, how they work, and why 2026 is the year they go from demos to real workers.",
     "date": "2026-02-07",
-    "category": "Deep Dive",
+    "category": "General",
     "url": "/articles/ai-agents-2026-guide.html"
   },
   {
@@ -60,7 +60,7 @@
     "title": "Remote Work in 2026: The Async-First Companies Winning the Talent War",
     "description": "Why the best companies have abandoned real-time communication. The tools, practices, and culture shifts defining the future of remote work.",
     "date": "2026-02-07",
-    "category": "Future of Work",
+    "category": "General",
     "url": "/articles/remote-work-async-culture-2026.html"
   },
   {
@@ -68,7 +68,7 @@
     "title": "The $100 Billion Agentic AI Boom: Why 2026 Is the Year AI Agents Go Mainstream",
     "description": "The agentic AI market is exploding from $4.5B to $100B by 2033. Here's what enterprises, startups, and professionals need to know about the autonomous AI revolution reshaping every industry.",
     "date": "2026-02-07",
-    "category": "AI Market Analysis",
+    "category": "General",
     "url": "/articles/agentic-ai-100-billion-market-2026.html"
   },
   {
@@ -76,7 +76,7 @@
     "title": "ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's Future",
     "description": "OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape corporate budgets and competitive landscapes in 2026.",
     "date": "2026-02-07",
-    "category": "Enterprise AI Strategy",
+    "category": "General",
     "url": "/articles/chatgpt-pro-200-enterprise-ai-shift.html"
   },
   {
@@ -84,7 +84,7 @@
     "title": "Claude vs ChatGPT: The Only Comparison That Actually Matters",
     "description": "Forget benchmarks. Here's how Claude and ChatGPT actually perform on real work-coding, writing, analysis, and reasoning.",
     "date": "2026-02-07",
-    "category": "Comparison",
+    "category": "General",
     "url": "/articles/claude-vs-gpt-comparison.html"
   },
   {
@@ -92,7 +92,7 @@
     "title": "Health Tech in 2026: What Your Wearables Can Actually Tell You Now",
     "description": "The health metrics worth tracking, the wearables that deliver, and how AI is turning biometric data into actionable health insights.",
     "date": "2026-02-07",
-    "category": "Health & Wellness",
+    "category": "General",
     "url": "/articles/health-tech-wearables-2026.html"
   },
   {
@@ -100,7 +100,7 @@
     "title": "The AI Agent Economy: Why Every Business Will Have Digital Employees by 2027",
     "description": "The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transform every industry by 2027.",
     "date": "2026-02-07",
-    "category": "AI Insights",
+    "category": "General",
     "url": "/articles/ai-agent-economy-2027.html"
   },
   {
@@ -108,7 +108,7 @@
     "title": "The Creator Economy in 2026: AI Tools That Actually Move the Needle",
     "description": "How creators are using AI to produce more content, grow faster, and build sustainable businesses. The tools, workflows, and strategies that work.",
     "date": "2026-02-07",
-    "category": "Creator Economy",
+    "category": "General",
     "url": "/articles/creator-economy-ai-tools-2026.html"
   },
   {
@@ -116,7 +116,7 @@
     "title": "How to Build Your First AI Agent: The Complete Practical Guide",
     "description": "Step-by-step guide to building your first AI agent without coding. Real examples, tools, and strategies for automating your work and creating value.",
     "date": "2026-02-07",
-    "category": "Practical AI",
+    "category": "General",
     "url": "/articles/build-your-first-ai-agent-practical-guide.html"
   },
   {
@@ -124,7 +124,7 @@
     "title": "The $200M Deal That Just Changed Enterprise AI Forever",
     "description": "Snowflake and OpenAI's massive partnership signals the end of AI hype and the beginning of true enterprise agent transformation. What every business needs to know.",
     "date": "2026-02-07",
-    "category": "Breaking Enterprise AI",
+    "category": "General",
     "url": "/articles/snowflake-openai-enterprise-ai-tipping-point.html"
   },
   {
@@ -132,7 +132,7 @@
     "title": "Building Passive Income with AI Automation: Real Strategies That Work",
     "description": "Discover proven strategies to build passive income streams using AI automation. Real examples, tools, and step-by-step blueprints for creating sustainable revenue.",
     "date": "2026-02-07",
-    "category": "Passive Income",
+    "category": "General",
     "url": "/articles/building-passive-income-ai-automation.html"
   },
   {
@@ -140,7 +140,7 @@
     "title": "12 Side Hustles That Actually Work in the AI Era",
     "description": "Side hustle ideas that leverage AI instead of competing with it. Real opportunities with realistic income expectations and how to get started.",
     "date": "2026-02-07",
-    "category": "Money & Careers",
+    "category": "General",
     "url": "/articles/side-hustle-ideas-ai-era.html"
   },
   {
@@ -148,7 +148,7 @@
     "title": "Why Most AI Side Projects Fail (And How to Beat the Odds)",
     "description": "The uncomfortable truth about why 90% of AI side projects never make money-and the exact playbook to be in the 10%.",
     "date": "2026-02-07",
-    "category": "Strategy",
+    "category": "General",
     "url": "/articles/why-ai-side-projects-fail.html"
   },
   {
@@ -156,7 +156,7 @@
     "title": "AI Marketing in 2026: What's Working and What's Hype",
     "description": "The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from teams seeing actual results.",
     "date": "2026-02-07",
-    "category": "Marketing",
+    "category": "General",
     "url": "/articles/ai-marketing-strategies-2026.html"
   },
   {
@@ -164,7 +164,7 @@
     "title": "DeFi Yield in 2026: Strategies That Survive Bear Markets",
     "description": "The sustainable yield strategies that work in any market condition. Risk management, protocol selection, and the math behind real DeFi returns.",
     "date": "2026-02-07",
-    "category": "Crypto & DeFi",
+    "category": "General",
     "url": "/articles/defi-yield-strategies-2026.html"
   },
   {
@@ -172,7 +172,7 @@
     "title": "How to Automate Your Freelance Business with AI: Complete 2026 Guide",
     "description": "Learn how to automate your freelance business with AI in 2026. Step-by-step guide covering client acquisition, project management, invoicing, content creation, and more. Save 10+ hours per week.",
     "date": "2026-02-07",
-    "category": "Automation",
+    "category": "General",
     "url": "/articles/automate-freelance-business-ai-guide.html"
   },
   {
@@ -180,7 +180,7 @@
     "title": "DeepSeek R1 vs OpenAI o1: The Open Source Revolution in AI Reasoning",
     "description": "DeepSeek R1 just shattered the reasoning AI landscape. Here's how this open-source model compares to OpenAI's o1 and why it changes everything.",
     "date": "2026-02-07",
-    "category": "Analysis",
+    "category": "General",
     "url": "/articles/deepseek-r1-vs-openai-o1.html"
   },
   {
@@ -188,7 +188,7 @@
     "title": "No-Code Automation Stacks for Solopreneurs: Complete Setup Guide",
     "description": "Build powerful automation stacks without coding. Complete blueprints for solopreneurs to automate marketing, sales, operations, and customer service.",
     "date": "2026-02-07",
-    "category": "No-Code Automation",
+    "category": "General",
     "url": "/articles/nocode-automation-stacks-solopreneurs.html"
   },
   {
@@ -196,7 +196,7 @@
     "title": "AI Agents Getting Memory: Why Persistent Context Changes Everything",
     "description": "The breakthrough that transforms AI agents from smart tools into persistent digital minds. How memory changes everything about AI autonomy, business applications, and the future of work.",
     "date": "2026-02-07",
-    "category": "Breaking Technology",
+    "category": "General",
     "url": "/articles/ai-agents-memory.html"
   },
   {
@@ -204,7 +204,7 @@
     "title": "Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers",
     "description": "Apple adds Claude Agent and OpenAI Codex to Xcode 26.3, marking the biggest shift in iOS development since SwiftUI. Here's what every developer needs to know about agentic coding.",
     "date": "2026-02-07",
-    "category": "AI Development",
+    "category": "General",
     "url": "/articles/apple-xcode-agentic-coding.html"
   },
   {
@@ -212,7 +212,7 @@
     "title": "Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI",
     "description": "Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses and how it stacks up against OpenAI's multimodal future.",
     "date": "2026-02-07",
-    "category": "Industry Analysis",
+    "category": "General",
     "url": "/articles/gemini-2-flash-multimodal-ai-dominance.html"
   },
   {
@@ -220,7 +220,7 @@
     "title": "AI Just Learned to Control Your Computer: The Revolution is Here",
     "description": "Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation. Here's what it means for your work and business.",
     "date": "2026-02-07",
-    "category": "AI Insights",
+    "category": "General",
     "url": "/articles/ai-computer-control-revolution.html"
   },
   {
@@ -228,7 +228,7 @@
     "title": "Claude vs ChatGPT for Coding in 2026: Which AI Should You Choose?",
     "description": "Comprehensive comparison of Claude vs ChatGPT for coding in 2026. Benchmark data, real-world tests, pricing analysis, and expert recommendations for developers choosing between AI coding assistants.",
     "date": "2026-02-07",
-    "category": "AI Development",
+    "category": "General",
     "url": "/articles/claude-vs-chatgpt-for-coding-2026.html"
   },
   {
@@ -236,7 +236,7 @@
     "title": "AI Tools Are Replacing SaaS Subscriptions: The Great Unbundling",
     "description": "How AI is making specialized SaaS tools obsolete. Why you can replace $500+/month in subscriptions with smart AI workflows that cost $50.",
     "date": "2026-02-07",
-    "category": "SaaS Disruption",
+    "category": "General",
     "url": "/articles/ai-tools-replacing-saas-subscriptions.html"
   },
   {
@@ -244,7 +244,7 @@
     "title": "Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming",
     "description": "Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.",
     "date": "2026-02-07",
-    "category": "Enterprise AI",
+    "category": "General",
     "url": "/articles/shadow-ai-enterprise-crisis.html"
   },
   {
@@ -252,7 +252,7 @@
     "title": "Prompt Engineering That Actually Works: Beyond Basic Tips",
     "description": "Advanced prompt engineering techniques that consistently produce better AI outputs. Real examples, tested strategies, and the psychology behind effective prompts.",
     "date": "2026-02-07",
-    "category": "AI Mastery",
+    "category": "General",
     "url": "/articles/prompt-engineering-that-actually-works.html"
   },
   {
@@ -260,7 +260,7 @@
     "title": "10 Best AI Tools for Solopreneurs in 2026: Scale Without Hiring",
     "description": "Discover the 10 best AI tools for solopreneurs in 2026. Automate content, marketing, customer support, and operations to scale your one-person business without hiring.",
     "date": "2026-02-07",
-    "category": "AI Tools",
+    "category": "General",
     "url": "/articles/best-ai-tools-solopreneurs-2026.html"
   },
   {
@@ -268,7 +268,7 @@
     "title": "AI Agents: The Next Big Platform Shift After Mobile",
     "description": "Why AI agents represent the most significant platform shift since mobile. From apps to autonomous workers - how businesses must prepare for the agent economy.",
     "date": "2026-02-07",
-    "category": "AI Insights",
+    "category": "General",
     "url": "/articles/ai-agents-platform-shift.html"
   },
   {
@@ -276,7 +276,7 @@
     "title": "2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works",
     "description": "Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.",
     "date": "2026-02-07",
-    "category": "AI Agents",
+    "category": "General",
     "url": "/articles/2026-year-ai-agents-production.html"
   },
   {
@@ -284,7 +284,7 @@
     "title": "How We Automated 80% of Our Agency Work",
     "description": "The exact automations, prompts, and workflows we use to run a digital agency with a fraction of the headcount.",
     "date": "2026-02-07",
-    "category": "Case Study",
+    "category": "General",
     "url": "/articles/automate-80-percent-agency-work.html"
   },
   {
@@ -292,7 +292,7 @@
     "title": "16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks",
     "description": "Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.",
     "date": "2026-02-07",
-    "category": "Breaking News",
+    "category": "General",
     "url": "/articles/16-ai-agents-built-c-compiler.html"
   },
   {
@@ -300,7 +300,7 @@
     "title": "Why Every Business Needs an AI Strategy in 2026: The Competitive Reality",
     "description": "AI is no longer optional for business success. Learn why every company needs an AI strategy in 2026 and how to build one that drives real results.",
     "date": "2026-02-07",
-    "category": "Business Strategy",
+    "category": "General",
     "url": "/articles/why-every-business-needs-ai-strategy-2026.html"
   },
   {
@@ -308,7 +308,7 @@
     "title": "GitHub Copilot vs Cursor vs Claude Code: Complete 2026 Comparison",
     "description": "In-depth comparison of GitHub Copilot, Cursor, and Claude Code for developers in 2026. Features, pricing, use cases, and which AI coding assistant is right for your workflow.",
     "date": "2026-02-07",
-    "category": "AI Tools",
+    "category": "General",
     "url": "/articles/github-copilot-vs-cursor-vs-claude-code-2026.html"
   },
   {
@@ -316,7 +316,7 @@
     "title": "Best AI Coding Assistants for Beginners in 2026: Complete Guide",
     "description": "Discover the best AI coding assistants for beginners in 2026. Compare GitHub Copilot, Claude, Cursor, ChatGPT, and more with honest pricing, real use cases, and beginner-friendly recommendations.",
     "date": "2026-02-07",
-    "category": "AI Tools",
+    "category": "General",
     "url": "/articles/best-ai-coding-assistants-beginners-2026.html"
   },
   {
@@ -324,7 +324,7 @@
     "title": "The Future of Search After ChatGPT: What Google Won't Tell You",
     "description": "How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.",
     "date": "2026-02-07",
-    "category": "Search Evolution",
+    "category": "General",
     "url": "/articles/future-of-search-after-chatgpt.html"
   },
   {
@@ -332,7 +332,7 @@
     "title": "AI Agent Security: The Vulnerabilities That Could Bring Down Your Enterprise",
     "description": "BodySnatcher, lateral movement, and agent-to-agent attacks are exposing critical flaws in enterprise AI deployments. Learn how to protect your organization from the next wave of AI security threats.",
     "date": "2026-02-07",
-    "category": "Security Alert",
+    "category": "General",
     "url": "/articles/ai-agent-security-vulnerabilities-2026.html"
   },
   {
@@ -340,7 +340,7 @@
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
     "date": "2026-02-07",
-    "category": "AI Analysis",
+    "category": "General",
     "url": "/articles/ai-model-convergence-2026.html"
   },
   {
@@ -348,7 +348,7 @@
     "title": "Crypto Market Cycles and AI Trading Signals: What the Data Actually Shows",
     "description": "Analyze crypto market patterns with AI. Real data, tested strategies, and practical signals for understanding market cycles beyond the hype.",
     "date": "2026-02-07",
-    "category": "Crypto Analysis",
+    "category": "General",
     "url": "/articles/crypto-market-cycles-ai-trading-signals.html"
   }
 ]
