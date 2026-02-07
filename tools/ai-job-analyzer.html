@@ -528,17 +528,26 @@
             text-align: center;
             margin-bottom: 48px;
         }
+        .hero-icon {
+            width: 80px;
+            height: 80px;
+            background: rgba(245, 158, 11, 0.1);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 24px;
+        }
+        .hero-icon svg {
+            width: 40px !important;
+            height: 40px !important;
+        }
         .hero h1 {
             font-size: 2.5rem;
             font-weight: 800;
             margin-bottom: 16px;
             line-height: 1.2;
-        }
-        .hero h1 span {
-            background: linear-gradient(135deg, var(--accent), #60a5fa);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            color: var(--text-primary);
         }
         .hero p {
             font-size: 1.1rem;
@@ -987,7 +996,10 @@
     
     <main>
         <section class="hero">
-            <h1>AI Job <span>Impact Analyzer</span></h1>
+            <div class="hero-icon">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/><line x1="12" y1="11" x2="12" y2="17"/><line x1="9" y1="14" x2="15" y2="14"/></svg>
+            </div>
+            <h1>AI Job Impact Analyzer</h1>
             <p>Discover how AI will affect your career. Get your personalized AI Exposure Score and actionable recommendations.</p>
         </section>
         
@@ -1040,12 +1052,12 @@
             </div>
             
             <div class="breakdown-card">
-                <h3><span class="icon">&#128202;</span> Impact Breakdown</h3>
+                <h3><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M9 11H3v10h6V11zM15 3H9v18h6V3zM21 7h-6v14h6V7z"/></svg></span> Impact Breakdown</h3>
                 <div id="breakdownList"></div>
             </div>
             
             <div class="breakdown-card recommendations">
-                <h3><span class="icon">&#128161;</span> Your Action Plan</h3>
+                <h3><span class="icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"/></svg></span> Your Action Plan</h3>
                 <div id="recommendationsList"></div>
             </div>
             
@@ -1423,8 +1435,8 @@
         
         function shareTwitter() {
             const { jobTitle, score, level } = window.analysisResults;
-            const emoji = level === 'high' ? '🔴' : level === 'medium' ? '🟡' : '🟢';
-            const text = `${emoji} My AI Exposure Score: ${score}/100 for "${jobTitle}"\n\nDiscover how AI will impact YOUR career:\n`;
+            const indicator = level === 'high' ? 'High' : level === 'medium' ? 'Medium' : 'Low';
+            const text = `My AI Exposure Score: ${score}/100 (${indicator}) for "${jobTitle}"\n\nDiscover how AI will impact YOUR career:\n`;
             const url = 'https://futurehumanism.co/tools/ai-job-analyzer.html';
             window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
             gtag('event', 'share', { 'method': 'twitter' });
