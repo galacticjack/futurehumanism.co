@@ -970,11 +970,7 @@
         }
         
         /* 3. Keep Reading section with images */
-        .keep-reading-section {
-            max-width: 1200px;
-            margin: 60px auto;
-            padding: 0 24px;
-        }
+        
         
         .keep-reading-section h3 {
             font-size: 1.5rem;
@@ -983,22 +979,9 @@
             margin-bottom: 24px;
         }
         
-        .keep-reading-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-        }
         
-        .keep-reading-card {
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            overflow: hidden;
-            text-decoration: none;
-            transition: all 0.2s ease;
-            display: flex;
-            flex-direction: column;
-        }
+        
+        
         
         .keep-reading-card:hover {
             border-color: var(--accent);
@@ -1046,15 +1029,11 @@
         }
         
         @media (max-width: 1024px) {
-            .keep-reading-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
+            
         }
         
         @media (max-width: 640px) {
-            .keep-reading-grid {
-                grid-template-columns: 1fr;
-            }
+            
             
             .keep-reading-card-image {
                 height: 140px;
@@ -1243,6 +1222,97 @@
             font-size: 0.95rem;
         }
     }
+
+    
+        /* Keep Reading - Visual 4-card grid */
+        .keep-reading-section {
+            max-width: 1200px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+        
+        .keep-reading-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+        
+        .keep-reading-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .keep-reading-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .keep-reading-img {
+            width: 100%;
+            height: 140px;
+            object-fit: cover;
+        }
+        
+        .keep-reading-content {
+            padding: 16px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-cat {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .keep-reading-card h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .keep-reading-card p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0;
+        }
+        
+        @media (max-width: 1024px) {
+            .keep-reading-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .keep-reading-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .keep-reading-img {
+                height: 120px;
+            }
+        }
 
     </style>
 </head>
@@ -1575,83 +1645,8 @@
     </div>
 
 
-
     <!-- Keep Reading Section -->
-    <div class="keep-reading-section">
-        <h3>Keep Reading</h3>
-        <div class="keep-reading-grid">
-            <a href="/articles/ai-agents-2026-guide.html" class="keep-reading-card">
-                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="The Complete Guide to AI Agents in 2026" class="keep-reading-card-image" loading="lazy">
-                <div class="keep-reading-card-content">
-                    <span class="keep-reading-card-category">Guide</span>
-                    <h4>The Complete Guide to AI Agents in 2026</h4>
-                    <p>Everything you need to know about AI agents and how they work.</p>
-                </div>
-            </a>
-            <a href="/articles/claude-vs-chatgpt-2026.html" class="keep-reading-card">
-                <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT: The 2026 AI Showdown" class="keep-reading-card-image" loading="lazy">
-                <div class="keep-reading-card-content">
-                    <span class="keep-reading-card-category">Comparison</span>
-                    <h4>Claude vs ChatGPT: The 2026 AI Showdown</h4>
-                    <p>A detailed comparison of the two leading AI assistants.</p>
-                </div>
-            </a>
-            <a href="/articles/ai-agent-economy-2027.html" class="keep-reading-card">
-                <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80" alt="The AI Agent Economy: 2027 Predictions" class="keep-reading-card-image" loading="lazy">
-                <div class="keep-reading-card-content">
-                    <span class="keep-reading-card-category">Prediction</span>
-                    <h4>The AI Agent Economy: 2027 Predictions</h4>
-                    <p>How AI agents will reshape work and create new opportunities.</p>
-                </div>
-            </a>
-        </div>
-    </div>
-
-
-
-    <!-- Footer -->
-    <footer class="site-footer">
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a href="/" class="footer-logo">
-                    <svg width="32" height="32" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <defs>
-                            <linearGradient id="footerLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                                <stop offset="0%" style="stop-color:#FF6B6B"/>
-                                <stop offset="50%" style="stop-color:#9B59B6"/>
-                                <stop offset="100%" style="stop-color:#1E90FF"/>
-                            </linearGradient>
-                        </defs>
-                        <circle cx="50" cy="50" r="45" stroke="url(#footerLogoGrad)" stroke-width="4" fill="none"/>
-                        <path d="M35 30 Q50 20 65 30 Q75 45 65 60 Q50 75 35 60 Q25 45 35 30" fill="none" stroke="url(#footerLogoGrad)" stroke-width="3"/>
-                        <circle cx="42" cy="42" r="4" fill="url(#footerLogoGrad)"/>
-                        <circle cx="58" cy="42" r="4" fill="url(#footerLogoGrad)"/>
-                        <path d="M40 55 Q50 62 60 55" fill="none" stroke="url(#footerLogoGrad)" stroke-width="2.5" stroke-linecap="round"/>
-                    </svg>
-                    <span>Future<span class="light">Humanism</span></span>
-                </a>
-                <p class="footer-tagline">Where AI meets human potential. Stories, tools, and insights for builders navigating the most interesting time in tech history.</p>
-            </div>
-            <div class="footer-links">
-                <div class="footer-column">
-                    <h5>Content</h5>
-                    <a href="/articles/">Stories</a>
-                    <a href="https://futurehumanism.beehiiv.com" target="_blank">Newsletter</a>
-                    <a href="/about.html">About</a>
-                </div>
-                <div class="footer-column">
-                    <h5>Products</h5>
-                    <a href="https://gumroad.com/futurehumanism" target="_blank">AI Prompt Playbook</a>
-                    <a href="/tools/">Free Tools</a>
-                </div>
-                <div class="footer-column">
-                    <h5>Connect</h5>
-                    <a href="https://x.com/FutureHumanism" target="_blank">Twitter</a>
-                    <a href="https://futurehumanism.beehiiv.com" target="_blank">Beehiiv</a>
-                    <a href="https://gumroad.com/futurehumanism" target="_blank">Gumroad</a>
-                </div>
-            </div>
-        </div>
+    
         <div class="footer-bottom">
             <p>&copy; 2026 Future Humanism. All rights reserved.</p>
         </div>
@@ -1711,5 +1706,45 @@
             }
         }
     </script>
+
+    <!-- Keep Reading Section (Visual 4-card grid) -->
+    <section class="keep-reading-section">
+        <h3>Keep Reading</h3>
+        <div class="keep-reading-grid">
+                <a href="/articles/ai-agents-2026-guide.html" class="keep-reading-card">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="The Complete Guide to AI Agents in 2026" class="keep-reading-img" loading="lazy">
+                    <div class="keep-reading-content">
+                        <span class="keep-reading-cat">Guide</span>
+                        <h4>The Complete Guide to AI Agents in 2026</h4>
+                        <p>Everything you need to know about AI agents and how they work.</p>
+                    </div>
+                </a>
+                <a href="/articles/claude-vs-chatgpt-2026.html" class="keep-reading-card">
+                    <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT: The 2026 Showdown" class="keep-reading-img" loading="lazy">
+                    <div class="keep-reading-content">
+                        <span class="keep-reading-cat">Comparison</span>
+                        <h4>Claude vs ChatGPT: The 2026 Showdown</h4>
+                        <p>A detailed comparison of the two leading AI assistants.</p>
+                    </div>
+                </a>
+                <a href="/articles/ai-marketing-strategies-2026.html" class="keep-reading-card">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=80" alt="AI Marketing: What's Working in 2026" class="keep-reading-img" loading="lazy">
+                    <div class="keep-reading-content">
+                        <span class="keep-reading-cat">Marketing</span>
+                        <h4>AI Marketing: What's Working in 2026</h4>
+                        <p>The AI marketing strategies delivering real ROI.</p>
+                    </div>
+                </a>
+                <a href="/articles/best-ai-tools-solopreneurs-2026.html" class="keep-reading-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Best AI Tools for Solopreneurs" class="keep-reading-img" loading="lazy">
+                    <div class="keep-reading-content">
+                        <span class="keep-reading-cat">Tools</span>
+                        <h4>Best AI Tools for Solopreneurs</h4>
+                        <p>The essential AI tools that save time and make money.</p>
+                    </div>
+                </a>
+        </div>
+    </section>
+
 </body>
 </html>
