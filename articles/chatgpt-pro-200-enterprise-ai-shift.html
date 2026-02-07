@@ -190,11 +190,11 @@
         article {
             max-width: 800px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 40px 24px;
         }
         article h2 {
             font-size: 1.6rem;
-            margin: 48px 0 20px;
+            margin: 32px 0 20px;
             color: var(--text-primary);
         }
         article h3 {
@@ -335,7 +335,7 @@
         }
         /* Share Buttons */
         .share-section {
-            margin: 48px 0;
+            margin: 24px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
@@ -402,7 +402,7 @@
         padding: 32px;
         background: var(--bg-secondary);
         border-radius: 12px;
-        margin: 48px 0;
+        margin: 24px 0;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -440,13 +440,13 @@
     /* Related Articles */
     .related-articles {
         max-width: 900px;
-        margin: 60px auto;
+        margin: 32px auto;
         padding: 0 24px;
     }
     .related-articles h3 {
         text-align: center;
         font-size: 1.5rem;
-        margin-bottom: 32px;
+        margin-bottom: 16px;
         color: var(--text-primary);
     }
     .related-grid {
@@ -508,7 +508,7 @@
     
         /* Share & Follow Sections */
         .share-section {
-            margin: 48px 0;
+            margin: 24px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
@@ -629,7 +629,7 @@
         }
             /* Share Section - Clean */
         .share-section {
-            margin: 48px 0;
+            margin: 24px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
         }
@@ -1145,6 +1145,308 @@
             }
         }
 
+    
+        /* === ARTICLE TEMPLATE FIXES === */
+        
+        /* 1. Wider article container on large screens */
+        article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        @media (min-width: 1200px) {
+            article {
+                max-width: 900px;
+            }
+        }
+        
+        /* 2. Author bio with proper logo and X link */
+        .author-bio-container {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+        
+        .author-bio {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .author-avatar-wrapper {
+            flex-shrink: 0;
+        }
+        
+        .author-avatar-wrapper svg {
+            width: 56px !important;
+            height: 56px !important;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .author-x-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .author-x-link:hover {
+            color: var(--accent-hover);
+        }
+        
+        .author-x-link svg {
+            width: 14px !important;
+            height: 14px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .author-info {
+                text-align: center;
+            }
+        }
+        
+        /* 3. Keep Reading section with images */
+        .keep-reading-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        
+        .keep-reading-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+        
+        .keep-reading-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .keep-reading-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .keep-reading-card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: var(--bg-dark);
+        }
+        
+        .keep-reading-card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-card-category {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .keep-reading-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .keep-reading-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0;
+            flex: 1;
+        }
+        
+        @media (max-width: 1024px) {
+            .keep-reading-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .keep-reading-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .keep-reading-card-image {
+                height: 140px;
+            }
+        }
+        
+        /* 4. Proper footer styling */
+        .site-footer {
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border);
+            padding: 60px 24px 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+            gap: 60px;
+        }
+        
+        .footer-brand {
+            max-width: 300px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo svg {
+            width: 32px !important;
+            height: 32px !important;
+        }
+        
+        .footer-logo .light {
+            font-weight: 400;
+            opacity: 0.6;
+        }
+        
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-column h5 {
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-column a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-brand {
+                max-width: none;
+                text-align: center;
+            }
+            
+            .footer-links {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        /* 5. Remove floating social share buttons from sidebar */
+        .floating-share-buttons,
+        .social-sidebar,
+        .share-sidebar {
+            display: none !important;
+        }
+
     </style>
 </head>
 <body>
@@ -1373,255 +1675,9 @@
     </div>
 
     <!-- Author Bio -->
-    <div class="author-bio">
-        <img src="../images/profile.jpg" alt="Author" class="author-avatar">
-        <div class="author-info">
-            <h4>Written by Future Humanism</h4>
-            <p>Exploring where AI meets human potential. Weekly insights on automation, side projects, and building things that matter.</p>
-            <a href="https://twitter.com/FutureHumanism" target="_blank" class="author-follow">Follow on X →</a>
-        </div>
-    </div>
+    
 
-    <!-- Related Articles -->
-    <div class="related-articles">
-        <h3>Keep Reading</h3>
-        <div class="related-grid">
-            <a href="snowflake-openai-enterprise-ai-tipping-point.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&q=80" alt="The $200M Enterprise AI Deal">
-                <div class="related-content">
-                    <span class="related-tag">Breaking</span>
-                    <h4>The $200M Enterprise AI Deal</h4>
-                </div>
-            </a>
-            <a href="gemini-2-flash-multimodal-ai-dominance.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Gemini 2.0 Flash Analysis">
-                <div class="related-content">
-                    <span class="related-tag">Industry</span>
-                    <h4>Gemini 2.0 Flash Analysis</h4>
-                </div>
-            </a>
-            <a href="claude-vs-gpt-comparison.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1553877522-43269d4ea984?w=400&q=80" alt="Claude 4 vs GPT-5.2">
-                <div class="related-content">
-                    <span class="related-tag">Comparison</span>
-                    <h4>Claude 4 vs GPT-5.2</h4>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    </article>
-
-    <script>
-        // Reading progress bar
-        window.addEventListener('scroll', () => {
-            const article = document.querySelector('article');
-            const progressBar = document.getElementById('progress-bar');
-            
-            if (article) {
-                const articleStart = article.offsetTop;
-                const articleEnd = document.querySelector('.share-section');
-                const articleHeight = articleEnd.offsetTop - articleStart;
-                const scrolled = window.scrollY - articleStart;
-                
-                const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
-                progressBar.style.width = progress * 100 + '%';
-            }
-        });
-
-        // Copy link functionality
-        function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                const btn = document.querySelector('.copy-link');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = ' Copied!';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 2000);
-            }).catch(() => {
-                // Fallback for browsers that don't support clipboard API
-                const textArea = document.createElement('textarea');
-                textArea.value = url;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                
-                const btn = document.querySelector('.copy-link');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = ' Copied!';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 2000);
-            });
-        }
-
-        // Lazy loading for images (if any images are added later)
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img[loading="lazy"]');
-            
-            if ('IntersectionObserver' in window) {
-                const imageObserver = new IntersectionObserver((entries, observer) => {
-                    entries.forEach(entry => {
-                        if (entry.isIntersecting) {
-                            const img = entry.target;
-                            img.src = img.dataset.src;
-                            img.classList.remove('lazy');
-                            observer.unobserve(img);
-                        }
-                    });
-                });
-                
-                images.forEach(img => imageObserver.observe(img));
-            } else {
-                // Fallback for browsers without IntersectionObserver
-                images.forEach(img => {
-                    img.src = img.dataset.src;
-                });
-            }
-        });
-    </script>
-
-
-<!-- Exit Intent Popup Component - Include before 
-    <script>
-        // Share functions
-        const shareUrl = window.location.href;
-        const shareTitle = document.title;
-        
-        function shareToX() {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function copyLink() {
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                const btn = document.getElementById('copy-link-btn');
-                if (btn) {
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
-                    btn.style.color = '#10b981';
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.color = '';
-                    }, 2000);
-                }
-            });
-        }
-
-        // Mobile menu
-        function openMobileMenu() {
-            document.getElementById('mobile-menu').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            document.getElementById('mobile-menu').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-        }
-    </script>
-
-
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-<!-- Add this before     <script src="../js/exit-intent.js"></script>
-</body> in articles -->
-
-
-<!-- Related Articles Section - Auto-generated for SEO -->
-<style>
-.related-articles {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border, #2a2a2a);
-}
-.related-articles h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary, #ffffff);
-}
-.related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-.related-card {
-    background: var(--bg-secondary, #1a1a1a);
-    border: 1px solid var(--border, #2a2a2a);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: block;
-}
-.related-card:hover {
-    border-color: var(--accent, #1E90FF);
-    transform: translateY(-2px);
-}
-.related-category {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent, #1E90FF);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-.related-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary, #ffffff);
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-.related-card p {
-    font-size: 0.875rem;
-    color: var(--text-secondary, #b0b0b0);
-    line-height: 1.5;
-    margin: 0;
-}
-@media (max-width: 640px) {
-    .related-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-<div class="related-articles">
-    <h3>Keep Reading</h3>
-    <div class="related-grid">
-            <a href="/articles/why-every-business-needs-ai-strategy-2026.html" class="related-card">
-                <span class="related-category">Business Strategy</span>
-                <h4>Why Every Business Needs an AI Strategy in 2026: The Competitive Re...</h4>
-                <p>AI is no longer optional for business success. Learn why every company needs an AI strategy in 2026 and how to build ...</p>
-            </a>
-            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
-                <span class="related-category">Deep Dive</span>
-                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
-                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
-            </a>
-            <a href="/articles/ai-model-convergence-2026.html" class="related-card">
-                <span class="related-category">AI Analysis</span>
-                <h4>The Great AI Model Convergence of 2026</h4>
-                <p>ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment ...</p>
-            </a>
-    </div>
-</div>
-<!-- End Related Articles -->
+    
 
 <style>
 .sticky-cta-bar {
@@ -1778,7 +1834,309 @@
         position: relative;
     }
 }
-</style>
+
+        /* === ARTICLE TEMPLATE FIXES === */
+        
+        /* 1. Wider article container on large screens */
+        article {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 24px;
+        }
+        
+        @media (min-width: 1200px) {
+            article {
+                max-width: 900px;
+            }
+        }
+        
+        /* 2. Author bio with proper logo and X link */
+        .author-bio-container {
+            max-width: 900px;
+            margin: 48px auto;
+            padding: 0 24px;
+        }
+        
+        .author-bio {
+            display: flex;
+            gap: 20px;
+            padding: 24px;
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+        }
+        
+        .author-avatar-wrapper {
+            flex-shrink: 0;
+        }
+        
+        .author-avatar-wrapper svg {
+            width: 56px !important;
+            height: 56px !important;
+        }
+        
+        .author-info {
+            flex: 1;
+        }
+        
+        .author-info h4 {
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+        
+        .author-info p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            line-height: 1.5;
+        }
+        
+        .author-x-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--accent);
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .author-x-link:hover {
+            color: var(--accent-hover);
+        }
+        
+        .author-x-link svg {
+            width: 14px !important;
+            height: 14px !important;
+        }
+        
+        @media (max-width: 768px) {
+            .author-bio {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+            
+            .author-info {
+                text-align: center;
+            }
+        }
+        
+        /* 3. Keep Reading section with images */
+        .keep-reading-section {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 24px;
+        }
+        
+        .keep-reading-section h3 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 24px;
+        }
+        
+        .keep-reading-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .keep-reading-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.2s ease;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        }
+        
+        .keep-reading-card-image {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+            background: var(--bg-dark);
+        }
+        
+        .keep-reading-card-content {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .keep-reading-card-category {
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .keep-reading-card h4 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+            line-height: 1.4;
+        }
+        
+        .keep-reading-card p {
+            font-size: 0.875rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin: 0;
+            flex: 1;
+        }
+        
+        @media (max-width: 1024px) {
+            .keep-reading-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .keep-reading-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .keep-reading-card-image {
+                height: 140px;
+            }
+        }
+        
+        /* 4. Proper footer styling */
+        .site-footer {
+            background: var(--bg-dark);
+            border-top: 1px solid var(--border);
+            padding: 60px 24px 30px;
+            margin-top: 60px;
+        }
+        
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 2fr;
+            gap: 60px;
+        }
+        
+        .footer-brand {
+            max-width: 300px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo svg {
+            width: 32px !important;
+            height: 32px !important;
+        }
+        
+        .footer-logo .light {
+            font-weight: 400;
+            opacity: 0.6;
+        }
+        
+        .footer-tagline {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+        
+        .footer-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+        }
+        
+        .footer-column h5 {
+            color: var(--text-primary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-column a {
+            display: block;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+            transition: color 0.2s;
+        }
+        
+        .footer-column a:hover {
+            color: var(--accent);
+        }
+        
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 40px auto 0;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            text-align: center;
+        }
+        
+        .footer-bottom p {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 768px) {
+            .footer-inner {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .footer-brand {
+                max-width: none;
+                text-align: center;
+            }
+            
+            .footer-links {
+                grid-template-columns: repeat(3, 1fr);
+                text-align: center;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .footer-links {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+        }
+        
+        /* 5. Remove floating social share buttons from sidebar */
+        .floating-share-buttons,
+        .social-sidebar,
+        .share-sidebar {
+            display: none !important;
+        }
+
+    </style>
 
 <div class="sticky-cta-bar" id="stickyCta">
     <div class="sticky-cta-inner">
