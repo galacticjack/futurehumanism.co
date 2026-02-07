@@ -994,7 +994,41 @@
 
     
         /* Keep Reading - Visual 4-card grid */
+        .keep-reading-section {
+            background: var(--bg-primary);
+            padding: 48px 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
         
+        .keep-reading-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        
+        .keep-reading-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.2s;
+        }
+        
+        @media (max-width: 900px) {
+            .keep-reading-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 500px) {
+            .keep-reading-grid {
+                grid-template-columns: 1fr;
+            }
+        }
         
         .keep-reading-section h3 {
             font-size: 1.5rem;
