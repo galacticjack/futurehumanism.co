@@ -910,6 +910,221 @@
 
         <p>Understanding where we've been helps predict where we're going:</p>
         <!-- Inline Newsletter CTA -->
+        
+
+    <!-- Author Bio -->
+    <div class="author-bio">
+        <img src="../images/profile.jpg" alt="Author" class="author-avatar">
+        <div class="author-info">
+            <h4>Written by Future Humanism</h4>
+            <p>Exploring where AI meets human potential. Weekly insights on automation, side projects, and building things that matter.</p>
+            <a href="https://twitter.com/FutureHumanism" target="_blank" class="author-follow">Follow on X →</a>
+        </div>
+    </div>
+
+    <!-- Related Articles -->
+    <div class="related-articles">
+        <h3>Keep Reading</h3>
+        <div class="related-grid">
+            <a href="build-your-first-ai-agent-practical-guide.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80" alt="AI Agent Guide">
+                <div class="related-content">
+                    <span class="related-tag">Practical AI</span>
+                    <h4>How to Build Your First AI Agent</h4>
+                </div>
+            </a>
+            <a href="prompt-engineering-that-actually-works.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=80" alt="Prompt Engineering">
+                <div class="related-content">
+                    <span class="related-tag">Prompting</span>
+                    <h4>Prompt Engineering That Actually Works</h4>
+                </div>
+            </a>
+            <a href="ai-agents-2026-guide.html" class="related-card">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&q=80" alt="AI Agents Guide">
+                <div class="related-content">
+                    <span class="related-tag">Guide</span>
+                    <h4>The Complete Guide to AI Agents in 2026</h4>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const article = document.querySelector('article');
+            const progressBar = document.getElementById('progress-bar');
+            
+            if (article) {
+                const articleStart = article.offsetTop;
+                const articleHeight = article.offsetHeight;
+                const scrolled = window.scrollY - articleStart;
+                
+                const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
+                progressBar.style.width = progress * 100 + '%';
+            }
+        });
+
+        // Copy link functionality
+        function copyLink() {
+            const url = window.location.href;
+            navigator.clipboard.writeText(url).then(() => {
+                const btn = document.querySelector('.copy-link');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = ' Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            }).catch(() => {
+                const textArea = document.createElement('textarea');
+                textArea.value = url;
+                document.body.appendChild(textArea);
+                textArea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textArea);
+                
+                const btn = document.querySelector('.copy-link');
+                const originalText = btn.innerHTML;
+                btn.innerHTML = ' Copied!';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 2000);
+            });
+        }
+    </script>
+
+
+<!-- Exit Intent Popup Component - Include before 
+    <script>
+        // Share functions
+        const shareUrl = window.location.href;
+        const shareTitle = document.title;
+        
+        function shareToX() {
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                const btn = document.getElementById('copy-link-btn');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Mobile menu
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+    </script>
+
+
+    <!-- Sticky Newsletter Bar -->
+<!-- Sticky Newsletter Bar Component -->
+<!-- Appears after 30% scroll, stays fixed at bottom -->
+<!-- Add this before     <script src="../js/exit-intent.js"></script>
+</body> in articles -->
+
+
+<!-- Related Articles Section - Auto-generated for SEO -->
+<style>
+.related-articles {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border, #2a2a2a);
+}
+.related-articles h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary, #ffffff);
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+.related-card {
+    background: var(--bg-secondary, #1a1a1a);
+    border: 1px solid var(--border, #2a2a2a);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+}
+.related-card:hover {
+    border-color: var(--accent, #1E90FF);
+    transform: translateY(-2px);
+}
+.related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent, #1E90FF);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.related-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.related-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #b0b0b0);
+    line-height: 1.5;
+    margin: 0;
+}
+@media (max-width: 640px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<div class="related-articles">
+    <h3>Keep Reading</h3>
+    <div class="related-grid">
+            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
+                <span class="related-category">Deep Dive</span>
+                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
+                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
+            </a>
+            <a href="/articles/ai-marketing-strategies-2026.html" class="related-card">
+                <span class="related-category">Marketing</span>
+                <h4>AI Marketing in 2026: What's Working and What's Hype</h4>
+                <p>The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from tea...</p>
+
         <div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
             <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Want more like this?</h3>
@@ -1304,218 +1519,6 @@
         </div>
     </div>
 
-    <!-- Author Bio -->
-    <div class="author-bio">
-        <img src="../images/profile.jpg" alt="Author" class="author-avatar">
-        <div class="author-info">
-            <h4>Written by Future Humanism</h4>
-            <p>Exploring where AI meets human potential. Weekly insights on automation, side projects, and building things that matter.</p>
-            <a href="https://twitter.com/FutureHumanism" target="_blank" class="author-follow">Follow on X →</a>
-        </div>
-    </div>
-
-    <!-- Related Articles -->
-    <div class="related-articles">
-        <h3>Keep Reading</h3>
-        <div class="related-grid">
-            <a href="build-your-first-ai-agent-practical-guide.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1531746790731-6c087fecd65a?w=400&q=80" alt="AI Agent Guide">
-                <div class="related-content">
-                    <span class="related-tag">Practical AI</span>
-                    <h4>How to Build Your First AI Agent</h4>
-                </div>
-            </a>
-            <a href="prompt-engineering-that-actually-works.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1555949963-ff9fe0c870eb?w=400&q=80" alt="Prompt Engineering">
-                <div class="related-content">
-                    <span class="related-tag">Prompting</span>
-                    <h4>Prompt Engineering That Actually Works</h4>
-                </div>
-            </a>
-            <a href="ai-agents-2026-guide.html" class="related-card">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?w=400&q=80" alt="AI Agents Guide">
-                <div class="related-content">
-                    <span class="related-tag">Guide</span>
-                    <h4>The Complete Guide to AI Agents in 2026</h4>
-                </div>
-            </a>
-        </div>
-    </div>
-
-    <script>
-        // Reading progress bar
-        window.addEventListener('scroll', () => {
-            const article = document.querySelector('article');
-            const progressBar = document.getElementById('progress-bar');
-            
-            if (article) {
-                const articleStart = article.offsetTop;
-                const articleHeight = article.offsetHeight;
-                const scrolled = window.scrollY - articleStart;
-                
-                const progress = Math.min(Math.max(scrolled / articleHeight, 0), 1);
-                progressBar.style.width = progress * 100 + '%';
-            }
-        });
-
-        // Copy link functionality
-        function copyLink() {
-            const url = window.location.href;
-            navigator.clipboard.writeText(url).then(() => {
-                const btn = document.querySelector('.copy-link');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = ' Copied!';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 2000);
-            }).catch(() => {
-                const textArea = document.createElement('textarea');
-                textArea.value = url;
-                document.body.appendChild(textArea);
-                textArea.select();
-                document.execCommand('copy');
-                document.body.removeChild(textArea);
-                
-                const btn = document.querySelector('.copy-link');
-                const originalText = btn.innerHTML;
-                btn.innerHTML = ' Copied!';
-                setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 2000);
-            });
-        }
-    </script>
-
-
-<!-- Exit Intent Popup Component - Include before 
-    <script>
-        // Share functions
-        const shareUrl = window.location.href;
-        const shareTitle = document.title;
-        
-        function shareToX() {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function copyLink() {
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                const btn = document.getElementById('copy-link-btn');
-                if (btn) {
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
-                    btn.style.color = '#10b981';
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.color = '';
-                    }, 2000);
-                }
-            });
-        }
-
-        // Mobile menu
-        function openMobileMenu() {
-            document.getElementById('mobile-menu').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            document.getElementById('mobile-menu').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-        }
-    </script>
-
-
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-<!-- Add this before     <script src="../js/exit-intent.js"></script>
-</body> in articles -->
-
-
-<!-- Related Articles Section - Auto-generated for SEO -->
-<style>
-.related-articles {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border, #2a2a2a);
-}
-.related-articles h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary, #ffffff);
-}
-.related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-.related-card {
-    background: var(--bg-secondary, #1a1a1a);
-    border: 1px solid var(--border, #2a2a2a);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: block;
-}
-.related-card:hover {
-    border-color: var(--accent, #1E90FF);
-    transform: translateY(-2px);
-}
-.related-category {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent, #1E90FF);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-.related-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary, #ffffff);
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-.related-card p {
-    font-size: 0.875rem;
-    color: var(--text-secondary, #b0b0b0);
-    line-height: 1.5;
-    margin: 0;
-}
-@media (max-width: 640px) {
-    .related-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-<div class="related-articles">
-    <h3>Keep Reading</h3>
-    <div class="related-grid">
-            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
-                <span class="related-category">Deep Dive</span>
-                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
-                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
-            </a>
-            <a href="/articles/ai-marketing-strategies-2026.html" class="related-card">
-                <span class="related-category">Marketing</span>
-                <h4>AI Marketing in 2026: What's Working and What's Hype</h4>
-                <p>The AI marketing strategies delivering real ROI versus the overhyped tools wasting budget. Practical tactics from tea...</p>
             </a>
             <a href="/articles/chatgpt-pro-200-enterprise-ai-shift.html" class="related-card">
                 <span class="related-category">Enterprise AI Strategy</span>

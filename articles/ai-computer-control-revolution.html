@@ -1071,6 +1071,183 @@
             <p>Let's be clear about what just happened. Previous AI was like having a genius advisor locked in a text box. Incredibly smart, but ultimately limited to giving you advice through words. You'd ask ChatGPT to help you organize your calendar, and it would explain how-but you'd still have to do the clicking.</p>
             
             <p>NotebookLM and Claude Computer Use changed that fundamental limitation. These systems can:</p>
+        
+    
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', function() {
+            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            document.getElementById('progress-bar').style.width = scrolled + '%';
+        });
+        
+        // Copy link functionality
+        function copyLink() {
+            navigator.clipboard.writeText(window.location.href).then(function() {
+                const button = document.querySelector('.share-btn.copy-link');
+                const originalText = button.textContent;
+                button.textContent = 'Copied!';
+                setTimeout(function() {
+                    button.textContent = originalText;
+                }, 2000);
+            });
+        }
+        
+        // Lazy loading for images
+        document.addEventListener('DOMContentLoaded', function() {
+            const images = document.querySelectorAll('img[data-src]');
+            const imageObserver = new IntersectionObserver(function(entries, observer) {
+                entries.forEach(function(entry) {
+                    if (entry.isIntersecting) {
+                        const img = entry.target;
+                        img.src = img.dataset.src;
+                        img.removeAttribute('data-src');
+                        imageObserver.unobserve(img);
+                    }
+                });
+            });
+            
+            images.forEach(function(img) {
+                imageObserver.observe(img);
+            });
+        });
+    </script>
+
+
+<!-- Exit Intent Popup Component - Include before 
+    <script>
+        // Share functions
+        const shareUrl = window.location.href;
+        const shareTitle = document.title;
+        
+        function shareToX() {
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                const btn = document.getElementById('copy-link-btn');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Mobile menu
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+    </script>
+
+
+    <!-- Sticky Newsletter Bar -->
+<!-- Sticky Newsletter Bar Component -->
+<!-- Appears after 30% scroll, stays fixed at bottom -->
+<!-- Add this before     <script src="../js/exit-intent.js"></script>
+</body> in articles -->
+
+
+<!-- Related Articles Section - Auto-generated for SEO -->
+<style>
+.related-articles {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border, #2a2a2a);
+}
+.related-articles h3 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: var(--text-primary, #ffffff);
+}
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.25rem;
+}
+.related-card {
+    background: var(--bg-secondary, #1a1a1a);
+    border: 1px solid var(--border, #2a2a2a);
+    border-radius: 12px;
+    padding: 1.25rem;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: block;
+}
+.related-card:hover {
+    border-color: var(--accent, #1E90FF);
+    transform: translateY(-2px);
+}
+.related-category {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--accent, #1E90FF);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+.related-card h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary, #ffffff);
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+.related-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary, #b0b0b0);
+    line-height: 1.5;
+    margin: 0;
+}
+@media (max-width: 640px) {
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+}
+</style>
+<div class="related-articles">
+    <h3>Keep Reading</h3>
+    <div class="related-grid">
+            <a href="/articles/chatgpt-pro-200-enterprise-ai-shift.html" class="related-card">
+                <span class="related-category">Enterprise AI Strategy</span>
+                <h4>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's ...</h4>
+                <p>OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape cor...</p>
+            </a>
+            <a href="/articles/gemini-2-flash-multimodal-ai-dominance.html" class="related-card">
+                <span class="related-category">Industry Analysis</span>
+                <h4>Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI</h4>
+                <p>Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses and...</p>
+            </a>
+            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
+                <span class="related-category">Deep Dive</span>
+                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
+                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
+
         <!-- Inline Newsletter CTA -->
         <div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
             <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
@@ -1298,181 +1475,7 @@
             </div>
         </div>
     </div>
-    
-    <script>
-        // Reading progress bar
-        window.addEventListener('scroll', function() {
-            const scrolled = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
-            document.getElementById('progress-bar').style.width = scrolled + '%';
-        });
-        
-        // Copy link functionality
-        function copyLink() {
-            navigator.clipboard.writeText(window.location.href).then(function() {
-                const button = document.querySelector('.share-btn.copy-link');
-                const originalText = button.textContent;
-                button.textContent = 'Copied!';
-                setTimeout(function() {
-                    button.textContent = originalText;
-                }, 2000);
-            });
-        }
-        
-        // Lazy loading for images
-        document.addEventListener('DOMContentLoaded', function() {
-            const images = document.querySelectorAll('img[data-src]');
-            const imageObserver = new IntersectionObserver(function(entries, observer) {
-                entries.forEach(function(entry) {
-                    if (entry.isIntersecting) {
-                        const img = entry.target;
-                        img.src = img.dataset.src;
-                        img.removeAttribute('data-src');
-                        imageObserver.unobserve(img);
-                    }
-                });
-            });
-            
-            images.forEach(function(img) {
-                imageObserver.observe(img);
-            });
-        });
-    </script>
 
-
-<!-- Exit Intent Popup Component - Include before 
-    <script>
-        // Share functions
-        const shareUrl = window.location.href;
-        const shareTitle = document.title;
-        
-        function shareToX() {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function copyLink() {
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                const btn = document.getElementById('copy-link-btn');
-                if (btn) {
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
-                    btn.style.color = '#10b981';
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.color = '';
-                    }, 2000);
-                }
-            });
-        }
-
-        // Mobile menu
-        function openMobileMenu() {
-            document.getElementById('mobile-menu').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            document.getElementById('mobile-menu').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-        }
-    </script>
-
-
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-<!-- Add this before     <script src="../js/exit-intent.js"></script>
-</body> in articles -->
-
-
-<!-- Related Articles Section - Auto-generated for SEO -->
-<style>
-.related-articles {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border, #2a2a2a);
-}
-.related-articles h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary, #ffffff);
-}
-.related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-.related-card {
-    background: var(--bg-secondary, #1a1a1a);
-    border: 1px solid var(--border, #2a2a2a);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: block;
-}
-.related-card:hover {
-    border-color: var(--accent, #1E90FF);
-    transform: translateY(-2px);
-}
-.related-category {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent, #1E90FF);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-.related-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary, #ffffff);
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-.related-card p {
-    font-size: 0.875rem;
-    color: var(--text-secondary, #b0b0b0);
-    line-height: 1.5;
-    margin: 0;
-}
-@media (max-width: 640px) {
-    .related-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-<div class="related-articles">
-    <h3>Keep Reading</h3>
-    <div class="related-grid">
-            <a href="/articles/chatgpt-pro-200-enterprise-ai-shift.html" class="related-card">
-                <span class="related-category">Enterprise AI Strategy</span>
-                <h4>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's ...</h4>
-                <p>OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape cor...</p>
-            </a>
-            <a href="/articles/gemini-2-flash-multimodal-ai-dominance.html" class="related-card">
-                <span class="related-category">Industry Analysis</span>
-                <h4>Gemini 2.0 Flash: Google's Bid to Dominate Multi-Modal AI</h4>
-                <p>Google's Gemini 2.0 Flash combines vision, audio, and code in one model. Why this changes the game for businesses and...</p>
-            </a>
-            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
-                <span class="related-category">Deep Dive</span>
-                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
-                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
             </a>
     </div>
 </div>
