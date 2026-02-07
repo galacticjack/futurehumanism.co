@@ -1235,13 +1235,13 @@
 
         .products-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
         }
 
         .product-card {
             background: var(--bg-primary);
-            border-radius: 12px;
+            border-radius: 10px;
             overflow: hidden;
             border: 1px solid var(--border);
             transition: transform 0.2s, box-shadow 0.2s;
@@ -1251,13 +1251,13 @@
         }
 
         .product-card:hover {
-            transform: translateY(-4px);
-            box-shadow: 0 12px 40px rgba(255,90,95,0.15);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255,90,95,0.15);
             border-color: var(--accent);
         }
 
         .product-image {
-            height: 180px;
+            height: 120px;
             background: #1a1a2e;
             display: flex;
             align-items: center;
@@ -1265,8 +1265,8 @@
         }
 
         .product-image svg {
-            width: 64px;
-            height: 64px;
+            width: 48px;
+            height: 48px;
             stroke-width: 1.5;
             fill: none;
         }
@@ -1296,21 +1296,21 @@
         }
 
         .product-content {
-            padding: 24px;
+            padding: 16px;
         }
 
         .product-content h3 {
-            font-size: 1.15rem;
+            font-size: 0.95rem;
             font-weight: 600;
-            margin-bottom: 8px;
+            margin-bottom: 6px;
             color: var(--text-primary);
         }
 
         .product-content p {
-            font-size: 0.9rem;
+            font-size: 0.8rem;
             color: var(--text-secondary);
-            margin-bottom: 16px;
-            line-height: 1.5;
+            margin-bottom: 12px;
+            line-height: 1.4;
         }
 
         .product-footer {
@@ -1431,6 +1431,126 @@
         .stat-item p {
             font-size: 0.9rem;
             opacity: 0.7;
+        }
+
+        /* Tools Section - Homepage */
+        .tools-section {
+            padding: 60px 24px;
+            background: var(--bg-primary);
+        }
+        
+        .tools-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .tools-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+        
+        .tools-header h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+        
+        .tools-header p {
+            color: var(--text-secondary);
+            font-size: 1rem;
+        }
+        
+        .tools-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+        
+        .tool-card-home {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 20px;
+            text-decoration: none;
+            transition: all 0.2s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+        
+        .tool-card-home:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        
+        .tool-icon-home {
+            width: 64px;
+            height: 64px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 12px;
+        }
+        
+        .tool-card-home h3 {
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+        
+        .tool-card-home p {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+        
+        .tool-badge {
+            font-size: 0.65rem;
+            font-weight: 700;
+            color: #10b981;
+            background: rgba(16, 185, 129, 0.1);
+            padding: 4px 10px;
+            border-radius: 4px;
+        }
+        
+        .tools-cta {
+            text-align: center;
+            margin-top: 24px;
+        }
+        
+        .tools-cta a {
+            display: inline-block;
+            padding: 12px 24px;
+            background: var(--accent);
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+        
+        .tools-cta a:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 1024px) {
+            .tools-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+        
+        @media (max-width: 600px) {
+            .tools-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Testimonials Section */
@@ -2926,6 +3046,85 @@
                     <div class="grid-card-meta"><span>6 min read</span></div>
                 </div>
             </a>
+        </div>
+    </section>
+
+    <!-- Tools Section -->
+    <section class="tools-section" id="tools">
+        <div class="tools-inner">
+            <div class="tools-header">
+                <h2>Free AI Tools</h2>
+                <p>Practical tools to save time and make money</p>
+            </div>
+            <div class="tools-grid">
+                <a href="/tools/ai-roi-calculator.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/><line x1="8" y1="10" x2="12" y2="10"/><line x1="8" y1="14" x2="16" y2="14"/><line x1="8" y1="18" x2="14" y2="18"/></svg>
+                    </div>
+                    <h3>AI ROI Calculator</h3>
+                    <p>Calculate your AI investment returns</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/ai-use-case-generator.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #2d1b4e);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    </div>
+                    <h3>AI Use Case Generator</h3>
+                    <p>Discover AI opportunities for your role</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/prompt-generator.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #0f1f1a, #0f2922);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    </div>
+                    <h3>AI Prompt Generator</h3>
+                    <p>Generate optimized prompts instantly</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/headline-analyzer.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #2d1f24);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    </div>
+                    <h3>Headline Analyzer</h3>
+                    <p>Score your headlines 0-100</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/automation-savings-calculator.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #16213e);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#3b82f6" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                    </div>
+                    <h3>Automation Savings</h3>
+                    <p>Calculate time saved with automation</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/ai-job-analyzer.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #2d1b4e);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                    </div>
+                    <h3>AI Job Impact Analyzer</h3>
+                    <p>How will AI affect your career?</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/ai-tool-matchmaker.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #0f1f1a, #0f2922);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+                    </div>
+                    <h3>AI Tool Matchmaker</h3>
+                    <p>Find the perfect AI tools for you</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+                <a href="/tools/prompt-cheatsheet.html" class="tool-card-home">
+                    <div class="tool-icon-home" style="background: linear-gradient(135deg, #1a1a2e, #2d1f24);">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    </div>
+                    <h3>Prompt Cheatsheet</h3>
+                    <p>Copy-paste prompts for any task</p>
+                    <span class="tool-badge">FREE</span>
+                </a>
+            </div>
+            <div class="tools-cta">
+                <a href="/tools/">View All 21 Tools →</a>
+            </div>
         </div>
     </section>
 
