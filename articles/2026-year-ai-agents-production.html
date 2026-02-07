@@ -12,63 +12,50 @@
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#1E90FF">
     <title>2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works | Future Humanism</title>
     <meta name="description" content="Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@FutureHumanism">
+    <meta name="twitter:title" content="2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works">
+    <meta name="twitter:description" content="Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.">
+    <meta name="twitter:image" content="https://futurehumanism.co/images/og-image.jpg">
     <meta property="og:title" content="2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works">
     <meta property="og:description" content="Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.">
     <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
     <meta property="og:url" content="https://futurehumanism.co/articles/2026-year-ai-agents-production.html">
-    <meta name="twitter:card" content="summary_large_image">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Article",
-        "headline": "2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works",
-        "description": "Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.",
-        "author": {
-            "@type": "Person",
-            "name": "Galactic Jack"
-        },
-        "publisher": {
-            "@type": "Organization",
-            "name": "Future Humanism",
-            "url": "https://futurehumanism.co"
-        },
-        "datePublished": "2026-02-07",
-        "dateModified": "2026-02-07",
-        "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https://futurehumanism.co/articles/2026-year-ai-agents-production.html"
-        },
-        "image": "https://futurehumanism.co/images/og-image.jpg"
-    }
-    </script>
+    <meta property="og:type" content="article">
+    <link rel="canonical" href="https://futurehumanism.co/articles/2026-year-ai-agents-production.html">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        /* === RESET & VARIABLES === */
-        * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
             --bg-primary: #0a0a0a;
             --bg-secondary: #141414;
-            --accent: #6366F1;
+            --bg-dark: #000000;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --text-muted: #707070;
+            --accent: #1E90FF;
+            --accent-hover: #3BA0FF;
             --border: #2a2a2a;
         }
-        
-        /* === BASE === */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: 'Inter', sans-serif;
+            font-family: 'Inter', system-ui, sans-serif;
             background: var(--bg-primary);
-            color: var(--text-primary);
+            color: var(--text-secondary);
             line-height: 1.7;
         }
-        
-        /* Keep all links blue when visited */
-        a:visited { color: var(--accent); }
-        
-        /* === HEADER === */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: var(--accent);
+            z-index: 1000;
+            transition: width 0.1s;
+        }
         header {
             padding: 16px 24px;
             border-bottom: 1px solid var(--border);
@@ -86,23 +73,37 @@
             align-items: center;
         }
         .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-primary);
+        }
+        .logo-icon {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            overflow: hidden;
+        }
+        .logo-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .logo-text {
             font-weight: 700;
             font-size: 1.2rem;
-            color: var(--text-primary);
-            text-decoration: none;
         }
-        .logo span { font-weight: 400; opacity: 0.6; }
+        .logo-text span { font-weight: 400; opacity: 0.6; }
         .back-link {
             color: var(--accent);
             text-decoration: none;
             font-weight: 500;
         }
-        
-        /* === HERO === */
         .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), url('../images/hero-ai-agents-production.jpg') center/cover;
-            padding: 80px 24px;
+            padding: 60px 24px;
             text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1677442136019-21780ecad995?w=800&q=80') center/cover;
         }
         .hero-tag {
             display: inline-block;
@@ -118,8 +119,9 @@
         }
         .hero h1 {
             font-size: clamp(2rem, 5vw, 3rem);
-            font-weight: 700;
             line-height: 1.15;
+            font-weight: 700;
+            color: var(--text-primary);
             margin-bottom: 16px;
             max-width: 800px;
             margin-left: auto;
@@ -129,314 +131,98 @@
             color: var(--text-secondary);
             font-size: 0.9rem;
         }
-        
-        /* === ARTICLE === */
         article {
-            max-width: 800px;
+            max-width: 700px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 48px 24px;
         }
         article h2 {
-            font-size: 1.6rem;
-            margin: 32px 0 20px;
+            font-size: 1.5rem;
             color: var(--text-primary);
+            margin: 40px 0 20px;
+            font-weight: 700;
         }
         article h3 {
             font-size: 1.25rem;
-            margin: 32px 0 16px;
             color: var(--text-primary);
+            margin: 32px 0 16px;
+            font-weight: 600;
         }
         article p {
             margin-bottom: 20px;
             color: #b0b0b0;
         }
         article ul, article ol {
-            margin: 20px 0;
-            padding-left: 24px;
+            margin: 0 0 20px 24px;
             color: #b0b0b0;
         }
         article li {
+            margin-bottom: 10px;
             color: #b0b0b0;
-            margin-bottom: 12px;
         }
         article strong {
             color: var(--text-primary);
         }
-        
-        /* === CALLOUT BOX === */
-        .callout {
+        article a {
+            color: #60a5fa;
+            text-decoration: underline;
+            text-decoration-thickness: 1px;
+            text-underline-offset: 2px;
+        }
+        article a:hover {
+            color: var(--accent);
+        }
+        .highlight-box {
             background: var(--bg-secondary);
-            border-left: 3px solid var(--accent);
+            border-left: 4px solid var(--accent);
             padding: 24px;
-            margin: 20px 0;
+            margin: 32px 0;
             border-radius: 0 8px 8px 0;
         }
-        .callout h4 {
-            color: var(--accent);
-            margin-bottom: 12px;
-            font-size: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        .callout p:last-child {
-            margin-bottom: 0;
-        }
-        
-        /* === SHARE BUTTONS === */
-        .share-buttons {
-            display: flex;
-            gap: 12px;
-            margin: 40px 0;
-            padding: 24px 0;
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-        .share-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 10px 16px;
-            background: var(--bg-secondary);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: all 0.2s;
-        }
-        .share-btn:hover {
-            background: var(--accent);
-            color: white;
-            border-color: var(--accent);
-        }
-        
-        /* === AUTHOR BIO === */
-        .author-bio {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-            padding: 32px;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            margin: 24px 0;
-        }
-        .author-avatar {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: var(--accent);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            flex-shrink: 0;
-            color: white;
-            font-weight: 700;
-        }
-        .author-info h4 {
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-        .author-info p {
-            color: var(--text-secondary);
-            font-size: 0.95rem;
+        .highlight-box p {
             margin: 0;
-        }
-        
-        /* === RELATED ARTICLES === */
-        .related {
-            margin-top: 60px;
-            padding-top: 40px;
-            border-top: 1px solid var(--border);
-        }
-        .related h3 {
-            font-size: 1.4rem;
-            margin-bottom: 24px;
-        }
-        .related-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 24px;
-        }
-        .related-card {
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            overflow: hidden;
-            text-decoration: none;
-            transition: transform 0.2s;
-        }
-        .related-card:hover {
-            transform: translateY(-4px);
-        }
-        .related-card img {
-            width: 100%;
-            height: 140px;
-            object-fit: cover;
-        }
-        .related-card-content {
-            padding: 16px;
-        }
-        .related-card h4 {
             color: var(--text-primary);
-            font-size: 1rem;
-            line-height: 1.4;
-            margin-bottom: 8px;
         }
-        .related-card span {
-            color: var(--text-secondary);
-            font-size: 0.85rem;
-        }
-        
-        /* === FOOTER === */
         footer {
+            padding: 48px 24px;
             background: var(--bg-secondary);
-            padding: 60px 24px 30px;
-            margin-top: 80px;
-        }
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 2fr repeat(3, 1fr);
-            gap: 48px;
-        }
-        .footer-brand p {
-            color: var(--text-secondary);
-            margin-top: 16px;
-            font-size: 0.95rem;
-            line-height: 1.6;
-        }
-        .footer-column h4 {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-            color: var(--text-primary);
-        }
-        .footer-column a {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            margin-bottom: 12px;
-            font-size: 0.95rem;
-            transition: color 0.2s;
-        }
-        .footer-column a:hover {
-            color: var(--accent);
-        }
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 24px;
+            text-align: center;
             border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: var(--text-secondary);
-            font-size: 0.85rem;
         }
-        .footer-bottom a {
-            color: var(--text-secondary);
+        footer a {
+            color: var(--accent);
             text-decoration: none;
         }
-        .footer-bottom a:hover {
-            color: var(--accent);
+        footer a:hover {
+            text-decoration: underline;
         }
-        
-        /* === MOBILE === */
+        footer p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
         @media (max-width: 768px) {
-            .hero { padding: 60px 20px; }
-            .hero h1 { font-size: 1.6rem; line-height: 1.15; }
-            article { padding: 40px 20px; }
-            article h2 { font-size: 1.4rem; margin-top: 36px; }
-            .author-bio { flex-direction: column; text-align: center; }
-            .share-buttons { flex-wrap: wrap; }
-            .footer-inner { grid-template-columns: 1fr; gap: 32px; }
-            .footer-bottom { flex-direction: column; gap: 16px; text-align: center; }
+            .hero h1 { font-size: 1.75rem; }
+            article { padding: 32px 20px; }
         }
-    
-    /* Next Story Navigation */
-    .next-story {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 24px;
-        background: var(--bg-secondary);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        margin: 24px auto;
-        text-decoration: none;
-        transition: all 0.2s ease;
-        max-width: 800px;
-    }
-    .next-story:hover {
-        border-color: var(--accent);
-        background: rgba(30, 144, 255, 0.05);
-    }
-    .next-story-content {
-        flex: 1;
-    }
-    .next-story-label {
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--accent);
-        margin-bottom: 4px;
-    }
-    .next-story-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        line-height: 1.4;
-    }
-    .next-story-arrow {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--accent);
-        flex-shrink: 0;
-        margin-left: 16px;
-    }
-    .next-story-arrow svg {
-        width: 24px;
-        height: 24px;
-        transition: transform 0.2s ease;
-    }
-    .next-story:hover .next-story-arrow svg {
-        transform: translateX(4px);
-    }
-    @media (max-width: 768px) {
-        .next-story {
-            padding: 16px 20px;
-            margin: 20px 16px;
-        }
-        .next-story-title {
-            font-size: 0.95rem;
-        }
-    }
-
     </style>
-    <meta name="twitter:site" content="@FutureHumanism">
-    <meta name="twitter:title" content="2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works">
-    <meta name="twitter:description" content="Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.">
-    <meta name="twitter:image" content="https://futurehumanism.co/images/og-image.jpg">
 </head>
 <body>
+    <div class="progress-bar" id="progress"></div>
     <header>
         <div class="header-inner">
-            <a href="../index.html" class="logo">Future <span>Humanism</span></a>
-            <a href="../index.html" class="back-link">Back to Home</a>
+            <a href="/" class="logo">
+                <div class="logo-icon"><img src="../images/profile.jpg" alt="Future Humanism"></div>
+                <div class="logo-text">Future<span>Humanism</span></div>
+            </a>
+            <a href="/" class="back-link">← Back to Home</a>
         </div>
     </header>
-
-    <section class="hero">
+    
+    <div class="hero">
         <span class="hero-tag">AI Agents</span>
         <h1>2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works</h1>
-        <p class="hero-meta">February 7, 2026 | 9 min read</p>
-    </section>
+        <p class="hero-meta">February 7, 2026 &bull; 9 min read</p>
+    </div>
 
     <article>
         <p>On January 5, 2025, Sam Altman published a prediction that set the tone for the entire year: "In 2025, we may see the first AI agents 'join the workforce' and materially change the output of companies."</p>
@@ -581,13 +367,7 @@
         </div>
 
         <!-- AUTHOR BIO -->
-        <div class="author-bio">
-            <div class="author-avatar">GJ</div>
-            <div class="author-info">
-                <h4>Galactic Jack</h4>
-                <p>AI systems architect and automation specialist exploring the convergence of human creativity and machine intelligence. Building tools that amplify what humans do best.</p>
-            </div>
-        </div>
+        
 
         <!-- RELATED ARTICLES -->
         <div class="related">
@@ -621,38 +401,19 @@
             </svg>
         </div>
     </a>
-
     </article>
-
+    
     <footer>
-        <div class="footer-inner">
-            <div class="footer-brand">
-                <a href="../index.html" class="logo">Future <span>Humanism</span></a>
-                <p>Exploring the convergence of human potential and artificial intelligence. Daily insights on AI tools, automation, and the future of work.</p>
-            </div>
-            <div class="footer-column">
-                <h4>Content</h4>
-                <a href="../index.html">Latest Articles</a>
-                <a href="../resources.html">Resources</a>
-                <a href="../about.html">About</a>
-            </div>
-            <div class="footer-column">
-                <h4>Tools</h4>
-                <a href="../tools/replyready.html">ReplyReady</a>
-                <a href="../tools/prompt-playbook.html">Prompt Playbook</a>
-            </div>
-            <div class="footer-column">
-                <h4>Connect</h4>
-                <a href="https://x.com/FutureHumanism" target="_blank">X / Twitter</a>
-                <a href="../subscribe.html">Newsletter</a>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <span>2026 Future Humanism</span>
-            <div>
-                <a href="../privacy.html">Privacy</a> | <a href="../terms.html">Terms</a>
-            </div>
-        </div>
+        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html">Newsletter</a></p>
     </footer>
+
+    <script>
+        // Reading progress bar
+        window.addEventListener('scroll', () => {
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const scrolled = (window.scrollY / docHeight) * 100;
+            document.getElementById('progress').style.width = scrolled + '%';
+        });
+    </script>
 </body>
 </html>
