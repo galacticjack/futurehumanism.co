@@ -302,6 +302,71 @@
             .author-bio { flex-direction: column; text-align: center; align-items: center; }
             .share-buttons { flex-wrap: wrap; }
         }
+    
+    /* Next Story Navigation */
+    .next-story {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 20px 24px;
+        background: var(--bg-secondary);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        margin: 24px 0;
+        text-decoration: none;
+        transition: all 0.2s ease;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .next-story:hover {
+        border-color: var(--accent);
+        background: rgba(30, 144, 255, 0.05);
+    }
+    .next-story-content {
+        flex: 1;
+    }
+    .next-story-label {
+        font-size: 0.75rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        color: var(--accent);
+        margin-bottom: 4px;
+    }
+    .next-story-title {
+        font-size: 1rem;
+        font-weight: 600;
+        color: var(--text-primary);
+        line-height: 1.4;
+    }
+    .next-story-arrow {
+        width: 32px;
+        height: 32px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--accent);
+        flex-shrink: 0;
+        margin-left: 16px;
+    }
+    .next-story-arrow svg {
+        width: 24px;
+        height: 24px;
+        transition: transform 0.2s ease;
+    }
+    .next-story:hover .next-story-arrow svg {
+        transform: translateX(4px);
+    }
+    @media (max-width: 768px) {
+        .next-story {
+            padding: 16px 20px;
+        }
+        .next-story-title {
+            font-size: 0.95rem;
+        }
+    }
+
     </style>
 </head>
 <body>
@@ -441,7 +506,21 @@
             </div>
         </div>
 
-        <div class="related-articles">
+        
+    <!-- Next Story Navigation -->
+    <a href="agentic-ai-100-billion-market-2026.html" class="next-story">
+        <div class="next-story-content">
+            <div class="next-story-label">Next Story</div>
+            <div class="next-story-title">The $100 Billion Agentic AI Boom: Why 2026 Is the Year AI Agents Go Mainstream</div>
+        </div>
+        <div class="next-story-arrow">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+        </div>
+    </a>
+
+    <div class="related-articles">
             <h3>Keep Reading</h3>
             <div class="related-grid">
                 <a href="ai-agents-2026-guide.html" class="related-card">

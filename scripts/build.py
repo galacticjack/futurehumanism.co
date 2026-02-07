@@ -282,6 +282,10 @@ def main():
     run_script('update-stories-grid.py', 'Update homepage stories grid')
     print()
     
+    # Add next story navigation
+    run_script('add-next-story.py', 'Add next story navigation')
+    print()
+    
     print(f"{'='*50}")
     print("Build complete!")
     print(f"{'='*50}\n")
