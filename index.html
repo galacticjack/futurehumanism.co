@@ -1553,6 +1553,163 @@
             }
         }
 
+        /* Quick Resources Section */
+        .quick-resources-section {
+            padding: 80px 24px;
+            background: var(--bg-secondary);
+        }
+        
+        .quick-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .quick-brand {
+            flex: 0 0 300px;
+        }
+        
+        .quick-brand h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -0.5px;
+            margin-bottom: 16px;
+        }
+        
+        .quick-brand h2 span {
+            color: var(--accent);
+        }
+        
+        .quick-brand p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        
+        .quick-grid {
+            flex: 1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        
+        .quick-link {
+            padding: 12px 20px;
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        
+        .quick-link:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 900px) {
+            .quick-inner {
+                flex-direction: column;
+                text-align: center;
+            }
+            .quick-brand {
+                flex: none;
+            }
+            .quick-grid {
+                justify-content: center;
+            }
+        }
+
+        /* Newsletter Section */
+        .newsletter-section {
+            padding: 100px 24px;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #0d1a26 100%);
+            text-align: center;
+        }
+        
+        .newsletter-box {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .newsletter-box h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: -1px;
+            margin-bottom: 16px;
+        }
+        
+        .newsletter-box h2 span {
+            color: var(--accent);
+        }
+        
+        .newsletter-box > p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            margin-bottom: 32px;
+        }
+        
+        .newsletter-form {
+            display: flex;
+            gap: 12px;
+            max-width: 450px;
+            margin: 0 auto 16px;
+        }
+        
+        .newsletter-form input {
+            flex: 1;
+            padding: 16px 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            background: var(--bg-secondary);
+            color: var(--text-primary);
+            font-size: 1rem;
+        }
+        
+        .newsletter-form input:focus {
+            outline: none;
+            border-color: var(--accent);
+        }
+        
+        .newsletter-form button {
+            padding: 16px 32px;
+            border-radius: 8px;
+            border: none;
+            background: var(--accent);
+            color: white;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .newsletter-form button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+        }
+        
+        .newsletter-note {
+            color: var(--text-muted);
+            font-size: 0.85rem;
+        }
+        
+        @media (max-width: 600px) {
+            .newsletter-box h2 {
+                font-size: 1.8rem;
+            }
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+
         /* Testimonials Section */
         .testimonials-section {
             background: var(--bg-secondary);
@@ -3125,6 +3282,37 @@
             <div class="tools-cta">
                 <a href="/tools/">View All 21 Tools →</a>
             </div>
+        </div>
+    </section>
+
+    <!-- Quick Resources Section -->
+    <section class="quick-resources-section">
+        <div class="quick-inner">
+            <div class="quick-brand">
+                <h2>QUICK <span>RESOURCES</span></h2>
+                <p>Jump straight to the good stuff. Free tools, guides, and resources to accelerate your AI journey.</p>
+            </div>
+            <div class="quick-grid">
+                <a href="/tools/" class="quick-link">Free AI Tools</a>
+                <a href="/articles/ai-agents-2026-guide.html" class="quick-link">Complete AI Agent Guide</a>
+                <a href="/tools/ai-use-case-generator.html" class="quick-link">AI Use Case Generator</a>
+                <a href="/free-guide/" class="quick-link">Free AI Starter Guide</a>
+                <a href="/articles/build-your-first-ai-agent-practical-guide.html" class="quick-link">Build Your First Agent</a>
+                <a href="/articles/50-dollar-tech-stack.html" class="quick-link">$50 AI Tech Stack</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter-section" id="newsletter">
+        <div class="newsletter-box">
+            <h2>REFRAME <span>YOUR INBOX</span></h2>
+            <p>Daily insights on AI, automation, and building things that matter. No spam, just signal.</p>
+            <form class="newsletter-form" action="https://formspree.io/f/myzevrzl" method="POST">
+                <input type="email" name="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <p class="newsletter-note">Join 1,000+ builders staying ahead</p>
         </div>
     </section>
 
