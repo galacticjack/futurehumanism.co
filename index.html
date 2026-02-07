@@ -3397,7 +3397,7 @@
         <div class="newsletter-box">
             <h2>REFRAME <span>YOUR INBOX</span></h2>
             <p>Daily insights on AI, automation, and building things that matter. No spam, just signal.</p>
-            <form class="newsletter-form" action="https://formspree.io/f/myzevrzl" method="POST">
+            <form class="newsletter-form" action="https://futurehumanism.beehiiv.com/subscribe" method="POST">
                 <input type="email" name="email" placeholder="Enter your email" required>
                 <button type="submit">Subscribe</button>
             </form>
@@ -3704,7 +3704,7 @@
             
             try {
                 // Send to Formspree
-                const response = await fetch('https://formspree.io/f/xpwzgvvn', {
+                const response = await fetch('https://futurehumanism.beehiiv.com/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({ email, source: 'homepage' })
@@ -3984,7 +3984,7 @@
             
             // Try Formspree
             try {
-                await fetch('https://formspree.io/f/myzevrzl', {
+                await fetch('https://futurehumanism.beehiiv.com/subscribe', {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
                     body: JSON.stringify({ email, source: 'exit_popup' })
