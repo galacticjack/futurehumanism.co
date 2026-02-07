@@ -250,30 +250,8 @@
         /* === END SITE THEME === */
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root {
-            --text-primary: #1a1a1a;
-            --text-secondary: #555555;
-            --text-muted: #888888;
-            --bg-primary: #ffffff;
-            --bg-secondary: #f8f9fa;
-            --bg-card: #ffffff;
-            --accent: #1E90FF;
-            --accent-dark: #1873CC;
-            --accent-light: #E8F4FD;
-            --border: #e5e7eb;
-            --success: #22c55e;
-            --success-light: #dcfce7;
-            --warning: #f59e0b;
-            --gradient-start: #1E90FF;
-            --gradient-end: #6366F1;
-        }
-        body {
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-primary);
-            min-height: 100vh;
-            line-height: 1.6;
-        }
+        
+        
         
         /* Header */
         header {
@@ -326,7 +304,7 @@
         
         /* Hero */
         .hero {
-            background: linear-gradient(135deg, var(--accent-light) 0%, #fff 100%);
+            background: linear-gradient(135deg, rgba(30,144,255,0.1) 0%, var(--bg-primary) 100%);
             padding: 80px 24px;
             text-align: center;
             position: relative;
@@ -573,7 +551,7 @@
             text-align: center;
         }
         .signup-box {
-            background: linear-gradient(135deg, var(--accent-light) 0%, #fff 100%);
+            background: var(--bg-card);
             border: 2px solid var(--accent);
             border-radius: 24px;
             padding: 48px 40px;
