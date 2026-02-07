@@ -3289,9 +3289,9 @@
             </a>
         </div>
         <div class="stories-pagination">
-            <button class="stories-nav-btn" id="storiesPrev" disabled>← Previous</button>
+            <button class="stories-nav-btn" id="storiesPrev" onclick="storiesGoPage(-1)" disabled>← Previous</button>
             <span class="stories-page-info">Page <span id="storiesPage">1</span> of <span id="storiesTotalPages">3</span></span>
-            <button class="stories-nav-btn" id="storiesNext">Next →</button>
+            <button class="stories-nav-btn" id="storiesNext" onclick="storiesGoPage(1)">Next →</button>
         </div>
     </section>
 
@@ -3775,51 +3775,48 @@
             observer.observe(el);
         });
         
-        // Stories pagination
-        (function() {
-            const grid = document.getElementById('stories-grid');
-            const prevBtn = document.getElementById('storiesPrev');
-            const nextBtn = document.getElementById('storiesNext');
-            const pageSpan = document.getElementById('storiesPage');
-            const totalSpan = document.getElementById('storiesTotalPages');
+        // Stories pagination - global function
+        var storiesCurrentPage = 1;
+        var storiesPerPage = 12;
+        var storiesTotalPages = 1;
+        var storiesCards = [];
+        
+        function storiesInit() {
+            var grid = document.getElementById('stories-grid');
+            if (!grid) return;
+            storiesCards = Array.from(grid.querySelectorAll('.grid-story-card'));
+            storiesTotalPages = Math.ceil(storiesCards.length / storiesPerPage);
+            document.getElementById('storiesTotalPages').textContent = storiesTotalPages;
+            storiesShowPage(1);
+        }
+        
+        function storiesShowPage(page) {
+            storiesCurrentPage = page;
+            document.getElementById('storiesPage').textContent = page;
             
-            if (!grid || !prevBtn || !nextBtn) {
-                console.log('Pagination elements not found');
-                return;
+            storiesCards.forEach(function(card, i) {
+                var start = (page - 1) * storiesPerPage;
+                var end = start + storiesPerPage;
+                card.style.display = (i >= start && i < end) ? 'block' : 'none';
+            });
+            
+            document.getElementById('storiesPrev').disabled = page <= 1;
+            document.getElementById('storiesNext').disabled = page >= storiesTotalPages;
+            
+            if (page > 1) {
+                document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-            console.log('Pagination initialized');
-            
-            const cards = Array.from(grid.querySelectorAll('.grid-story-card'));
-            const perPage = 12; // 3 rows of 4
-            const totalPages = Math.ceil(cards.length / perPage);
-            let currentPage = 1;
-            
-            totalSpan.textContent = totalPages;
-            
-            function showPage(page) {
-                currentPage = page;
-                pageSpan.textContent = page;
-                
-                cards.forEach((card, i) => {
-                    const start = (page - 1) * perPage;
-                    const end = start + perPage;
-                    card.style.display = (i >= start && i < end) ? 'block' : 'none';
-                });
-                
-                prevBtn.disabled = page <= 1;
-                nextBtn.disabled = page >= totalPages;
-                
-                // Scroll to stories section smoothly
-                if (page > 1) {
-                    document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
+        }
+        
+        function storiesGoPage(dir) {
+            var newPage = storiesCurrentPage + dir;
+            if (newPage >= 1 && newPage <= storiesTotalPages) {
+                storiesShowPage(newPage);
             }
-            
-            prevBtn.addEventListener('click', () => showPage(currentPage - 1));
-            nextBtn.addEventListener('click', () => showPage(currentPage + 1));
-            
-            showPage(1);
-        })();
+        }
+        
+        // Initialize on load
+        storiesInit();
     </script>
 
     <!-- Exit Intent Popup -->
