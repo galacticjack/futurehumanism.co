@@ -1560,6 +1560,64 @@
             }
         }
 
+    
+        /* Clean article ending styles */
+        .share-box { max-width: 900px; margin: 48px auto; padding: 32px 24px 0; border-top: 1px solid var(--border); }
+        .share-box h4 { color: var(--text-primary); margin-bottom: 16px; font-size: 1rem; }
+        .share-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+        .share-btns a, .share-btns button { display: inline-flex; align-items: center; gap: 8px; padding: 12px 20px; border-radius: 8px; text-decoration: none; background: var(--bg-secondary); color: var(--text-secondary); font-size: 0.9rem; border: none; cursor: pointer; transition: all 0.2s; }
+        .share-btns a:hover, .share-btns button:hover { transform: translateY(-2px); }
+        .share-btns .tw:hover { background: #1DA1F2; color: white; }
+        .share-btns .li:hover { background: #0077B5; color: white; }
+        .share-btns .cp:hover { background: var(--accent); color: white; }
+        
+        .bio-box { max-width: 900px; margin: 48px auto; padding: 0 24px; }
+        .bio-inner { display: flex; gap: 20px; padding: 24px; background: var(--bg-secondary); border-radius: 12px; border: 1px solid var(--border); }
+        .bio-avatar svg { width: 56px; height: 56px; }
+        .bio-text h4 { color: var(--text-primary); margin-bottom: 8px; font-size: 1.1rem; }
+        .bio-text p { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 12px; }
+        .bio-link { display: inline-flex; align-items: center; gap: 6px; color: var(--accent); text-decoration: none; font-size: 0.85rem; font-weight: 500; }
+        @media (max-width: 768px) { .bio-inner { flex-direction: column; text-align: center; align-items: center; } }
+        
+        .kr-section { max-width: 1200px; margin: 48px auto; padding: 0 24px; }
+        .kr-section h3 { font-size: 1.5rem; font-weight: 700; color: var(--text-primary); margin-bottom: 24px; }
+        .kr-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .kr-card { background: var(--bg-secondary); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; text-decoration: none; transition: all 0.2s; }
+        .kr-card:hover { border-color: var(--accent); transform: translateY(-4px); box-shadow: 0 10px 30px rgba(0,0,0,0.3); }
+        .kr-img { width: 100%; height: 140px; object-fit: cover; }
+        .kr-content { padding: 16px; }
+        .kr-cat { font-size: 0.7rem; font-weight: 600; color: var(--accent); text-transform: uppercase; }
+        .kr-card h4 { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin: 8px 0; line-height: 1.4; }
+        .kr-card p { font-size: 0.8rem; color: var(--text-secondary); margin: 0; }
+        @media (max-width: 1024px) { .kr-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (max-width: 600px) { .kr-grid { grid-template-columns: 1fr; } }
+        
+        .ftr { background: var(--bg-dark); border-top: 1px solid var(--border); padding: 48px 24px 24px; margin-top: 48px; }
+        .ftr-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+        .ftr-brand { max-width: 280px; }
+        .ftr-logo { font-size: 1.2rem; font-weight: 700; color: var(--text-primary); text-decoration: none; display: block; margin-bottom: 12px; }
+        .ftr-logo span { font-weight: 400; opacity: 0.6; }
+        .ftr-brand p { font-size: 0.85rem; color: var(--text-secondary); }
+        .ftr-links { display: flex; gap: 48px; }
+        .ftr-col h5 { font-size: 0.75rem; font-weight: 600; color: var(--text-primary); text-transform: uppercase; margin-bottom: 12px; }
+        .ftr-col a { display: block; font-size: 0.85rem; color: var(--text-secondary); text-decoration: none; margin-bottom: 8px; }
+        .ftr-col a:hover { color: var(--accent); }
+        .ftr-btm { max-width: 1200px; margin: 32px auto 0; padding-top: 16px; border-top: 1px solid var(--border); text-align: center; }
+        .ftr-btm p { font-size: 0.8rem; color: var(--text-muted); }
+        @media (max-width: 768px) { .ftr-inner { flex-direction: column; } .ftr-links { gap: 32px; } }
+        
+        .sticky-bar { position: fixed; bottom: 0; left: 0; right: 0; background: linear-gradient(90deg, #0a0a0a, #1a1a2e, #0a0a0a); border-top: 1px solid rgba(30,144,255,0.3); padding: 12px 20px; transform: translateY(100%); transition: transform 0.4s; z-index: 9999; }
+        .sticky-bar.visible { transform: translateY(0); }
+        .sticky-bar.dismissed { display: none; }
+        .sticky-inner { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; }
+        .sticky-inner p { color: #fff; font-size: 0.9rem; margin: 0; }
+        .sticky-inner strong { color: var(--accent); }
+        .sticky-form { display: flex; gap: 8px; }
+        .sticky-form input { padding: 8px 14px; border-radius: 6px; border: 1px solid var(--border); background: #0a0a0a; color: #fff; font-size: 0.85rem; }
+        .sticky-form button { padding: 8px 16px; border-radius: 6px; border: none; background: var(--accent); color: white; font-weight: 600; cursor: pointer; }
+        .sticky-close { background: none; border: none; color: #707070; font-size: 1.2rem; cursor: pointer; }
+        @media (max-width: 768px) { .sticky-inner { flex-direction: column; } .sticky-form { width: 100%; } .sticky-form input { flex: 1; } }
+
     </style>
     
     <script>
@@ -1839,631 +1897,118 @@
     </script>
 
 
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-<!-- Add this before     <script src="../js/exit-intent.js"></script>
-
-    <!-- Keep Reading Section (Visual 4-card grid) -->
     
-
-
-    <!-- Keep Reading Section (Visual 4-card grid) -->
-    <section class="keep-reading-section">
-        <h3>Keep Reading</h3>
-        <div class="keep-reading-grid">
-                <a href="/articles/ai-agents-2026-guide.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="The Complete Guide to AI Agents in 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Guide</span>
-                        <h4>The Complete Guide to AI Agents in 2026</h4>
-                        <p>Everything you need to know about AI agents and how they work.</p>
-                    </div>
-                </a>
-                <a href="/articles/claude-vs-chatgpt-for-coding-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT for Coding 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Comparison</span>
-                        <h4>Claude vs ChatGPT for Coding 2026</h4>
-                        <p>A detailed comparison of the two leading AI coding assistants.</p>
-                    </div>
-                </a>
-                <a href="/articles/ai-marketing-strategies-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=80" alt="AI Marketing: What's Working in 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Marketing</span>
-                        <h4>AI Marketing: What's Working in 2026</h4>
-                        <p>The AI marketing strategies delivering real ROI.</p>
-                    </div>
-                </a>
-                <a href="/articles/best-ai-tools-solopreneurs-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Best AI Tools for Solopreneurs" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Tools</span>
-                        <h4>Best AI Tools for Solopreneurs</h4>
-                        <p>The essential AI tools that save time and make money.</p>
-                    </div>
-                </a>
+    <!-- Share -->
+    <div class="share-box">
+        <h4>Share This Article</h4>
+        <div class="share-btns">
+            <a href="https://twitter.com/intent/tweet?url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fgemini-2-flash-multimodal-ai-dominance.html&via=FutureHumanism" target="_blank" class="tw">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                Share on X
+            </a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https%3A%2F%2Ffuturehumanism.co%2Farticles%2Fgemini-2-flash-multimodal-ai-dominance.html" target="_blank" class="li">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                LinkedIn
+            </a>
+            <button class="cp" onclick="navigator.clipboard.writeText(window.location.href);this.textContent='Copied!'">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                Copy Link
+            </button>
         </div>
-    </section>
-
-</body> in articles -->
-
-
-<!-- Related Articles Section - Auto-generated for SEO -->
-
-
-    <!-- Next Story Navigation -->
-    <a href="future-of-search-after-chatgpt.html" class="next-story">
-        <div class="next-story-content">
-            <div class="next-story-label">Next Story</div>
-            <div class="next-story-title">The Future of Search After ChatGPT: What Google Won't Tell You</div>
-        </div>
-        <div class="next-story-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </div>
-    </a>
-
-
-<!-- End Related Articles -->
-
-<style>
-.sticky-cta-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-    border-top: 1px solid rgba(30, 144, 255, 0.3);
-    padding: 12px 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-    z-index: 9999;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-}
-
-.sticky-cta-bar.visible {
-    transform: translateY(0);
-}
-
-.sticky-cta-bar.dismissed {
-    display: none;
-}
-
-.sticky-cta-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.sticky-cta-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-}
-
-.sticky-cta-text span.icon {
-    font-size: 1.5rem;
-}
-
-.sticky-cta-text p {
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-.sticky-cta-text p strong {
-    color: #1E90FF;
-}
-
-.sticky-cta-form {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.sticky-cta-form input[type="email"] {
-    padding: 10px 16px;
-    border-radius: 6px;
-    border: 1px solid #2a2a2a;
-    background: #0a0a0a;
-    color: #ffffff;
-    font-size: 0.9rem;
-    width: 220px;
-}
-
-.sticky-cta-form input[type="email"]:focus {
-    outline: none;
-    border-color: #1E90FF;
-}
-
-.sticky-cta-form button {
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    background: #1E90FF;
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.sticky-cta-form button:hover {
-    background: #3BA0FF;
-    transform: translateY(-1px);
-}
-
-.sticky-cta-close {
-    background: none;
-    border: none;
-    color: #707070;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 4px;
-    line-height: 1;
-    transition: color 0.2s;
-}
-
-.sticky-cta-close:hover {
-    color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .sticky-cta-bar {
-        padding: 10px 12px;
-    }
-    
-    .sticky-cta-inner {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .sticky-cta-text {
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .sticky-cta-text span.icon {
-        display: none;
-    }
-    
-    .sticky-cta-text p {
-        font-size: 0.85rem;
-    }
-    
-    .sticky-cta-form {
-        width: 100%;
-    }
-    
-    .sticky-cta-form input[type="email"] {
-        flex: 1;
-        width: auto;
-        min-width: 0;
-    }
-    
-    .sticky-cta-form button {
-        padding: 10px 16px;
-    }
-    
-    .sticky-cta-close {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-    }
-    
-    .sticky-cta-bar {
-        position: relative;
-    }
-}
-
-        /* === ARTICLE TEMPLATE FIXES === */
-        
-        /* 1. Wider article container on large screens */
-        article {
-            max-width: 900px;
-            margin: 0 auto;
-            padding: 40px 24px;
-        }
-        
-        @media (min-width: 1200px) {
-            article {
-                max-width: 900px;
-            }
-        }
-        
-        /* 2. Author bio with proper logo and X link */
-        .author-bio-container {
-            max-width: 900px;
-            margin: 48px auto;
-            padding: 0 24px;
-        }
-        
-        .author-bio {
-            display: flex;
-            gap: 20px;
-            padding: 24px;
-            background: var(--bg-secondary);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-        
-        .author-avatar-wrapper {
-            flex-shrink: 0;
-        }
-        
-        .author-avatar-wrapper svg {
-            width: 56px !important;
-            height: 56px !important;
-        }
-        
-        .author-info {
-            flex: 1;
-        }
-        
-        .author-info h4 {
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-        }
-        
-        .author-info p {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 12px;
-            line-height: 1.5;
-        }
-        
-        .author-x-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            color: var(--accent);
-            text-decoration: none;
-            font-size: 0.85rem;
-            font-weight: 500;
-            transition: all 0.2s;
-        }
-        
-        .author-x-link:hover {
-            color: var(--accent-hover);
-        }
-        
-        .author-x-link svg {
-            width: 14px !important;
-            height: 14px !important;
-        }
-        
-        @media (max-width: 768px) {
-            .author-bio {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
-            }
-            
-            .author-info {
-                text-align: center;
-            }
-        }
-        
-        /* 3. Keep Reading section with images */
-        
-        
-        .keep-reading-section h3 {
-            font-size: 1.5rem;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 24px;
-        }
-        
-        
-        
-        
-        
-        .keep-reading-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-4px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
-        }
-        
-        .keep-reading-card-image {
-            width: 100%;
-            height: 160px;
-            object-fit: cover;
-            background: var(--bg-dark);
-        }
-        
-        .keep-reading-card-content {
-            padding: 20px;
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        
-        .keep-reading-card-category {
-            font-size: 0.7rem;
-            font-weight: 600;
-            color: var(--accent);
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-        }
-        
-        .keep-reading-card h4 {
-            font-size: 1rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-            line-height: 1.4;
-        }
-        
-        .keep-reading-card p {
-            font-size: 0.875rem;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin: 0;
-            flex: 1;
-        }
-        
-        @media (max-width: 1024px) {
-            
-        }
-        
-        @media (max-width: 640px) {
-            
-            
-            .keep-reading-card-image {
-                height: 140px;
-            }
-        }
-        
-        /* 4. Proper footer styling */
-        .site-footer {
-            background: var(--bg-dark);
-            border-top: 1px solid var(--border);
-            padding: 60px 24px 30px;
-            margin-top: 60px;
-        }
-        
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1.5fr 2fr;
-            gap: 60px;
-        }
-        
-        .footer-brand {
-            max-width: 300px;
-        }
-        
-        .footer-logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-primary);
-            font-size: 1.2rem;
-            font-weight: 700;
-            margin-bottom: 16px;
-        }
-        
-        .footer-logo svg {
-            width: 32px !important;
-            height: 32px !important;
-        }
-        
-        .footer-logo .light {
-            font-weight: 400;
-            opacity: 0.6;
-        }
-        
-        .footer-tagline {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            line-height: 1.6;
-        }
-        
-        .footer-links {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-        }
-        
-        .footer-column h5 {
-            color: var(--text-primary);
-            font-size: 0.85rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 16px;
-        }
-        
-        .footer-column a {
-            display: block;
-            color: var(--text-secondary);
-            text-decoration: none;
-            font-size: 0.9rem;
-            margin-bottom: 10px;
-            transition: color 0.2s;
-        }
-        
-        .footer-column a:hover {
-            color: var(--accent);
-        }
-        
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 40px auto 0;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-            text-align: center;
-        }
-        
-        .footer-bottom p {
-            color: var(--text-muted);
-            font-size: 0.85rem;
-        }
-        
-        @media (max-width: 768px) {
-            .footer-inner {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            
-            .footer-brand {
-                max-width: none;
-                text-align: center;
-            }
-            
-            .footer-links {
-                grid-template-columns: repeat(3, 1fr);
-                text-align: center;
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .footer-links {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-        
-        /* 5. Remove floating social share buttons from sidebar */
-        .floating-share-buttons,
-        .social-sidebar,
-        .share-sidebar {
-            display: none !important;
-        }
-
-    </style>
-
-<div class="sticky-cta-bar" id="stickyCta">
-    <div class="sticky-cta-inner">
-        <div class="sticky-cta-text">
-            <span class="icon">⚡</span>
-            <p>Join <strong>2,000+ builders</strong> getting AI insights weekly</p>
-        </div>
-        <form class="sticky-cta-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
-            <input type="email" name="email" placeholder="your@email.com" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <button class="sticky-cta-close" onclick="dismissStickyBar()" aria-label="Close">&times;</button>
     </div>
-</div>
 
-<script>
-(function() {
-    const stickyBar = document.getElementById('stickyCta');
-    if (!stickyBar) return;
-    
-    // Check if already dismissed this session
-    if (sessionStorage.getItem('stickyCtaDismissed')) {
-        stickyBar.classList.add('dismissed');
-        return;
-    }
-    
-    let hasShown = false;
-    
-    function checkScroll() {
-        if (hasShown) return;
-        
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        // Show after 30% scroll
-        if (scrollPercent > 30) {
-            stickyBar.classList.add('visible');
-            hasShown = true;
-            
-            // Track impression
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_shown', { 'scroll_percent': Math.round(scrollPercent) });
-            }
-        }
-    }
-    
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    
-    // Track submission
-    const form = stickyBar.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_submit', { 'source': 'sticky_bar' });
-            }
-            // Auto-dismiss after submission
-            setTimeout(function() {
-                dismissStickyBar();
-            }, 1000);
-        });
-    }
-})();
+    <!-- Author -->
+    <div class="bio-box">
+        <div class="bio-inner">
+            <div class="bio-avatar">
+                <svg width="56" height="56" viewBox="0 0 100 100" fill="none">
+                    <defs><linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#FF6B6B"/><stop offset="50%" style="stop-color:#9B59B6"/><stop offset="100%" style="stop-color:#1E90FF"/></linearGradient></defs>
+                    <circle cx="50" cy="50" r="45" stroke="url(#g)" stroke-width="4" fill="none"/>
+                    <path d="M35 30 Q50 20 65 30 Q75 45 65 60 Q50 75 35 60 Q25 45 35 30" fill="none" stroke="url(#g)" stroke-width="3"/>
+                </svg>
+            </div>
+            <div class="bio-text">
+                <h4>Future Humanism</h4>
+                <p>Exploring where AI meets human potential. Daily insights on automation, side projects, and building things that matter.</p>
+                <a href="https://x.com/FutureHumanism" target="_blank" class="bio-link">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    Follow on X
+                </a>
+            </div>
+        </div>
+    </div>
 
-function dismissStickyBar() {
-    const bar = document.getElementById('stickyCta');
-    if (bar) {
-        bar.classList.remove('visible');
-        bar.classList.add('dismissed');
-        sessionStorage.setItem('stickyCtaDismissed', 'true');
-        
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'sticky_cta_dismissed');
-        }
-    }
-}
-</script>
-
-    <!-- Keep Reading Section (Visual 4-card grid) -->
-    
-
-
-    <!-- Keep Reading Section (Visual 4-card grid) -->
-    <section class="keep-reading-section">
+    <!-- Keep Reading -->
+    <section class="kr-section">
         <h3>Keep Reading</h3>
-        <div class="keep-reading-grid">
-                <a href="/articles/ai-agents-2026-guide.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="The Complete Guide to AI Agents in 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Guide</span>
+        <div class="kr-grid">
+                <a href="/articles/ai-agents-2026-guide.html" class="kr-card">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="The Complete Guide to AI Agents in 2026" class="kr-img" loading="lazy">
+                    <div class="kr-content">
+                        <span class="kr-cat">Guide</span>
                         <h4>The Complete Guide to AI Agents in 2026</h4>
-                        <p>Everything you need to know about AI agents and how they work.</p>
+                        <p>Everything you need to know about AI agents.</p>
                     </div>
                 </a>
-                <a href="/articles/claude-vs-chatgpt-for-coding-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT for Coding 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Comparison</span>
+                <a href="/articles/claude-vs-chatgpt-for-coding-2026.html" class="kr-card">
+                    <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT for Coding 2026" class="kr-img" loading="lazy">
+                    <div class="kr-content">
+                        <span class="kr-cat">Comparison</span>
                         <h4>Claude vs ChatGPT for Coding 2026</h4>
-                        <p>A detailed comparison of the two leading AI coding assistants.</p>
+                        <p>Comparing the top AI coding assistants.</p>
                     </div>
                 </a>
-                <a href="/articles/ai-marketing-strategies-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=80" alt="AI Marketing: What's Working in 2026" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Marketing</span>
+                <a href="/articles/ai-marketing-strategies-2026.html" class="kr-card">
+                    <img src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=400&q=80" alt="AI Marketing: What's Working in 2026" class="kr-img" loading="lazy">
+                    <div class="kr-content">
+                        <span class="kr-cat">Marketing</span>
                         <h4>AI Marketing: What's Working in 2026</h4>
-                        <p>The AI marketing strategies delivering real ROI.</p>
+                        <p>AI strategies delivering real ROI.</p>
                     </div>
                 </a>
-                <a href="/articles/best-ai-tools-solopreneurs-2026.html" class="keep-reading-card">
-                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Best AI Tools for Solopreneurs" class="keep-reading-img" loading="lazy">
-                    <div class="keep-reading-content">
-                        <span class="keep-reading-cat">Tools</span>
+                <a href="/articles/best-ai-tools-solopreneurs-2026.html" class="kr-card">
+                    <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="Best AI Tools for Solopreneurs" class="kr-img" loading="lazy">
+                    <div class="kr-content">
+                        <span class="kr-cat">Tools</span>
                         <h4>Best AI Tools for Solopreneurs</h4>
-                        <p>The essential AI tools that save time and make money.</p>
+                        <p>Essential AI tools that save time.</p>
                     </div>
                 </a>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="ftr">
+        <div class="ftr-inner">
+            <div class="ftr-brand">
+                <a href="/" class="ftr-logo">Future<span>Humanism</span></a>
+                <p>Where AI meets human potential.</p>
+            </div>
+            <div class="ftr-links">
+                <div class="ftr-col"><h5>Content</h5><a href="/articles/">Stories</a><a href="/about.html">About</a></div>
+                <div class="ftr-col"><h5>Tools</h5><a href="/tools/">Free Tools</a></div>
+                <div class="ftr-col"><h5>Connect</h5><a href="https://x.com/FutureHumanism" target="_blank">Twitter</a></div>
+            </div>
+        </div>
+        <div class="ftr-btm"><p>&copy; 2026 Future Humanism</p></div>
+    </footer>
+
+    <!-- Sticky CTA -->
+    <div class="sticky-bar" id="stickyBar">
+        <div class="sticky-inner">
+            <p>⚡ Join <strong>2,000+ builders</strong> getting AI insights</p>
+            <form class="sticky-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
+                <input type="email" name="email" placeholder="your@email.com" required>
+                <button type="submit">Subscribe</button>
+            </form>
+            <button class="sticky-close" onclick="dismissBar()">×</button>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('scroll',()=>{const p=document.getElementById('progress');if(p)p.style.width=(scrollY/(document.documentElement.scrollHeight-innerHeight)*100)+'%';});
+        (function(){const b=document.getElementById('stickyBar');if(!b||sessionStorage.getItem('sd'))return;let s=false;window.addEventListener('scroll',()=>{if(s)return;if(scrollY/(document.body.scrollHeight-innerHeight)>0.3){b.classList.add('visible');s=true;}},{passive:true});})();
+        function dismissBar(){const b=document.getElementById('stickyBar');if(b){b.classList.remove('visible');b.classList.add('dismissed');sessionStorage.setItem('sd','1');}}
+    </script>
 </body>
 </html>
