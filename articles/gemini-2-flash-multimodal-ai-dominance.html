@@ -45,54 +45,6 @@
         "image": "https://futurehumanism.co/images/og-gemini-2-flash-multimodal-ai-dominance.jpg"
     }
     </script>
-    <script type="application/ld+json">
-    {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-        {
-            "@type": "Question",
-            "name": "What Gemini 2.0 Flash Actually Does?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Strip away the marketing hype, and Gemini 2.0 Flash is impressive for one core reason: it's genuinely multimodal from the ground up."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "The Business Implications Are Massive?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "This isn't about which AI is \"smarter.\" It's about which AI architecture becomes the standard that every business tool builds on."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "Google vs. OpenAI: The Architecture War?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "OpenAI has been playing catch-up in multimodal AI, and it shows. Their approach has been to bolt capabilities onto GPT-5 rather than rebuilding from scratch for multiple input types."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "What This Means for Your Business?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "The immediate question isn't whether to switch AI providers-it's whether your current business processes are ready for genuinely multimodal AI."
-            }
-        },
-        {
-            "@type": "Question",
-            "name": "The Future Is Multimodal (Whether We're Ready or Not)?",
-            "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Here's what Google understands that many businesses don't yet: the future of AI isn't about making computers better at understanding human language. It's about making computers capable of understanding human communication-in all its messy, multimodal glory."
-            }
-        }
-    ]
-}
-    </script>
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -190,11 +142,11 @@
         article {
             max-width: 800px;
             margin: 0 auto;
-            padding: 40px 24px;
+            padding: 60px 24px;
         }
         article h2 {
             font-size: 1.6rem;
-            margin: 32px 0 20px;
+            margin: 48px 0 20px;
             color: var(--text-primary);
         }
         article h3 {
@@ -217,24 +169,9 @@
         article strong {
             color: var(--text-primary);
         }
-        /* Article link styling - subtle, readable */
-        article a {
-            color: #60a5fa;
-            text-decoration: underline;
-            text-decoration-color: rgba(96, 165, 250, 0.3);
-            text-underline-offset: 2px;
-        }
-        article a:hover {
-            color: #93c5fd;
-            text-decoration-color: rgba(96, 165, 250, 0.6);
-        }
-        article a:visited {
-            color: #a78bfa;
-        }
-
         article em {
-            font-style: italic;
-            color: var(--text-primary);
+            color: var(--accent);
+            font-style: normal;
         }
         blockquote {
             background: var(--bg-secondary);
@@ -350,7 +287,7 @@
         }
         /* Share Buttons */
         .share-section {
-            margin: 24px 0;
+            margin: 48px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
@@ -417,7 +354,7 @@
         padding: 32px;
         background: var(--bg-secondary);
         border-radius: 12px;
-        margin: 24px 0;
+        margin: 48px 0;
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
@@ -455,13 +392,13 @@
     /* Related Articles */
     .related-articles {
         max-width: 900px;
-        margin: 32px auto;
+        margin: 60px auto;
         padding: 0 24px;
     }
     .related-articles h3 {
         text-align: center;
         font-size: 1.5rem;
-        margin-bottom: 16px;
+        margin-bottom: 32px;
         color: var(--text-primary);
     }
     .related-grid {
@@ -523,7 +460,7 @@
     
         /* Share & Follow Sections */
         .share-section {
-            margin: 24px 0;
+            margin: 48px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
             border-bottom: 1px solid var(--border);
@@ -644,7 +581,7 @@
         }
             /* Share Section - Clean */
         .share-section {
-            margin: 24px 0;
+            margin: 48px 0;
             padding: 32px 0;
             border-top: 1px solid var(--border);
         }
@@ -1160,70 +1097,6 @@
             }
         }
 
-    
-    /* Next Story Navigation */
-    .next-story {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 24px;
-        background: var(--bg-secondary);
-        border: 1px solid var(--border);
-        border-radius: 12px;
-        margin: 24px auto;
-        text-decoration: none;
-        transition: all 0.2s ease;
-        max-width: 800px;
-    }
-    .next-story:hover {
-        border-color: var(--accent);
-        background: rgba(30, 144, 255, 0.05);
-    }
-    .next-story-content {
-        flex: 1;
-    }
-    .next-story-label {
-        font-size: 0.75rem;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        color: var(--accent);
-        margin-bottom: 4px;
-    }
-    .next-story-title {
-        font-size: 1rem;
-        font-weight: 600;
-        color: var(--text-primary);
-        line-height: 1.4;
-    }
-    .next-story-arrow {
-        width: 32px;
-        height: 32px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: var(--accent);
-        flex-shrink: 0;
-        margin-left: 16px;
-    }
-    .next-story-arrow svg {
-        width: 24px;
-        height: 24px;
-        transition: transform 0.2s ease;
-    }
-    .next-story:hover .next-story-arrow svg {
-        transform: translateX(4px);
-    }
-    @media (max-width: 768px) {
-        .next-story {
-            padding: 16px 20px;
-            margin: 20px 16px;
-        }
-        .next-story-title {
-            font-size: 0.95rem;
-        }
-    }
-
     </style>
     
     <script>
@@ -1285,10 +1158,7 @@
     <header>
         <div class="container">
             <div class="header-content">
-                <a href="../" class="logo">
-                <div class="logo-icon"><img src="../images/profile.jpg" alt="Future Humanism"></div>
-                <div class="logo-text">Future<span>Humanism</span></div>
-            </a>
+                <a href="/" class="logo">Future<span style="font-weight: 400;">Humanism</span></a>
                 <a href="/" class="back-link">← Back to Home</a>
             </div>
         </div>
@@ -1311,186 +1181,6 @@
             <p>While everyone's been focused on the race to build better chatbots, Google quietly assembled something different: an AI that can see, hear, speak, and code-all at the same time, all in real-time.</p>
 
             <p>This isn't about benchmarks or technical superiority. It's about positioning. And Google just made a move that could redefine what "AI-powered" means for every business on the planet.</p>
-        <!-- Inline Newsletter CTA -->
-            <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const progressBar = document.getElementById('reading-progress');
-        const article = document.querySelector('article, .content, main, .article-content') || document.body;
-        
-        function updateProgress() {
-            const scrollTop = window.scrollY;
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
-            progressBar.style.width = progress + '%';
-        }
-        
-        window.addEventListener('scroll', updateProgress);
-        updateProgress();
-    });
-    </script>
-    <script src="../js/lazy-loading.js"></script>
-
-
-<!-- Exit Intent Popup Component - Include before 
-    <script>
-        // Share functions
-        const shareUrl = window.location.href;
-        const shareTitle = document.title;
-        
-        function shareToX() {
-            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToLinkedIn() {
-            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function shareToFacebook() {
-            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
-        }
-        
-        function copyLink() {
-            navigator.clipboard.writeText(shareUrl).then(() => {
-                const btn = document.getElementById('copy-link-btn');
-                if (btn) {
-                    const originalText = btn.innerHTML;
-                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
-                    btn.style.color = '#10b981';
-                    setTimeout(() => {
-                        btn.innerHTML = originalText;
-                        btn.style.color = '';
-                    }, 2000);
-                }
-            });
-        }
-
-        // Mobile menu
-        function openMobileMenu() {
-            document.getElementById('mobile-menu').classList.add('open');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeMobileMenu() {
-            document.getElementById('mobile-menu').classList.remove('open');
-            document.body.style.overflow = '';
-        }
-
-        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
-        if (mobileMenuBtn) {
-            mobileMenuBtn.addEventListener('click', openMobileMenu);
-        }
-    </script>
-
-
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-<!-- Add this before     <script src="../js/exit-intent.js"></script>
-</body> in articles -->
-
-
-<!-- Related Articles Section - Auto-generated for SEO -->
-<style>
-.related-articles {
-    margin-top: 3rem;
-    padding-top: 2rem;
-    border-top: 1px solid var(--border, #2a2a2a);
-}
-.related-articles h3 {
-    font-size: 1.25rem;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
-    color: var(--text-primary, #ffffff);
-}
-.related-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.25rem;
-}
-.related-card {
-    background: var(--bg-secondary, #1a1a1a);
-    border: 1px solid var(--border, #2a2a2a);
-    border-radius: 12px;
-    padding: 1.25rem;
-    text-decoration: none;
-    transition: all 0.2s ease;
-    display: block;
-}
-.related-card:hover {
-    border-color: var(--accent, #1E90FF);
-    transform: translateY(-2px);
-}
-.related-category {
-    font-size: 0.75rem;
-    font-weight: 600;
-    color: var(--accent, #1E90FF);
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-.related-card h4 {
-    font-size: 1rem;
-    font-weight: 600;
-    color: var(--text-primary, #ffffff);
-    margin-bottom: 0.5rem;
-    line-height: 1.4;
-}
-.related-card p {
-    font-size: 0.875rem;
-    color: var(--text-secondary, #b0b0b0);
-    line-height: 1.5;
-    margin: 0;
-}
-@media (max-width: 640px) {
-    .related-grid {
-        grid-template-columns: 1fr;
-    }
-}
-</style>
-
-    <!-- Next Story Navigation -->
-    <a href="best-ai-tools-solopreneurs-2026.html" class="next-story">
-        <div class="next-story-content">
-            <div class="next-story-label">Next Story</div>
-            <div class="next-story-title">10 Best AI Tools for Solopreneurs in 2026: Scale Without Hiring</div>
-        </div>
-        <div class="next-story-arrow">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                <path d="M5 12h14M12 5l7 7-7 7"/>
-            </svg>
-        </div>
-    </a>
-
-<div class="related-articles">
-    <h3>Keep Reading</h3>
-    <div class="related-grid">
-            <a href="/articles/chatgpt-pro-200-enterprise-ai-shift.html" class="related-card">
-                <span class="related-category">Enterprise AI Strategy</span>
-                <h4>ChatGPT Pro at $200/Month: What This Signals About Enterprise AI's ...</h4>
-                <p>OpenAI's $200/month ChatGPT Pro tier reveals enterprise AI pricing psychology. Why premium AI models will reshape cor...</p>
-            </a>
-            <a href="/articles/ai-world-models-next-breakthrough.html" class="related-card">
-                <span class="related-category">Deep Dive</span>
-                <h4>World Models: The AI Breakthrough That Will Change Everything After...</h4>
-                <p>Beyond text and reasoning: AI systems that understand 3D space, physics, and how the real world works. The next parad...</p>
-            </a>
-            <a href="/articles/local-llms-running-ai-on-your-hardware.html" class="related-card">
-                <span class="related-category">Local AI</span>
-                <h4>The Rise of Local LLMs: Running AI on Your Own Hardware</h4>
-                <p>Why running AI models locally is becoming the smart choice for privacy, cost control, and performance. Complete guide...</p>
-
-        <div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
-            
-            <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Want more like this?</h3>
-            <p style="color: #b0b0b0; font-size: 1rem; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">Join 2,000+ builders getting weekly AI insights, tools, and unfiltered takes. No spam, unsubscribe anytime.</p>
-            <form action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 450px; margin: 0 auto;">
-                <input type="email" name="email" placeholder="your@email.com" required style="padding: 14px 20px; border-radius: 8px; border: 1px solid #2a2a2a; background: #0a0a0a; color: #ffffff; font-size: 1rem; flex: 1; min-width: 200px;">
-                <button type="submit" style="padding: 14px 28px; border-radius: 8px; border: none; background: #1E90FF; color: white; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Subscribe Free</button>
-            </form>
-            <p style="color: #707070; font-size: 0.85rem; margin-top: 16px;">Read by developers, founders, and AI enthusiasts</p>
-        </div>
-
 
             <h2>What Gemini 2.0 Flash Actually Does</h2>
 
@@ -1601,245 +1291,76 @@
             <p><strong>The question isn't whether multimodal AI will transform business communication. The question is whether Google just accelerated that transformation by three years.</strong></p>
         </div>
 
-            </div>
-
-            </a>
-    </div>
-</div>
-<!-- End Related Articles -->
-
-<style>
-.sticky-cta-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-    border-top: 1px solid rgba(30, 144, 255, 0.3);
-    padding: 12px 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-    z-index: 9999;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-}
-
-.sticky-cta-bar.visible {
-    transform: translateY(0);
-}
-
-.sticky-cta-bar.dismissed {
-    display: none;
-}
-
-.sticky-cta-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.sticky-cta-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-}
-
-.sticky-cta-text span.icon {
-    font-size: 1.5rem;
-}
-
-.sticky-cta-text p {
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-.sticky-cta-text p strong {
-    color: #1E90FF;
-}
-
-.sticky-cta-form {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.sticky-cta-form input[type="email"] {
-    padding: 10px 16px;
-    border-radius: 6px;
-    border: 1px solid #2a2a2a;
-    background: #0a0a0a;
-    color: #ffffff;
-    font-size: 0.9rem;
-    width: 220px;
-}
-
-.sticky-cta-form input[type="email"]:focus {
-    outline: none;
-    border-color: #1E90FF;
-}
-
-.sticky-cta-form button {
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    background: #1E90FF;
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.sticky-cta-form button:hover {
-    background: #3BA0FF;
-    transform: translateY(-1px);
-}
-
-.sticky-cta-close {
-    background: none;
-    border: none;
-    color: #707070;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 4px;
-    line-height: 1;
-    transition: color 0.2s;
-}
-
-.sticky-cta-close:hover {
-    color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .sticky-cta-bar {
-        padding: 10px 12px;
-    }
-    
-    .sticky-cta-inner {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .sticky-cta-text {
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .sticky-cta-text span.icon {
-        display: none;
-    }
-    
-    .sticky-cta-text p {
-        font-size: 0.85rem;
-    }
-    
-    .sticky-cta-form {
-        width: 100%;
-    }
-    
-    .sticky-cta-form input[type="email"] {
-        flex: 1;
-        width: auto;
-        min-width: 0;
-    }
-    
-    .sticky-cta-form button {
-        padding: 10px 16px;
-    }
-    
-    .sticky-cta-close {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-    }
-    
-    .sticky-cta-bar {
-        position: relative;
-    }
-}
-</style>
-
-<div class="sticky-cta-bar" id="stickyCta">
-    <div class="sticky-cta-inner">
-        <div class="sticky-cta-text">
-            
-            <p>Join <strong>2,000+ builders</strong> getting AI insights weekly</p>
-        </div>
-        <form class="sticky-cta-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
-            <input type="email" name="email" placeholder="your@email.com" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <button class="sticky-cta-close" onclick="dismissStickyBar()" aria-label="Close">&times;</button>
-    </div>
-</div>
-
-<script>
-(function() {
-    const stickyBar = document.getElementById('stickyCta');
-    if (!stickyBar) return;
-    
-    // Check if already dismissed this session
-    if (sessionStorage.getItem('stickyCtaDismissed')) {
-        stickyBar.classList.add('dismissed');
-        return;
-    }
-    
-    let hasShown = false;
-    
-    function checkScroll() {
-        if (hasShown) return;
+            </div>    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const progressBar = document.getElementById('reading-progress');
+        const article = document.querySelector('article, .content, main, .article-content') || document.body;
         
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        // Show after 30% scroll
-        if (scrollPercent > 30) {
-            stickyBar.classList.add('visible');
-            hasShown = true;
-            
-            // Track impression
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_shown', { 'scroll_percent': Math.round(scrollPercent) });
-            }
+        function updateProgress() {
+            const scrollTop = window.scrollY;
+            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = Math.min(100, Math.max(0, (scrollTop / docHeight) * 100));
+            progressBar.style.width = progress + '%';
         }
-    }
-    
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    
-    // Track submission
-    const form = stickyBar.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_submit', { 'source': 'sticky_bar' });
-            }
-            // Auto-dismiss after submission
-            setTimeout(function() {
-                dismissStickyBar();
-            }, 1000);
-        });
-    }
-})();
-
-function dismissStickyBar() {
-    const bar = document.getElementById('stickyCta');
-    if (bar) {
-        bar.classList.remove('visible');
-        bar.classList.add('dismissed');
-        sessionStorage.setItem('stickyCtaDismissed', 'true');
         
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'sticky_cta_dismissed');
+        window.addEventListener('scroll', updateProgress);
+        updateProgress();
+    });
+    </script>
+    <script src="../js/lazy-loading.js"></script>
+
+
+<!-- Exit Intent Popup Component - Include before 
+    <script>
+        // Share functions
+        const shareUrl = window.location.href;
+        const shareTitle = document.title;
+        
+        function shareToX() {
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
         }
-    }
-}
-</script>
-</body> -->
+        
+        function shareToLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                const btn = document.getElementById('copy-link-btn');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Mobile menu
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+    </script>
+
+
 <div id="exit-popup" class="exit-popup">
     <div class="exit-popup-content">
         <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close popup">&times;</button>
@@ -2642,242 +2163,8 @@ function dismissStickyBar() {
         }
     </script>
 
-
-    <!-- Sticky Newsletter Bar -->
-<!-- Sticky Newsletter Bar Component -->
-<!-- Appears after 30% scroll, stays fixed at bottom -->
-</body> in articles -->
-
-<style>
-.sticky-cta-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
-    border-top: 1px solid rgba(30, 144, 255, 0.3);
-    padding: 12px 20px;
-    transform: translateY(100%);
-    transition: transform 0.4s ease;
-    z-index: 9999;
-    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
-}
-
-.sticky-cta-bar.visible {
-    transform: translateY(0);
-}
-
-.sticky-cta-bar.dismissed {
-    display: none;
-}
-
-.sticky-cta-inner {
-    max-width: 1000px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-.sticky-cta-text {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    flex: 1;
-}
-
-.sticky-cta-text span.icon {
-    font-size: 1.5rem;
-}
-
-.sticky-cta-text p {
-    color: #ffffff;
-    font-size: 0.95rem;
-    font-weight: 500;
-    margin: 0;
-}
-
-.sticky-cta-text p strong {
-    color: #1E90FF;
-}
-
-.sticky-cta-form {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-.sticky-cta-form input[type="email"] {
-    padding: 10px 16px;
-    border-radius: 6px;
-    border: 1px solid #2a2a2a;
-    background: #0a0a0a;
-    color: #ffffff;
-    font-size: 0.9rem;
-    width: 220px;
-}
-
-.sticky-cta-form input[type="email"]:focus {
-    outline: none;
-    border-color: #1E90FF;
-}
-
-.sticky-cta-form button {
-    padding: 10px 20px;
-    border-radius: 6px;
-    border: none;
-    background: #1E90FF;
-    color: white;
-    font-weight: 600;
-    font-size: 0.9rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    white-space: nowrap;
-}
-
-.sticky-cta-form button:hover {
-    background: #3BA0FF;
-    transform: translateY(-1px);
-}
-
-.sticky-cta-close {
-    background: none;
-    border: none;
-    color: #707070;
-    font-size: 1.2rem;
-    cursor: pointer;
-    padding: 4px;
-    line-height: 1;
-    transition: color 0.2s;
-}
-
-.sticky-cta-close:hover {
-    color: #ffffff;
-}
-
-@media (max-width: 768px) {
-    .sticky-cta-bar {
-        padding: 10px 12px;
-    }
-    
-    .sticky-cta-inner {
-        flex-direction: column;
-        gap: 10px;
-    }
-    
-    .sticky-cta-text {
-        text-align: center;
-        justify-content: center;
-    }
-    
-    .sticky-cta-text span.icon {
-        display: none;
-    }
-    
-    .sticky-cta-text p {
-        font-size: 0.85rem;
-    }
-    
-    .sticky-cta-form {
-        width: 100%;
-    }
-    
-    .sticky-cta-form input[type="email"] {
-        flex: 1;
-        width: auto;
-        min-width: 0;
-    }
-    
-    .sticky-cta-form button {
-        padding: 10px 16px;
-    }
-    
-    .sticky-cta-close {
-        position: absolute;
-        top: 8px;
-        right: 8px;
-    }
-    
-    .sticky-cta-bar {
-        position: relative;
-    }
-}
-</style>
-
-<div class="sticky-cta-bar" id="stickyCta">
-    <div class="sticky-cta-inner">
-        <div class="sticky-cta-text">
-            
-            <p>Join <strong>2,000+ builders</strong> getting AI insights weekly</p>
-        </div>
-        <form class="sticky-cta-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
-            <input type="email" name="email" placeholder="your@email.com" required>
-            <button type="submit">Subscribe</button>
-        </form>
-        <button class="sticky-cta-close" onclick="dismissStickyBar()" aria-label="Close">&times;</button>
-    </div>
-</div>
-
-<script>
-(function() {
-    const stickyBar = document.getElementById('stickyCta');
-    if (!stickyBar) return;
-    
-    // Check if already dismissed this session
-    if (sessionStorage.getItem('stickyCtaDismissed')) {
-        stickyBar.classList.add('dismissed');
-        return;
-    }
-    
-    let hasShown = false;
-    
-    function checkScroll() {
-        if (hasShown) return;
-        
-        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
-        
-        // Show after 30% scroll
-        if (scrollPercent > 30) {
-            stickyBar.classList.add('visible');
-            hasShown = true;
-            
-            // Track impression
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_shown', { 'scroll_percent': Math.round(scrollPercent) });
-            }
-        }
-    }
-    
-    window.addEventListener('scroll', checkScroll, { passive: true });
-    
-    // Track submission
-    const form = stickyBar.querySelector('form');
-    if (form) {
-        form.addEventListener('submit', function() {
-            if (typeof gtag !== 'undefined') {
-                gtag('event', 'sticky_cta_submit', { 'source': 'sticky_bar' });
-            }
-            // Auto-dismiss after submission
-            setTimeout(function() {
-                dismissStickyBar();
-            }, 1000);
-        });
-    }
-})();
-
-function dismissStickyBar() {
-    const bar = document.getElementById('stickyCta');
-    if (bar) {
-        bar.classList.remove('visible');
-        bar.classList.add('dismissed');
-        sessionStorage.setItem('stickyCtaDismissed', 'true');
-        
-        if (typeof gtag !== 'undefined') {
-            gtag('event', 'sticky_cta_dismissed');
-        }
-    }
-}
-</script>
+    <footer>
+        <p>© 2026 <a href="/">Future Humanism</a> · <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a> · <a href="/subscribe.html">Newsletter</a></p>
+    </footer>
 </body>
 </html>
