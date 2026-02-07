@@ -3776,47 +3776,48 @@
         });
         
         // Stories pagination - global function
-        var storiesCurrentPage = 1;
-        var storiesPerPage = 12;
-        var storiesTotalPages = 1;
-        var storiesCards = [];
+        window.storiesCurrentPage = 1;
+        window.storiesPerPage = 12;
+        window.storiesTotalPages = 1;
+        window.storiesCards = [];
         
-        function storiesInit() {
+        window.storiesInit = function() {
             var grid = document.getElementById('stories-grid');
-            if (!grid) return;
-            storiesCards = Array.from(grid.querySelectorAll('.grid-story-card'));
-            storiesTotalPages = Math.ceil(storiesCards.length / storiesPerPage);
-            document.getElementById('storiesTotalPages').textContent = storiesTotalPages;
-            storiesShowPage(1);
-        }
+            if (!grid) { console.log('Grid not found'); return; }
+            window.storiesCards = Array.from(grid.querySelectorAll('.grid-story-card'));
+            window.storiesTotalPages = Math.ceil(window.storiesCards.length / window.storiesPerPage);
+            document.getElementById('storiesTotalPages').textContent = window.storiesTotalPages;
+            console.log('Pagination init:', window.storiesCards.length, 'cards,', window.storiesTotalPages, 'pages');
+            window.storiesShowPage(1);
+        };
         
-        function storiesShowPage(page) {
-            storiesCurrentPage = page;
+        window.storiesShowPage = function(page) {
+            window.storiesCurrentPage = page;
             document.getElementById('storiesPage').textContent = page;
             
-            storiesCards.forEach(function(card, i) {
-                var start = (page - 1) * storiesPerPage;
-                var end = start + storiesPerPage;
+            window.storiesCards.forEach(function(card, i) {
+                var start = (page - 1) * window.storiesPerPage;
+                var end = start + window.storiesPerPage;
                 card.style.display = (i >= start && i < end) ? 'block' : 'none';
             });
             
             document.getElementById('storiesPrev').disabled = page <= 1;
-            document.getElementById('storiesNext').disabled = page >= storiesTotalPages;
+            document.getElementById('storiesNext').disabled = page >= window.storiesTotalPages;
             
             if (page > 1) {
                 document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-        }
+        };
         
-        function storiesGoPage(dir) {
-            var newPage = storiesCurrentPage + dir;
-            if (newPage >= 1 && newPage <= storiesTotalPages) {
-                storiesShowPage(newPage);
+        window.storiesGoPage = function(dir) {
+            var newPage = window.storiesCurrentPage + dir;
+            if (newPage >= 1 && newPage <= window.storiesTotalPages) {
+                window.storiesShowPage(newPage);
             }
-        }
+        };
         
         // Initialize on load
-        storiesInit();
+        window.storiesInit();
     </script>
 
     <!-- Exit Intent Popup -->
