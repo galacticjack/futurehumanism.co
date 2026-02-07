@@ -1,13 +1,14 @@
 #!/usr/bin/env python3
 """
 FutureHumanism.co Build Script
-Regenerates sitemap.xml, RSS feed, and articles index from actual content.
+Regenerates sitemap.xml, RSS feed, articles index, and applies CSS fixes.
 Run this after adding/removing articles or pages.
 """
 
 import os
 import re
 import json
+import subprocess
 from pathlib import Path
 from datetime import datetime
 from xml.etree.ElementTree import Element, SubElement, tostring
@@ -15,6 +16,7 @@ from xml.dom import minidom
 
 # Project root
 PROJECT_ROOT = Path(__file__).parent.parent
+SCRIPTS_DIR = Path(__file__).parent
 ARTICLES_DIR = PROJECT_ROOT / "articles"
 TOOLS_DIR = PROJECT_ROOT / "tools"
 
@@ -199,11 +201,70 @@ def generate_articles_json():
     print(f"  Written: {json_path}")
     return len(articles)
 
+def run_script(script_name, description):
+    """Run another build script"""
+    script_path = SCRIPTS_DIR / script_name
+    if script_path.exists():
+        print(f"Running {description}...")
+        result = subprocess.run(['python3', str(script_path)], capture_output=True, text=True)
+        if result.returncode == 0:
+            # Count lines that indicate changes
+            output_lines = [l for l in result.stdout.split('\n') if l.strip()]
+            print(f"  → {description} complete")
+            return True
+        else:
+            print(f"  ⚠ {description} failed: {result.stderr[:200]}")
+            return False
+    else:
+        print(f"  ⚠ Script not found: {script_name}")
+        return False
+
+def tighten_article_spacing():
+    """Apply consistent tight spacing to all articles"""
+    print("Tightening article spacing...")
+    
+    fixed_count = 0
+    for filepath in sorted(ARTICLES_DIR.glob('*.html')):
+        if filepath.name.startswith('_'):
+            continue
+        
+        with open(filepath, 'r', encoding='utf-8') as f:
+            content = f.read()
+        
+        original = content
+        
+        # Author bio: margin 48px -> 24px
+        content = re.sub(r'(\.author-bio\s*\{[^}]*margin:\s*)48px(\s*0)', r'\g<1>24px\2', content)
+        
+        # Related articles: margin 60px -> 32px
+        content = re.sub(r'(\.related-articles\s*\{[^}]*margin:\s*)60px(\s*auto)', r'\g<1>32px\2', content)
+        
+        # Related articles h3: margin-bottom 32px -> 16px
+        content = re.sub(r'(\.related-articles h3\s*\{[^}]*margin-bottom:\s*)32px', r'\g<1>16px', content)
+        
+        # Article padding: 60px -> 40px
+        content = re.sub(r'(article\s*\{[^}]*padding:\s*)60px(\s+24px)', r'\g<1>40px\2', content)
+        
+        # Share section margin: 48px -> 24px
+        content = re.sub(r'(\.share-section\s*\{[^}]*margin:\s*)48px(\s*0)', r'\g<1>24px\2', content)
+        
+        # h2 margin-top: 48px -> 32px
+        content = re.sub(r'(article h2\s*\{[^}]*margin:\s*)48px(\s+0\s+20px)', r'\g<1>32px\2', content)
+        
+        if content != original:
+            with open(filepath, 'w', encoding='utf-8') as f:
+                f.write(content)
+            fixed_count += 1
+    
+    print(f"  → {fixed_count} articles spacing tightened")
+    return fixed_count
+
 def main():
     print(f"\n{'='*50}")
     print("FutureHumanism.co Build Script")
     print(f"{'='*50}\n")
     
+    # Core builds
     article_count = generate_sitemap()
     print(f"  → {article_count} articles in sitemap\n")
     
@@ -212,6 +273,14 @@ def main():
     
     json_count = generate_articles_json()
     print(f"  → {json_count} articles in JSON index\n")
+    
+    # CSS/HTML fixes
+    tighten_article_spacing()
+    print()
+    
+    # Update homepage stories grid
+    run_script('update-stories-grid.py', 'Update homepage stories grid')
+    print()
     
     print(f"{'='*50}")
     print("Build complete!")
