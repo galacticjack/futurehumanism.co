@@ -1,18 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-W0SQN4JHN2');
-    </script>
-    
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-W0SQN4JHN2');</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="theme-color" content="#1E90FF">
     <title>The Future of Search After ChatGPT: What Google Won't Tell You | Future Humanism</title>
     <meta name="description" content="How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.">
     <meta name="twitter:card" content="summary_large_image">
@@ -24,194 +16,50 @@
     <meta property="og:description" content="How AI is fundamentally changing search behavior, what it means for SEO, and why the future belongs to answer engines, not search engines.">
     <meta property="og:image" content="https://futurehumanism.co/images/og-future-of-search-after-chatgpt.jpg">
     <meta property="og:url" content="https://futurehumanism.co/articles/future-of-search-after-chatgpt.html">
-    <meta property="og:type" content="article">
     <link rel="canonical" href="https://futurehumanism.co/articles/future-of-search-after-chatgpt.html">
     <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon-32.png">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --bg-primary: #0a0a0a;
-            --bg-secondary: #141414;
-            --bg-dark: #000000;
-            --text-primary: #ffffff;
-            --text-secondary: #b0b0b0;
-            --text-muted: #707070;
-            --accent: #1E90FF;
-            --accent-hover: #3BA0FF;
-            --border: #2a2a2a;
-        }
+        :root { --bg: #0a0a0a; --bg2: #141414; --text: #ffffff; --text2: #b0b0b0; --accent: #1E90FF; --border: #2a2a2a; }
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body {
-            font-family: 'Inter', system-ui, sans-serif;
-            background: var(--bg-primary);
-            color: var(--text-secondary);
-            line-height: 1.7;
-        }
-        .progress-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            height: 3px;
-            background: var(--accent);
-            z-index: 1000;
-            transition: width 0.1s;
-        }
-        header {
-            padding: 16px 24px;
-            border-bottom: 1px solid var(--border);
-            position: sticky;
-            top: 0;
-            background: rgba(10,10,10,0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-        }
-        .header-inner {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        .logo {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            text-decoration: none;
-            color: var(--text-primary);
-        }
-        .logo-icon {
-            width: 32px;
-            height: 32px;
-            border-radius: 50%;
-            overflow: hidden;
-        }
-        .logo-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .logo-text {
-            font-weight: 700;
-            font-size: 1.2rem;
-        }
+        body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text2); line-height: 1.7; }
+        .progress { position: fixed; top: 0; left: 0; height: 3px; background: var(--accent); z-index: 1000; }
+        header { padding: 16px 24px; border-bottom: 1px solid var(--border); position: sticky; top: 0; background: rgba(10,10,10,0.95); backdrop-filter: blur(10px); z-index: 100; }
+        .header-inner { max-width: 800px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+        .logo-icon { width: 32px; height: 32px; border-radius: 50%; overflow: hidden; }
+        .logo-icon img { width: 100%; height: 100%; object-fit: cover; }
+        .logo-text { font-weight: 700; font-size: 1.2rem; }
         .logo-text span { font-weight: 400; opacity: 0.6; }
-        .back-link {
-            color: var(--accent);
-            text-decoration: none;
-            font-weight: 500;
-        }
-        .hero {
-            padding: 60px 24px;
-            text-align: center;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80') center/cover;
-        }
-        .hero-tag {
-            display: inline-block;
-            background: var(--accent);
-            color: white;
-            padding: 6px 16px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            margin-bottom: 20px;
-        }
-        .hero h1 {
-            font-size: clamp(2rem, 5vw, 3rem);
-            line-height: 1.15;
-            font-weight: 700;
-            color: var(--text-primary);
-            margin-bottom: 16px;
-            max-width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        .hero-meta {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-        }
-        article {
-            max-width: 700px;
-            margin: 0 auto;
-            padding: 48px 24px;
-        }
-        article h2 {
-            font-size: 1.5rem;
-            color: var(--text-primary);
-            margin: 40px 0 20px;
-            font-weight: 700;
-        }
-        article h3 {
-            font-size: 1.25rem;
-            color: var(--text-primary);
-            margin: 32px 0 16px;
-            font-weight: 600;
-        }
-        article p {
-            margin-bottom: 20px;
-            color: #b0b0b0;
-        }
-        article ul, article ol {
-            margin: 0 0 20px 24px;
-            color: #b0b0b0;
-        }
-        article li {
-            margin-bottom: 10px;
-            color: #b0b0b0;
-        }
-        article strong {
-            color: var(--text-primary);
-        }
-        article a {
-            color: #60a5fa;
-            text-decoration: underline;
-            text-decoration-thickness: 1px;
-            text-underline-offset: 2px;
-        }
-        article a:hover {
-            color: var(--accent);
-        }
-        .highlight-box {
-            background: var(--bg-secondary);
-            border-left: 4px solid var(--accent);
-            padding: 24px;
-            margin: 32px 0;
-            border-radius: 0 8px 8px 0;
-        }
-        .highlight-box p {
-            margin: 0;
-            color: var(--text-primary);
-        }
-        footer {
-            padding: 48px 24px;
-            background: var(--bg-secondary);
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-        footer a:hover {
-            text-decoration: underline;
-        }
-        footer p {
-            color: var(--text-muted);
-            font-size: 0.9rem;
-        }
-        @media (max-width: 768px) {
-            .hero h1 { font-size: 1.75rem; }
-            article { padding: 32px 20px; }
-        }
+        .back-link { color: var(--accent); text-decoration: none; font-weight: 500; }
+        .hero { padding: 60px 24px; text-align: center; background: linear-gradient(rgba(0,0,0,0.6), rgba(10,10,10,1)), url('https://images.unsplash.com/photo-1555421689-491a97ff2040?w=800&q=80') center/cover; }
+        .hero-tag { display: inline-block; background: var(--accent); color: white; padding: 6px 16px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 20px; }
+        .hero h1 { font-size: clamp(1.75rem, 5vw, 2.5rem); line-height: 1.2; font-weight: 700; color: var(--text); margin-bottom: 16px; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .hero-meta { color: var(--text2); font-size: 0.9rem; }
+        article { max-width: 680px; margin: 0 auto; padding: 48px 24px; }
+        article h2 { font-size: 1.4rem; color: var(--text); margin: 40px 0 16px; font-weight: 700; }
+        article h3 { font-size: 1.2rem; color: var(--text); margin: 32px 0 12px; font-weight: 600; }
+        article p { margin-bottom: 20px; }
+        article ul, article ol { margin: 0 0 20px 24px; }
+        article li { margin-bottom: 8px; }
+        article strong { color: var(--text); }
+        article a { color: #60a5fa; }
+        article a:hover { color: var(--accent); }
+        .highlight-box { background: var(--bg2); border-left: 4px solid var(--accent); padding: 20px; margin: 24px 0; border-radius: 0 8px 8px 0; }
+        .highlight-box p { margin: 0; color: var(--text); }
+        blockquote { border-left: 3px solid var(--accent); padding-left: 20px; margin: 24px 0; font-style: italic; color: var(--text2); }
+        footer { padding: 40px 24px; background: var(--bg2); text-align: center; border-top: 1px solid var(--border); }
+        footer a { color: var(--accent); text-decoration: none; }
+        footer p { color: #707070; font-size: 0.85rem; }
+        @media (max-width: 640px) { .hero h1 { font-size: 1.5rem; } article { padding: 32px 16px; } }
     </style>
 </head>
 <body>
-    <div class="progress-bar" id="progress"></div>
+    <div class="progress" id="progress"></div>
     <header>
         <div class="header-inner">
             <a href="/" class="logo">
-                <div class="logo-icon"><img src="../images/profile.jpg" alt="Future Humanism"></div>
+                <div class="logo-icon"><img src="../images/profile.jpg" alt=""></div>
                 <div class="logo-text">Future<span>Humanism</span></div>
             </a>
             <a href="/" class="back-link">← Back to Home</a>
@@ -219,13 +67,13 @@
     </header>
     
     <div class="hero">
-        <span class="hero-tag">Search Evolution</span>
+        <span class="hero-tag"></span>
         <h1>The Future of Search After ChatGPT: What Google Won't Tell You</h1>
-        <p class="hero-meta">February 6, 2026 &bull; 13 min read</p>
+        <p class="hero-meta">February 6, 2026 • 13 min read</p>
     </div>
 
     <article>
-        <p>Search is dead. Long live search.</p>
+<p>Search is dead. Long live search.</p>
 
         <p>We're witnessing the most significant shift in information discovery since Google dethroned Yahoo in 1998. But this time, it's not just about better algorithms-it's about a fundamental change in how humans interact with knowledge. We're moving from <em>searching for information</em> to <em>conversing with intelligence</em>.</p>
 
@@ -597,11 +445,9 @@
     </footer>
 
     <script>
-        // Reading progress bar
         window.addEventListener('scroll', () => {
-            const docHeight = document.documentElement.scrollHeight - window.innerHeight;
-            const scrolled = (window.scrollY / docHeight) * 100;
-            document.getElementById('progress').style.width = scrolled + '%';
+            const h = document.documentElement.scrollHeight - window.innerHeight;
+            document.getElementById('progress').style.width = (window.scrollY / h * 100) + '%';
         });
     </script>
 </body>
