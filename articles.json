@@ -64,6 +64,14 @@
     "url": "/articles/health-tech-wearables-2026.html"
   },
   {
+    "slug": "ai-agent-economy-2027",
+    "title": "The AI Agent Economy: Why Every Business Will Have Digital Employees by 2027",
+    "description": "The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transform every industry by 2027.",
+    "date": "2026-02-07",
+    "category": "General",
+    "url": "/articles/ai-agent-economy-2027.html"
+  },
+  {
     "slug": "creator-economy-ai-tools-2026",
     "title": "The Creator Economy in 2026: AI Tools That Actually Move the Needle",
     "description": "How creators are using AI to produce more content, grow faster, and build sustainable businesses. The tools, workflows, and strategies that work.",
@@ -124,7 +132,7 @@
     "title": "AI Just Learned to Control Your Computer: The Revolution is Here",
     "description": "Google NotebookLM and Claude Computer Use mark the shift from AI conversation to AI automation. Here's what it means for your work and business.",
     "date": "2026-02-07",
-    "category": "General",
+    "category": "Enterprise AI Strategy",
     "url": "/articles/ai-computer-control-revolution.html"
   },
   {
@@ -150,6 +158,14 @@
     "date": "2026-02-07",
     "category": "General",
     "url": "/articles/best-ai-tools-solopreneurs-2026.html"
+  },
+  {
+    "slug": "ai-agents-platform-shift",
+    "title": "AI Agents: The Next Big Platform Shift After Mobile",
+    "description": "Why AI agents represent the most significant platform shift since mobile. From apps to autonomous workers - how businesses must prepare for the agent economy.",
+    "date": "2026-02-07",
+    "category": "Business Strategy",
+    "url": "/articles/ai-agents-platform-shift.html"
   },
   {
     "slug": "2026-year-ai-agents-production",
@@ -206,14 +222,6 @@
     "date": "2026-02-06",
     "category": "Deep Dive",
     "url": "/articles/ai-world-models-next-breakthrough.html"
-  },
-  {
-    "slug": "ai-agent-economy-2027",
-    "title": "The AI Agent Economy: Why Every Business Will Have Digital Employees by 2027",
-    "description": "The massive economic shift from SaaS tools to AI agents as business infrastructure. How digital employees will transform every industry by 2027.",
-    "date": "2026-02-06",
-    "category": "General",
-    "url": "/articles/ai-agent-economy-2027.html"
   },
   {
     "slug": "build-your-first-ai-agent-practical-guide",
@@ -278,14 +286,6 @@
     "date": "2026-02-06",
     "category": "AI Mastery",
     "url": "/articles/prompt-engineering-that-actually-works.html"
-  },
-  {
-    "slug": "ai-agents-platform-shift",
-    "title": "AI Agents: The Next Big Platform Shift After Mobile",
-    "description": "Why AI agents represent the most significant platform shift since mobile. From apps to autonomous workers - how businesses must prepare for the agent economy.",
-    "date": "2026-02-06",
-    "category": "General",
-    "url": "/articles/ai-agents-platform-shift.html"
   },
   {
     "slug": "why-every-business-needs-ai-strategy-2026",
