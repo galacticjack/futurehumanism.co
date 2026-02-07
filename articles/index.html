@@ -360,7 +360,7 @@
         .page-header {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 40px 24px 20px;
+            padding: 60px 24px 30px;
             text-align: center;
         }
         .page-header h1 {
@@ -411,7 +411,7 @@
             padding: 0 24px 80px;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
-            gap: 24px;
+            gap: 32px;
         }
         .article-card {
             background: var(--bg-secondary);
@@ -482,7 +482,7 @@
         .no-results {
             grid-column: 1 / -1;
             text-align: center;
-            padding: 32px 20px;
+            padding: 60px 20px;
             color: var(--text-secondary);
             display: none;
         }
@@ -512,7 +512,7 @@
             .page-header p { font-size: 0.95rem; }
             .category-filter { padding: 0 16px 30px; gap: 8px; }
             .filter-btn { padding: 8px 16px; font-size: 0.85rem; }
-            .articles-grid { padding: 0 16px 40px; grid-template-columns: 1fr; gap: 20px; }
+            .articles-grid { padding: 0 16px 60px; grid-template-columns: 1fr; gap: 20px; }
             .article-content { padding: 20px; }
             .article-content h2 { font-size: 1.1rem; }
             .article-tag { font-size: 0.7rem; padding: 5px 12px; }
@@ -610,7 +610,79 @@
                                         <div class="mega-menu-item-content">
                                             <h5>Free Tools</h5>
                                             <p>Calculators & utilities</p>
-        
+        <!-- Inline Newsletter CTA -->
+        <div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
+            <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Want more like this?</h3>
+            <p style="color: #b0b0b0; font-size: 1rem; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">Join 2,000+ builders getting weekly AI insights, tools, and unfiltered takes. No spam, unsubscribe anytime.</p>
+            <form action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 450px; margin: 0 auto;">
+                <input type="email" name="email" placeholder="your@email.com" required style="padding: 14px 20px; border-radius: 8px; border: 1px solid #2a2a2a; background: #0a0a0a; color: #ffffff; font-size: 1rem; flex: 1; min-width: 200px;">
+                <button type="submit" style="padding: 14px 28px; border-radius: 8px; border: none; background: #1E90FF; color: white; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Subscribe Free</button>
+            </form>
+            <p style="color: #707070; font-size: 0.85rem; margin-top: 16px;">Read by developers, founders, and AI enthusiasts</p>
+        </div>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h4>Topics</h4>
+                                <div class="mega-menu-grid">
+                                    <a href="/articles/?cat=ai-agents" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 8V4M12 16v4M8 12H4M16 12h4"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>AI Agents</h5>
+                                            <p>Autonomous systems</p>
+                                        </div>
+                                    </a>
+                                    <a href="/articles/?cat=ai-models" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>AI Models</h5>
+                                            <p>LLMs & capabilities</p>
+                                        </div>
+                                    </a>
+                                    <a href="/articles/?cat=automation" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>Automation</h5>
+                                            <p>Workflows & efficiency</p>
+                                        </div>
+                                    </a>
+                                    <a href="/articles/?cat=strategy" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>Strategy</h5>
+                                            <p>Business & growth</p>
+                                        </div>
+                                    </a>
+                                    <a href="/articles/?cat=tutorials" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>Tutorials</h5>
+                                            <p>Step-by-step guides</p>
+                                        </div>
+                                    </a>
+                                    <a href="/articles/?cat=crypto" class="mega-menu-item">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M9 9h4.5a1.5 1.5 0 0 1 0 3H9m0 0h5a1.5 1.5 0 0 1 0 3H9"/></svg>
+                                        <div class="mega-menu-item-content">
+                                            <h5>Crypto & DeFi</h5>
+                                            <p>Web3 & trading</p>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="mega-menu-section">
+                                <h4>Featured Guide</h4>
+                                <div class="mega-menu-featured">
+                                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=400&q=80" alt="AI Agents Guide">
+                                    <h5>The Complete Guide to AI Agents in 2026</h5>
+                                    <p>Everything you need to know about autonomous AI systems.</p>
+                                    <a href="/articles/ai-agents-2026-guide.html">Read the guide →</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
                 
@@ -1324,5 +1396,778 @@
     document.querySelector('.mobile-menu-btn').addEventListener('click', openMobileMenu);
     </script>
 
+<!-- Exit Intent Popup Component - Include before 
+    <!-- Sticky Newsletter Bar -->
+<!-- Sticky Newsletter Bar Component -->
+<!-- Appears after 30% scroll, stays fixed at bottom -->
+<!-- Add this before     <script src="../js/exit-intent.js"></script>
+</body> in articles -->
+
+<style>
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    border-top: 1px solid rgba(30, 144, 255, 0.3);
+    padding: 12px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 9999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+}
+
+.sticky-cta-bar.visible {
+    transform: translateY(0);
+}
+
+.sticky-cta-bar.dismissed {
+    display: none;
+}
+
+.sticky-cta-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sticky-cta-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.sticky-cta-text span.icon {
+    font-size: 1.5rem;
+}
+
+.sticky-cta-text p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sticky-cta-text p strong {
+    color: #1E90FF;
+}
+
+.sticky-cta-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sticky-cta-form input[type="email"] {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background: #0a0a0a;
+    color: #ffffff;
+    font-size: 0.9rem;
+    width: 220px;
+}
+
+.sticky-cta-form input[type="email"]:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+.sticky-cta-form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #1E90FF;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.sticky-cta-form button:hover {
+    background: #3BA0FF;
+    transform: translateY(-1px);
+}
+
+.sticky-cta-close {
+    background: none;
+    border: none;
+    color: #707070;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.sticky-cta-close:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .sticky-cta-bar {
+        padding: 10px 12px;
+    }
+    
+    .sticky-cta-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .sticky-cta-text {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .sticky-cta-text span.icon {
+        display: none;
+    }
+    
+    .sticky-cta-text p {
+        font-size: 0.85rem;
+    }
+    
+    .sticky-cta-form {
+        width: 100%;
+    }
+    
+    .sticky-cta-form input[type="email"] {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+    
+    .sticky-cta-form button {
+        padding: 10px 16px;
+    }
+    
+    .sticky-cta-close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .sticky-cta-bar {
+        position: relative;
+    }
+}
+</style>
+
+<div class="sticky-cta-bar" id="stickyCta">
+    <div class="sticky-cta-inner">
+        <div class="sticky-cta-text">
+            <span class="icon">⚡</span>
+            <p>Join <strong>2,000+ builders</strong> getting AI insights weekly</p>
+        </div>
+        <form class="sticky-cta-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <button class="sticky-cta-close" onclick="dismissStickyBar()" aria-label="Close">&times;</button>
+    </div>
+</div>
+
+<script>
+(function() {
+    const stickyBar = document.getElementById('stickyCta');
+    if (!stickyBar) return;
+    
+    // Check if already dismissed this session
+    if (sessionStorage.getItem('stickyCtaDismissed')) {
+        stickyBar.classList.add('dismissed');
+        return;
+    }
+    
+    let hasShown = false;
+    
+    function checkScroll() {
+        if (hasShown) return;
+        
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        
+        // Show after 30% scroll
+        if (scrollPercent > 30) {
+            stickyBar.classList.add('visible');
+            hasShown = true;
+            
+            // Track impression
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sticky_cta_shown', { 'scroll_percent': Math.round(scrollPercent) });
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    
+    // Track submission
+    const form = stickyBar.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sticky_cta_submit', { 'source': 'sticky_bar' });
+            }
+            // Auto-dismiss after submission
+            setTimeout(function() {
+                dismissStickyBar();
+            }, 1000);
+        });
+    }
+})();
+
+function dismissStickyBar() {
+    const bar = document.getElementById('stickyCta');
+    if (bar) {
+        bar.classList.remove('visible');
+        bar.classList.add('dismissed');
+        sessionStorage.setItem('stickyCtaDismissed', 'true');
+        
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'sticky_cta_dismissed');
+        }
+    }
+}
+</script>
+</body> -->
+<div id="exit-popup" class="exit-popup">
+    <div class="exit-popup-content">
+        <button class="exit-popup-close" onclick="closeExitPopup()" aria-label="Close popup">&times;</button>
+        
+        <div class="exit-popup-badge">FREE DOWNLOAD</div>
+        <h2>Before you go...</h2>
+        <p class="exit-popup-lead">Grab our <strong>AI Prompt Cheatsheet</strong> with 50+ battle-tested prompts that actually work.</p>
+        
+        <div class="exit-popup-features">
+            <span>ChatGPT prompts</span>
+            <span>Claude prompts</span>
+            <span>Coding prompts</span>
+        </div>
+        
+        <form id="exit-popup-form" class="exit-popup-form">
+            <input type="email" name="email" placeholder="Enter your email" required autocomplete="email">
+            <button type="submit">Get the Cheatsheet</button>
+        </form>
+        <p class="exit-popup-note">Join 500+ builders. No spam, ever.</p>
+    </div>
+</div>
+
+<style>
+    .exit-popup {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0,0,0,0.85);
+        z-index: 10000;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+    }
+    .exit-popup.show {
+        display: flex;
+        animation: fadeIn 0.25s ease;
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+    .exit-popup-content {
+        background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+        border: 1px solid rgba(30, 144, 255, 0.3);
+        border-radius: 16px;
+        padding: 40px 36px;
+        max-width: 420px;
+        width: 100%;
+        text-align: center;
+        position: relative;
+        animation: slideUp 0.3s ease;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    }
+    @keyframes slideUp {
+        from { transform: translateY(20px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+    .exit-popup-close {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+        background: none;
+        border: none;
+        color: #888;
+        font-size: 28px;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.2s;
+        padding: 4px;
+    }
+    .exit-popup-close:hover {
+        color: #fff;
+    }
+    .exit-popup-badge {
+        display: inline-block;
+        background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 100%);
+        color: white;
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 0.5px;
+        padding: 6px 14px;
+        border-radius: 20px;
+        margin-bottom: 16px;
+    }
+    .exit-popup-content h2 {
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    }
+    .exit-popup-lead {
+        color: #b0b0b0;
+        font-size: 0.95rem;
+        line-height: 1.5;
+        margin-bottom: 16px;
+    }
+    .exit-popup-lead strong {
+        color: #1E90FF;
+    }
+    .exit-popup-features {
+        display: flex;
+        justify-content: flex-start;
+        gap: 8px;
+        flex-wrap: wrap;
+        margin-bottom: 20px;
+    }
+    .exit-popup-features span {
+        background: rgba(30, 144, 255, 0.15);
+        color: #1E90FF;
+        font-size: 12px;
+        font-weight: 500;
+        padding: 5px 12px;
+        border-radius: 12px;
+    }
+    .exit-popup-form {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .exit-popup-form input {
+        padding: 14px 16px;
+        border: 1px solid #333;
+        border-radius: 8px;
+        background: rgba(0,0,0,0.4);
+        color: #fff;
+        font-size: 15px;
+        font-family: inherit;
+        transition: border-color 0.2s;
+    }
+    .exit-popup-form input:focus {
+        outline: none;
+        border-color: #1E90FF;
+    }
+    .exit-popup-form input::placeholder {
+        color: #666;
+    }
+    .exit-popup-form button {
+        padding: 14px 24px;
+        background: linear-gradient(135deg, #1E90FF 0%, #00BFFF 100%);
+        color: white;
+        border: none;
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: transform 0.2s, box-shadow 0.2s;
+        font-family: inherit;
+    }
+    .exit-popup-form button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(30, 144, 255, 0.3);
+    }
+    .exit-popup-form button:disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+        transform: none;
+    }
+    .exit-popup-note {
+        font-size: 12px;
+        color: #666;
+        margin-top: 12px;
+    }
+    .exit-popup-success {
+        color: #22c55e;
+        font-size: 1rem;
+        padding: 20px 0;
+    }
+    @media (max-width: 480px) {
+        .exit-popup-content {
+            padding: 32px 24px;
+        }
+        .exit-popup-content h2 {
+            font-size: 1.3rem;
+        }
+        .exit-popup-features span {
+            font-size: 11px;
+            padding: 4px 10px;
+        }
+    }
+</style>
+
+<script>
+(function() {
+    let popupShown = false;
+    const STORAGE_KEY = 'fh_exit_popup_dismissed';
+    const DISMISS_DAYS = 7; // Don't show for 7 days after dismiss
+    
+    function isDismissed() {
+        const dismissed = localStorage.getItem(STORAGE_KEY);
+        if (!dismissed) return false;
+        const dismissedAt = parseInt(dismissed, 10);
+        const daysSince = (Date.now() - dismissedAt) / (1000 * 60 * 60 * 24);
+        return daysSince < DISMISS_DAYS;
+    }
+    
+    function showExitPopup() {
+        if (popupShown || isDismissed()) return;
+        const popup = document.getElementById('exit-popup');
+        if (popup) {
+            popup.classList.add('show');
+            popupShown = true;
+            // Track in GA
+            if (typeof gtag === 'function') {
+                gtag('event', 'exit_popup_shown', { event_category: 'engagement' });
+            }
+        }
+    }
+    
+    window.closeExitPopup = function() {
+        const popup = document.getElementById('exit-popup');
+        if (popup) {
+            popup.classList.remove('show');
+            localStorage.setItem(STORAGE_KEY, Date.now().toString());
+        }
+    };
+    
+    // Exit intent - mouse leaves viewport (desktop)
+    document.addEventListener('mouseout', function(e) {
+        if (e.clientY < 10 && e.relatedTarget === null) {
+            showExitPopup();
+        }
+    });
+    
+    // Fallback: show after 45 seconds of reading
+    setTimeout(function() {
+        showExitPopup();
+    }, 45000);
+    
+    // Close on backdrop click
+    document.addEventListener('click', function(e) {
+        if (e.target && e.target.id === 'exit-popup') {
+            closeExitPopup();
+        }
+    });
+    
+    // Close on Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeExitPopup();
+        }
+    });
+    
+    // Form submission
+    const form = document.getElementById('exit-popup-form');
+    if (form) {
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            const emailInput = this.querySelector('input[name="email"]');
+            const email = emailInput.value;
+            const btn = this.querySelector('button');
+            
+            btn.disabled = true;
+            btn.textContent = 'Sending...';
+            
+            // Store locally for backup
+            try {
+                const subscribers = JSON.parse(localStorage.getItem('fh_subscribers') || '[]');
+                subscribers.push({ 
+                    email: email, 
+                    date: new Date().toISOString(), 
+                    source: 'exit_popup_article',
+                    page: window.location.pathname
+                });
+                localStorage.setItem('fh_subscribers', JSON.stringify(subscribers));
+            } catch(err) {}
+            
+            // Send to Formspree
+            try {
+                await fetch('https://formspree.io/f/myzevrzl', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
+                    body: JSON.stringify({ 
+                        email: email, 
+                        source: 'exit_popup_article',
+                        page: window.location.pathname
+                    })
+                });
+            } catch(err) {}
+            
+            // Track conversion in GA
+            if (typeof gtag === 'function') {
+                gtag('event', 'exit_popup_conversion', { 
+                    event_category: 'conversion',
+                    event_label: window.location.pathname
+                });
+            }
+            
+            // Show success
+            form.innerHTML = '<p class="exit-popup-success">Check your inbox for the cheatsheet!</p>';
+            localStorage.setItem(STORAGE_KEY, Date.now().toString());
+            
+            setTimeout(closeExitPopup, 2500);
+        });
+    }
+})();
+</script>
+
+
+    <!-- Sticky Newsletter Bar -->
+<!-- Sticky Newsletter Bar Component -->
+<!-- Appears after 30% scroll, stays fixed at bottom -->
+</body> in articles -->
+
+<style>
+.sticky-cta-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    border-top: 1px solid rgba(30, 144, 255, 0.3);
+    padding: 12px 20px;
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+    z-index: 9999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.5);
+}
+
+.sticky-cta-bar.visible {
+    transform: translateY(0);
+}
+
+.sticky-cta-bar.dismissed {
+    display: none;
+}
+
+.sticky-cta-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.sticky-cta-text {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+}
+
+.sticky-cta-text span.icon {
+    font-size: 1.5rem;
+}
+
+.sticky-cta-text p {
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+.sticky-cta-text p strong {
+    color: #1E90FF;
+}
+
+.sticky-cta-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.sticky-cta-form input[type="email"] {
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid #2a2a2a;
+    background: #0a0a0a;
+    color: #ffffff;
+    font-size: 0.9rem;
+    width: 220px;
+}
+
+.sticky-cta-form input[type="email"]:focus {
+    outline: none;
+    border-color: #1E90FF;
+}
+
+.sticky-cta-form button {
+    padding: 10px 20px;
+    border-radius: 6px;
+    border: none;
+    background: #1E90FF;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    white-space: nowrap;
+}
+
+.sticky-cta-form button:hover {
+    background: #3BA0FF;
+    transform: translateY(-1px);
+}
+
+.sticky-cta-close {
+    background: none;
+    border: none;
+    color: #707070;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 4px;
+    line-height: 1;
+    transition: color 0.2s;
+}
+
+.sticky-cta-close:hover {
+    color: #ffffff;
+}
+
+@media (max-width: 768px) {
+    .sticky-cta-bar {
+        padding: 10px 12px;
+    }
+    
+    .sticky-cta-inner {
+        flex-direction: column;
+        gap: 10px;
+    }
+    
+    .sticky-cta-text {
+        text-align: center;
+        justify-content: center;
+    }
+    
+    .sticky-cta-text span.icon {
+        display: none;
+    }
+    
+    .sticky-cta-text p {
+        font-size: 0.85rem;
+    }
+    
+    .sticky-cta-form {
+        width: 100%;
+    }
+    
+    .sticky-cta-form input[type="email"] {
+        flex: 1;
+        width: auto;
+        min-width: 0;
+    }
+    
+    .sticky-cta-form button {
+        padding: 10px 16px;
+    }
+    
+    .sticky-cta-close {
+        position: absolute;
+        top: 8px;
+        right: 8px;
+    }
+    
+    .sticky-cta-bar {
+        position: relative;
+    }
+}
+</style>
+
+<div class="sticky-cta-bar" id="stickyCta">
+    <div class="sticky-cta-inner">
+        <div class="sticky-cta-text">
+            <span class="icon">⚡</span>
+            <p>Join <strong>2,000+ builders</strong> getting AI insights weekly</p>
+        </div>
+        <form class="sticky-cta-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
+            <input type="email" name="email" placeholder="your@email.com" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <button class="sticky-cta-close" onclick="dismissStickyBar()" aria-label="Close">&times;</button>
+    </div>
+</div>
+
+<script>
+(function() {
+    const stickyBar = document.getElementById('stickyCta');
+    if (!stickyBar) return;
+    
+    // Check if already dismissed this session
+    if (sessionStorage.getItem('stickyCtaDismissed')) {
+        stickyBar.classList.add('dismissed');
+        return;
+    }
+    
+    let hasShown = false;
+    
+    function checkScroll() {
+        if (hasShown) return;
+        
+        const scrollPercent = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+        
+        // Show after 30% scroll
+        if (scrollPercent > 30) {
+            stickyBar.classList.add('visible');
+            hasShown = true;
+            
+            // Track impression
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sticky_cta_shown', { 'scroll_percent': Math.round(scrollPercent) });
+            }
+        }
+    }
+    
+    window.addEventListener('scroll', checkScroll, { passive: true });
+    
+    // Track submission
+    const form = stickyBar.querySelector('form');
+    if (form) {
+        form.addEventListener('submit', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sticky_cta_submit', { 'source': 'sticky_bar' });
+            }
+            // Auto-dismiss after submission
+            setTimeout(function() {
+                dismissStickyBar();
+            }, 1000);
+        });
+    }
+})();
+
+function dismissStickyBar() {
+    const bar = document.getElementById('stickyCta');
+    if (bar) {
+        bar.classList.remove('visible');
+        bar.classList.add('dismissed');
+        sessionStorage.setItem('stickyCtaDismissed', 'true');
+        
+        if (typeof gtag !== 'undefined') {
+            gtag('event', 'sticky_cta_dismissed');
+        }
+    }
+}
+</script>
 </body>
 </html>
