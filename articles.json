@@ -1,13 +1,5 @@
 [
   {
-    "slug": "github-copilot-vs-cursor-vs-claude-code-2026",
-    "title": "GitHub Copilot vs Cursor vs Claude Code: Complete 2026 Comparison",
-    "description": "In-depth comparison of GitHub Copilot, Cursor, and Claude Code for developers in 2026. Features, pricing, use cases, and which AI coding assistant is right for your workflow.",
-    "date": "2026-02-08",
-    "category": "AI Tools",
-    "url": "/articles/github-copilot-vs-cursor-vs-claude-code-2026.html"
-  },
-  {
     "slug": "ai-model-convergence-2026",
     "title": "The Great AI Model Convergence of 2026",
     "description": "ChatGPT, Claude, and Gemini are reaching similar intelligence levels. The real competition has shifted to deployment speed, cost, and user experience.",
@@ -20,7 +12,7 @@
     "title": "Snowflake and OpenAI's $200 Million Partnership: What It Means for Enterprise AI",
     "description": "Snowflake and OpenAI just announced a $200 million multi-year partnership. Here's why this deal signals a fundamental shift in how enterprises will deploy AI agents and what it means for the future of business intelligence.",
     "date": "2026-02-07",
-    "category": "Enterprise AI",
+    "category": "General",
     "url": "/articles/snowflake-openai-200-million-partnership.html"
   },
   {
@@ -52,7 +44,7 @@
     "title": "The $100 Billion Agentic AI Boom: Why 2026 Is the Year AI Agents Go Mainstream",
     "description": "The agentic AI market is exploding from $4.5B to $100B by 2033. Here's what enterprises, startups, and professionals need to know about the autonomous AI revolution reshaping every industry.",
     "date": "2026-02-07",
-    "category": "AI Market Analysis",
+    "category": "General",
     "url": "/articles/agentic-ai-100-billion-market-2026.html"
   },
   {
@@ -108,7 +100,7 @@
     "title": "How to Automate Your Freelance Business with AI: Complete 2026 Guide",
     "description": "Learn how to automate your freelance business with AI in 2026. Step-by-step guide covering client acquisition, project management, invoicing, content creation, and more. Save 10+ hours per week.",
     "date": "2026-02-07",
-    "category": "Automation",
+    "category": "General",
     "url": "/articles/automate-freelance-business-ai-guide.html"
   },
   {
@@ -116,7 +108,7 @@
     "title": "Apple Embraces Agentic Coding: What Xcode 26.3 Means for Developers",
     "description": "Apple adds Claude Agent and OpenAI Codex to Xcode 26.3, marking the biggest shift in iOS development since SwiftUI. Here's what every developer needs to know about agentic coding.",
     "date": "2026-02-07",
-    "category": "AI Development",
+    "category": "General",
     "url": "/articles/apple-xcode-agentic-coding.html"
   },
   {
@@ -140,7 +132,7 @@
     "title": "Claude vs ChatGPT for Coding in 2026: Which AI Should You Choose?",
     "description": "Comprehensive comparison of Claude vs ChatGPT for coding in 2026. Benchmark data, real-world tests, pricing analysis, and expert recommendations for developers choosing between AI coding assistants.",
     "date": "2026-02-07",
-    "category": "AI Development",
+    "category": "General",
     "url": "/articles/claude-vs-chatgpt-for-coding-2026.html"
   },
   {
@@ -148,7 +140,7 @@
     "title": "Shadow AI Is Eating the Enterprise: The Governance Crisis Nobody Saw Coming",
     "description": "Companies use an average of 12 AI agents but half operate in isolation. Shadow AI, ungoverned tools used by employees, is now the top enterprise data security threat for 2026.",
     "date": "2026-02-07",
-    "category": "Enterprise AI",
+    "category": "General",
     "url": "/articles/shadow-ai-enterprise-crisis.html"
   },
   {
@@ -156,7 +148,7 @@
     "title": "10 Best AI Tools for Solopreneurs in 2026: Scale Without Hiring",
     "description": "Discover the 10 best AI tools for solopreneurs in 2026. Automate content, marketing, customer support, and operations to scale your one-person business without hiring.",
     "date": "2026-02-07",
-    "category": "AI Tools",
+    "category": "General",
     "url": "/articles/best-ai-tools-solopreneurs-2026.html"
   },
   {
@@ -164,7 +156,7 @@
     "title": "2025 Was The Year of AI Agent Hype. 2026 Is When We Find Out What Actually Works",
     "description": "Sam Altman predicted AI agents would join the workforce in 2025. They did. Sort of. Here's what the gap between pilot programs and production deployments reveals about the real state of agentic AI.",
     "date": "2026-02-07",
-    "category": "AI Agents",
+    "category": "General",
     "url": "/articles/2026-year-ai-agents-production.html"
   },
   {
@@ -172,15 +164,23 @@
     "title": "16 AI Agents Just Built a C Compiler From Scratch in 2 Weeks",
     "description": "Anthropic's Claude Opus 4.6 used 16 coordinated AI agents to autonomously build a 100,000-line C compiler that can compile the Linux kernel. Here's why this changes everything.",
     "date": "2026-02-07",
-    "category": "Breaking News",
+    "category": "General",
     "url": "/articles/16-ai-agents-built-c-compiler.html"
+  },
+  {
+    "slug": "github-copilot-vs-cursor-vs-claude-code-2026",
+    "title": "GitHub Copilot vs Cursor vs Claude Code: Complete 2026 Comparison",
+    "description": "In-depth comparison of GitHub Copilot, Cursor, and Claude Code for developers in 2026. Features, pricing, use cases, and which AI coding assistant is right for your workflow.",
+    "date": "2026-02-07",
+    "category": "General",
+    "url": "/articles/github-copilot-vs-cursor-vs-claude-code-2026.html"
   },
   {
     "slug": "best-ai-coding-assistants-beginners-2026",
     "title": "Best AI Coding Assistants for Beginners in 2026: Complete Guide",
     "description": "Discover the best AI coding assistants for beginners in 2026. Compare GitHub Copilot, Claude, Cursor, ChatGPT, and more with honest pricing, real use cases, and beginner-friendly recommendations.",
     "date": "2026-02-07",
-    "category": "AI Tools",
+    "category": "General",
     "url": "/articles/best-ai-coding-assistants-beginners-2026.html"
   },
   {
@@ -188,7 +188,7 @@
     "title": "AI Agent Security: The Vulnerabilities That Could Bring Down Your Enterprise",
     "description": "BodySnatcher, lateral movement, and agent-to-agent attacks are exposing critical flaws in enterprise AI deployments. Learn how to protect your organization from the next wave of AI security threats.",
     "date": "2026-02-07",
-    "category": "Security Alert",
+    "category": "General",
     "url": "/articles/ai-agent-security-vulnerabilities-2026.html"
   },
   {
