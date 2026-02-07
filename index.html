@@ -931,56 +931,10 @@
             margin-bottom: 24px;
         }
         
-        .stories-pagination {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 16px;
-            margin-top: 32px;
-            padding: 16px 0;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .stories-nav-btn {
-            padding: 14px 28px;
-            background: var(--accent);
-            border: none;
-            border-radius: 8px;
-            color: white !important;
-            font-size: 0.95rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s;
-            box-shadow: 0 2px 8px rgba(30, 144, 255, 0.3);
-            pointer-events: auto;
-            -webkit-appearance: none;
-            appearance: none;
-        }
-        
-        .stories-nav-btn:hover:not(:disabled) {
-            background: var(--accent-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 12px rgba(30, 144, 255, 0.4);
-        }
-        
-        .stories-nav-btn:active:not(:disabled) {
-            transform: translateY(0);
-        }
-        
-        .stories-nav-btn:disabled {
-            background: var(--bg-secondary);
-            color: var(--text-muted) !important;
-            opacity: 0.5;
-            cursor: not-allowed;
-            box-shadow: none;
-        }
-        
-        .stories-page-info {
-            color: var(--text-primary);
-            font-size: 1rem;
-            font-weight: 500;
-            padding: 0 12px;
+        .view-all-btn:hover {
+            background: var(--accent-hover) !important;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
         }
 
         .grid-story-card {
@@ -3288,10 +3242,8 @@
                 </div>
             </a>
         </div>
-        <div class="stories-pagination">
-            <button class="stories-nav-btn" id="storiesPrev" disabled>← Previous</button>
-            <span class="stories-page-info">Page <span id="storiesPage">1</span> of <span id="storiesTotalPages">3</span></span>
-            <button class="stories-nav-btn" id="storiesNext">Next →</button>
+        <div class="stories-cta" style="text-align: center; margin-top: 32px;">
+            <a href="/articles/" class="view-all-btn" style="display: inline-block; padding: 14px 32px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: all 0.2s;">View All Stories →</a>
         </div>
     </section>
 
@@ -3775,49 +3727,6 @@
             observer.observe(el);
         });
         
-        // Stories pagination - global function
-        window.storiesCurrentPage = 1;
-        window.storiesPerPage = 12;
-        window.storiesTotalPages = 1;
-        window.storiesCards = [];
-        
-        window.storiesInit = function() {
-            var grid = document.getElementById('stories-grid');
-            if (!grid) { console.log('Grid not found'); return; }
-            window.storiesCards = Array.from(grid.querySelectorAll('.grid-story-card'));
-            window.storiesTotalPages = Math.ceil(window.storiesCards.length / window.storiesPerPage);
-            document.getElementById('storiesTotalPages').textContent = window.storiesTotalPages;
-            console.log('Pagination init:', window.storiesCards.length, 'cards,', window.storiesTotalPages, 'pages');
-            window.storiesShowPage(1);
-        };
-        
-        window.storiesShowPage = function(page) {
-            window.storiesCurrentPage = page;
-            document.getElementById('storiesPage').textContent = page;
-            
-            window.storiesCards.forEach(function(card, i) {
-                var start = (page - 1) * window.storiesPerPage;
-                var end = start + window.storiesPerPage;
-                card.style.display = (i >= start && i < end) ? 'block' : 'none';
-            });
-            
-            document.getElementById('storiesPrev').disabled = page <= 1;
-            document.getElementById('storiesNext').disabled = page >= window.storiesTotalPages;
-            
-            if (page > 1) {
-                document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        };
-        
-        window.storiesGoPage = function(dir) {
-            var newPage = window.storiesCurrentPage + dir;
-            if (newPage >= 1 && newPage <= window.storiesTotalPages) {
-                window.storiesShowPage(newPage);
-            }
-        };
-        
-        // Initialize on load
-        window.storiesInit();
     </script>
 
     <!-- Exit Intent Popup -->
@@ -4090,8 +3999,6 @@
     <!-- Exit Intent Popup -->
     <script src="js/exit-intent.js"></script>
     
-    <!-- Pagination -->
-    <script src="js/pagination.js"></script>
 </body>
 </html>
 <!-- deployed Sat Feb  7 08:11:49 +07 2026 -->
