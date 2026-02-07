@@ -20,9 +20,9 @@ RELATED_ARTICLES = [
         'image': 'https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80'
     },
     {
-        'url': '/articles/claude-vs-chatgpt-2026.html',
-        'title': 'Claude vs ChatGPT: The 2026 Showdown',
-        'description': 'A detailed comparison of the two leading AI assistants.',
+        'url': '/articles/claude-vs-chatgpt-for-coding-2026.html',
+        'title': 'Claude vs ChatGPT for Coding 2026',
+        'description': 'A detailed comparison of the two leading AI coding assistants.',
         'category': 'Comparison',
         'image': 'https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80'
     },
