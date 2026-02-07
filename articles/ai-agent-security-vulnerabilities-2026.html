@@ -1310,71 +1310,8 @@
         <h2>Shadow Agents: The Threat from Inside</h2>
         
         <p>External attackers aren't the only concern. The explosion of autonomous AI tools has created a new category of risk: shadow agents deployed by employees without IT knowledge or approval.</p>
-        
-        <p>According to recent research from CIO magazine, roughly half of employees are using unsanctioned AI tools at work. But what's changed in 2026 is the nature of these tools. They're no longer simple chatbots. They're autonomous agents with:</p>
-        
-        <ul>
-            <li>Access to email accounts and calendars</li>
-            <li>Ability to read and modify documents</li>
-            <li>Integration with project management systems</li>
-            <li>Connections to code repositories</li>
-            <li>API access to CRM and ERP systems</li>
-        </ul>
-        
-        <p>When an employee sets up a personal AI agent and connects it to work systems, they're effectively creating an unmonitored, unaudited pipeline into the organization's most sensitive data.</p>
-        
-        <p>"Employees are secretly adopting AI to get ahead at work and obtain more leisure time, without informing superiors or the organization," notes Wharton School professor Ethan Mollick. The intention isn't malicious, but the security implications are severe.</p>
 
-        <h3>The Real-World Impact</h3>
-        
-        <p>Security firm Tenable recently published an analysis of shadow AI risks, focusing on tools like local AI agents running on employee laptops. Their findings:</p>
-        
-        <ul>
-            <li><strong>Indirect prompt injection:</strong> AI agents that read emails, chat messages, and web pages can be tricked by malicious content into executing unauthorized commands</li>
-            <li><strong>Data exfiltration:</strong> Agents with broad read access can be manipulated into copying sensitive data to external locations</li>
-            <li><strong>Credential exposure:</strong> Many agents store API keys and authentication tokens in poorly protected local files</li>
-            <li><strong>Persistence:</strong> Agents often run as background services with startup persistence, meaning they're active even when the employee isn't</li>
-        </ul>
-        
-        <p>The attack surface isn't just what these agents can do intentionally. It's what they can be tricked into doing.</p>
 
-        <h2>The Seven Archetypes of Vulnerable Agents</h2>
-        
-        <p>According to recent analysis from The Information, enterprise AI agents fall into seven categories, each with distinct security implications:</p>
-        
-        <h3>1. Business-Task Agents</h3>
-        <p>Agents that operate within enterprise software like Salesforce, SAP, or ServiceNow. These have deep integration with systems of record and can modify business-critical data. A compromised business-task agent can change customer records, approve transactions, or modify access controls.</p>
-        
-        <h3>2. Conversational Agents</h3>
-        <p>Customer-facing chatbots and support agents. While seemingly lower risk, these agents often have access to customer databases for "personalized" responses. Prompt injection attacks through customer messages can expose other customers' data or manipulate support workflows.</p>
-        
-        <h3>3. Research Agents</h3>
-        <p>Agents that query and analyze information, like OpenAI's Deep Research. These often have broad read access across systems to gather context. An attacker who can inject instructions into research queries can exfiltrate sensitive data disguised as legitimate research output.</p>
-        
-        <h3>4. Analytics Agents</h3>
-        <p>Agents that generate reports and analyze data. They typically have read access to databases and file systems. Manipulating an analytics agent's output can influence business decisions based on falsified data.</p>
-        
-        <h3>5. Coding Agents</h3>
-        <p>Development assistants like Cursor, GitHub Copilot, or specialized coding agents. These have write access to source code repositories. A compromised coding agent can inject backdoors, vulnerabilities, or malicious code into production systems.</p>
-        
-        <h3>6. Domain-Specific Agents</h3>
-        <p>Specialized agents for legal, medical, financial, or scientific domains. These often have access to the most sensitive data in an organization: patient records, legal documents, financial models. Compromise means exposure of highly regulated data.</p>
-        
-        <h3>7. Web Browser Agents</h3>
-        <p>Agents like OpenAI's Operator that control web browsers autonomously. These can fill forms, make purchases, access any web service. An attacker controlling a browser agent has access to every online account the user is logged into.</p>
-
-        
-        <!-- Inline Newsletter CTA -->
-        <div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
-            <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
-            <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Want more like this?</h3>
-            <p style="color: #b0b0b0; font-size: 1rem; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">Join 2,000+ builders getting weekly AI insights, tools, and unfiltered takes. No spam, unsubscribe anytime.</p>
-            <form action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 450px; margin: 0 auto;">
-                <input type="email" name="email" placeholder="your@email.com" required style="padding: 14px 20px; border-radius: 8px; border: 1px solid #2a2a2a; background: #0a0a0a; color: #ffffff; font-size: 1rem; flex: 1; min-width: 200px;">
-                <button type="submit" style="padding: 14px 28px; border-radius: 8px; border: none; background: #1E90FF; color: white; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Subscribe Free</button>
-            </form>
-            <p style="color: #707070; font-size: 0.85rem; margin-top: 16px;">Read by developers, founders, and AI enthusiasts</p>
-        </div>
 
 
 <h2>Why Traditional Security Fails</h2>
@@ -1420,7 +1357,20 @@
             <p><strong>This Quarter:</strong> Develop AI-specific security policies and incident response procedures. Evaluate AI security platforms for your environment.</p>
         </div>
 
-        <h2>The Market Is Responding</h2>
+        
+
+<div class="inline-newsletter-cta" style="margin: 48px 0; padding: 32px; background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%); border-radius: 16px; border: 1px solid rgba(30, 144, 255, 0.3); text-align: center;">
+            <div style="font-size: 2rem; margin-bottom: 12px;">🚀</div>
+            <h3 style="color: #ffffff; font-size: 1.4rem; font-weight: 700; margin-bottom: 8px;">Want more like this?</h3>
+            <p style="color: #b0b0b0; font-size: 1rem; margin-bottom: 20px; max-width: 400px; margin-left: auto; margin-right: auto;">Join 2,000+ builders getting weekly AI insights, tools, and unfiltered takes. No spam, unsubscribe anytime.</p>
+            <form action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank" style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; max-width: 450px; margin: 0 auto;">
+                <input type="email" name="email" placeholder="your@email.com" required style="padding: 14px 20px; border-radius: 8px; border: 1px solid #2a2a2a; background: #0a0a0a; color: #ffffff; font-size: 1rem; flex: 1; min-width: 200px;">
+                <button type="submit" style="padding: 14px 28px; border-radius: 8px; border: none; background: #1E90FF; color: white; font-weight: 600; font-size: 1rem; cursor: pointer; transition: all 0.2s; white-space: nowrap;">Subscribe Free</button>
+            </form>
+            <p style="color: #707070; font-size: 0.85rem; margin-top: 16px;">Read by developers, founders, and AI enthusiasts</p>
+        </div>
+
+<h2>The Market Is Responding</h2>
         
         <p>The agentic AI security market is projected to grow from $7.3 billion in 2025 to over $139 billion by 2034, a 40% annual growth rate. Venture capital is flooding into startups building agent security solutions:</p>
         
@@ -1478,6 +1428,64 @@
             <div class="next-story-label">Next Story</div>
             <div class="next-story-title">Claude vs ChatGPT for Coding in 2026: Which AI Should You Choose?</div>
         </div>
+
+
+        
+        <p>According to recent research from CIO magazine, roughly half of employees are using unsanctioned AI tools at work. But what's changed in 2026 is the nature of these tools. They're no longer simple chatbots. They're autonomous agents with:</p>
+        
+        <ul>
+            <li>Access to email accounts and calendars</li>
+            <li>Ability to read and modify documents</li>
+            <li>Integration with project management systems</li>
+            <li>Connections to code repositories</li>
+            <li>API access to CRM and ERP systems</li>
+        </ul>
+        
+        <p>When an employee sets up a personal AI agent and connects it to work systems, they're effectively creating an unmonitored, unaudited pipeline into the organization's most sensitive data.</p>
+        
+        <p>"Employees are secretly adopting AI to get ahead at work and obtain more leisure time, without informing superiors or the organization," notes Wharton School professor Ethan Mollick. The intention isn't malicious, but the security implications are severe.</p>
+
+        <h3>The Real-World Impact</h3>
+        
+        <p>Security firm Tenable recently published an analysis of shadow AI risks, focusing on tools like local AI agents running on employee laptops. Their findings:</p>
+        
+        <ul>
+            <li><strong>Indirect prompt injection:</strong> AI agents that read emails, chat messages, and web pages can be tricked by malicious content into executing unauthorized commands</li>
+            <li><strong>Data exfiltration:</strong> Agents with broad read access can be manipulated into copying sensitive data to external locations</li>
+            <li><strong>Credential exposure:</strong> Many agents store API keys and authentication tokens in poorly protected local files</li>
+            <li><strong>Persistence:</strong> Agents often run as background services with startup persistence, meaning they're active even when the employee isn't</li>
+        </ul>
+        
+        <p>The attack surface isn't just what these agents can do intentionally. It's what they can be tricked into doing.</p>
+
+        <h2>The Seven Archetypes of Vulnerable Agents</h2>
+        
+        <p>According to recent analysis from The Information, enterprise AI agents fall into seven categories, each with distinct security implications:</p>
+        
+        <h3>1. Business-Task Agents</h3>
+        <p>Agents that operate within enterprise software like Salesforce, SAP, or ServiceNow. These have deep integration with systems of record and can modify business-critical data. A compromised business-task agent can change customer records, approve transactions, or modify access controls.</p>
+        
+        <h3>2. Conversational Agents</h3>
+        <p>Customer-facing chatbots and support agents. While seemingly lower risk, these agents often have access to customer databases for "personalized" responses. Prompt injection attacks through customer messages can expose other customers' data or manipulate support workflows.</p>
+        
+        <h3>3. Research Agents</h3>
+        <p>Agents that query and analyze information, like OpenAI's Deep Research. These often have broad read access across systems to gather context. An attacker who can inject instructions into research queries can exfiltrate sensitive data disguised as legitimate research output.</p>
+        
+        <h3>4. Analytics Agents</h3>
+        <p>Agents that generate reports and analyze data. They typically have read access to databases and file systems. Manipulating an analytics agent's output can influence business decisions based on falsified data.</p>
+        
+        <h3>5. Coding Agents</h3>
+        <p>Development assistants like Cursor, GitHub Copilot, or specialized coding agents. These have write access to source code repositories. A compromised coding agent can inject backdoors, vulnerabilities, or malicious code into production systems.</p>
+        
+        <h3>6. Domain-Specific Agents</h3>
+        <p>Specialized agents for legal, medical, financial, or scientific domains. These often have access to the most sensitive data in an organization: patient records, legal documents, financial models. Compromise means exposure of highly regulated data.</p>
+        
+        <h3>7. Web Browser Agents</h3>
+        <p>Agents like OpenAI's Operator that control web browsers autonomously. These can fill forms, make purchases, access any web service. An attacker controlling a browser agent has access to every online account the user is logged into.</p>
+
+        
+        <!-- Inline Newsletter CTA -->
+        
         <div class="next-story-arrow">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                 <path d="M5 12h14M12 5l7 7-7 7"/>
