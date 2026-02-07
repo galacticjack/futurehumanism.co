@@ -1782,14 +1782,25 @@
             }
 
             .topic-filter {
-                width: 100%;
+                width: calc(100% + 32px);
+                margin-left: -16px;
+                padding-left: 16px;
+                padding-right: 16px;
                 overflow-x: auto;
                 flex-wrap: nowrap;
-                padding-bottom: 8px;
+                padding-bottom: 12px;
+                -webkit-overflow-scrolling: touch;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            
+            .topic-filter::-webkit-scrollbar {
+                display: none;
             }
 
             .topic-btn {
                 flex-shrink: 0;
+                white-space: nowrap;
             }
 
             .stories-grid {
