@@ -928,7 +928,42 @@
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap: 24px;
-            margin-bottom: 40px;
+            margin-bottom: 24px;
+        }
+        
+        .stories-pagination {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 24px;
+        }
+        
+        .stories-nav-btn {
+            padding: 12px 24px;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .stories-nav-btn:hover:not(:disabled) {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+        
+        .stories-nav-btn:disabled {
+            opacity: 0.4;
+            cursor: not-allowed;
+        }
+        
+        .stories-page-info {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
         }
 
         .grid-story-card {
@@ -3203,6 +3238,43 @@
                     <div class="grid-card-meta"><span>6 min read</span></div>
                 </div>
             </a>
+            <a href="articles/ai-marketing-strategies-2026.html" class="grid-story-card" data-category="strategy">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1533750349088-cd871a92f312?w=600&q=80" alt="AI Marketing in 2026">
+                <div class="grid-card-content">
+                    <span class="grid-card-category">Marketing</span>
+                    <h3 class="grid-card-title">AI Marketing in 2026: What's Working and What's Hype</h3>
+                    <div class="grid-card-meta"><span>6 min read</span></div>
+                </div>
+            </a>
+            <a href="articles/build-your-first-ai-agent-practical-guide.html" class="grid-story-card" data-category="tutorials">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="Build Your First AI Agent">
+                <div class="grid-card-content">
+                    <span class="grid-card-category">Tutorial</span>
+                    <h3 class="grid-card-title">Build Your First AI Agent: A Practical Guide</h3>
+                    <div class="grid-card-meta"><span>8 min read</span></div>
+                </div>
+            </a>
+            <a href="articles/prompt-engineering-that-actually-works.html" class="grid-story-card" data-category="tutorials">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600&q=80" alt="Prompt Engineering">
+                <div class="grid-card-content">
+                    <span class="grid-card-category">Tutorial</span>
+                    <h3 class="grid-card-title">Prompt Engineering That Actually Works</h3>
+                    <div class="grid-card-meta"><span>7 min read</span></div>
+                </div>
+            </a>
+            <a href="articles/50-dollar-tech-stack.html" class="grid-story-card" data-category="tutorials">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&q=80" alt="$50 Tech Stack">
+                <div class="grid-card-content">
+                    <span class="grid-card-category">Tutorial</span>
+                    <h3 class="grid-card-title">The $50 Tech Stack: Build AI Products Without Breaking the Bank</h3>
+                    <div class="grid-card-meta"><span>6 min read</span></div>
+                </div>
+            </a>
+        </div>
+        <div class="stories-pagination">
+            <button class="stories-nav-btn" id="storiesPrev" disabled>← Previous</button>
+            <span class="stories-page-info">Page <span id="storiesPage">1</span> of <span id="storiesTotalPages">3</span></span>
+            <button class="stories-nav-btn" id="storiesNext">Next →</button>
         </div>
     </section>
 
@@ -3685,6 +3757,48 @@
             el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(el);
         });
+        
+        // Stories pagination
+        (function() {
+            const grid = document.getElementById('stories-grid');
+            const prevBtn = document.getElementById('storiesPrev');
+            const nextBtn = document.getElementById('storiesNext');
+            const pageSpan = document.getElementById('storiesPage');
+            const totalSpan = document.getElementById('storiesTotalPages');
+            
+            if (!grid || !prevBtn || !nextBtn) return;
+            
+            const cards = Array.from(grid.querySelectorAll('.grid-story-card'));
+            const perPage = 12; // 3 rows of 4
+            const totalPages = Math.ceil(cards.length / perPage);
+            let currentPage = 1;
+            
+            totalSpan.textContent = totalPages;
+            
+            function showPage(page) {
+                currentPage = page;
+                pageSpan.textContent = page;
+                
+                cards.forEach((card, i) => {
+                    const start = (page - 1) * perPage;
+                    const end = start + perPage;
+                    card.style.display = (i >= start && i < end) ? 'block' : 'none';
+                });
+                
+                prevBtn.disabled = page <= 1;
+                nextBtn.disabled = page >= totalPages;
+                
+                // Scroll to stories section smoothly
+                if (page > 1) {
+                    document.getElementById('stories').scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            }
+            
+            prevBtn.addEventListener('click', () => showPage(currentPage - 1));
+            nextBtn.addEventListener('click', () => showPage(currentPage + 1));
+            
+            showPage(1);
+        })();
     </script>
 
     <!-- Exit Intent Popup -->
