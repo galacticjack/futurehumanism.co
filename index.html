@@ -818,6 +818,58 @@
             display: none;
         }
 
+        .carousel-card {
+            flex-shrink: 0;
+            width: 280px;
+            scroll-snap-align: start;
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .carousel-card:hover {
+            border-color: var(--accent);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+        }
+        
+        .carousel-card img {
+            width: 100%;
+            height: 160px;
+            object-fit: cover;
+        }
+        
+        .carousel-card-content {
+            padding: 16px;
+        }
+        
+        .carousel-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: var(--accent);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
+        }
+        
+        .carousel-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+            line-height: 1.3;
+        }
+        
+        .carousel-card p {
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            line-height: 1.4;
+        }
+
         .story-card {
             flex-shrink: 0;
             width: 260px;
@@ -3244,6 +3296,71 @@
         </div>
         <div class="stories-cta" style="text-align: center; margin-top: 32px;">
             <a href="/articles/" class="view-all-btn" style="display: inline-block; padding: 14px 32px; background: var(--accent); color: white; text-decoration: none; border-radius: 8px; font-weight: 600; font-size: 1rem; transition: all 0.2s;">View All Stories →</a>
+        </div>
+    </section>
+
+    <!-- Most Popular Carousel -->
+    <section class="carousel-section" id="popular">
+        <div class="carousel-header">
+            <h2>🔥 Most Popular</h2>
+            <div class="carousel-nav">
+                <button onclick="scrollCarousel('popular', -1)" aria-label="Previous">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg>
+                </button>
+                <button onclick="scrollCarousel('popular', 1)" aria-label="Next">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="carousel-track" id="popular-carousel">
+            <a href="articles/ai-agents-2026-guide.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="AI Agents Guide" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Guide</span>
+                    <h3>The Complete Guide to AI Agents in 2026</h3>
+                    <p>Everything you need to know about AI agents.</p>
+                </div>
+            </a>
+            <a href="articles/claude-vs-chatgpt-for-coding-2026.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1676299081847-824916de030a?w=400&q=80" alt="Claude vs ChatGPT" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Comparison</span>
+                    <h3>Claude vs ChatGPT for Coding 2026</h3>
+                    <p>Which AI coding assistant is right for you?</p>
+                </div>
+            </a>
+            <a href="articles/best-ai-tools-solopreneurs-2026.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=400&q=80" alt="AI Tools" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Tools</span>
+                    <h3>Best AI Tools for Solopreneurs 2026</h3>
+                    <p>The essential AI tools that save time and money.</p>
+                </div>
+            </a>
+            <a href="articles/prompt-engineering-that-actually-works.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=400&q=80" alt="Prompt Engineering" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Tutorial</span>
+                    <h3>Prompt Engineering That Actually Works</h3>
+                    <p>Move beyond basic prompting with pro techniques.</p>
+                </div>
+            </a>
+            <a href="articles/build-your-first-ai-agent-practical-guide.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="Build AI Agent" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Tutorial</span>
+                    <h3>Build Your First AI Agent</h3>
+                    <p>A practical guide to building AI agents from scratch.</p>
+                </div>
+            </a>
+            <a href="articles/50-dollar-tech-stack.html" class="carousel-card">
+                <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&q=80" alt="$50 Tech Stack" loading="lazy">
+                <div class="carousel-card-content">
+                    <span class="carousel-tag">Tutorial</span>
+                    <h3>The $50 Tech Stack</h3>
+                    <p>Build AI products without breaking the bank.</p>
+                </div>
+            </a>
         </div>
     </section>
 
