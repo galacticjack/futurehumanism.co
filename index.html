@@ -89,12 +89,23 @@
             font-size: 15px;
         }
         
-        /* Keep links blue even when visited - except hero and cards */
-        a:visited {
+        /* Visited links should look the same as unvisited */
+        a, a:visited {
             color: inherit;
         }
-        a[href]:not(.card):not(.article-card):not(.hero-main):not(.story-card):not(.sidebar-card):visited {
+        a:hover {
             color: var(--accent);
+        }
+        
+        /* Buttons should always have white text */
+        .testimonials-cta a,
+        .testimonials-cta a:visited,
+        .cta-button,
+        .cta-button:visited,
+        button,
+        [class*="btn"],
+        [class*="btn"]:visited {
+            color: white !important;
         }
 
         /* Page Load Animation */
