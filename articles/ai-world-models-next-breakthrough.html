@@ -220,9 +220,24 @@
         article strong {
             color: var(--text-primary);
         }
+        /* Article link styling - subtle, readable */
+        article a {
+            color: #60a5fa;
+            text-decoration: underline;
+            text-decoration-color: rgba(96, 165, 250, 0.3);
+            text-underline-offset: 2px;
+        }
+        article a:hover {
+            color: #93c5fd;
+            text-decoration-color: rgba(96, 165, 250, 0.6);
+        }
+        article a:visited {
+            color: #a78bfa;
+        }
+
         article em {
-            color: var(--accent);
-            font-style: normal;
+            font-style: italic;
+            color: var(--text-primary);
         }
         blockquote {
             background: var(--bg-secondary);
