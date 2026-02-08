@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W0SQN4JHN2');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E90FF">
+  
+  <title>Headline Analyzer - Score Your Headlines | Future Humanism</title>
+  <meta name="description" content="Free headline analyzer that scores your titles 0-100. Checks power words, emotional impact, word count, and more. Instant suggestions to improve.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="Headline Analyzer - Score Your Headlines">
+  <meta property="og:description" content="Free headline analyzer that scores your titles 0-100. Checks power words, emotional impact, word count, and more. Instant suggestions to improve.">
+  <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+  <meta property="og:url" content="https://futurehumanism.co/tools/headline-analyzer/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FutureHumanism">
+  <meta name="twitter:title" content="Headline Analyzer - Score Your Headlines">
+  <meta name="twitter:description" content="Free headline analyzer that scores your titles 0-100. Checks power words, emotional impact, word count, and more. Instant suggestions to improve.">
+  <meta name="twitter:image" content="https://futurehumanism.co/images/og-image.jpg">
+  
+  <link rel="canonical" href="https://futurehumanism.co/tools/headline-analyzer/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/global.css?v=20260208">
+  <link rel="stylesheet" href="/css/tools.css?v=20260208">
+  
+  
+</head>
+<body class="tool-page">
+  <header>
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><img loading="lazy" src="/images/profile.jpg" alt="Future Humanism"></div>
+            <div class="logo-text">Future<span>Humanism</span></div>
+        </a>
+        <nav>
+            <div class="nav-dropdown">
+                <span>Explore <svg width="16" height="16" class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+                <div class="mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Browse Content</div>
+                            <div class="mega-menu-grid">
+                                <a href="/articles/" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">All Stories</div>
+                                        <p>Browse 46+ articles</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?sort=latest" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Latest</div>
+                                        <p>Fresh insights daily</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?sort=popular" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Most Popular</div>
+                                        <p>Reader favorites</p>
+                                    </div>
+                                </a>
+                                <a href="/tools/" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Free Tools</div>
+                                        <p>Calculators & utilities</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Topics</div>
+                            <div class="mega-menu-grid">
+                                <a href="/articles/?cat=ai-agents" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 8V4M12 16v4M8 12H4M16 12h4"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">AI Agents</div>
+                                        <p>Autonomous systems</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=ai-models" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">AI Models</div>
+                                        <p>LLMs & capabilities</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=automation" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Automation</div>
+                                        <p>Workflows & efficiency</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=strategy" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Strategy</div>
+                                        <p>Business & growth</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=tutorials" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Tutorials</div>
+                                        <p>Step-by-step guides</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=crypto" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M9 9h4.5a1.5 1.5 0 0 1 0 3H9m0 0h5a1.5 1.5 0 0 1 0 3H9"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Crypto & DeFi</div>
+                                        <p>Web3 & trading</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Featured Guide</div>
+                            <div class="mega-menu-featured">
+                                <img src="/images/hero-ai-agents.webp" alt="AI Agents Guide">
+                                <div class="mega-menu-item-title">The Complete Guide to AI Agents in 2026</div>
+                                <p>Everything you need to know about autonomous AI systems.</p>
+                                <a href="/articles/ai-agents-2026-guide/">Read the guide →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/pages/challenge/" class="nav-challenge">7-Day Challenge</a>
+            <a href="/pages/about/">About</a>
+            <a href="/pages/search/" class="nav-search" title="Search (Press /)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            </a>
+            <div class="nav-dropdown share-dropdown">
+                <span class="nav-share-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </span>
+                <div class="dropdown-menu share-menu">
+                    <a href="#" onclick="shareToX(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <a href="#" onclick="shareToLinkedIn(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Share on LinkedIn
+                    </a>
+                    <a href="#" onclick="shareToFacebook(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Share on Facebook
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="copyLink(); return false;" id="copy-link-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        Copy Link
+                    </a>
+                </div>
+            </div>
+            <a href="/free-guide/" class="nav-cta nav-cta-secondary">Free Guide</a>
+            <a href="/pages/subscribe/" class="nav-cta">Subscribe</a>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="openMobileMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </nav>
+    </div>
+</header>
+
+  
+  
+<main>
+<div class="hero">
+<div class="hero-icon red">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+</div>
+<h1>Headline Analyzer</h1>
+<p class="tagline">Score your headlines instantly. See what works and what doesn't.</p>
+</div>
+<div class="input-section">
+<div class="input-wrapper">
+<input autocomplete="off" id="headline-input" maxlength="200" placeholder="Enter your headline here..." type="text"/>
+<span class="char-count"><span id="char-count">0</span>/200</span>
+</div>
+<button class="analyze-btn" id="analyze-btn">Analyze Headline</button>
+</div>
+<div class="results" id="results">
+<div class="score-section">
+<div class="score-circle" id="score-circle">
+<span class="score-value" id="score-value">0</span>
+</div>
+<div class="score-label">Overall Score</div>
+<div class="score-verdict" id="score-verdict"></div>
+</div>
+<div class="breakdown">
+<h3>
+<svg height="20" viewbox="0 0 24 24" width="20"><path d="M9 11H3v10h6V11zM15 3H9v18h6V3zM21 7h-6v14h6V7z"></path></svg>
+                    Score Breakdown
+                </h3>
+<div class="criteria" id="criteria-list"></div>
+</div>
+<div class="highlights" id="highlights-section">
+<h3>
+<svg height="20" viewbox="0 0 24 24" width="20"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                    Words Found
+                </h3>
+<div id="highlights-content"></div>
+</div>
+<div class="suggestions">
+<h3>
+<svg height="20" viewbox="0 0 24 24" width="20"><path d="M12 2a10 10 0 1 0 10 10A10 10 0 0 0 12 2zm1 15h-2v-2h2zm0-4h-2V7h2z"></path></svg>
+                    Suggestions to Improve
+                </h3>
+<ul class="suggestion-list" id="suggestion-list"></ul>
+</div>
+</div>
+
+<section class="related-tools">
+    <h2>More Tools You'll Love</h2>
+    <div class="related-tools-grid">
+        <a href="/tools/prompt-generator/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Prompt Generator</h3>
+            <p>Generate effective AI prompts in seconds</p>
+        </a>
+        <a href="/tools/ai-readiness-quiz/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg></div>
+            <h3>AI Readiness Quiz</h3>
+            <p>Test your AI preparedness level</p>
+        </a>
+        <a href="/tools/ai-survival-kit/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#22c55e" stroke-width="1.5"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg></div>
+            <h3>AI Survival Kit</h3>
+            <p>Free 47-page guide with tools & prompts</p>
+        </a>
+    </div>
+</section>
+</main>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag("js",new Date());gtag("config","G-W0SQN4JHN2");</script>
+<script src="../js/email-capture.js"></script>
+<script>
+        // Word lists for analysis
+        const POWER_WORDS = [
+            'secret', 'proven', 'ultimate', 'exclusive', 'free', 'new', 'now', 'instant',
+            'guaranteed', 'best', 'easy', 'simple', 'fast', 'quick', 'powerful', 'amazing',
+            'incredible', 'shocking', 'surprising', 'revolutionary', 'breakthrough', 'discover',
+            'unlock', 'master', 'hack', 'tricks', 'strategies', 'insider', 'expert', 'essential',
+            'critical', 'vital', 'crucial', 'urgent', 'limited', 'rare', 'unique', 'epic',
+            'massive', 'huge', 'explosive', 'supercharge', 'skyrocket', 'boost', 'transform',
+            'complete', 'definitive', 'comprehensive', 'step-by-step', 'effortless', 'scientific'
+        ];
+
+        const EMOTIONAL_WORDS = [
+            'love', 'hate', 'fear', 'angry', 'happy', 'sad', 'excited', 'worried', 'anxious',
+            'terrified', 'thrilled', 'disgusted', 'inspired', 'motivated', 'frustrated',
+            'overwhelmed', 'confused', 'curious', 'surprised', 'shocked', 'amazed', 'delighted',
+            'heartbroken', 'devastated', 'ecstatic', 'furious', 'jealous', 'proud', 'ashamed',
+            'guilty', 'hopeful', 'desperate', 'lonely', 'grateful', 'blessed', 'obsessed',
+            'addicted', 'passionate', 'painful', 'dangerous', 'deadly', 'nightmare', 'dream',
+            'beautiful', 'ugly', 'crazy', 'insane', 'brilliant', 'stupid', 'genius', 'dumb',
+            'embarrassing', 'humiliating', 'life-changing', 'mind-blowing', 'jaw-dropping'
+        ];
+
+        // DOM elements
+        const headlineInput = document.getElementById('headline-input');
+        const charCount = document.getElementById('char-count');
+        const analyzeBtn = document.getElementById('analyze-btn');
+        const results = document.getElementById('results');
+        const scoreCircle = document.getElementById('score-circle');
+        const scoreValue = document.getElementById('score-value');
+        const scoreVerdict = document.getElementById('score-verdict');
+        const criteriaList = document.getElementById('criteria-list');
+        const highlightsContent = document.getElementById('highlights-content');
+        const suggestionList = document.getElementById('suggestion-list');
+
+        // Update character count
+        headlineInput.addEventListener('input', () => {
+            charCount.textContent = headlineInput.value.length;
+        });
+
+        // Analyze on button click
+        analyzeBtn.addEventListener('click', analyzeHeadline);
+
+        // Analyze on Enter key
+        headlineInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') analyzeHeadline();
+        });
+
+        function analyzeHeadline() {
+            const headline = headlineInput.value.trim();
+            if (!headline) {
+                headlineInput.focus();
+                return;
+            }
+
+            const analysis = performAnalysis(headline);
+            displayResults(analysis);
+        }
+
+        function performAnalysis(headline) {
+            const words = headline.toLowerCase().split(/\s+/).filter(w => w.length > 0);
+            const wordCount = words.length;
+            
+            // Find power words
+            const foundPowerWords = words.filter(word => 
+                POWER_WORDS.some(pw => word.includes(pw) || pw.includes(word))
+            );
+            const uniquePowerWords = [...new Set(foundPowerWords)];
+
+            // Find emotional words
+            const foundEmotionalWords = words.filter(word =>
+                EMOTIONAL_WORDS.some(ew => word.includes(ew) || ew.includes(word))
+            );
+            const uniqueEmotionalWords = [...new Set(foundEmotionalWords)];
+
+            // Check for numbers
+            const hasNumber = /\d/.test(headline);
+            const numbers = headline.match(/\d+/g) || [];
+
+            // Check if it's a question
+            const isQuestion = headline.trim().endsWith('?');
+
+            // Check for "How to" or "Why" patterns
+            const hasHowTo = /^how\s+to/i.test(headline);
+            const startsWithWhy = /^why/i.test(headline);
+            const startsWithWhat = /^what/i.test(headline);
+            
+            // Calculate scores for each criteria
+            const scores = {};
+
+            // Word count score (max 25 points)
+            // Ideal: 6-12 words
+            if (wordCount >= 6 && wordCount <= 12) {
+                scores.wordCount = 25;
+            } else if (wordCount >= 4 && wordCount <= 14) {
+                scores.wordCount = 18;
+            } else if (wordCount >= 3 && wordCount <= 16) {
+                scores.wordCount = 10;
+            } else {
+                scores.wordCount = 5;
+            }
+
+            // Power words score (max 25 points)
+            if (uniquePowerWords.length >= 2) {
+                scores.powerWords = 25;
+            } else if (uniquePowerWords.length === 1) {
+                scores.powerWords = 15;
+            } else {
+                scores.powerWords = 0;
+            }
+
+            // Emotional words score (max 20 points)
+            if (uniqueEmotionalWords.length >= 2) {
+                scores.emotionalWords = 20;
+            } else if (uniqueEmotionalWords.length === 1) {
+                scores.emotionalWords = 12;
+            } else {
+                scores.emotionalWords = 0;
+            }
+
+            // Numbers score (max 15 points)
+            if (hasNumber) {
+                scores.numbers = 15;
+            } else {
+                scores.numbers = 0;
+            }
+
+            // Question/Format score (max 15 points)
+            if (isQuestion || hasHowTo) {
+                scores.format = 15;
+            } else if (startsWithWhy || startsWithWhat) {
+                scores.format = 10;
+            } else {
+                scores.format = 5;
+            }
+
+            const totalScore = Object.values(scores).reduce((a, b) => a + b, 0);
+
+            return {
+                headline,
+                wordCount,
+                totalScore,
+                scores,
+                powerWords: uniquePowerWords,
+                emotionalWords: uniqueEmotionalWords,
+                numbers,
+                hasNumber,
+                isQuestion,
+                hasHowTo,
+                startsWithWhy,
+                startsWithWhat
+            };
+        }
+
+        function displayResults(analysis) {
+            results.classList.add('visible');
+
+            // Animate score
+            animateScore(analysis.totalScore);
+
+            // Set score color
+            let color;
+            if (analysis.totalScore >= 70) color = 'var(--green)';
+            else if (analysis.totalScore >= 40) color = 'var(--yellow)';
+            else color = 'var(--red)';
+            
+            scoreCircle.style.setProperty('--score-color', color);
+            scoreCircle.style.setProperty('--score-pct', analysis.totalScore);
+
+            // Set verdict
+            let verdict;
+            if (analysis.totalScore >= 80) verdict = 'Excellent! This headline will grab attention.';
+            else if (analysis.totalScore >= 60) verdict = 'Good headline with room for improvement.';
+            else if (analysis.totalScore >= 40) verdict = 'Decent, but could be stronger.';
+            else verdict = 'Needs work. See suggestions below.';
+            
+            scoreVerdict.textContent = verdict;
+            scoreVerdict.style.color = color;
+
+            // Display criteria breakdown
+            displayCriteria(analysis);
+
+            // Display highlighted words
+            displayHighlights(analysis);
+
+            // Display suggestions
+            displaySuggestions(analysis);
+
+            // Scroll to results
+            results.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            
+            // Show email capture after 3 seconds
+            if (typeof triggerEmailCaptureOnResults === 'function') {
+                triggerEmailCaptureOnResults({
+                    score: analysis.totalScore,
+                    toolName: 'Headline Analyzer',
+                    type: 'calculator'
+                }, 3000);
+            }
+        }
+
+        function animateScore(target) {
+            let current = 0;
+            const duration = 800;
+            const startTime = performance.now();
+
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                
+                // Ease out cubic
+                const eased = 1 - Math.pow(1 - progress, 3);
+                current = Math.round(eased * target);
+                
+                scoreValue.textContent = current;
+                scoreCircle.style.setProperty('--score-pct', current);
+
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            requestAnimationFrame(update);
+        }
+
+        function displayCriteria(analysis) {
+            const criteria = [
+                {
+                    name: 'Word Count',
+                    detail: `${analysis.wordCount} words (ideal: 6-12)`,
+                    score: analysis.scores.wordCount,
+                    max: 25
+                },
+                {
+                    name: 'Power Words',
+                    detail: `${analysis.powerWords.length} found`,
+                    score: analysis.scores.powerWords,
+                    max: 25
+                },
+                {
+                    name: 'Emotional Words',
+                    detail: `${analysis.emotionalWords.length} found`,
+                    score: analysis.scores.emotionalWords,
+                    max: 20
+                },
+                {
+                    name: 'Numbers',
+                    detail: analysis.hasNumber ? `Contains: ${analysis.numbers.join(', ')}` : 'None found',
+                    score: analysis.scores.numbers,
+                    max: 15
+                },
+                {
+                    name: 'Format Bonus',
+                    detail: analysis.isQuestion ? 'Question format' : 
+                            analysis.hasHowTo ? '"How to" format' : 
+                            analysis.startsWithWhy ? '"Why" format' :
+                            analysis.startsWithWhat ? '"What" format' : 'Standard format',
+                    score: analysis.scores.format,
+                    max: 15
+                }
+            ];
+
+            criteriaList.innerHTML = criteria.map(c => {
+                const pct = (c.score / c.max) * 100;
+                let level, icon;
+                if (pct >= 70) { level = 'high'; icon = '✓'; }
+                else if (pct >= 40) { level = 'medium'; icon = '~'; }
+                else { level = 'low'; icon = '✗'; }
+
+                const iconClass = pct >= 70 ? 'pass' : pct >= 40 ? 'partial' : 'fail';
+
+                return `
+                    <div class="criteria-item">
+                        <div class="criteria-label">
+                            <div class="criteria-icon ${iconClass}">${icon}</div>
+                            <div>
+                                <div class="criteria-name">${c.name}</div>
+                                <div class="criteria-detail">${c.detail}</div>
+                            </div>
+                        </div>
+                        <span class="criteria-score ${level}">+${c.score}</span>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function displayHighlights(analysis) {
+            let html = '';
+
+            if (analysis.powerWords.length > 0) {
+                html += `
+                    <div class="highlight-group">
+                        <div class="highlight-label">Power Words</div>
+                        <div class="highlight-tags">
+                            ${analysis.powerWords.map(w => `<span class="tag power">${w}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (analysis.emotionalWords.length > 0) {
+                html += `
+                    <div class="highlight-group">
+                        <div class="highlight-label">Emotional Words</div>
+                        <div class="highlight-tags">
+                            ${analysis.emotionalWords.map(w => `<span class="tag emotional">${w}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (analysis.numbers.length > 0) {
+                html += `
+                    <div class="highlight-group">
+                        <div class="highlight-label">Numbers</div>
+                        <div class="highlight-tags">
+                            ${analysis.numbers.map(n => `<span class="tag number">${n}</span>`).join('')}
+                        </div>
+                    </div>
+                `;
+            }
+
+            if (!html) {
+                html = `
+                    <div class="highlight-group">
+                        <div class="highlight-tags">
+                            <span class="tag none">No special words detected</span>
+                        </div>
+                    </div>
+                `;
+            }
+
+            highlightsContent.innerHTML = html;
+        }
+
+        function displaySuggestions(analysis) {
+            const suggestions = [];
+
+            // Word count suggestions
+            if (analysis.wordCount < 6) {
+                suggestions.push('Your headline is too short. Aim for 6-12 words to provide enough context while staying punchy.');
+            } else if (analysis.wordCount > 12) {
+                suggestions.push('Your headline is a bit long. Try trimming it to 6-12 words for better engagement.');
+            }
+
+            // Power words suggestions
+            if (analysis.powerWords.length === 0) {
+                suggestions.push('Add a power word like "proven," "ultimate," "secret," or "essential" to make it more compelling.');
+            }
+
+            // Emotional words suggestions
+            if (analysis.emotionalWords.length === 0) {
+                suggestions.push('Include an emotional trigger word like "surprising," "inspiring," or "frustrating" to connect with readers.');
+            }
+
+            // Numbers suggestions
+            if (!analysis.hasNumber) {
+                suggestions.push('Headlines with numbers (like "7 Ways..." or "3 Secrets...") typically get 36% more clicks. Consider adding one.');
+            }
+
+            // Format suggestions
+            if (!analysis.isQuestion && !analysis.hasHowTo && !analysis.startsWithWhy) {
+                suggestions.push('Try framing it as a question or "How to..." statement. These formats tend to boost engagement.');
+            }
+
+            // If score is already good
+            if (analysis.totalScore >= 80 && suggestions.length === 0) {
+                suggestions.push('Great job! Your headline hits all the key markers. Test it against a variation to see which performs better.');
+            }
+
+            // Character length check
+            if (analysis.headline.length > 60) {
+                suggestions.push('Consider keeping your headline under 60 characters for better display in search results and social shares.');
+            }
+
+            suggestionList.innerHTML = suggestions.map(s => `
+                <li class="suggestion-item">
+                    <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 18l6-6-6-6"/></svg>
+                    <span class="suggestion-text">${s}</span>
+                </li>
+            `).join('');
+        }
+    </script>
+<script>
+        // Share functions
+        const shareUrl = window.location.href;
+        const shareTitle = document.title;
+        
+        function shareToX() {
+            window.open(`https://twitter.com/intent/tweet?url=${encodeURIComponent(shareUrl)}&text=${encodeURIComponent(shareTitle)}&via=FutureHumanism`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToLinkedIn() {
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function shareToFacebook() {
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`, '_blank', 'width=550,height=420');
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText(shareUrl).then(() => {
+                const btn = document.getElementById('copy-link-btn');
+                if (btn) {
+                    const originalText = btn.innerHTML;
+                    btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Copied!';
+                    btn.style.color = '#10b981';
+                    setTimeout(() => {
+                        btn.innerHTML = originalText;
+                        btn.style.color = '';
+                    }, 2000);
+                }
+            });
+        }
+
+        // Mobile menu
+        function openMobileMenu() {
+            document.getElementById('mobile-menu').classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+            document.getElementById('mobile-menu').classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        if (mobileMenuBtn) {
+            mobileMenuBtn.addEventListener('click', openMobileMenu);
+        }
+    </script>
+<script src="../js/social-proof.js"></script>
+  
+  <footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><img loading="lazy" src="/images/profile.jpg" alt="Future Humanism"></div>
+                    <div class="logo-text">Future<span>Humanism</span></div>
+                </a>
+                <p>Where AI meets human potential. Stories, tools, and insights for builders navigating the most interesting time in tech history.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Content</h4>
+                <a href="/articles/">Stories</a>
+                <a href="/tools/">Free Tools</a>
+                <a href="/pages/subscribe/">Newsletter</a>
+                <a href="/pages/about/">About</a>
+            </div>
+            <div class="footer-links">
+                <h4>Popular Tools</h4>
+                <a href="/tools/ai-roi-calculator/">AI ROI Calculator</a>
+                <a href="/tools/prompt-generator/">Prompt Generator</a>
+                <a href="/tools/ai-readiness-quiz/">AI Readiness Quiz</a>
+                <a href="/tools/headline-analyzer/">Headline Analyzer</a>
+                <a href="/tools/ai-glossary/">AI Glossary</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                <a href="https://futurehumanism.beehiiv.com" target="_blank">Beehiiv</a>
+                <a href="https://gumroad.com/futurehumanism" target="_blank">Gumroad</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Future Humanism. Made with intention. · <a href="/pages/privacy/">Privacy</a> · <a href="/pages/terms/">Terms</a></p>
+            <div class="footer-social">
+                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                <a href="/pages/subscribe/">Newsletter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+        <a href="/" class="logo">
+            <div class="logo-icon"><img src="/images/profile.jpg" alt=""></div>
+            <span class="logo-text">Future<span>Humanism</span></span>
+        </a>
+        <button class="close-btn" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">Browse</div>
+            <a href="/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Home
+            </a>
+            <a href="/articles/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                All Stories
+            </a>
+            <a href="/articles/ai-agents-2026-guide/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Featured Guide
+            </a>
+            <a href="/tools/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Free Tools
+            </a>
+            <a href="/pages/about/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                About
+            </a>
+        </div>
+
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">Topics</div>
+            <div class="mobile-menu-topics">
+                <a href="/articles/?cat=ai-agents" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+                    AI Agents
+                </a>
+                <a href="/articles/?cat=ai-models" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    AI Models
+                </a>
+                <a href="/articles/?cat=automation" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                    Automation
+                </a>
+                <a href="/articles/?cat=strategy" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Strategy
+                </a>
+                <a href="/articles/?cat=tutorials" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Tutorials
+                </a>
+                <a href="/articles/?cat=crypto" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Crypto & DeFi
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu-section">
+        <div class="mobile-menu-section-title">Share This Site</div>
+        <a href="#" onclick="copyMobileLink(); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Link
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://futurehumanism.co" target="_blank" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Share on Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Future%20Humanism%20-%20where%20AI%20meets%20human%20potential&url=https://futurehumanism.co&via=FutureHumanism" target="_blank" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Share on X
+        </a>
+    </div>
+
+    <div class="mobile-menu-cta">
+        <a href="/pages/subscribe/" onclick="closeMobileMenu()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Subscribe for Free
+        </a>
+        <div class="mobile-menu-social">
+            <a href="https://twitter.com/FutureHumanism" target="_blank" aria-label="X/Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/futurehumanism" target="_blank" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+  
+  <script src="/js/main.js"></script>
+</body>
+</html>

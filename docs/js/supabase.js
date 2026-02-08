@@ -1,0 +1,1 @@
+const SUPABASE_URL="https://ajagsinfrmgmzksrfshr.supabase.co",SUPABASE_ANON_KEY="sb_publishable_mvuYiwEcDBVGRrAK0lbvzA_u14p9oXD";let supabase=null;function getSupabase(){return!supabase&&"undefined"!=typeof window&&window.supabase&&(supabase=window.supabase.createClient(SUPABASE_URL,SUPABASE_ANON_KEY)),supabase}window.getSupabase=getSupabase;

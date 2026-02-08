@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-W0SQN4JHN2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-W0SQN4JHN2');
+  </script>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#1E90FF">
+  
+  <title>AI Job Impact Analyzer | Will AI Affect Your Career? | Future Humanism</title>
+  <meta name="description" content="Free AI job impact assessment. Enter your job title to see how AI will affect your role, get your AI Exposure Score, and receive personalized career recommendations.">
+  
+  <!-- Open Graph -->
+  <meta property="og:title" content="AI Job Impact Analyzer | Will AI Affect Your Career?">
+  <meta property="og:description" content="Free AI job impact assessment. Enter your job title to see how AI will affect your role, get your AI Exposure Score, and receive personalized career recommendations.">
+  <meta property="og:image" content="https://futurehumanism.co/images/og-image.jpg">
+  <meta property="og:url" content="https://futurehumanism.co/tools/ai-job-analyzer/">
+  <meta property="og:type" content="website">
+  
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@FutureHumanism">
+  <meta name="twitter:title" content="AI Job Impact Analyzer | Will AI Affect Your Career?">
+  <meta name="twitter:description" content="Free AI job impact assessment. Enter your job title to see how AI will affect your role, get your AI Exposure Score, and receive personalized career recommendations.">
+  <meta name="twitter:image" content="https://futurehumanism.co/images/og-image.jpg">
+  
+  <link rel="canonical" href="https://futurehumanism.co/tools/ai-job-analyzer/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="/css/global.css?v=20260208">
+  <link rel="stylesheet" href="/css/tools.css?v=20260208">
+  
+  
+</head>
+<body class="tool-page">
+  <header>
+    <div class="header-inner">
+        <a href="/" class="logo">
+            <div class="logo-icon"><img loading="lazy" src="/images/profile.jpg" alt="Future Humanism"></div>
+            <div class="logo-text">Future<span>Humanism</span></div>
+        </a>
+        <nav>
+            <div class="nav-dropdown">
+                <span>Explore <svg width="16" height="16" class="chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></span>
+                <div class="mega-menu">
+                    <div class="mega-menu-inner">
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Browse Content</div>
+                            <div class="mega-menu-grid">
+                                <a href="/articles/" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">All Stories</div>
+                                        <p>Browse 46+ articles</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?sort=latest" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Latest</div>
+                                        <p>Fresh insights daily</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?sort=popular" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Most Popular</div>
+                                        <p>Reader favorites</p>
+                                    </div>
+                                </a>
+                                <a href="/tools/" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Free Tools</div>
+                                        <p>Calculators & utilities</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Topics</div>
+                            <div class="mega-menu-grid">
+                                <a href="/articles/?cat=ai-agents" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="8" width="8" height="8" rx="1"/><path d="M12 8V4M12 16v4M8 12H4M16 12h4"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">AI Agents</div>
+                                        <p>Autonomous systems</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=ai-models" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">AI Models</div>
+                                        <p>LLMs & capabilities</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=automation" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Automation</div>
+                                        <p>Workflows & efficiency</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=strategy" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Strategy</div>
+                                        <p>Business & growth</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=tutorials" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Tutorials</div>
+                                        <p>Step-by-step guides</p>
+                                    </div>
+                                </a>
+                                <a href="/articles/?cat=crypto" class="mega-menu-item">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v12M9 9h4.5a1.5 1.5 0 0 1 0 3H9m0 0h5a1.5 1.5 0 0 1 0 3H9"/></svg>
+                                    <div class="mega-menu-item-content">
+                                        <div class="mega-menu-item-title">Crypto & DeFi</div>
+                                        <p>Web3 & trading</p>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="mega-menu-section">
+                            <div class="mega-menu-section-title">Featured Guide</div>
+                            <div class="mega-menu-featured">
+                                <img src="/images/hero-ai-agents.webp" alt="AI Agents Guide">
+                                <div class="mega-menu-item-title">The Complete Guide to AI Agents in 2026</div>
+                                <p>Everything you need to know about autonomous AI systems.</p>
+                                <a href="/articles/ai-agents-2026-guide/">Read the guide →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <a href="/pages/challenge/" class="nav-challenge">7-Day Challenge</a>
+            <a href="/pages/about/">About</a>
+            <a href="/pages/search/" class="nav-search" title="Search (Press /)">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.35-4.35"></path></svg>
+            </a>
+            <div class="nav-dropdown share-dropdown">
+                <span class="nav-share-btn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg>
+                </span>
+                <div class="dropdown-menu share-menu">
+                    <a href="#" onclick="shareToX(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        Share on X
+                    </a>
+                    <a href="#" onclick="shareToLinkedIn(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                        Share on LinkedIn
+                    </a>
+                    <a href="#" onclick="shareToFacebook(); return false;">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                        Share on Facebook
+                    </a>
+                    <div class="dropdown-divider"></div>
+                    <a href="#" onclick="copyLink(); return false;" id="copy-link-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                        Copy Link
+                    </a>
+                </div>
+            </div>
+            <a href="/free-guide/" class="nav-cta nav-cta-secondary">Free Guide</a>
+            <a href="/pages/subscribe/" class="nav-cta">Subscribe</a>
+            <button class="mobile-menu-btn" aria-label="Menu" onclick="openMobileMenu()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
+        </nav>
+    </div>
+</header>
+
+  
+  
+<main>
+<section class="hero">
+<div class="hero-icon orange">
+    <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+</div>
+<h1>AI Job <span>Impact Analyzer</span></h1>
+<p>Discover how AI will affect your career. Get your personalized AI Exposure Score and actionable recommendations.</p>
+</section>
+<div class="analyzer-card" id="inputSection">
+<div class="input-group">
+<label for="jobTitle">Your Job Title</label>
+<input autocomplete="off" id="jobTitle" placeholder="e.g., Marketing Manager, Software Engineer, Accountant..." type="text"/>
+</div>
+<div class="input-group">
+<label for="industry">Industry</label>
+<select id="industry">
+<option value="">Select your industry</option>
+<option value="technology">Technology</option>
+<option value="finance">Finance &amp; Banking</option>
+<option value="healthcare">Healthcare</option>
+<option value="marketing">Marketing &amp; Advertising</option>
+<option value="legal">Legal</option>
+<option value="education">Education</option>
+<option value="retail">Retail &amp; E-commerce</option>
+<option value="manufacturing">Manufacturing</option>
+<option value="media">Media &amp; Entertainment</option>
+<option value="consulting">Consulting</option>
+<option value="real-estate">Real Estate</option>
+<option value="hospitality">Hospitality &amp; Travel</option>
+<option value="other">Other</option>
+</select>
+</div>
+<button class="analyze-btn" id="analyzeBtn" onclick="analyzeJob()">
+<span class="btn-text">Analyze My Job</span>
+</button>
+</div>
+<div class="results" id="results">
+<div class="score-card">
+<p class="job-title-display">AI Impact Analysis for <strong id="displayJobTitle"></strong></p>
+<div class="score-circle" id="scoreCircle">
+<svg height="180" viewbox="0 0 180 180" width="180">
+<circle class="bg" cx="90" cy="90" fill="none" r="80" stroke-width="12"></circle>
+<circle class="progress" cx="90" cy="90" fill="none" id="progressCircle" r="80" stroke-dasharray="502" stroke-dashoffset="502" stroke-width="12"></circle>
+</svg>
+<div class="score-value">
+<div class="number" id="scoreNumber">0</div>
+<div class="label">AI Exposure</div>
+</div>
+</div>
+<div class="score-status" id="scoreStatus">Analyzing...</div>
+<p class="score-description" id="scoreDescription"></p>
+</div>
+<div class="breakdown-card">
+<h3><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#8b5cf6" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></span> Impact Breakdown</h3>
+<div id="breakdownList"></div>
+</div>
+<div class="breakdown-card recommendations">
+<h3><span class="icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2"><path d="M9 18h6M10 22h4M21 13c0 4.97-4.03 9-9 9s-9-4.03-9-9c0-3.53 2.04-6.58 5-8.05V4a1 1 0 0 1 1-1h6a1 1 0 0 1 1 1v.95c2.96 1.47 5 4.52 5 8.05z"/></svg></span> Your Action Plan</h3>
+<div id="recommendationsList"></div>
+</div>
+<div class="share-section">
+<h3>Share Your Results</h3>
+<p>Let others discover their AI exposure score too</p>
+<div class="share-buttons">
+<button class="share-btn twitter" onclick="shareTwitter()">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></svg>
+                        Share on X
+                    </button>
+<button class="share-btn linkedin" onclick="shareLinkedIn()">
+<svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
+                        Share on LinkedIn
+                    </button>
+<button class="share-btn copy" onclick="copyLink()">
+<svg fill="none" height="18" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="13" rx="2" width="13" x="9" y="9"></rect><path d="M5 15H4a2 2 0 01-2-2V4a2 2 0 012-2h9a2 2 0 012 2v1"></path></svg>
+<span id="copyText">Copy Link</span>
+</button>
+</div>
+</div>
+<div class="cta-section">
+<h3>Stay Ahead of AI Changes</h3>
+<p>Get weekly insights on AI trends and practical strategies to future-proof your career.</p>
+<a class="cta-btn" href="https://futurehumanism.beehiiv.com/subscribe" target="_blank">
+                    Subscribe Free
+                    <svg fill="none" height="16" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="16"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
+</div>
+<button class="reset-btn" onclick="resetAnalyzer()">Analyze Another Job</button>
+</div>
+
+<section class="related-tools">
+    <h2>More Tools You'll Love</h2>
+    <div class="related-tools-grid">
+        <a href="/tools/headline-analyzer/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ef4444" stroke-width="1.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+            <h3>Headline Analyzer</h3>
+            <p>Score your headlines 0-100</p>
+        </a>
+        <a href="/tools/ai-productivity-score/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="1.5"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+            <h3>Productivity Score</h3>
+            <p>Measure your AI usage</p>
+        </a>
+        <a href="/tools/prompt-generator/" class="related-tool-card">
+            <div class="icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#10b981" stroke-width="1.5"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+            <h3>Prompt Generator</h3>
+            <p>Generate AI prompts instantly</p>
+        </a>
+    </div>
+</section>
+</main>
+<script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-W0SQN4JHN2');
+    </script>
+<script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does AI impact jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "AI impacts jobs in three ways: automation of routine tasks (reducing need for some roles), augmentation (making workers more productive), and creation of new roles that didn't exist before. The impact varies significantly by industry and specific job functions."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Which jobs are most at risk from AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Jobs with high AI exposure include data entry, basic customer service, routine analysis, and repetitive manufacturing tasks. However, most jobs will be augmented rather than fully replaced, with AI handling routine aspects while humans focus on complex decisions, creativity, and relationship building."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How can I prepare my career for AI?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Focus on skills AI struggles with: complex problem-solving, emotional intelligence, creative thinking, and strategic decision-making. Learn to work alongside AI tools to increase your productivity. Continuous learning and adaptability are key to thriving in an AI-augmented workforce."
+          }
+        }
+      ]
+    }
+    </script>
+<script>
+        // Job categories and their AI exposure data
+        const jobData = {
+            // High exposure (60-85)
+            'data entry': { base: 82, automation: 90, augmentation: 75, creation: 10 },
+            'bookkeeper': { base: 78, automation: 85, augmentation: 70, creation: 15 },
+            'customer service representative': { base: 72, automation: 80, augmentation: 75, creation: 20 },
+            'telemarketer': { base: 80, automation: 85, augmentation: 60, creation: 10 },
+            'paralegal': { base: 68, automation: 70, augmentation: 80, creation: 25 },
+            'transcriptionist': { base: 85, automation: 95, augmentation: 60, creation: 10 },
+            'copywriter': { base: 65, automation: 55, augmentation: 85, creation: 40 },
+            'translator': { base: 70, automation: 75, augmentation: 80, creation: 25 },
+            'accountant': { base: 62, automation: 70, augmentation: 80, creation: 30 },
+            'financial analyst': { base: 58, automation: 55, augmentation: 85, creation: 35 },
+            
+            // Medium exposure (35-59)
+            'marketing manager': { base: 48, automation: 40, augmentation: 85, creation: 55 },
+            'software engineer': { base: 45, automation: 35, augmentation: 90, creation: 65 },
+            'product manager': { base: 42, automation: 30, augmentation: 80, creation: 60 },
+            'hr manager': { base: 50, automation: 45, augmentation: 75, creation: 45 },
+            'graphic designer': { base: 55, automation: 45, augmentation: 85, creation: 50 },
+            'journalist': { base: 52, automation: 40, augmentation: 80, creation: 55 },
+            'teacher': { base: 38, automation: 25, augmentation: 75, creation: 50 },
+            'sales representative': { base: 45, automation: 35, augmentation: 80, creation: 45 },
+            'project manager': { base: 40, automation: 30, augmentation: 75, creation: 55 },
+            'consultant': { base: 44, automation: 35, augmentation: 85, creation: 60 },
+            'lawyer': { base: 48, automation: 40, augmentation: 80, creation: 45 },
+            'doctor': { base: 35, automation: 20, augmentation: 85, creation: 40 },
+            'nurse': { base: 28, automation: 15, augmentation: 70, creation: 35 },
+            'architect': { base: 42, automation: 35, augmentation: 80, creation: 55 },
+            
+            // Low exposure (15-34)
+            'ceo': { base: 25, automation: 15, augmentation: 75, creation: 70 },
+            'entrepreneur': { base: 22, automation: 10, augmentation: 80, creation: 75 },
+            'therapist': { base: 18, automation: 10, augmentation: 65, creation: 40 },
+            'psychologist': { base: 20, automation: 12, augmentation: 70, creation: 45 },
+            'social worker': { base: 22, automation: 15, augmentation: 65, creation: 40 },
+            'electrician': { base: 18, automation: 10, augmentation: 55, creation: 30 },
+            'plumber': { base: 15, automation: 8, augmentation: 50, creation: 25 },
+            'chef': { base: 25, automation: 20, augmentation: 60, creation: 50 },
+            'surgeon': { base: 28, automation: 15, augmentation: 75, creation: 45 },
+            'physical therapist': { base: 20, automation: 10, augmentation: 65, creation: 35 },
+            'personal trainer': { base: 18, automation: 8, augmentation: 60, creation: 40 },
+        };
+        
+        // Industry multipliers
+        const industryMultipliers = {
+            'technology': 1.15,
+            'finance': 1.1,
+            'healthcare': 0.85,
+            'marketing': 1.1,
+            'legal': 1.05,
+            'education': 0.9,
+            'retail': 1.0,
+            'manufacturing': 0.95,
+            'media': 1.05,
+            'consulting': 1.08,
+            'real-estate': 0.95,
+            'hospitality': 0.88,
+            'other': 1.0
+        };
+        
+        function findClosestJob(input) {
+            const normalizedInput = input.toLowerCase().trim();
+            
+            // Direct match
+            if (jobData[normalizedInput]) {
+                return { job: normalizedInput, data: jobData[normalizedInput] };
+            }
+            
+            // Partial match
+            for (const [job, data] of Object.entries(jobData)) {
+                if (normalizedInput.includes(job) || job.includes(normalizedInput)) {
+                    return { job, data };
+                }
+            }
+            
+            // Keyword matching
+            const keywords = {
+                'manager': { base: 42, automation: 30, augmentation: 78, creation: 55 },
+                'analyst': { base: 55, automation: 50, augmentation: 82, creation: 40 },
+                'engineer': { base: 45, automation: 35, augmentation: 85, creation: 60 },
+                'developer': { base: 48, automation: 38, augmentation: 88, creation: 62 },
+                'designer': { base: 52, automation: 42, augmentation: 82, creation: 55 },
+                'writer': { base: 60, automation: 50, augmentation: 82, creation: 45 },
+                'assistant': { base: 68, automation: 70, augmentation: 75, creation: 25 },
+                'coordinator': { base: 55, automation: 50, augmentation: 70, creation: 35 },
+                'specialist': { base: 50, automation: 45, augmentation: 78, creation: 45 },
+                'director': { base: 35, automation: 25, augmentation: 75, creation: 60 },
+                'executive': { base: 30, automation: 20, augmentation: 72, creation: 65 },
+            };
+            
+            for (const [keyword, data] of Object.entries(keywords)) {
+                if (normalizedInput.includes(keyword)) {
+                    return { job: input, data };
+                }
+            }
+            
+            // Default for unknown jobs
+            return { 
+                job: input, 
+                data: { base: 45, automation: 40, augmentation: 75, creation: 45 }
+            };
+        }
+        
+        function analyzeJob() {
+            const jobTitle = document.getElementById('jobTitle').value.trim();
+            const industry = document.getElementById('industry').value;
+            
+            if (!jobTitle) {
+                alert('Please enter your job title');
+                return;
+            }
+            
+            // Show loading state
+            const btn = document.getElementById('analyzeBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<div class="spinner"></div> Analyzing...';
+            
+            // Simulate analysis delay for effect
+            setTimeout(() => {
+                const { job, data } = findClosestJob(jobTitle);
+                const multiplier = industry ? industryMultipliers[industry] : 1.0;
+                
+                // Calculate final score with some randomness for uniqueness
+                const variance = (Math.random() - 0.5) * 10;
+                let finalScore = Math.round((data.base * multiplier) + variance);
+                finalScore = Math.max(10, Math.min(85, finalScore));
+                
+                // Calculate sub-scores
+                const automation = Math.round(data.automation * multiplier);
+                const augmentation = Math.round(data.augmentation);
+                const creation = Math.round(data.creation);
+                
+                displayResults(jobTitle, finalScore, automation, augmentation, creation);
+                
+                // Reset button
+                btn.disabled = false;
+                btn.innerHTML = '<span class="btn-text">Analyze My Job</span>';
+                
+                // Track event
+                gtag('event', 'analyze_job', {
+                    'job_title': jobTitle,
+                    'industry': industry,
+                    'ai_exposure_score': finalScore
+                });
+                
+                // Show email capture after 3 seconds
+                if (typeof triggerEmailCaptureOnResults === 'function') {
+                    triggerEmailCaptureOnResults({
+                        score: finalScore,
+                        toolName: 'AI Job Impact Analyzer',
+                        type: 'calculator'
+                    }, 4500); // 1.5s animation + 3s delay
+                }
+            }, 1500);
+        }
+        
+        function displayResults(jobTitle, score, automation, augmentation, creation) {
+            // Hide input, show results
+            document.getElementById('inputSection').style.display = 'none';
+            document.getElementById('results').classList.add('visible');
+            
+            // Set job title
+            document.getElementById('displayJobTitle').textContent = jobTitle;
+            
+            // Determine level
+            let level, statusText, description;
+            if (score >= 60) {
+                level = 'high';
+                statusText = 'High AI Exposure';
+                description = 'Your role has significant tasks that AI can automate. Focus on strategic skills and AI collaboration to stay ahead.';
+            } else if (score >= 35) {
+                level = 'medium';
+                statusText = 'Moderate AI Exposure';
+                description = 'AI will augment your work significantly. Learning to leverage AI tools will multiply your effectiveness.';
+            } else {
+                level = 'low';
+                statusText = 'Low AI Exposure';
+                description = 'Your role relies heavily on human skills that AI struggles to replicate. AI will be a helpful assistant, not a replacement.';
+            }
+            
+            // Update score circle
+            const scoreCircle = document.getElementById('scoreCircle');
+            scoreCircle.className = 'score-circle ' + level;
+            
+            const circumference = 502; // 2 * PI * 80
+            const offset = circumference - (score / 100 * circumference);
+            
+            setTimeout(() => {
+                document.getElementById('progressCircle').style.strokeDashoffset = offset;
+                animateNumber('scoreNumber', 0, score, 1000);
+            }, 100);
+            
+            // Update status
+            const statusEl = document.getElementById('scoreStatus');
+            statusEl.textContent = statusText;
+            statusEl.className = 'score-status ' + level;
+            
+            document.getElementById('scoreDescription').textContent = description;
+            
+            // Impact breakdown
+            const breakdownHtml = `
+                <div class="impact-item">
+                    <span class="label">Task Automation Risk</span>
+                    <span class="value">
+                        <div class="bar"><div class="bar-fill ${getLevel(automation)}" style="width: ${automation}%"></div></div>
+                        ${automation}%
+                    </span>
+                </div>
+                <div class="impact-item">
+                    <span class="label">AI Augmentation Potential</span>
+                    <span class="value">
+                        <div class="bar"><div class="bar-fill ${augmentation > 70 ? 'low' : 'medium'}" style="width: ${augmentation}%"></div></div>
+                        ${augmentation}%
+                    </span>
+                </div>
+                <div class="impact-item">
+                    <span class="label">New Role Creation</span>
+                    <span class="value">
+                        <div class="bar"><div class="bar-fill low" style="width: ${creation}%"></div></div>
+                        ${creation}%
+                    </span>
+                </div>
+            `;
+            document.getElementById('breakdownList').innerHTML = breakdownHtml;
+            
+            // Recommendations based on score
+            const recommendations = getRecommendations(score, augmentation);
+            let recHtml = '';
+            recommendations.forEach(rec => {
+                recHtml += `
+                    <div class="rec-item">
+                        <h4>${rec.title}</h4>
+                        <p>${rec.description}</p>
+                    </div>
+                `;
+            });
+            document.getElementById('recommendationsList').innerHTML = recHtml;
+            
+            // Store for sharing
+            window.analysisResults = { jobTitle, score, level };
+            
+            // Scroll to results
+            document.getElementById('results').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+        
+        function getLevel(value) {
+            if (value >= 60) return 'high';
+            if (value >= 35) return 'medium';
+            return 'low';
+        }
+        
+        function animateNumber(elementId, start, end, duration) {
+            const element = document.getElementById(elementId);
+            const range = end - start;
+            const startTime = performance.now();
+            
+            function update(currentTime) {
+                const elapsed = currentTime - startTime;
+                const progress = Math.min(elapsed / duration, 1);
+                const value = Math.round(start + (range * easeOutQuart(progress)));
+                element.textContent = value;
+                
+                if (progress < 1) {
+                    requestAnimationFrame(update);
+                }
+            }
+            
+            requestAnimationFrame(update);
+        }
+        
+        function easeOutQuart(x) {
+            return 1 - Math.pow(1 - x, 4);
+        }
+        
+        function getRecommendations(score, augmentation) {
+            const recs = [];
+            
+            if (score >= 60) {
+                recs.push({
+                    title: 'Master AI Tools Now',
+                    description: 'Start using AI tools daily in your work. Those who can direct AI effectively will manage those who can\'t.'
+                });
+                recs.push({
+                    title: 'Develop Strategic Thinking',
+                    description: 'Focus on skills AI struggles with: complex problem-solving, stakeholder management, and creative strategy.'
+                });
+                recs.push({
+                    title: 'Consider Adjacent Roles',
+                    description: 'Explore roles that combine your domain expertise with AI oversight, prompt engineering, or AI training.'
+                });
+            } else if (score >= 35) {
+                recs.push({
+                    title: 'Become an AI Power User',
+                    description: `With ${augmentation}% augmentation potential, learning to leverage AI will significantly multiply your output and value.`
+                });
+                recs.push({
+                    title: 'Focus on Human-AI Collaboration',
+                    description: 'The future belongs to professionals who can seamlessly blend AI capabilities with human judgment.'
+                });
+                recs.push({
+                    title: 'Build Your Personal Brand',
+                    description: 'As AI commoditizes basic tasks, your reputation and unique perspective become your competitive moat.'
+                });
+            } else {
+                recs.push({
+                    title: 'Use AI as Your Assistant',
+                    description: 'AI can handle your administrative tasks, research, and documentation while you focus on high-value human work.'
+                });
+                recs.push({
+                    title: 'Double Down on Human Skills',
+                    description: 'Emotional intelligence, physical dexterity, and complex interpersonal skills will become more valuable, not less.'
+                });
+                recs.push({
+                    title: 'Stay Informed, Not Anxious',
+                    description: 'Monitor AI developments in your field, but don\'t overreact. Your role\'s core value is inherently human.'
+                });
+            }
+            
+            return recs;
+        }
+        
+        function shareTwitter() {
+            const { jobTitle, score, level } = window.analysisResults;
+            const indicator = level === 'high' ? '[HIGH]' : level === 'medium' ? '[MEDIUM]' : '[LOW]';
+            const text = `${indicator} My AI Exposure Score: ${score}/100 for "${jobTitle}"\n\nDiscover how AI will impact YOUR career:\n`;
+            const url = 'https://futurehumanism.co/tools/ai-job-analyzer.html';
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+            gtag('event', 'share', { 'method': 'twitter' });
+        }
+        
+        function shareLinkedIn() {
+            const url = 'https://futurehumanism.co/tools/ai-job-analyzer.html';
+            window.open(`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`, '_blank');
+            gtag('event', 'share', { 'method': 'linkedin' });
+        }
+        
+        function copyLink() {
+            navigator.clipboard.writeText('https://futurehumanism.co/tools/ai-job-analyzer.html').then(() => {
+                const copyText = document.getElementById('copyText');
+                copyText.textContent = 'Copied!';
+                setTimeout(() => {
+                    copyText.textContent = 'Copy Link';
+                }, 2000);
+            });
+            gtag('event', 'share', { 'method': 'copy_link' });
+        }
+        
+        function resetAnalyzer() {
+            document.getElementById('inputSection').style.display = 'block';
+            document.getElementById('results').classList.remove('visible');
+            document.getElementById('jobTitle').value = '';
+            document.getElementById('industry').value = '';
+            document.getElementById('progressCircle').style.strokeDashoffset = 502;
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        
+        // Allow Enter key to submit
+        document.getElementById('jobTitle').addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') analyzeJob();
+        });
+    </script>
+<script src="../js/social-proof.js"></script>
+  
+  <footer>
+    <div class="footer-inner">
+        <div class="footer-top">
+            <div class="footer-brand">
+                <a href="/" class="logo">
+                    <div class="logo-icon"><img loading="lazy" src="/images/profile.jpg" alt="Future Humanism"></div>
+                    <div class="logo-text">Future<span>Humanism</span></div>
+                </a>
+                <p>Where AI meets human potential. Stories, tools, and insights for builders navigating the most interesting time in tech history.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Content</h4>
+                <a href="/articles/">Stories</a>
+                <a href="/tools/">Free Tools</a>
+                <a href="/pages/subscribe/">Newsletter</a>
+                <a href="/pages/about/">About</a>
+            </div>
+            <div class="footer-links">
+                <h4>Popular Tools</h4>
+                <a href="/tools/ai-roi-calculator/">AI ROI Calculator</a>
+                <a href="/tools/prompt-generator/">Prompt Generator</a>
+                <a href="/tools/ai-readiness-quiz/">AI Readiness Quiz</a>
+                <a href="/tools/headline-analyzer/">Headline Analyzer</a>
+                <a href="/tools/ai-glossary/">AI Glossary</a>
+            </div>
+            <div class="footer-links">
+                <h4>Connect</h4>
+                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                <a href="https://futurehumanism.beehiiv.com" target="_blank">Beehiiv</a>
+                <a href="https://gumroad.com/futurehumanism" target="_blank">Gumroad</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2026 Future Humanism. Made with intention. · <a href="/pages/privacy/">Privacy</a> · <a href="/pages/terms/">Terms</a></p>
+            <div class="footer-social">
+                <a href="https://twitter.com/FutureHumanism" target="_blank">Twitter</a>
+                <a href="/pages/subscribe/">Newsletter</a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+  <!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+    <div class="mobile-menu-header">
+        <a href="/" class="logo">
+            <div class="logo-icon"><img src="/images/profile.jpg" alt=""></div>
+            <span class="logo-text">Future<span>Humanism</span></span>
+        </a>
+        <button class="close-btn" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6L6 18M6 6l12 12"/></svg>
+        </button>
+    </div>
+    
+    <div class="mobile-menu-content">
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">Browse</div>
+            <a href="/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+                Home
+            </a>
+            <a href="/articles/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+                All Stories
+            </a>
+            <a href="/articles/ai-agents-2026-guide/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                Featured Guide
+            </a>
+            <a href="/tools/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                Free Tools
+            </a>
+            <a href="/pages/about/" onclick="closeMobileMenu()">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                About
+            </a>
+        </div>
+
+        <div class="mobile-menu-section">
+            <div class="mobile-menu-section-title">Topics</div>
+            <div class="mobile-menu-topics">
+                <a href="/articles/?cat=ai-agents" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><line x1="8" y1="16" x2="8" y2="16"/><line x1="16" y1="16" x2="16" y2="16"/></svg>
+                    AI Agents
+                </a>
+                <a href="/articles/?cat=ai-models" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+                    AI Models
+                </a>
+                <a href="/articles/?cat=automation" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+                    Automation
+                </a>
+                <a href="/articles/?cat=strategy" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+                    Strategy
+                </a>
+                <a href="/articles/?cat=tutorials" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+                    Tutorials
+                </a>
+                <a href="/articles/?cat=crypto" onclick="closeMobileMenu()">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                    Crypto & DeFi
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-menu-section">
+        <div class="mobile-menu-section-title">Share This Site</div>
+        <a href="#" onclick="copyMobileLink(); return false;">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+            Copy Link
+        </a>
+        <a href="https://www.facebook.com/sharer/sharer.php?u=https://futurehumanism.co" target="_blank" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+            Share on Facebook
+        </a>
+        <a href="https://twitter.com/intent/tweet?text=Check%20out%20Future%20Humanism%20-%20where%20AI%20meets%20human%20potential&url=https://futurehumanism.co&via=FutureHumanism" target="_blank" onclick="closeMobileMenu()">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            Share on X
+        </a>
+    </div>
+
+    <div class="mobile-menu-cta">
+        <a href="/pages/subscribe/" onclick="closeMobileMenu()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Subscribe for Free
+        </a>
+        <div class="mobile-menu-social">
+            <a href="https://twitter.com/FutureHumanism" target="_blank" aria-label="X/Twitter">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+            </a>
+            <a href="https://www.linkedin.com/company/futurehumanism" target="_blank" aria-label="LinkedIn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            </a>
+        </div>
+    </div>
+</div>
+
+<!-- Toast Notification -->
+<div class="toast" id="toast"></div>
+
+  
+  <script src="/js/main.js"></script>
+</body>
+</html>
