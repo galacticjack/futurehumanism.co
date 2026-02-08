@@ -3,10 +3,8 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<!-- Cache control for staging -->
-<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
-<meta http-equiv="Pragma" content="no-cache">
-<meta http-equiv="Expires" content="0">
+<!-- Cache control - production ready -->
+<meta http-equiv="Cache-Control" content="public, max-age=31536000">
 <!-- Critical CSS - inline for faster FCP -->
 <style>
 :root{--bg:#000;--text:#fff;--text-muted:#9a9a9a;--accent:#1E90FF;--card-bg:#111;--border:#222}
@@ -54,16 +52,19 @@ main{min-height:80vh}
 <link rel="icon" type="image/svg+xml" href="/images/favicon.svg">
 <link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
 
-<!-- Preload critical CSS -->
-<link rel="preload" href="/css/global.css?v=20260207c" as="style">
-
-<!-- Fonts - display swap for faster text rendering -->
+<!-- Preconnect to external resources -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+<link rel="preconnect" href="https://images.unsplash.com">
+<link rel="dns-prefetch" href="https://www.googletagmanager.com">
 
-<!-- Stylesheets -->
-<link rel="stylesheet" href="/css/global.css?v=20260207c">
+<!-- Preload critical resources -->
+<link rel="preload" href="/css/global.css?v=20260208" as="style">
+<link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+
+<!-- Main stylesheet -->
+<link rel="stylesheet" href="/css/global.css?v=20260208">
 
 <!-- Google Analytics -->
 
@@ -976,9 +977,9 @@ if (initialQuery) {
 <div class="toast" id="toast"></div>
 
   
-  <!-- Scripts -->
-  <script src="/js/supabase.js"></script>
-  <script src="/js/subscribe.js"></script>
-  <script src="/js/main.js"></script>
+  <!-- Scripts - deferred for performance -->
+  <script defer src="/js/supabase.js"></script>
+  <script defer src="/js/subscribe.js"></script>
+  <script defer src="/js/main.js"></script>
 </body>
 </html>

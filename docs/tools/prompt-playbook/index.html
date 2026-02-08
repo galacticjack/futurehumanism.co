@@ -33,7 +33,14 @@
   
   <link rel="canonical" href="https://futurehumanism.co/tools/prompt-playbook/">
   <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Preconnect for performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  
+  <!-- Fonts - non-blocking -->
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
   
   <!-- Stylesheets -->
   <link rel="stylesheet" href="/css/global.css?v=20260208">
@@ -426,6 +433,6 @@
 <div class="toast" id="toast"></div>
 
   
-  <script src="/js/main.js"></script>
+  <script defer src="/js/main.js"></script>
 </body>
 </html>

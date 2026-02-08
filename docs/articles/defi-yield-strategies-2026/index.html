@@ -54,9 +54,23 @@
     </script>
     
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/global.css">
-    <link rel="stylesheet" href="/css/article.css?v=20260208b">
+    
+    <!-- Preconnect for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="dns-prefetch" href="https://www.googletagmanager.com">
+    
+    <!-- Preload hero image -->
+    <link rel="preload" as="image" href="https://images.unsplash.com/photo-1639762681485-074b7f938ba0?w=800&amp;q=80">
+    
+    <!-- Fonts - non-blocking -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" as="style" onload="this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="/css/global.css?v=20260208">
+    <link rel="stylesheet" href="/css/article.css?v=20260208">
     <style>
         /* Article-specific hero background - gradient fades to black at bottom */
         .hero {
