@@ -1,0 +1,5 @@
+# Redirect www to non-www
+https://www.futurehumanism.co/* https://futurehumanism.co/:splat 301
+
+# Old staging URLs (if any)
+/futurehumanism-staging/* /:splat 301
