@@ -850,9 +850,8 @@ function handleDownload(e) {
         timestamp: Date.now()
     }));
     
-    // Open Beehiiv subscribe
-    const beehiivUrl = `https://futurehumanism.beehiiv.com/subscribe?email=${encodeURIComponent(email)}&firstName=${encodeURIComponent(firstName)}&utm_source=survival_kit`;
-    window.open(beehiivUrl, '_blank');
+    // Note: Removed Beehiiv redirect (was causing 404)
+    // Users can subscribe via the main Subscribe page
     
     // Show success state
     document.getElementById('form-container').style.display = 'none';
