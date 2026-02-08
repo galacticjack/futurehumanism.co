@@ -521,7 +521,7 @@ main{min-height:80vh}
         <h2>Get Your Free Copy</h2>
         <p>Join 2,400+ AI practitioners. No spam, unsubscribe anytime.</p>
         
-        <form id="guide-form" class="guide-form">
+        <form id="guide-form" class="guide-form" action="https://app.beehiiv.com/forms/c7d45ea8-9b86-4677-8bd0-9e3b37e0b1c7/subscribe" method="POST" target="_blank">
             <input type="email" name="email" placeholder="Enter your email" required>
             <button type="submit">Get Free Guide</button>
         </form>
@@ -610,27 +610,22 @@ main{min-height:80vh}
 </section>
 
 <script>
-document.getElementById('guide-form').addEventListener('submit', async function(e) {
+document.getElementById('guide-form').addEventListener('submit', function(e) {
     e.preventDefault();
     const email = this.querySelector('input[name="email"]').value;
     const btn = this.querySelector('button');
-    btn.textContent = 'Sending...';
+    btn.textContent = 'Opening...';
     btn.disabled = true;
-    try {
-        await fetch('https://futurehumanism.beehiiv.com/subscribe', {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-            body: JSON.stringify({ email: email, source: 'free-guide-page' })
-        });
-        this.style.display = 'none';
-        document.getElementById('form-success').style.display = 'block';
-        if (typeof gtag === 'function') {
-            gtag('event', 'guide_download', { event_category: 'conversion' });
-        }
-    } catch(err) {
-        btn.textContent = 'Get Free Guide';
-        btn.disabled = false;
-        alert('Something went wrong. Please try again.');
+    
+    // Open Beehiiv subscribe in new tab
+    window.open('https://futurehumanism.beehiiv.com/subscribe?email=' + encodeURIComponent(email), '_blank');
+    
+    // Show success and download
+    this.style.display = 'none';
+    document.getElementById('form-success').style.display = 'block';
+    
+    if (typeof gtag === 'function') {
+        gtag('event', 'guide_download', { event_category: 'conversion' });
     }
 });
 </script>
